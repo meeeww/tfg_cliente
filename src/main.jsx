@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import Dashboard from './pages/Dashboard'
+import Inicio from './pages/Inicio'
 import './estilos/estilos.css'
 
 import {
@@ -12,7 +13,7 @@ import {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Dashboard />,
+    element: <Inicio />,
   },
   {
     path: "/precios",
