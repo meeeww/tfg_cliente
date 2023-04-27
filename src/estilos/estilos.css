@@ -1,69 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+  --color_principal: #1FA0FF;
+  --color_secundario: #A7FDCC;
+  --color_boton: #12DAFB;
+  --color_gradiente: #12DAFB;
+  --background_color_1: #FFFFFF;
+  --backgroud_color_2: #404040;
+  --gris: #404040;
 }
 
 body {
+  font-family: 'Poppins', sans-serif;
+  padding: 0;
   margin: 0;
+}
+
+.mainBody {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  justify-content: space-between;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.panelDashboard {
+  background-color: var(--background_color_1);
+  width: 80%;
+  padding: 2rem;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.headerDashboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.welcomeMessageDashboard {
+  display: flex;
+  align-items: flex-start;
+}
+
+.sessionDashboard a {
+  padding-right: 1rem;
+}
+
+.panelInfoDashboard {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 3rem;
+  grid-row-gap: 0px;
+}
+
+.productsOverviewDashboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bestSellingProductDashboard {
+  background-color: var(--color_principal);
+  border-radius: 1rem;
+  -webkit-box-shadow: 8px 5px 5px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 8px 5px 5px 1px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+.timingsProductDashboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toppingsOverviewDashboard h4 {
+  margin-block: 0.1rem;
+}
+
+.financialProductDashboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin-block: 1rem;
+}
+
+.financialProductDashboard h2,
+h3 {
+  margin: 0;
+}
+
+.reportInfoDashboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fechaInfoDashBoard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fechaInfoDashBoard h2 {
+  margin: 0
+}
+
+.informacionInfoDashboard h4 {
+  margin: 0;
+}
+
+.summaryBoxDashboard {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--backgroud_color_2);
+  -webkit-box-shadow: 8px 5px 5px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 8px 5px 5px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  padding-inline: 1rem;
+  text-align: center;
+  color: var(--background_color_1);
+}
+
+.fechaBoxDashboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.preciosBoxDashboard {
+  display: flex;
+  justify-content: space-between;
+  align-content: baseline;
+}
+
+.precioArribaBoxDashboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-inline: 1rem;
+}
+
+.precioArribaBoxDashboard img{
+  padding-inline: 1rem;
+}
+
+/* barra lateral */
+
+.barraDashboard {
+  background-color: var(--backgroud_color_2);
+  width: 20%;
+  height: 100vh;
+  padding-inline: 2rem;
+  color: var(--background_color_1);
+  overflow: auto;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.barraDashboard h1 {
+  text-align: center;
+}
+
+.barraDashboard h2 {
+  text-align: center;
+  margin: 0;
+}
+
+.documentDashboard {
+  padding-top: 1rem;
+}
+
+.documentDashboard h3 {
+  font-size: 22px;
+}
+
+.secondDashboard {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.secondDashboard img {
+  padding-right: 1rem;
+}
+
+.secondDashboard a {
+  text-decoration: none;
+  color: var(--background_color_1);
 }

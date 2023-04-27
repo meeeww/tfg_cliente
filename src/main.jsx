@@ -1,10 +1,27 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './pages/App.jsx'
+import Dashboard from './pages/Dashboard'
 import './estilos/estilos.css'
+
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route
+} from "react-router-dom";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Dashboard />,
+  },
+  {
+    path: "/precios",
+    element: <Dashboard />,
+  },
+]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>,
 )
