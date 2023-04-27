@@ -143,18 +143,26 @@ function Dashboard() {
             <div className="reportsOverviewDashboard">
               <h2>Reports</h2>
               <div className="reportInfoDashboard">
-                <h2>MON</h2>
-                <h3>28</h3>
-                <h3>Report - Finances</h3>
-                <h4>La Tarrina - Annual Report</h4>
+                <div className="fechaInfoDashBoard">
+                  <h2>MON</h2>
+                  <h3>28</h3>
+                </div>
+                <div className="informacionInfoDashboard">
+                  <h3>Report - Finances</h3>
+                  <h4>La Tarrina - Annual Report</h4>
+                </div>
                 <h4>Zas</h4>
                 <img src={circulo} style={{ width: "30px", height: "30px" }}></img>
               </div>
               <div className="reportInfoDashboard">
-                <h2>MON</h2>
-                <h3>28</h3>
-                <h3>Report - Finances</h3>
-                <h4>La Tarrina - Annual Report</h4>
+                <div className="fechaInfoDashBoard">
+                  <h2>MON</h2>
+                  <h3>28</h3>
+                </div>
+                <div className="informacionInfoDashboard">
+                  <h3>Report - Finances</h3>
+                  <h4>La Tarrina - Annual Report</h4>
+                </div>
                 <h4>Zas</h4>
                 <img src={circulo} style={{ width: "30px", height: "30px" }}></img>
               </div>
@@ -172,7 +180,7 @@ function Dashboard() {
                     <img src={circulo} style={{ width: "30px", height: "30px" }}></img>
                     <h2>$232,58</h2>
                   </div>
-                  <div className="precioAbajoBoxDashboard">
+                  <div className="precioArribaBoxDashboard">
                     <img src={circulo} style={{ width: "30px", height: "30px" }}></img>
                     <h2>$232,58</h2>
                   </div>

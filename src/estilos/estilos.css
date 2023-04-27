@@ -50,31 +50,31 @@ body {
   grid-row-gap: 0px;
 }
 
-.productsOverviewDashboard{
+.productsOverviewDashboard {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.bestSellingProductDashboard{
+.bestSellingProductDashboard {
   background-color: var(--color_principal);
   border-radius: 1rem;
-  -webkit-box-shadow: 8px 5px 5px 1px rgba(0,0,0,0.1);
-  box-shadow: 8px 5px 5px 1px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 8px 5px 5px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 8px 5px 5px 1px rgba(0, 0, 0, 0.1);
   padding: 1rem;
 }
 
-.timingsProductDashboard{
+.timingsProductDashboard {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.toppingsOverviewDashboard h4{
+.toppingsOverviewDashboard h4 {
   margin-block: 0.1rem;
 }
 
-.financialProductDashboard{
+.financialProductDashboard {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -82,8 +82,64 @@ body {
   margin-block: 1rem;
 }
 
-.financialProductDashboard h2, h3 {
+.financialProductDashboard h2,
+h3 {
   margin: 0;
+}
+
+.reportInfoDashboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fechaInfoDashBoard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fechaInfoDashBoard h2 {
+  margin: 0
+}
+
+.informacionInfoDashboard h4 {
+  margin: 0;
+}
+
+.summaryBoxDashboard {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--backgroud_color_2);
+  -webkit-box-shadow: 8px 5px 5px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 8px 5px 5px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  padding-inline: 1rem;
+  text-align: center;
+  color: var(--background_color_1);
+}
+
+.fechaBoxDashboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.preciosBoxDashboard {
+  display: flex;
+  justify-content: space-between;
+  align-content: baseline;
+}
+
+.precioArribaBoxDashboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-inline: 1rem;
+}
+
+.precioArribaBoxDashboard img{
+  padding-inline: 1rem;
 }
 
 /* barra lateral */
