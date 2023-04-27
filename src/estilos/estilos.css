@@ -16,56 +16,118 @@ body {
   margin: 0;
 }
 
-.mainBody{
+.mainBody {
   display: flex;
+  justify-content: space-between;
 }
 
-.panelDashboard{
+.panelDashboard {
   background-color: var(--background_color_1);
   width: 80%;
   padding: 2rem;
 }
 
-.headerDashboard{
-  
+.headerDashboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.barraDashboard{
+.welcomeMessageDashboard {
+  display: flex;
+  align-items: flex-start;
+}
+
+.sessionDashboard a {
+  padding-right: 1rem;
+}
+
+.panelInfoDashboard {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 3rem;
+  grid-row-gap: 0px;
+}
+
+.productsOverviewDashboard{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bestSellingProductDashboard{
+  background-color: var(--color_principal);
+  border-radius: 1rem;
+  -webkit-box-shadow: 8px 5px 5px 1px rgba(0,0,0,0.1);
+  box-shadow: 8px 5px 5px 1px rgba(0,0,0,0.1);
+  padding: 1rem;
+}
+
+.timingsProductDashboard{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toppingsOverviewDashboard h4{
+  margin-block: 0.1rem;
+}
+
+.financialProductDashboard{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin-block: 1rem;
+}
+
+.financialProductDashboard h2, h3 {
+  margin: 0;
+}
+
+/* barra lateral */
+
+.barraDashboard {
   background-color: var(--backgroud_color_2);
   width: 20%;
   height: 100vh;
   padding-inline: 2rem;
   color: var(--background_color_1);
+  overflow: auto;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
-.barraDashboard h1{
+.barraDashboard h1 {
   text-align: center;
 }
 
-.barraDashboard h2{
+.barraDashboard h2 {
   text-align: center;
   margin: 0;
 }
 
-.documentDashboard{
+.documentDashboard {
   padding-top: 1rem;
 }
 
-.documentDashboard h3{
+.documentDashboard h3 {
   font-size: 22px;
 }
 
-.secondDashboard{
+.secondDashboard {
   display: flex;
   align-items: center;
   font-size: 14px;
 }
 
-.secondDashboard img{
+.secondDashboard img {
   padding-right: 1rem;
 }
 
-.secondDashboard a{
+.secondDashboard a {
   text-decoration: none;
   color: var(--background_color_1);
 }
