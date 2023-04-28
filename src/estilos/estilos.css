@@ -68,25 +68,11 @@ body {
 }
 
 /*Inicio*/
-.bodyCarousel{
+.mainBodyInicio{
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-}
-
-.wrapper{
-  max-width: 1200px;
-}
-
-.wrapper .carrusel{
-  white-space: nowrap;
-}
-
-.carrusel img{
-  height: 340px;
-  object-fit: cover;
-  width: calc(100% / 3);
 }
 
 /*dashboard*/
