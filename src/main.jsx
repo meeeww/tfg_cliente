@@ -2,6 +2,9 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import Dashboard from './pages/Dashboard'
 import Inicio from './pages/Inicio'
+import Carousel from './components/Carousel'
+import Footer from './components/Footer'
+import Header from './components/Header'
 import './estilos/estilos.css'
 
 import {
@@ -17,7 +20,15 @@ const router = createBrowserRouter([
   },
   {
     path: "/precios",
-    element: <Dashboard />,
+    element: <Carousel />,
+  },
+  {
+    path: "/footer",
+    element: <Footer />,
+  },
+  {
+    path: "/header",
+    element: <Header />,
   },
 ]);
 

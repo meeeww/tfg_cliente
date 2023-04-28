@@ -21,7 +21,7 @@ function Dashboard() {
 
   return (
     <>
-      <div className="mainBody">
+      <div className="dashboardBody">
         <div className="barraDashboard">
           <h1>La Tarrina</h1>
           <div className="dashboardDashboard">

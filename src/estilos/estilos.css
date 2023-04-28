@@ -16,13 +16,82 @@ body {
   margin: 0;
 }
 
+/*Header*/
+.headerHeader {
+  display: flex;
+  height: 70px;
+  background-color: aqua;
+  align-items: center;
+  padding: 10px;
+}
+
+.logoHeader {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.logoHeader img {
+  height: 75px;
+  width: 75px;
+}
+
+.navHeader {
+  display: flex;
+}
+
+.navHeader a{
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.navHeader a:visited{
+  color: black;
+}
+
+
+.navHeader a:hover{
+  color: blue;
+}
+
+.nav-linksHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.register-loginHeader {
+  display: flex;
+  align-items: center;
+}
+
 /*Inicio*/
+.bodyCarousel{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
 
+.wrapper{
+  max-width: 1200px;
+}
 
+.wrapper .carrusel{
+  white-space: nowrap;
+}
+
+.carrusel img{
+  height: 340px;
+  object-fit: cover;
+  width: calc(100% / 3);
+}
 
 /*dashboard*/
 
-.mainBody {
+.dashboardBody {
   display: flex;
   justify-content: space-between;
 }
@@ -192,4 +261,70 @@ h3 {
 .secondDashboard a {
   text-decoration: none;
   color: var(--background_color_1);
+}
+
+/*footer*/
+.containerFooter{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footerBody{
+  background-color: rgb(89, 89, 89);
+  padding: 80px 0;
+}
+
+.footer-row{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-links{
+  width: 25%;
+  padding: 0 15px;
+}
+
+.footer-links h4{
+  font-size: 20px;
+  color: white;
+  margin-bottom: 25px;
+  font-weight: 500;
+  border-bottom: 2px solid #00C3FF;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.footer-links ul li a{
+  font-size: 18px;
+  text-decoration: none;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.footer-links ul li a:visited{
+  color: white;
+}
+
+.footer-links ul li a:hover{
+  color: aqua;
+}
+
+.social-links a{
+  display: inline-block;
+  min-height: 40px;
+  width: 40px;
+  background-color: rgb(63, 63, 63);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: white;
+}
+
+.social-links a:visited{
+  color: white;
+}
+
+.social-links a:hover{
+  color: aqua;
 }
