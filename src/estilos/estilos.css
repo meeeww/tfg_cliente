@@ -75,6 +75,21 @@ body {
   min-height: 100vh;
 }
 
+/*Informacion*/
+.divContainerInformacion{
+  display: flex;
+  align-items: center;
+}
+
+.cajaInformacion{
+  margin-left: 40px;
+}
+
+.cajaInformacion img{
+  width: 250px;
+  height: 250px;
+  
+}
 /*dashboard*/
 
 .dashboardBody {
