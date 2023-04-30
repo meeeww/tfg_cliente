@@ -10,7 +10,6 @@ import './estilos/estilos.css'
 import {
   createBrowserRouter,
   RouterProvider,
-  Route
 } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -29,6 +28,10 @@ const router = createBrowserRouter([
   {
     path: "/header",
     element: <Header />,
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard />,
   },
 ]);
 

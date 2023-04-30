@@ -1,35 +1,31 @@
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom";
 
 const Footer = () => (
-    <footer class="footerBody">
-        <div class="containerFooter">
-            <div class="footer-row">
-                <div class="footer-links">
-                    <h4>Compañia</h4>
-                    <ul>
-                        <li><a href="#">Nosotros</a></li>
-                        <li><a href="#">Nuestros servicios</a></li>
-                        <li><a href="#">Politica de privacidad</a></li>
-                        <li><a href="#">Afiliate</a></li>
-                    </ul>
+    <footer className="footerBody">
+        <div className="containerFooter">
+            <div className="footer_rowFooter">
+                <div className="footer_linksFooter">
+                    <h4>Company</h4>
+                    <div className="linksOrganizerFooter">
+                        <NavLink to={"/aboutus"}>About Us</NavLink>
+                        <NavLink to={"/services"}>Our Services</NavLink>
+                        <NavLink to={"/privacy"}>Privacy Policy</NavLink>
+                    </div>
                 </div>
-                <div class="footer-links">
-                    <h4>Encuentranos</h4>
-                    <ul>
-                        <li><a href="#">Pide en nuestra aplicacion</a></li>
-                        <li><a href="#">Uber</a></li>
-                        <li><a href="#">Establecimientos</a></li>
+                <div className="footer_linksFooter">
+                    <h4>Find Us</h4>
+                    <div className="linksOrganizerFooter">
+                        <NavLink to={"/establishments"}>Establishments</NavLink>
+                        <NavLink to={"/delivery"}>Delivery</NavLink>
+                    </div>
 
-                    </ul>
                 </div>
-                <div class="footer-links">
-                    <h4>Siguenos</h4>
-                    <div class="social-links">
-
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                <div className="footer_linksFooter">
+                    <h4>Follow Us</h4>
+                    <div className="social_linksFooter">
+                        <NavLink to={"https://www.facebook.com"} className="fab fa-facebook-f"></NavLink>
+                        <NavLink to={"https://www.instagram.com"} className="fab fa-instagram"></NavLink>
+                        <NavLink to={"https://www.twitter.com"} className="fab fa-twitter"></NavLink>
                     </div>
                 </div>
             </div>

@@ -1,21 +1,22 @@
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom";
+import Logo from '../assets/Logo.png'
 
 const Header = () => (
     <header className="headerHeader">
-        <div class="logoHeader">
-            <img src={""} alt="Logo"></img>
+        <div className="logoHeader">
+            <img src={Logo} alt="Logo"></img>
         </div>
-        <div class="nav-linksHeader">
+        <div className="nav-linksHeader">
             <nav className="navHeader">
-                <a href="" class="nav-linkHeader">Inicio</a>
-                <a href="" class="nav-linkHeader">Carta</a>
-                <a href="" class="nav-linkHeader">Café</a>
-                <a href="" class="nav-linkHeader">Contacto</a>
+                <NavLink to={"/"} className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>Main</NavLink>
+                <NavLink to={"/menu"} className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>Menu</NavLink>
+                <NavLink to={"/coffee"} className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>Coffee</NavLink>
+                <NavLink to={"/contact"} className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>Contact Us</NavLink>
             </nav>
-            <div class="register-loginHeader">
+            <div className="register-loginHeader">
                 <nav className="navHeader">
-                    <a href="" class="nav-linkHeader">Registrate</a>
-                    <a href="" class="nav-linkHeader">Inicia sesion</a>
+                    <NavLink to={"/signup"} className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>Sign Up</NavLink>
+                    <NavLink to={"/signin"} className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>Sign In</NavLink>
                 </nav>
             </div>
         </div>

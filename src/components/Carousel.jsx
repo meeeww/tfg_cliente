@@ -1,4 +1,3 @@
-import React from "react";
 import ImageSlider from "../scripts/Slider.jsx";
 
 import Slide1 from '../assets/Slider1.jpg'
