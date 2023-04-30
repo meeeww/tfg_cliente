@@ -56,7 +56,23 @@ body {
 }
 
 .active {
-  color: var(--color_secundario)!important;
+  color: var(--color_secundario) !important;
+}
+
+#signup {
+  border: 3px solid var(--color_secundario);
+  border-radius: 2rem;
+  margin-left: 1rem;
+  color: var(--gris);
+
+  transition: all 0.25s;
+}
+
+#signup:hover {
+  background-color: var(--color_secundario);
+  color: var(--blanco);
+
+  transition: all 0.25s;
 }
 
 .nav-linksHeader {
@@ -304,7 +320,7 @@ h3 {
   display: inline-block;
 }
 
-.linksOrganizerFooter{
+.linksOrganizerFooter {
   display: flex;
   flex-direction: column;
 }

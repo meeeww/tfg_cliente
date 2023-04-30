@@ -1,6 +1,18 @@
 import { NavLink } from "react-router-dom";
 import Logo from '../assets/Logo.png'
 
+const linksLeft = [
+    { name: 'Main', href: '/' },
+    { name: 'Menu', href: '/menu' },
+    { name: 'Coffee', href: '/coffee' },
+    { name: 'Contact Us', href: '/contactus' },
+]
+
+const linksRight = [
+    { name: 'Sign In', href: '/signin', clase: "signin" },
+    { name: 'Sign Up', href: '/signup', clase: "signup" },
+]
+
 const Header = () => (
     <header className="headerHeader">
         <div className="logoHeader">
@@ -8,15 +20,15 @@ const Header = () => (
         </div>
         <div className="nav-linksHeader">
             <nav className="navHeader">
-                <NavLink to={"/"} className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>Main</NavLink>
-                <NavLink to={"/menu"} className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>Menu</NavLink>
-                <NavLink to={"/coffee"} className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>Coffee</NavLink>
-                <NavLink to={"/contact"} className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>Contact Us</NavLink>
+                {linksLeft.map((item) => (
+                    <NavLink to={item.href} key={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>{item.name}</NavLink>
+                ))}
             </nav>
             <div className="register-loginHeader">
                 <nav className="navHeader">
-                    <NavLink to={"/signup"} className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>Sign Up</NavLink>
-                    <NavLink to={"/signin"} className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>Sign In</NavLink>
+                    {linksRight.map((item) => (
+                        <NavLink to={item.href} id={item.clase} key={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>{item.name}</NavLink>
+                    ))}
                 </nav>
             </div>
         </div>
