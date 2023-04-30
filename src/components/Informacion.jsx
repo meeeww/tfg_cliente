@@ -1,4 +1,3 @@
-import React from 'react';
 import cafe1 from '../assets/Informacioncafe1.jpg'
 import cafe2 from '../assets/Informacioncafe2.jpg'
 import cafe3 from '../assets/Informacioncafe3.jpg'
