@@ -10,6 +10,10 @@
   --blanco: #EAEAEA;
 }
 
+* {
+  font-family: 'Rubik', sans-serif;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   padding: 0;
@@ -163,16 +167,92 @@ body {
 .divContainerInformacion {
   display: flex;
   align-items: center;
+  height: 35rem;
+  gap: 1rem;
+  padding-inline: 1rem;
 }
 
 .cajaInformacion {
-  margin-left: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  align-items: center;
+  text-align: center;
+  padding-inline: 1rem;
+  background-color: var(--blanco);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  border: 1px solid #dddddd;
+  height: 100%;
+  font-size: 14px;
+  row-gap: 1rem;
 }
 
 .cajaInformacion img {
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 300px;
+  border-radius: 30px;
+}
 
+.div2ContainerInformacion {
+  display: flex;
+  align-items: center;
+  height: 35rem;
+  padding-inline: 1rem;
+  padding-block: 1rem;
+}
+
+.filaInformacion2 {
+  display: flex;
+  align-items: center;
+  height: 35rem;
+  gap: 1rem;
+  width: 100%;
+}
+
+.cajaInformacion2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  width: 350px;
+  text-align: center;
+  padding-inline: 1rem;
+  background-color: var(--blanco);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  border: 1px solid #dddddd;
+  height: 100%;
+  font-size: 14px;
+  row-gap: 1rem;
+}
+
+.cajaInformacion2 img {
+  width: 300px;
+  height: 300px;
+  border-radius: 30px;
+}
+
+.botonInformacion {
+  background-color: none;
+  color: var(--gris);
+  padding: 10px 20px;
+  border: 3px solid var(--color_secundario);
+  border-radius: 2rem;
+  cursor: pointer;
+
+  transition: all 0.25s;
+}
+
+.botonInformacion:hover {
+  border: 3px solid var(--color_secundario);
+  border-radius: 2rem;
+  background-color: var(--color_secundario);
+  color: var(--blanco);
+
+  transition: all 0.25s;
 }
 
 /*dashboard*/
@@ -423,3 +503,43 @@ h3 {
 .social_linksFooter a:hover {
   color: var(--color_secundario);
 }
+
+@media (max-width: 1100px) {
+
+}
+
+@media (max-width: 1431px) {
+  .divContainerInformacion {
+    flex-direction: column;
+    height: 100%;
+    padding-inline: 3rem;
+  }
+
+  .cajaInformacion{
+    width: 30rem;
+    padding-block-end: 1rem;
+    padding-inline: 2rem;
+  }
+
+  .div2ContainerInformacion {
+    height: 100%;
+  }
+
+  .filaInformacion2 {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100%;
+    padding-inline: 3rem;
+    justify-items: center;
+  }
+
+  .cajaInformacion2{
+    padding-block-end: 1rem;
+    height: auto;
+  }
+  
+  
+}
+
+/*640*/
