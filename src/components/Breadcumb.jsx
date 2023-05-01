@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 const Breadcumb = () => {
 
     const mainColor = "#ad974f"
@@ -6,18 +8,16 @@ const Breadcumb = () => {
         <div className="mainBread">
             <div className="titularBread">
                 <div className="tituloBread">
-                    <h1>The &<h1 style={{color: mainColor}}>C</h1>offee Tub</h1>
+                    <h1>The &<h1 style={{ color: mainColor }}>C</h1>offee Tub</h1>
                 </div>
                 <div className="subtituloBread">
-                    <h2>Quality On Time</h2>
+                    <h2>Best Quality, Always On Time</h2>
                 </div>
             </div>
             <div className="botonesBread">
-                <div className="pideYaBread">
-                    Order Now
-                </div>
+                <NavLink to={"/ordernow"}><div>Order Now</div></NavLink>
                 <div className="sobreNosotrosBread">
-                    About Us
+                    <NavLink to={"/aboutus"}><div>About Us</div></NavLink>
                 </div>
             </div>
         </div>

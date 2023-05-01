@@ -146,6 +146,11 @@ body {
   transition: all 0.25s;
 }
 
+.botonesBread a{
+  text-decoration: none;
+  
+}
+
 /*Inicio*/
 .mainBodyInicio {
   display: flex;
