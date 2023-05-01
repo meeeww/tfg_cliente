@@ -1,11 +1,10 @@
-import React from 'react'
-import Header from '../componentes/Header.jsx'
-import Footer from '../componentes/Footer'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 function MainLayout({children, laPagina}) {
     return (
         <div>
-            <Header quePagina={laPagina}>Hey</Header>
+            <Header quePagina={laPagina}></Header>
             <div>{children}</div>
             <Footer></Footer>
         </div>

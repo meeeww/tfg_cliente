@@ -17,11 +17,9 @@ const documents = [
 ]
 
 function Dashboard() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div className="mainBody">
+      <div className="dashboardBody">
         <div className="barraDashboard">
           <h1>La Tarrina</h1>
           <div className="dashboardDashboard">
