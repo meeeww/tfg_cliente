@@ -16,7 +16,7 @@ const linksRight = [
 const Header = () => (
     <header className="headerHeader">
         <div className="logoHeader">
-            <img src={Logo} alt="Logo"></img>
+            <NavLink to={"/"} ><img src={Logo} alt="Logo"></img></NavLink>
         </div>
         <div className="nav-linksHeader">
             <nav className="navHeader">
