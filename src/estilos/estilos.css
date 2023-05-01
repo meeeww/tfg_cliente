@@ -12,6 +12,9 @@
 
 * {
   font-family: 'Rubik', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -158,9 +161,10 @@ body {
 /*Inicio*/
 .mainBodyInicio {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  min-height: 100vh;
+  padding-block: 1rem;
+  width: 100%;
 }
 
 /*Informacion*/
@@ -175,8 +179,9 @@ body {
 .cajaInformacion {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   flex: 1;
+  flex-wrap: wrap;
   align-items: center;
   text-align: center;
   padding-inline: 1rem;
@@ -187,6 +192,14 @@ body {
   height: 100%;
   font-size: 14px;
   row-gap: 1rem;
+}
+
+.cajaTituloInformacion{
+  height: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .cajaInformacion img {
@@ -200,7 +213,7 @@ body {
   align-items: center;
   height: 35rem;
   padding-inline: 1rem;
-  padding-block: 1rem;
+  margin-block: 1rem;
 }
 
 .filaInformacion2 {
@@ -217,7 +230,7 @@ body {
   align-items: center;
   justify-content: center;
   flex: 1;
-  width: 350px;
+  width: 22rem;
   text-align: center;
   padding-inline: 1rem;
   background-color: var(--blanco);
@@ -508,7 +521,7 @@ h3 {
 
 }
 
-@media (max-width: 1431px) {
+@media (max-width: 1638px) {
   .divContainerInformacion {
     flex-direction: column;
     height: 100%;
@@ -536,7 +549,8 @@ h3 {
 
   .cajaInformacion2{
     padding-block-end: 1rem;
-    height: auto;
+    height: 100%;
+    margin-block: 2rem;
   }
   
   
