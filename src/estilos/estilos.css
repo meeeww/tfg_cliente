@@ -134,10 +134,26 @@ body {
   display: flex;
 }
 
-.botonesBread div {
+#orderNowBread{
+  background-color: var(--color_secundario);
   border: 3px solid var(--color_secundario);
   border-radius: 2rem;
   margin-inline: 2rem;
+  color: var(--blanco);
+
+  width: 10rem;
+  height: 3rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.25s;
+}
+
+.botonesBread div {
+  border: 3px solid var(--color_secundario);
+  border-radius: 2rem;
   color: var(--blanco);
 
   width: 10rem;
