@@ -639,7 +639,7 @@ h3 {
 
 @media (max-width: 1100px) {}
 
-@media (max-width: 1638px) {
+@media (max-width: 920px) {
   .divContainerInformacion {
     flex-direction: column;
     height: 100%;
