@@ -317,6 +317,14 @@ body {
   align-items: flex-start;
 }
 
+.managementDashboard{
+  padding-block: 1rem;
+}
+
+.managementDashboard h3{
+  padding-block: 1rem;
+}
+
 .sessionDashboard a {
   padding-right: 1rem;
 }
@@ -445,17 +453,19 @@ h3 {
 }
 
 .documentDashboard {
-  padding-top: 1rem;
+  padding-block: 1rem;
 }
 
 .documentDashboard h3 {
   font-size: 22px;
+  padding-block: 1rem;
 }
 
 .secondDashboard {
   display: flex;
   align-items: center;
   font-size: 14px;
+  padding-block: 2px;
 }
 
 .secondDashboard img {
@@ -568,7 +578,16 @@ h3 {
   background: var(--color_principal);
 }
 
-@media (max-width: 1100px) {}
+/*768*/
+@media (max-width: 1100px) {
+  .panelDashboard{
+    width: 70%;
+  }
+
+  .barraDashboard{
+    width: 30%;
+  }
+}
 
 @media (max-width: 1638px) {
   .divContainerInformacion {

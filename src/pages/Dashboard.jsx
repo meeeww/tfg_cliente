@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import Axios from 'axios'
+import { useEffect } from 'react'
 import '../estilos/estilos.css'
 import imagen from '../assets/image.png'
 import circulo from '../assets/circulo.png'
@@ -17,6 +18,33 @@ const documents = [
 ]
 
 function Dashboard() {
+
+  let baseURL = "http://localhost:4000/API/caracteristicas/consultar";
+
+  let config = {
+    timeout: 10000,
+  };
+
+  useEffect(() => {
+    Axios.get(baseURL, config)
+      .then((res) => {
+        console.log("RESPONSE RECEIVED: ", res.data);
+        //localStorage.setItem("token", res.data)
+        //location.replace("http://localhost:5173/login")
+        return {
+          statusCode: 200,
+          body: JSON.stringify({ title: "this was a success" }),
+        };
+      })
+  })
+
+
+
+
+  //var data = { /*nombreInicio: nombreInicio, contrasenaInicio: contrasenaInicio, agente: agente, date: date*/ };
+
+
+
   return (
     <>
       <div className="dashboardBody">
@@ -28,7 +56,7 @@ function Dashboard() {
           <div className="managementDashboard">
             <h3>Management</h3>
             {managements.map((item) => (
-              <div className={"secondDashboard"}>
+              <div key="" className={"secondDashboard"}>
                 <img src={imagen} style={{ width: "30px", height: "30px" }}></img>
                 <h4><a key={item.name} href={item.href}>{item.name.charAt(0).toUpperCase() + item.name.slice(1)}</a></h4>
               </div>
@@ -37,7 +65,7 @@ function Dashboard() {
           <div className="documentDashboard">
             <h3>Documents</h3>
             {documents.map((item) => (
-              <div className={"secondDashboard"}>
+              <div key="" className={"secondDashboard"}>
                 <img src={imagen} style={{ width: "30px", height: "30px" }}></img>
                 <h4><a key={item.name} href={item.href}>{item.name.charAt(0).toUpperCase() + item.name.slice(1)}</a></h4>
               </div>
