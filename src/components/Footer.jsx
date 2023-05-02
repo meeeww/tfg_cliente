@@ -1,5 +1,22 @@
 import { NavLink } from "react-router-dom";
 
+const linksLeft = [
+    { title: 'About Us', href: '/aboutus' },
+    { title: 'Our Services', href: '/services' },
+    { title: 'Privary Policy', href: '/privacy' },
+]
+
+const linksCenter = [
+    { title: 'Establishments', href: '/establishments' },
+    { title: 'Delivery', href: '/delivery' },
+]
+
+const linksRight = [
+    { icon: 'fab fa-facebook-f', href: 'https://www.facebook.com' },
+    { icon: 'fab fa-instagram', href: 'https://www.instagram.com' },
+    { icon: 'fab fa-twitter', href: 'https://www.twitter.com' },
+]
+
 const Footer = () => (
     <footer className="footerBody">
         <div className="containerFooter">
@@ -7,25 +24,26 @@ const Footer = () => (
                 <div className="footer_linksFooter">
                     <h4>Company</h4>
                     <div className="linksOrganizerFooter">
-                        <NavLink to={"/aboutus"}>About Us</NavLink>
-                        <NavLink to={"/services"}>Our Services</NavLink>
-                        <NavLink to={"/privacy"}>Privacy Policy</NavLink>
+                        {linksLeft.map((item) => (
+                            <NavLink key="" to={item.href}>{item.title}</NavLink>
+                        ))}
                     </div>
                 </div>
                 <div className="footer_linksFooter">
                     <h4>Find Us</h4>
                     <div className="linksOrganizerFooter">
-                        <NavLink to={"/establishments"}>Establishments</NavLink>
-                        <NavLink to={"/delivery"}>Delivery</NavLink>
+                        {linksCenter.map((item) => (
+                            <NavLink key="" to={item.href}>{item.title}</NavLink>
+                        ))}
                     </div>
 
                 </div>
                 <div className="footer_linksFooter">
                     <h4>Follow Us</h4>
                     <div className="social_linksFooter">
-                        <NavLink to={"https://www.facebook.com"} className="fab fa-facebook-f"></NavLink>
-                        <NavLink to={"https://www.instagram.com"} className="fab fa-instagram"></NavLink>
-                        <NavLink to={"https://www.twitter.com"} className="fab fa-twitter"></NavLink>
+                        {linksRight.map((item) => (
+                            <NavLink key="" to={item.href} className={item.icon}></NavLink>
+                        ))}
                     </div>
                 </div>
             </div>
