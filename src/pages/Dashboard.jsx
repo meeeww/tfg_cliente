@@ -5,7 +5,7 @@ import imagen from '../assets/image.png'
 import circulo from '../assets/circulo.png'
 
 const managements = [
-  { name: 'products', href: '#' },
+  { name: 'products', href: '/dashboard/products' },
   { name: 'orders', href: '#' },
   { name: 'contact', href: '#' },
   { name: 'customerFeedback', href: '#' },

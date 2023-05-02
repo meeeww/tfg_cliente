@@ -1,7 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Dashboard from './pages/Dashboard'
 import Inicio from './pages/Inicio'
+
+import Dashboard from './pages/Dashboard'
+import DashboardProducts from './pages/Dashboard/Products'
+
 import NoMatch from './pages/NoMatch'
 import './estilos/estilos.css'
 
@@ -18,6 +21,10 @@ const router = createBrowserRouter([
   {
     path: "/dashboard",
     element: <Dashboard />,
+  },
+  {
+    path: "/dashboard/products",
+    element: <DashboardProducts />,
   },
   {
     path: "*",

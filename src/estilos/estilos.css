@@ -322,6 +322,7 @@ body {
 }
 
 .managementDashboard h3{
+  font-size: 22px;
   padding-block: 1rem;
 }
 
@@ -335,6 +336,7 @@ body {
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 3rem;
   grid-row-gap: 0px;
+  overflow: auto;
 }
 
 .productsOverviewDashboard {
@@ -378,16 +380,27 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-align: center;
 }
 
 .fechaInfoDashBoard {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 20%;
+}
+
+.imagenFotoInfoDashboard img{
+  width: 50px;
+  height: 50px;
 }
 
 .fechaInfoDashBoard h2 {
   margin: 0
+}
+
+.informacionInfoDashboard{
+  width: 20%;
 }
 
 .informacionInfoDashboard h4 {
@@ -429,6 +442,13 @@ h3 {
   padding-inline: 1rem;
 }
 
+/*products*/
+.panelInfoDashboardProducts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-block: 2rem;
+}
 /* barra lateral */
 
 .barraDashboard {
