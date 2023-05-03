@@ -227,8 +227,7 @@ body {
 }
 
 .cajaInformacion img {
-  width: 300px;
-  height: 300px;
+  max-width: 300px;
   border-radius: 30px;
 }
 
@@ -326,10 +325,6 @@ body {
   padding-block: 1rem;
 }
 
-.sessionDashboard a {
-  padding-right: 1rem;
-}
-
 .panelInfoDashboard {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -337,6 +332,15 @@ body {
   grid-column-gap: 3rem;
   grid-row-gap: 0px;
   overflow: auto;
+}
+
+.sessionDashboard a{
+  margin-inline: 1rem;
+}
+
+.crearProducto{
+  display: flex;
+  justify-content: right;
 }
 
 .productsOverviewDashboard {
@@ -488,10 +492,6 @@ h3 {
   padding-block: 2px;
 }
 
-.secondDashboard img {
-  padding-right: 1rem;
-}
-
 .secondDashboard a {
   text-decoration: none;
   color: var(--background_color_1);
@@ -547,7 +547,12 @@ h3 {
 }
 
 .footer_linksFooter a:visited {
+  font-size: 18px;
+  text-decoration: none;
   color: var(--blanco);
+  margin-bottom: 15px;
+
+  transition: all 0.25s;
 }
 
 .footer_linksFooter a:hover {
@@ -609,7 +614,7 @@ h3 {
   }
 }
 
-@media (max-width: 1638px) {
+@media (max-width: 800px) {
   .divContainerInformacion {
     flex-direction: column;
     height: 100%;

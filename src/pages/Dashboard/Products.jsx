@@ -1,21 +1,12 @@
 import Axios from 'axios'
 import { useState, useEffect } from 'react';
 import '../../estilos/estilos.css'
-import imagen from '../../assets/image.png'
-import circulo from '../../assets/circulo.png'
+import Panel from '../../components/Dashboard/Panel'
+import ModalConfiguracion from '../../modals/Product/ProductConfig'
+import ModalCreation from '../../modals/Product/ProductCreate'
+import ModalDelete from '../../modals/Product/ProductDelete'
 
-const managements = [
-    { name: 'products', href: '#' },
-    { name: 'orders', href: '#' },
-    { name: 'contact', href: '#' },
-    { name: 'customerFeedback', href: '#' },
-]
 
-const documents = [
-    { name: 'documents', href: '#' },
-    { name: 'jobApplications', href: '#' },
-    { name: 'prospect', href: '#' },
-]
 
 function Dashboard() {
 
@@ -26,6 +17,8 @@ function Dashboard() {
     let config = {
         timeout: 10000,
     };
+
+
 
     useEffect(() => {
         Axios.get(baseURL, config)
@@ -39,44 +32,25 @@ function Dashboard() {
                     body: JSON.stringify({ title: "this was a success" }),
                 };
             })
-    },)
+    }, [])
 
-    //var data = { /*nombreInicio: nombreInicio, contrasenaInicio: contrasenaInicio, agente: agente, date: date*/ };
+
+
+
+
+
+
 
 
 
     return (
         <>
             <div className="dashboardBody">
-                <div className="barraDashboard">
-                    <h1>La Tarrina</h1>
-                    <div className="dashboardDashboard">
-                        <h2>Dashboard</h2>
-                    </div>
-                    <div className="managementDashboard">
-                        <h3>Management</h3>
-                        {
-                            managements.map((item) => (
-                                <div key={item.name} className={"secondDashboard"}>
-                                    <img src={imagen} style={{ width: "30px", height: "30px" }}></img>
-                                    <h4><a key={item.name} href={item.href}>{item.name.charAt(0).toUpperCase() + item.name.slice(1)}</a></h4>
-                                </div>
-                            ))}
-                    </div>
-                    <div className="documentDashboard">
-                        <h3>Documents</h3>
-                        {documents.map((item) => (
-                            <div key={item.name} className={"secondDashboard"}>
-                                <img src={imagen} style={{ width: "30px", height: "30px" }}></img>
-                                <h4><a key={item.name} href={item.href}>{item.name.charAt(0).toUpperCase() + item.name.slice(1)}</a></h4>
-                            </div>
-                        ))}
-                    </div>
-                </div>
+                <Panel></Panel>
                 <div className="panelDashboard">
                     <div className="headerDashboard">
                         <div className="welcomeMessageDashboard">
-                            <h1 style={{ "padding-right": "1rem" }}>Welcome,</h1>
+                            <h1 style={{ "paddingRight": "1rem" }}>Welcome,</h1>
                             <h1>{"Admin"}</h1>
                         </div>
                         <div className="sessionDashboard">
@@ -91,7 +65,7 @@ function Dashboard() {
                             {
                                 productos &&
                                 productos.map((item) => (
-                                    <div key={item.name} className="reportInfoDashboard">
+                                    <div key={"key5" + item.id_producto} className="reportInfoDashboard">
                                         <div className="fechaInfoDashBoard">
                                             <h2>{item.id_producto}</h2>
                                             <h3>Stock: {item.stock}</h3>
@@ -104,9 +78,16 @@ function Dashboard() {
                                             <h4>{item.descripcion_producto}</h4>
                                         </div>
                                         <h4>{item.coste_base}€</h4>
-                                        <img src={circulo} style={{ width: "30px", height: "30px" }}></img>
+                                        <div>
+                                            <ModalConfiguracion producto={item}></ModalConfiguracion>
+                                            <ModalDelete producto={item}></ModalDelete>
+                                        </div>
                                     </div>
                                 ))}
+                        </div>
+                        <div className="crearProducto">
+                            <ModalCreation></ModalCreation>
+                            {/* <a className="crearProductoBoton" onClick={(event) => crearProducto()}>Crear Producto</a> */}
                         </div>
                     </div>
                 </div>
@@ -114,5 +95,6 @@ function Dashboard() {
         </>
     )
 }
+
 
 export default Dashboard

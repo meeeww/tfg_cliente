@@ -1,0 +1,105 @@
+body.active-modal {
+    overflow-y: hidden;
+}
+
+.btn-modal {
+    width: 7rem;
+    height: 2rem;
+    font-size: 18px;
+    border: 3px solid var(--color_secundario);
+    border-radius: 2rem;
+    color: var(--gris);
+    cursor: pointer;
+
+    transition: all 0.25s;
+}
+
+.btn-modal:hover {
+    background-color: var(--color_secundario);
+    color: var(--blanco);
+
+    transition: all 0.25s;
+}
+
+.modal,
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
+
+.overlay {
+    background: rgba(49, 49, 49, 0.8);
+}
+
+.modal-content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    background: var(--color_secundario);
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    max-width: 600px;
+    min-width: 400px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 7px;
+    background-color: transparent;
+    border-color: transparent;
+    cursor: pointer;
+
+    transition: all 0.25s;
+}
+
+.close-modal:hover{
+    color: var(--blanco);
+
+    transition: all 0.25s;
+}
+
+.cambiarOpcionModal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cambiarOpcionModal h4{
+    width: 20%;
+}
+
+.cambiarOpcionModal a{
+    color: var(--gris);
+}
+
+.crearOpcionModal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.crearOpcionModal h4{
+    width: 20%;
+}
+
+.modal-content a{
+    color: var(--gris);
+    cursor: pointer;
+
+    transition: all 0.25s;
+}
+
+.modal-content a:hover{
+    color: var(--blanco);
+
+    transition: all 0.25s;
+}
