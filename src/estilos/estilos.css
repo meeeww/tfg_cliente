@@ -293,29 +293,29 @@ body {
   transition: all 0.25s;
 }
 
-/*SingIn / FormInput*/
-.SingInContainer{
+/*SignIn*/
+.SignInContainer{
     background-color: #8E793E;
 }
 
-.SingInCabecera{
+.SignInCabecera{
   display: flex;
   justify-content: center;
 }
 
-.SingInCabecera img{
+.SignInCabecera img{
   width: 150px;
   height: 150px;
 }
 
-.SingInMedio{
+.SignInMedio{
   display: flex;
   gap: 60px;
   justify-content: center;
   text-align: center;
 }
 
-.SingInForm{
+.SignInForm{
   display: flex;
   justify-content: center;
   height: 100%;
@@ -324,30 +324,31 @@ body {
   text-align: center;
 }
 
-.SingInForm form{
+.SignInForm form{
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: flex-start;
   height: 15rem;
   max-width: 500px;
+  background-color: #8E793E;
 }
 
-.SingInForm form div input{
+.SignInForm form div input{
   border-radius: 50px;
   border: none;
   height: 40px;
   width: 300px;
 }
 
-.SingInForm form div label input{
+.SignInForm form div label input{
   border-radius: 50px;
   border: none;
   height: auto;
   width: auto;
 }
 
-.SingInSing button{
+.SignInSign button{
   height: 40px;
   width: 300px;
   border-radius: 50px;
@@ -356,11 +357,96 @@ body {
   transition: all 0.25s;
 }
 
-.SingInSing button:hover {
-  background-color: #ffff; 
+.SignInSign button:hover {
+  background-color: #ffff;
   color: black;
 }
 
+.SignInText{
+  font-size: 13px;
+}
+
+/*Register*/
+
+.RegisterContainer{
+  background-color: #8E793E;
+}
+
+.RegisterCabecera{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 12rem;
+}
+
+.RegisterCabecera img{
+    width: 150px;
+    height: 150px;
+}
+
+.RegisterForm{
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: #8E793E;
+  text-align: center;
+}
+
+.RegisterForm form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  height: 20rem;
+  max-width: 500px;
+  background-color: #8E793E;
+}
+
+.RegisterForm form div p{
+  text-align: initial;
+  font-size: 13px;
+  justify-content: space-around;
+}
+
+.RegisterForm form div input{
+  height: 40px;
+  width: 300px;
+  border-radius: 0.3rem;
+  border: 1px solid #fff;
+  text-align: initial;
+  box-shadow: 0 2px 3px rgba(0 0 0 / 0.15);
+}
+
+.RegisterForm form div label input{
+  border-radius: 50px;
+  border: none;
+  height: auto;
+  width: auto;
+}
+
+.RegisterForm button{
+  height: 40px;
+  width: 300px;
+  border-radius: 50px;
+  border: none;
+  background-color: #ad974f;
+  transition: all 0.25s;
+}
+
+.RegisterPrivacy{
+  font-size: 13px;
+}
+
+.RegisterSend{
+  transition: all 0.25s;
+}
+
+.RegisterSend:hover {
+  background-color: #ffff;
+  color: black;
+}
 
 /*dashboard*/
 

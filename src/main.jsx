@@ -4,7 +4,7 @@ import Dashboard from './pages/Dashboard'
 import Inicio from './pages/Inicio'
 import NoMatch from './pages/NoMatch'
 import './estilos/estilos.css'
-import Precio from './components/SingIn'
+import Precio from './components/Register'
 
 import {
   createBrowserRouter,
