@@ -3,9 +3,9 @@ import React from 'react'
 import logo from '../assets/Logo.png'
 
 
-const FormInput = (props) => {
+const FormInput = () => {
     return (
-        <div className='SingInContainer'>
+        <div className="SingInContainer">
             <div className="SingInCabecera">
                 <img src={logo} alt="" />
             </div>
@@ -26,11 +26,12 @@ const FormInput = (props) => {
                             <input type="checkbox" id="cbox1" value="first_checkbox"/>Stay signed in
                         </label>
                     </div>
-                    <div className='SingInSing'>
+                    <div className="SingInSing">
                        <button>Sing in</button>
                     </div>
-
-
+                    <div>
+                        <p>Forgot your password</p>
+                    </div>
                 </form>
             </div>
         </div>

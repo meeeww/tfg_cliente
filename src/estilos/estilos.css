@@ -331,6 +331,7 @@ body {
   align-items: flex-start;
   height: 15rem;
   max-width: 500px;
+  background-color: #8E793E;
 }
 
 .SingInForm form div input{
@@ -357,11 +358,9 @@ body {
 }
 
 .SingInSing button:hover {
-  background-color: #ffff; 
+  background-color: #ffff;
   color: black;
 }
-
-
 /*dashboard*/
 
 .dashboardBody {
