@@ -134,7 +134,7 @@ body {
   display: flex;
 }
 
-#orderNowBread{
+#orderNowBread {
   background-color: var(--color_secundario);
   border: 3px solid var(--color_secundario);
   border-radius: 2rem;
@@ -293,29 +293,158 @@ body {
   transition: all 0.25s;
 }
 
-/*SignIn*/
-.SignInContainer{
-    background-color: #8E793E;
+/*InformacionActualizada*/
+
+.InformacionActualizadaDivContainer1 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  text-align: center;
+  align-items: center;
+  gap: 1rem;
+  padding-inline: 1rem;
 }
 
-.SignInCabecera{
+.InformacionActualizadaCaja img {
+  width: 300px;
+  height: 300px;
+  border-radius: 30px;
+}
+
+.InformacionActualizadaCaja h2 {
+  text-align: center;
+  margin-block: 1rem;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.InformacionActualizadaCaja{
+  margin-block: 1rem;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.InformacionActualizadaDiv1{
+  grid-area: 1 / 1 / 2 / 2;
+  padding-inline: 1rem;
+  background-color: var(--blanco);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  border: 1px solid #dddddd;
+  height: 100%;
+  font-size: 14px;
+  row-gap: 1rem;
+}
+
+.InformacionActualizadaDiv2 {
+  grid-area: 1 / 2 / 2 / 3;
+  background-color: var(--blanco);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  border: 1px solid #dddddd;
+  height: 100%;
+  font-size: 14px;
+  row-gap: 1rem;
+}
+
+.InformacionActualizadaDiv3 {
+  grid-area: 1 / 3 / 2 / 4;
+  background-color: var(--blanco);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  border: 1px solid #dddddd;
+  height: 100%;
+  font-size: 14px;
+  row-gap: 1rem;
+}
+
+.InformacionActualizadaDivContainer2 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  text-align: center;
+  align-items: center;
+  gap: 1rem;
+  padding-inline: 1rem;
+}
+
+.InformacionActualizadaDivContainer2 img {
+  width: 300px;
+  height: 300px;
+  border-radius: 30px;
+}
+
+.InformacionActualizadaDiv4 {
+  grid-area: 1 / 1 / 2 / 2;
+  background-color: var(--blanco);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  border: 1px solid #dddddd;
+  height: 100%;
+  font-size: 14px;
+  row-gap: 1rem;
+}
+
+.InformacionActualizadaDiv5 {
+  grid-area: 1 / 2 / 2 / 3;
+  background-color: var(--blanco);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  border: 1px solid #dddddd;
+  height: 100%;
+  font-size: 14px;
+  row-gap: 1rem;
+}
+
+.InformacionActualizadaDiv6 {
+  grid-area: 1 / 3 / 2 / 4;
+  background-color: var(--blanco);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  border: 1px solid #dddddd;
+  height: 100%;
+  font-size: 14px;
+  row-gap: 1rem;
+}
+
+.InformacionActualizadaDiv7 {
+  grid-area: 1 / 4 / 2 / 5;
+  background-color: var(--blanco);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  border: 1px solid #dddddd;
+  height: 100%;
+  font-size: 14px;
+  row-gap: 1rem;
+}
+
+
+
+/*SignIn*/
+.SignInContainer {
+  background-color: #8E793E;
+}
+
+.SignInCabecera {
   display: flex;
   justify-content: center;
 }
 
-.SignInCabecera img{
+.SignInCabecera img {
   width: 150px;
   height: 150px;
 }
 
-.SignInMedio{
+.SignInMedio {
   display: flex;
   gap: 60px;
   justify-content: center;
   text-align: center;
 }
 
-.SignInForm{
+.SignInForm {
   display: flex;
   justify-content: center;
   height: 100%;
@@ -324,7 +453,7 @@ body {
   text-align: center;
 }
 
-.SignInForm form{
+.SignInForm form {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -334,21 +463,21 @@ body {
   background-color: #8E793E;
 }
 
-.SignInForm form div input{
+.SignInForm form div input {
   border-radius: 50px;
   border: none;
   height: 40px;
   width: 300px;
 }
 
-.SignInForm form div label input{
+.SignInForm form div label input {
   border-radius: 50px;
   border: none;
   height: auto;
   width: auto;
 }
 
-.SignInSign button{
+.SignInSign button {
   height: 40px;
   width: 300px;
   border-radius: 50px;
@@ -362,17 +491,17 @@ body {
   color: black;
 }
 
-.SignInText{
+.SignInText {
   font-size: 13px;
 }
 
 /*Register*/
 
-.RegisterContainer{
+.RegisterContainer {
   background-color: #8E793E;
 }
 
-.RegisterCabecera{
+.RegisterCabecera {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -380,12 +509,12 @@ body {
   height: 12rem;
 }
 
-.RegisterCabecera img{
-    width: 150px;
-    height: 150px;
+.RegisterCabecera img {
+  width: 150px;
+  height: 150px;
 }
 
-.RegisterForm{
+.RegisterForm {
   display: flex;
   justify-content: center;
   height: 100%;
@@ -394,7 +523,7 @@ body {
   text-align: center;
 }
 
-.RegisterForm form{
+.RegisterForm form {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -404,13 +533,13 @@ body {
   background-color: #8E793E;
 }
 
-.RegisterForm form div p{
+.RegisterForm form div p {
   text-align: initial;
   font-size: 13px;
   justify-content: space-around;
 }
 
-.RegisterForm form div input{
+.RegisterForm form div input {
   height: 40px;
   width: 300px;
   border-radius: 0.3rem;
@@ -419,14 +548,14 @@ body {
   box-shadow: 0 2px 3px rgba(0 0 0 / 0.15);
 }
 
-.RegisterForm form div label input{
+.RegisterForm form div label input {
   border-radius: 50px;
   border: none;
   height: auto;
   width: auto;
 }
 
-.RegisterForm button{
+.RegisterForm button {
   height: 40px;
   width: 300px;
   border-radius: 50px;
@@ -435,11 +564,11 @@ body {
   transition: all 0.25s;
 }
 
-.RegisterPrivacy{
+.RegisterPrivacy {
   font-size: 13px;
 }
 
-.RegisterSend{
+.RegisterSend {
   transition: all 0.25s;
 }
 

@@ -5,6 +5,7 @@ import Inicio from './pages/Inicio'
 import NoMatch from './pages/NoMatch'
 import './estilos/estilos.css'
 import Precio from './components/Register'
+import InicioActualizado from './components/InformacionActualizado'
 
 import {
   createBrowserRouter,
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Inicio />,
+  },
+  {
+    path: "/inicioactualizado",
+    element: <InicioActualizado />,
   },
   {
     path: "/dashboard",
