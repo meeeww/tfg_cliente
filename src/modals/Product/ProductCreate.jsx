@@ -1,9 +1,30 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Axios from "axios";
 import "./Product.css";
 
 function Modal() {
   const [modal, setModal] = useState(false);
+  const [categorias, setCategorias] = useState();
+
+  let baseURL = "http://localhost:4000/API/categorias/consultar";
+
+  let config = {
+    timeout: 10000,
+  };
+
+  useEffect(() => {
+    Axios.get(baseURL, config)
+      .then((res) => {
+        //console.log("RESPONSE RECEIVED: ", res.data);
+        setCategorias(res.data)
+        //localStorage.setItem("token", res.data)
+        //location.replace("http://localhost:5173/login")
+        return {
+          statusCode: 200,
+          body: JSON.stringify({ title: "this was a success" }),
+        };
+      })
+  }, [])
 
   const toggleModal = () => {
     setModal(!modal);
@@ -71,9 +92,15 @@ function Modal() {
             </div>
             <div className="crearOpcionModal">
               <h4>Category</h4>
-              <input type={"text"} id="inputCategoriaProduct" autoComplete="off"></input>
+              <select id="listaCategoriasProduct">
+                {
+                  categorias &&
+                  categorias.map((item) => (
+                    <option key={"keyCategoria" + item.id_categoria} value={item.id_categoria} id="inputCategoriaProduct">{item.nombre_categoria}</option>
+                  ))}
+              </select>
             </div>
-            <a style={{float: "right", marginTop: "1rem"}}onClick={(event) => {
+            <a style={{ float: "right", marginTop: "1rem" }} onClick={(event) => {
               let nombre = document.getElementById("inputNombreProduct")
               let descripcion = document.getElementById("inputDescripcionProduct")
               let foto = document.getElementById("inputFotoProduct")

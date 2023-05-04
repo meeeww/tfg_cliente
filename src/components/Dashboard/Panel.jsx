@@ -2,6 +2,7 @@ import imagen from '../../assets/image.png'
 
 const managements = [
     { name: 'products', href: '/dashboard/products' },
+    { name: 'categories', href: '/dashboard/categories' },
     { name: 'orders', href: '#' },
     { name: 'contact', href: '#' },
     { name: 'customerFeedback', href: '#' },

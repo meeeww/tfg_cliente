@@ -4,6 +4,7 @@ import Inicio from './pages/Inicio'
 
 import Dashboard from './pages/Dashboard'
 import DashboardProducts from './pages/Dashboard/Products'
+import DahsboardCategories from './pages/Dashboard/Categories'
 
 import NoMatch from './pages/NoMatch'
 import './estilos/estilos.css'
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
   {
     path: "/dashboard/products",
     element: <DashboardProducts />,
+  },
+  {
+    path: "/dashboard/categories",
+    element: <DahsboardCategories />,
   },
   {
     path: "*",
