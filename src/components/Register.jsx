@@ -1,37 +1,36 @@
 import '../estilos/estilos.css'
-import React from 'react'
 import logo from '../assets/Logo.png'
 import MainLayout from '../layout/MainLayout'
 
 const Register = () => {
     return (
         <MainLayout>
-            <div className="RegisterContainer">
-                <div className="RegisterCabecera">
-                    <img src={logo} alt="" />
-                    <p>Sign up for free to listen.</p>
+            <div className="SingInContainer">
+                <div className="SingInCabecera">
+                    <img src={logo} alt="Logo" />
                 </div>
-                <div className="RegisterForm">
+                <div className="SingInMedio">
+                    <a href="/signin">Sign In</a>
+                    <a href="/signup">Sign Up</a>
+                </div>
+                <div className="SingInForm">
                     <form action="">
                         <div>
-                            <p>What is your Email?</p>
-                            <input type="email" id="fname" name="email" placeholder="Put your email" />
+                            <input type="text" id="fname" name="firstname" placeholder="Username" />
                         </div>
                         <div>
-                            <p>What do you want us to call you?</p>
-                            <input type="text" id="text" name="text" placeholder="Put a profile name." />
+                            <input type="text" id="lname" name="email" placeholder="Email" />
                         </div>
                         <div>
-                            <p>Create a password</p>
-                            <input type="password" id="password" name="password" placeholder="Create a password" />
+                            <input type="password" id="lname" name="password" placeholder="Password" />
                         </div>
-                        <div>
-                            <label className="RegisterPrivacy">
-                                <input type="checkbox" id="cbox1" value="privacy" />I accept the privacy terms.
+                        <div className="staySignedIn">
+                            <label>
+                                <input type="checkbox" id="cbox1" value="first_checkbox" /><p>I accept the privacy terms.</p>
                             </label>
                         </div>
-                        <div>
-                            <button className="RegisterSend">Send</button>
+                        <div className="SingInSing">
+                            <button>Register</button>
                         </div>
                     </form>
                 </div>

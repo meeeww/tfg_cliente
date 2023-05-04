@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import Dashboard from './pages/Dashboard'
 import Inicio from './pages/Inicio'
 import SignIn from './components/SingIn'
+import Register from './components/Register'
 import NoMatch from './pages/NoMatch'
 import './estilos/estilos.css'
 
@@ -21,12 +22,16 @@ const router = createBrowserRouter([
     element: <Dashboard />,
   },
   {
-    path: "*",
-    element: <NoMatch />,
-  },
-  {
     path: "/signin",
     element: <SignIn />,
+  },
+  {
+    path: "/signup",
+    element: <Register />,
+  },
+  {
+    path: "*",
+    element: <NoMatch />,
   },
 ]);
 

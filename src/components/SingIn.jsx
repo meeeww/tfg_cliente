@@ -8,7 +8,7 @@ const FormInput = () => {
         <MainLayout>
             <div className="SingInContainer">
                 <div className="SingInCabecera">
-                    <img src={logo} alt="" />
+                    <img src={logo} alt="Logo" />
                 </div>
                 <div className="SingInMedio">
                     <a href="/signin">Sign In</a>
@@ -17,10 +17,10 @@ const FormInput = () => {
                 <div className="SingInForm">
                     <form action="">
                         <div>
-                            <input type="text" id="fname" name="firstname" placeholder="Your name.." />
+                            <input type="text" id="fname" name="firstname" placeholder="Username" />
                         </div>
                         <div>
-                            <input type="text" id="lname" name="lastname" placeholder="Your last name.." />
+                            <input type="password" id="lname" name="password" placeholder="Password" />
                         </div>
                         <div className="staySignedIn">
                             <label>
