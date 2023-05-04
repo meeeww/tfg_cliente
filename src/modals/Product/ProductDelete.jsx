@@ -19,8 +19,6 @@ function Modal(producto) {
     let baseURL = "http://localhost:4000/API/productos/eliminar";
     let dataPayload = { id_producto: id };
 
-    console.log(dataPayload)
-
     let config = {
       timeout: 10000,
       headers: { 'Content-Type': 'application/json' }
