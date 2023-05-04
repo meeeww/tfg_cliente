@@ -32,7 +32,6 @@ const InformacionActualizado = () => {
                         <div>
                             <img src={cafe2} alt="" />
                         </div>
-
                     </div>
                     <p>Do you want to enjoy our delicious coffee from the comfort of your own home? Discover our high-quality coffee capsules and start every morning with a cup of exceptional flavor.</p>
                     <button className="botonInformacionActualizada">Explore Coffee</button>
