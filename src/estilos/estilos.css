@@ -188,113 +188,7 @@ body {
 }
 
 /*Informacion*/
-.divContainerInformacion {
-  display: flex;
-  align-items: center;
-  height: 35rem;
-  gap: 1rem;
-  padding-inline: 1rem;
-}
-
-.cajaInformacion {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  flex: 1;
-  flex-wrap: wrap;
-  align-items: center;
-  text-align: center;
-  padding-inline: 1rem;
-  background-color: var(--blanco);
-  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  border: 1px solid #dddddd;
-  height: 100%;
-  font-size: 14px;
-  row-gap: 1rem;
-}
-
-.tituloCajaInformacion h2 {
-  margin-block: 1rem;
-  font-size: 2rem;
-  font-weight: 500;
-}
-
-.cajaInformacion2,
-.cajaInformacion p {
-  font-size: 1rem;
-  font-weight: 400;
-}
-
-.cajaInformacion img {
-  width: 300px;
-  height: 300px;
-  border-radius: 30px;
-}
-
-.div2ContainerInformacion {
-  display: flex;
-  align-items: center;
-  height: 35rem;
-  padding-inline: 1rem;
-  margin-block: 1rem;
-}
-
-.filaInformacion2 {
-  display: flex;
-  align-items: center;
-  height: 35rem;
-  gap: 1rem;
-  width: 100%;
-}
-
-.cajaInformacion2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  flex: 1;
-  flex-wrap: wrap;
-  align-items: center;
-  text-align: center;
-  padding-inline: 1rem;
-  background-color: var(--blanco);
-  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  border: 1px solid #dddddd;
-  height: 100%;
-  font-size: 14px;
-  row-gap: 1rem;
-}
-
-.cajaInformacion2 img {
-  width: 300px;
-  height: 300px;
-  border-radius: 30px;
-}
-
-.botonInformacion {
-  background-color: none;
-  color: var(--gris);
-  padding: 10px 20px;
-  border: 3px solid var(--color_secundario);
-  border-radius: 2rem;
-  cursor: pointer;
-  text-decoration: none;
-
-  transition: all 0.25s;
-}
-
-.botonInformacion:hover {
-  border: 3px solid var(--color_secundario);
-  border-radius: 2rem;
-  background-color: var(--color_secundario);
-  color: var(--blanco);
-
-  transition: all 0.25s;
-}
-
-/*InformacionActualizada*/
-.InformacionActualizadaDivContainer1 {
+.InformacionDivContainer1 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 20px;
@@ -303,13 +197,13 @@ body {
   width: 100%;
 }
 
-.InformacionActualizadaDivContainer1 img {
+.InformacionDivContainer1 img {
   width: 100%;
   height: 100%;
   border-radius: 60px;
 }
 
-.InformacionActualizadaDiv {
+.InformacionDiv {
   height: 33rem;
   width: 100%;
   text-align: center;
@@ -324,24 +218,24 @@ body {
   flex-direction: column;
 }
 
-.InformacionActualizadaCaja {
+.InformacionCaja {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
 
-.InformacionActualizadaDivContainer2 img {
+.InformacionDivContainer2 img {
   width: 100%;
   height: 100%;
   border-radius: 60px;
 }
 
-.InformacionActualizadaCaja >div{
+.InformacionCaja >div{
   width: 100%;
   height: 100%;
 }
 
-.InformacionActualizadaCaja {
+.InformacionCaja {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -351,7 +245,7 @@ body {
   height: 66.6%;
 }
 
-.botonInformacionActualizada {
+.botonInformacion {
   background-color: none;
   color: var(--gris);
   padding: 10px 20px;
@@ -362,7 +256,7 @@ body {
   transition: all 0.25s;
 }
 
-.botonInformacionActualizada:hover {
+.botonInformacion:hover {
   border: 3px solid var(--color_secundario);
   border-radius: 2rem;
   background-color: var(--color_secundario);
@@ -370,7 +264,7 @@ body {
   transition: all 0.25s;
 }
 
-.InformacionActualizadaDivContainer2 {
+.InformacionDivContainer2 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 20px;
@@ -380,12 +274,12 @@ body {
 }
 
 @media (max-width:600px){
-  .InformacionActualizadaDivContainer1{
+  .InformacionDivContainer1{
     grid-template-columns: repeat(1, 1fr);
     grid-row-gap: 20px;
   }
 
-  .InformacionActualizadaDivContainer2{
+  .InformacionDivContainer2{
     grid-template-columns: repeat(1, 1fr);
     grid-row-gap: 20px;
   }
