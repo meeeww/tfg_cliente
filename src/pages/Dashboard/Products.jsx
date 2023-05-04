@@ -42,7 +42,7 @@ function Dashboard() {
                     <div className="headerDashboard">
                         <div className="welcomeMessageDashboard">
                             <h1 style={{ "paddingRight": "1rem" }}>Welcome,</h1>
-                            <h1>{"Admin"}</h1>
+                            <h1>{"Admins"}</h1>
                         </div>
                         <div className="sessionDashboard">
                             <a href="#">Settings</a>
