@@ -134,7 +134,7 @@ body {
   display: flex;
 }
 
-#orderNowBread{
+#orderNowBread {
   background-color: var(--color_secundario);
   border: 3px solid var(--color_secundario);
   border-radius: 2rem;
@@ -294,28 +294,47 @@ body {
 }
 
 /*SingIn / FormInput*/
-.SingInContainer{
-    background-color: #8E793E;
+.SingInContainer {
+  background-color: var(--color_principal);
 }
 
-.SingInCabecera{
+.SingInCabecera {
   display: flex;
   justify-content: center;
 }
 
-.SingInCabecera img{
+.SingInCabecera img {
   width: 150px;
   height: 150px;
+  margin-block: 3rem;
 }
 
-.SingInMedio{
+.SingInMedio {
   display: flex;
   gap: 60px;
   justify-content: center;
   text-align: center;
+  margin-block: 1rem;
 }
 
-.SingInForm{
+.SingInMedio a{
+  color: var(--blanco);
+  text-decoration: none;
+
+  transition: all 0.25s;
+}
+
+.SingInMedio a:hover{
+  color: var(--gris);
+
+  transition: all 0.25s;
+}
+
+.staySignedIn{
+  color: var(--blanco);
+}
+
+.SingInForm {
   display: flex;
   justify-content: center;
   height: 100%;
@@ -324,7 +343,7 @@ body {
   text-align: center;
 }
 
-.SingInForm form{
+.SingInForm form {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -334,33 +353,49 @@ body {
   background-color: #8E793E;
 }
 
-.SingInForm form div input{
+.SingInForm label {
+  display: flex;
+}
+
+.SingInForm label p {
+  margin-left: 0.5rem;
+}
+
+.SingInForm form div input {
   border-radius: 50px;
   border: none;
   height: 40px;
   width: 300px;
+  padding-left: 1rem;
 }
 
-.SingInForm form div label input{
+.SingInForm form div label input {
   border-radius: 50px;
   border: none;
   height: auto;
   width: auto;
 }
 
-.SingInSing button{
+.SingInSing button {
   height: 40px;
   width: 300px;
   border-radius: 50px;
   border: none;
+  cursor: pointer;
+  color: var(--blanco);
   background-color: #ad974f;
   transition: all 0.25s;
 }
 
 .SingInSing button:hover {
-  background-color: #ffff;
-  color: black;
+  background-color: var(--blanco);
+  color: var(--gris);
 }
+
+.forgotPassword{
+  color: var(--blanco);
+}
+
 /*dashboard*/
 
 .dashboardBody {
