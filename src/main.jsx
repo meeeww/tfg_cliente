@@ -5,7 +5,7 @@ import Inicio from './pages/Inicio'
 import NoMatch from './pages/NoMatch'
 import './estilos/estilos.css'
 import Precio from './components/SignIn'
-import InicioActualizado from './components/InformacionActualizado'
+import Carta from './components/Carta'
 
 import {
   createBrowserRouter,
@@ -18,8 +18,8 @@ const router = createBrowserRouter([
     element: <Inicio />,
   },
   {
-    path: "/inicioactualizado",
-    element: <InicioActualizado />,
+    path: "/carta",
+    element: <Carta />,
   },
   {
     path: "/dashboard",
