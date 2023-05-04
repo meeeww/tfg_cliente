@@ -34,15 +34,6 @@ function Dashboard() {
             })
     }, [])
 
-
-
-
-
-
-
-
-
-
     return (
         <>
             <div className="dashboardBody">
@@ -65,7 +56,7 @@ function Dashboard() {
                             {
                                 productos &&
                                 productos.map((item) => (
-                                    <div key={"key5" + item.id_producto} className="reportInfoDashboard">
+                                    <div key={"keyProductMain" + item.id_producto} className="reportInfoDashboard">
                                         <div className="fechaInfoDashBoard">
                                             <h2>{item.id_producto}</h2>
                                             <h3>Stock: {item.stock}</h3>

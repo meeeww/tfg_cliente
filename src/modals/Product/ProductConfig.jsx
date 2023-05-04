@@ -1,9 +1,31 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Axios from "axios";
+
 import "./Product.css";
 
 function Modal(producto) {
   const [modal, setModal] = useState(false);
+  const [categorias, setCategorias] = useState();
+
+  let baseURL = "http://localhost:4000/API/categorias/consultar";
+
+  let config = {
+    timeout: 10000,
+  };
+
+  useEffect(() => {
+    Axios.get(baseURL, config)
+      .then((res) => {
+        //console.log("RESPONSE RECEIVED: ", res.data);
+        setCategorias(res.data)       
+        //localStorage.setItem("token", res.data)
+        //location.replace("http://localhost:5173/login")
+        return {
+          statusCode: 200,
+          body: JSON.stringify({ title: "this was a success" }),
+        };
+      })
+  }, [])
 
   const toggleModal = () => {
     setModal(!modal);
@@ -16,8 +38,7 @@ function Modal(producto) {
   }
 
   const cambiarNombre = (id, opcion, valorOpcion) => {
-    console.log(id + " " + opcion + " " + valorOpcion)
-    let baseURL, data
+    let data
     switch (opcion) {
       case "nombre":
         baseURL = "http://localhost:4000/API/productos/modificar/nombre";
@@ -45,7 +66,7 @@ function Modal(producto) {
         break;
     }
 
-    let config = {
+    config = {
       timeout: 10000,
       headers: { 'Content-Type': 'application/json' }
     };
@@ -65,6 +86,12 @@ function Modal(producto) {
 
 
 
+
+
+
+
+
+
   return (
     <>
       <button onClick={toggleModal} className="btn-modal">
@@ -80,42 +107,48 @@ function Modal(producto) {
             <div className="cambiarOpcionModal">
               <h4>Name</h4>
               <input type={"text"} id="inputNombreProduct" autoComplete="off"></input>
-              <a onClick={(event) => cambiarNombre(producto.producto.id_producto, "nombre", document.getElementById("inputNombreProduct").value)}>
+              <a onClick={() => cambiarNombre(producto.producto.id_producto, "nombre", document.getElementById("inputNombreProduct").value)}>
                 <i className="fa-solid fa-check"></i>
               </a>
             </div>
             <div className="cambiarOpcionModal">
               <h4>Description</h4>
               <input type={"text"} id="inputDescripcionProduct" autoComplete="off"></input>
-              <a onClick={(event) => cambiarNombre(producto.producto.id_producto, "descripcion", document.getElementById("inputDescripcionProduct").value)}>
+              <a onClick={() => cambiarNombre(producto.producto.id_producto, "descripcion", document.getElementById("inputDescripcionProduct").value)}>
                 <i className="fa-solid fa-check"></i>
               </a>
             </div>
             <div className="cambiarOpcionModal">
               <h4>Image</h4>
               <input type={"text"} id="inputFotoProduct" autoComplete="off"></input>
-              <a onClick={(event) => cambiarNombre(producto.producto.id_producto, "foto", document.getElementById("inputFotoProduct").value)}>
+              <a onClick={() => cambiarNombre(producto.producto.id_producto, "foto", document.getElementById("inputFotoProduct").value)}>
                 <i className="fa-solid fa-check"></i>
               </a>
             </div>
             <div className="cambiarOpcionModal">
               <h4>Price</h4>
               <input type={"text"} id="inputCosteProduct" autoComplete="off"></input>
-              <a onClick={(event) => cambiarNombre(producto.producto.id_producto, "coste", document.getElementById("inputCosteProduct").value)}>
+              <a onClick={() => cambiarNombre(producto.producto.id_producto, "coste", document.getElementById("inputCosteProduct").value)}>
                 <i className="fa-solid fa-check"></i>
               </a>
             </div>
             <div className="cambiarOpcionModal">
               <h4>Stock</h4>
               <input type={"text"} id="inputStockProduct" autoComplete="off"></input>
-              <a onClick={(event) => cambiarNombre(producto.producto.id_producto, "stock", document.getElementById("inputStockProduct").value)}>
+              <a onClick={() => cambiarNombre(producto.producto.id_producto, "stock", document.getElementById("inputStockProduct").value)}>
                 <i className="fa-solid fa-check"></i>
               </a>
             </div>
             <div className="cambiarOpcionModal">
               <h4>Category</h4>
-              <input type={"text"} id="inputCategoriaProduct" autoComplete="off"></input>
-              <a onClick={(event) => cambiarNombre(producto.producto.id_producto, "categoria", document.getElementById("inputCategoriaProduct").value)}>
+              <select id="listaCategoriasProduct">
+                {
+                  categorias &&
+                  categorias.map((item) => (
+                    <option key={"keyCategoria" + item.id_categoria} value={item.id_categoria} id="inputCategoriaProduct">{item.nombre_categoria}</option>
+                  ))}
+              </select>
+              <a onClick={() => cambiarNombre(producto.producto.id_producto, "categoria", document.getElementById("inputCategoriaProduct").value)}>
                 <i className="fa-solid fa-check"></i>
               </a>
             </div>
