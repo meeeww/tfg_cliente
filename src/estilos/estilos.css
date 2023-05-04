@@ -325,6 +325,15 @@ body {
   padding-block: 1rem;
 }
 
+.clientsDashboard{
+  padding-block: 1rem;
+}
+
+.clientsDashboard h3{
+  font-size: 22px;
+  padding-block: 1rem;
+}
+
 .panelInfoDashboard {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -488,13 +497,31 @@ h3 {
 .secondDashboard {
   display: flex;
   align-items: center;
-  font-size: 14px;
-  padding-block: 2px;
+  font-size: 16px;
+  padding-block: 0.4rem;
 }
 
 .secondDashboard a {
   text-decoration: none;
   color: var(--background_color_1);
+
+  transition: all 0.25s;
+}
+
+.secondDashboard a:hover{
+  color: var(--color_secundario);
+
+  transition: all 0.25s;
+}
+
+.secondDashboard h4{
+  margin-inline: 1rem;
+}
+
+.secondDashboard i{
+  width: 16px;
+  height: 16px;
+  text-align: center;
 }
 
 /*footer*/

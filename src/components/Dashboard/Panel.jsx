@@ -1,17 +1,20 @@
-import imagen from '../../assets/image.png'
-
 const managements = [
-    { name: 'products', href: '/dashboard/products' },
-    { name: 'categories', href: '/dashboard/categories' },
-    { name: 'orders', href: '#' },
-    { name: 'contact', href: '#' },
-    { name: 'customerFeedback', href: '#' },
+    { name: 'products', href: '/dashboard/products', icon: "fa-solid fa-mug-saucer" },
+    { name: 'categories', href: '/dashboard/categories', icon: "fa-solid fa-tag" },
+    { name: 'characteristics', href: '/dashboard/characteristics', icon: "fa-solid fa-barcode" },
+    
+]
+
+const clients = [
+    { name: 'orders', href: '#', icon: "fa-solid fa-cart-shopping" },
+    { name: 'contact', href: '#', icon: "fa-solid fa-phone" },
+    { name: 'customerFeedback', href: '#', icon: "fa-solid fa-paper-plane" },
 ]
 
 const documents = [
-    { name: 'documents', href: '#' },
-    { name: 'jobApplications', href: '#' },
-    { name: 'prospect', href: '#' },
+    { name: 'documents', href: '#', icon: "fa-solid fa-folder-open" },
+    { name: 'jobApplications', href: '#', icon: "fa-solid fa-plus" },
+    { name: 'prospect', href: '#', icon: "fa-solid fa-circle-info" },
 ]
 
 const Panel = () => {
@@ -25,7 +28,16 @@ const Panel = () => {
                 <h3>Management</h3>
                 {managements.map((item) => (
                     <div key="" className={"secondDashboard"}>
-                        <img src={imagen} style={{ width: "30px", height: "30px" }}></img>
+                        <i className={item.icon}></i>
+                        <h4><a key={item.name} href={item.href}>{item.name.charAt(0).toUpperCase() + item.name.slice(1)}</a></h4>
+                    </div>
+                ))}
+            </div>
+            <div className="clientsDashboard">
+                <h3>Clients</h3>
+                {clients.map((item) => (
+                    <div key="" className={"secondDashboard"}>
+                        <i className={item.icon}></i>
                         <h4><a key={item.name} href={item.href}>{item.name.charAt(0).toUpperCase() + item.name.slice(1)}</a></h4>
                     </div>
                 ))}
@@ -34,7 +46,7 @@ const Panel = () => {
                 <h3>Documents</h3>
                 {documents.map((item) => (
                     <div key="" className={"secondDashboard"}>
-                        <img src={imagen} style={{ width: "30px", height: "30px" }}></img>
+                        <i className={item.icon}></i>
                         <h4><a key={item.name} href={item.href}>{item.name.charAt(0).toUpperCase() + item.name.slice(1)}</a></h4>
                     </div>
                 ))}
