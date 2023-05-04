@@ -37,18 +37,6 @@ const Register = () => {
                 </div>
             </div>
         </MainLayout>
-
-
-
-
-
-
-
-
-
-
-
-
     )
 
 }
