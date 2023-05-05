@@ -6,6 +6,7 @@ import NoMatch from './pages/NoMatch'
 import './estilos/estilos.css'
 import Precio from './components/SignIn'
 import Carta from './components/Carta'
+import Merchandising from './components/Merchandising'
 
 import {
   createBrowserRouter,
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {
     path: "/carta",
     element: <Carta />,
+  },
+  {
+    path: "/Merchandising",
+    element: <Merchandising />,
   },
   {
     path: "/dashboard",

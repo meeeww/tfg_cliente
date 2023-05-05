@@ -54,7 +54,6 @@ const Carta = () => {
                     <p>Confectionery</p>
                 </div>
             </div>
-
             <div className="CartaMenu">
                 <h1>Coffee</h1>
                 <div className="CartaCoffee">
@@ -119,7 +118,6 @@ const Carta = () => {
                         </div>
                     </div>
                 </div>
-
                 <h1>Juice</h1>
                 <div className="CartaJuice">
                     <div className="CartaJuiceCaja">
@@ -193,7 +191,6 @@ const Carta = () => {
                         </div>
                     </div>
                 </div>
-
                 <h1>Slushie</h1>
                 <div className="CartaSlushie">
                     <div className="CartaSlushieCaja">
@@ -237,7 +234,6 @@ const Carta = () => {
                         </div>
                     </div>
                 </div>
-
                 <h1>Sandwiches</h1>
                 <div className="CartaSandwich">
                     <div className="CartaSandwichCaja">
@@ -291,7 +287,6 @@ const Carta = () => {
                         </div>
                     </div>
                 </div>
-
                 <h1>Confectionery</h1>
                 <div className="CartaConfectionery">
                     <div className="CartaConfectioneryCaja">
@@ -334,11 +329,7 @@ const Carta = () => {
                             <p>$1.60</p>
                         </div>
                     </div>
-    
                 </div>
-
-
-
             </div>
         </MainLayout>
     )
