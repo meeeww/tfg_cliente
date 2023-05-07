@@ -13,10 +13,16 @@ import carta3 from '../assets/CartaCafe/Cartacafeconleche.png'
 import carta4 from '../assets/CartaCafe/Cartacapuchino.png'
 import carta5 from '../assets/CartaCafe/CartaIrish.png'
 import carta6 from '../assets/CartaCafe/Cartamacchiato.png'
-import carta7 from '../assets/CartaCafe/Cartazumo.png'
+import carta7 from '../assets/CartaCafe/Cartamocha.png'
+import carta8 from '../assets/CartaCafe/Cartazumonaranja.png'
+import carta9 from '../assets/CartaCafe/Cartazumouva.png'
+import carta10 from '../assets/CartaCafe/Cartazumomanzana.png'
+import carta11 from '../assets/CartaCafe/Cartazumopiña.png'
+
+/*import carta7 from '../assets/CartaCafe/Cartazumo.png'
 import carta8 from '../assets/CartaCafe/Cartagranizado.png'
 import carta9 from '../assets/CartaCafe/Cartasandwich.png'
-import carta10 from '../assets/CartaCafe/Cartapastel.png'
+import carta10 from '../assets/CartaCafe/Cartapastel.png'*/
 
 const Carta = () => {
     return (
@@ -64,7 +70,7 @@ const Carta = () => {
                         <div className="CartaTexto">
                             <h2>Coffee</h2>
                             <p>Only coffee</p>
-                            <p>$1.00</p>
+                            <p>$2.50</p>
                         </div>
                     </div>
                     <div className="CartaCofeeCaja">
@@ -73,8 +79,8 @@ const Carta = () => {
                         </div>
                         <div className="CartaTexto">
                             <h2>kleiner Brauner</h2>
-                            <p>Coffee with a bit of milk</p>
-                            <p>$1.30</p>
+                            <p>Coffee that combines equal parts espresso and a small amount of hot milk. It has a balance between the strong and concentrated flavor of the espresso and the smoothness provided by the milk.</p>
+                            <p>$3.40</p>
                         </div>
                     </div>
                     <div className="CartaCofeeCaja">
@@ -83,8 +89,8 @@ const Carta = () => {
                         </div>
                         <div className="CartaTexto">
                             <h2>Coffee with milk</h2>
-                            <p>Coffee mixed with scalded milk in approximately equal amounts.</p>
-                            <p>$1.20</p>
+                            <p>Mix coffee with an equal amount of hot milk.</p>
+                            <p>$3.20</p>
                         </div>
                     </div>
                     <div className="CartaCofeeCaja">
@@ -92,9 +98,9 @@ const Carta = () => {
                             <img src={carta4} alt="" />
                         </div>
                         <div className="CartaTexto">
-                            <h2>Cappuccino  </h2>
-                            <p>A cappuccino is the perfect balance of espresso, steamed milk and foam.</p>
-                            <p>$1.60</p>
+                            <h2>Cappuccino </h2>
+                            <p>It combines espresso coffee, steamed milk, and a layer of milk foam on top.</p>
+                            <p>$3.60</p>
                         </div>
                     </div>
                     <div className="CartaCofeeCaja">
@@ -103,8 +109,8 @@ const Carta = () => {
                         </div>
                         <div className="CartaTexto">
                             <h2>Irish coffee </h2>
-                            <p>Is a caffeinated alcoholic drink consisting of Irish whiskey, hot coffee and sugar</p>
-                            <p>$2.20</p>
+                            <p>Combine hot coffee, Irish whiskey, sugar and whipped cream.</p>
+                            <p>$8.80</p>
                         </div>
                     </div>
                     <div className="CartaCofeeCaja">
@@ -112,9 +118,19 @@ const Carta = () => {
                             <img src={carta6} alt="" />
                         </div>
                         <div className="CartaTexto">
-                            <h2>Irish coffee </h2>
-                            <p>espresso coffee drink, topped with a small amount of foamed or steamed milk to allow the taste of the espresso to still shine through</p>
-                            <p>$1.60</p>
+                            <h2>Macchiato</h2>
+                            <p>combines an espresso with a small amount of steamed milk and a layer of milk foam on top. It has a strong and concentrated flavor due to the espresso, with the steamed milk and milk foam adding smoothness and creamy texture.</p>
+                            <p>$4.60</p>
+                        </div>
+                    </div>
+                    <div className="CartaCofeeCaja">
+                        <div className="CartaImagen">
+                            <img src={carta7} alt="" />
+                        </div>
+                        <div className="CartaTexto">
+                            <h2>Mocha</h2>
+                            <p>that combines espresso coffee, chocolate and steamed milk.</p>
+                            <p>$4.10</p>
                         </div>
                     </div>
                 </div>
@@ -122,80 +138,82 @@ const Carta = () => {
                 <div className="CartaJuice">
                     <div className="CartaJuiceCaja">
                         <div className="CartaImagen">
-                            <img src={carta7} alt="" />
+                            <img src={carta8} alt="" />
                         </div>
                         <div className="CartaTexto">
                             <h2>Orange Juice </h2>
+                            <p>Natural orange juice</p>
+                            <p>$3.00</p>
+                        </div>
+                    </div>
+                    <div className="CartaJuiceCaja">
+                        <div className="CartaImagen">
+                            <img src={carta9} alt="" />
+                        </div>
+                        <div className="CartaTexto">
+                            <h2>Grape Juice </h2>
+                            <p>Natural grape juice</p>
+                            <p>$3.00</p>
+                        </div>
+                    </div>
+                    <div className="CartaJuiceCaja">
+                        <div className="CartaImagen">
+                            <img src={carta10} alt="" />
+                        </div>
+                        <div className="CartaTexto">
+                            <h2>Apple Juice </h2>
+                            <p>Natural apple juice</p>
+                            <p>$3.00</p>
+                        </div>
+                    </div>
+                    <div className="CartaJuiceCaja">
+                        <div className="CartaImagen">
+                            <img src={carta11} alt="" />
+                        </div>
+                        <div className="CartaTexto">
+                            <h2>Pineapple Juice </h2>
+                            <p>Natural pineapple juice</p>
+                            <p>$3.00</p>
+                        </div>
+                    </div>
+                    <div className="CartaJuiceCaja">
+                        <div className="CartaImagen">
+                            <img src={carta1} alt="" />
+                        </div>
+                        <div className="CartaTexto">
+                            <h2>Mora Juice </h2>
                             <p>espresso coffee drink, topped with a small amount of foamed or steamed milk to allow the taste of the espresso to still shine through</p>
                             <p>$1.60</p>
                         </div>
                     </div>
                     <div className="CartaJuiceCaja">
                         <div className="CartaImagen">
-                            <img src={carta7} alt="" />
+                            <img src={carta1} alt="" />
                         </div>
                         <div className="CartaTexto">
-                            <h2>Pineapple juice </h2>
+                            <h2>Tropical Juice </h2>
                             <p>espresso coffee drink, topped with a small amount of foamed or steamed milk to allow the taste of the espresso to still shine through</p>
                             <p>$1.60</p>
                         </div>
                     </div>
                     <div className="CartaJuiceCaja">
                         <div className="CartaImagen">
-                            <img src={carta7} alt="" />
+                            <img src={carta1} alt="" />
                         </div>
                         <div className="CartaTexto">
-                            <h2>Cranberry juice </h2>
+                            <h2>Tomate Juice </h2>
                             <p>espresso coffee drink, topped with a small amount of foamed or steamed milk to allow the taste of the espresso to still shine through</p>
                             <p>$1.60</p>
                         </div>
                     </div>
-                    <div className="CartaJuiceCaja">
-                        <div className="CartaImagen">
-                            <img src={carta7} alt="" />
-                        </div>
-                        <div className="CartaTexto">
-                            <h2>Prune juice </h2>
-                            <p>espresso coffee drink, topped with a small amount of foamed or steamed milk to allow the taste of the espresso to still shine through</p>
-                            <p>$1.60</p>
-                        </div>
-                    </div>
-                    <div className="CartaJuiceCaja">
-                        <div className="CartaImagen">
-                            <img src={carta7} alt="" />
-                        </div>
-                        <div className="CartaTexto">
-                            <h2>Strawberry juice</h2>
-                            <p>espresso coffee drink, topped with a small amount of foamed or steamed milk to allow the taste of the espresso to still shine through</p>
-                            <p>$1.60</p>
-                        </div>
-                    </div>
-                    <div className="CartaJuiceCaja">
-                        <div className="CartaImagen">
-                            <img src={carta7} alt="" />
-                        </div>
-                        <div className="CartaTexto">
-                            <h2>Apple juice</h2>
-                            <p>espresso coffee drink, topped with a small amount of foamed or steamed milk to allow the taste of the espresso to still shine through</p>
-                            <p>$1.60</p>
-                        </div>
-                    </div>
-                    <div className="CartaJuiceCaja">
-                        <div className="CartaImagen">
-                            <img src={carta7} alt="" />
-                        </div>
-                        <div className="CartaTexto">
-                            <h2>Coffee juice</h2>
-                            <p>espresso coffee drink, topped with a small amount of foamed or steamed milk to allow the taste of the espresso to still shine through</p>
-                            <p>$1.60</p>
-                        </div>
-                    </div>
+                    
+                   
                 </div>
                 <h1>Slushie</h1>
                 <div className="CartaSlushie">
                     <div className="CartaSlushieCaja">
                         <div className="CartaImagen">
-                            <img src={carta8} alt="" />
+                            <img src={carta1} alt="" />
                         </div>
                         <div className="CartaTexto">
                             <h2>Orange Juice </h2>
@@ -205,7 +223,7 @@ const Carta = () => {
                     </div>
                     <div className="CartaSlushieCaja">
                         <div className="CartaImagen">
-                            <img src={carta8} alt="" />
+                            <img src={carta1} alt="" />
                         </div>
                         <div className="CartaTexto">
                             <h2>Orange Juice </h2>
@@ -215,7 +233,7 @@ const Carta = () => {
                     </div>
                     <div className="CartaSlushieCaja">
                         <div className="CartaImagen">
-                            <img src={carta8} alt="" />
+                            <img src={carta1} alt="" />
                         </div>
                         <div className="CartaTexto">
                             <h2>Orange Juice </h2>
@@ -225,7 +243,7 @@ const Carta = () => {
                     </div>
                     <div className="CartaSlushieCaja">
                         <div className="CartaImagen">
-                            <img src={carta8} alt="" />
+                            <img src={carta1} alt="" />
                         </div>
                         <div className="CartaTexto">
                             <h2>Orange Juice </h2>
@@ -238,7 +256,7 @@ const Carta = () => {
                 <div className="CartaSandwich">
                     <div className="CartaSandwichCaja">
                         <div className="CartaImagen">
-                            <img src={carta9} alt="" />
+                            <img src={carta1} alt="" />
                         </div>
                         <div className="CartaTexto">
                             <h2>Orange Juice </h2>
@@ -248,7 +266,7 @@ const Carta = () => {
                     </div>
                     <div className="CartaSandwichCaja">
                         <div className="CartaImagen">
-                            <img src={carta9} alt="" />
+                            <img src={carta1} alt="" />
                         </div>
                         <div className="CartaTexto">
                             <h2>Orange Juice </h2>
@@ -258,7 +276,7 @@ const Carta = () => {
                     </div>
                     <div className="CartaSandwichCaja">
                         <div className="CartaImagen">
-                            <img src={carta9} alt="" />
+                            <img src={carta1} alt="" />
                         </div>
                         <div className="CartaTexto">
                             <h2>Orange Juice </h2>
@@ -268,7 +286,7 @@ const Carta = () => {
                     </div>
                     <div className="CartaSandwichCaja">
                         <div className="CartaImagen">
-                            <img src={carta9} alt="" />
+                            <img src={carta1} alt="" />
                         </div>
                         <div className="CartaTexto">
                             <h2>Orange Juice </h2>
@@ -278,7 +296,7 @@ const Carta = () => {
                     </div>
                     <div className="CartaSandwichCaja">
                         <div className="CartaImagen">
-                            <img src={carta9} alt="" />
+                            <img src={carta1} alt="" />
                         </div>
                         <div className="CartaTexto">
                             <h2>Orange Juice </h2>
@@ -291,7 +309,7 @@ const Carta = () => {
                 <div className="CartaConfectionery">
                     <div className="CartaConfectioneryCaja">
                         <div className="CartaImagen">
-                            <img src={carta10} alt="" />
+                            <img src={carta1} alt="" />
                         </div>
                         <div className="CartaTexto">
                             <h2>Orange Juice </h2>
@@ -301,7 +319,7 @@ const Carta = () => {
                     </div>
                     <div className="CartaConfectioneryCaja">
                         <div className="CartaImagen">
-                            <img src={carta10} alt="" />
+                            <img src={carta1} alt="" />
                         </div>
                         <div className="CartaTexto">
                             <h2>Orange Juice </h2>
@@ -311,7 +329,7 @@ const Carta = () => {
                     </div>
                     <div className="CartaConfectioneryCaja">
                         <div className="CartaImagen">
-                            <img src={carta10} alt="" />
+                            <img src={carta1} alt="" />
                         </div>
                         <div className="CartaTexto">
                             <h2>Orange Juice </h2>
@@ -321,7 +339,7 @@ const Carta = () => {
                     </div>
                     <div className="CartaConfectioneryCaja">
                         <div className="CartaImagen">
-                            <img src={carta10} alt="" />
+                            <img src={carta1} alt="" />
                         </div>
                         <div className="CartaTexto">
                             <h2>Orange Juice </h2>
