@@ -25,6 +25,13 @@ const Informacion = () => {
 
     return (
         <div>
+            <div className="CartaInformacionContainer">
+                <div className="WrapperCartaInformacion">
+                    <h2>Take a Look at our Menu</h2>
+                    <p>Enjoy ta</p>
+                </div>
+                <img src={cafe1}></img>
+            </div>
             <div className="InformacionDivContainer1">
                 {linksUp.map((item) => (
                     <div key={item.title} className="InformacionDiv">
