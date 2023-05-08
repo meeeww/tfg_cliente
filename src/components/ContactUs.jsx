@@ -2,8 +2,6 @@ import React from "react";
 import MainLayout from '../layout/MainLayout'
 
 const ContactUs = () => {
-
-
     return (
         <MainLayout>
             <div class="ContactUsContenedor">
@@ -33,30 +31,30 @@ const ContactUs = () => {
                         </div>
                     </div>
                 </div>
-
-                <div class="ContactUsFormularioDiv">
+                <div className="ContactUsFormularioDiv">
                     <div className="ContactUsFormDiv">
                         <div className="ContactUsFormHeader">
                             <p>Our team will contact you</p>
                         </div>
                         <div className="ContactUsFormCuerpo">
                             <form action="">
-                                <input className="ContactUsFormMensaje" type="text" />
-                                <input className="ContactUsFormMensaje" type="text" />
-                                <input className="ContactUsFormMensaje" type="text" />
-                                <input className="ContactUsFormMensaje" type="text" />
-                                <input className="ContactUsFormMensaje" type="text" />
-                                <input className="ContactUsFormMensaje" type="text" />
-                                <input className="ContactUsFormMensaje" type="text" />
-                                <input className="ContactUsFormMensaje" type="text" />
-                                <input className="ContactUsFormMensajeGrande" type="text" />
                                 <div>
-                                    <label >
-                                        <input className="ContactUsFormBoton" type="checkbox" value="privacy" />I accept the privacy terms.
-                                    </label>
+                                    <input className="ContactUsFormMensaje" type="text" placeholder="Name*"/>
+                                    <input className="ContactUsFormMensaje" type="text" placeholder="Last names*"/>
+                                </div>
+                                <div>
+                                    <input className="ContactUsFormMensaje" type="text" placeholder="Email*"/>
+                                    <input className="ContactUsFormMensaje" type="text" placeholder="Phone number*"/>
+                                </div>
+                                <div>
+                                    <input className="ContactUsFormMensajeGrande" type="text" />
                                 </div>
                             </form>
-
+                            <div className="ContactusFormPrivacidad">
+                                    <label >
+                                        <input type="checkbox" value="privacy" />I accept the privacy terms.
+                                    </label>
+                                </div>
                         </div>
                     </div>
                 </div>
