@@ -294,19 +294,38 @@ body {
   justify-content: center;
 }
 
-.SignInCabecera img {
+.SingInCabecera img {
   width: 150px;
   height: 150px;
+  margin-block: 3rem;
 }
 
-.SignInMedio {
+.SingInMedio {
   display: flex;
   gap: 60px;
   justify-content: center;
   text-align: center;
+  margin-block: 1rem;
 }
 
-.SignInForm {
+.SingInMedio a{
+  color: var(--blanco);
+  text-decoration: none;
+
+  transition: all 0.25s;
+}
+
+.SingInMedio a:hover{
+  color: var(--gris);
+
+  transition: all 0.25s;
+}
+
+.staySignedIn{
+  color: var(--blanco);
+}
+
+.SingInForm {
   display: flex;
   justify-content: center;
   height: 100%;
@@ -315,7 +334,7 @@ body {
   text-align: center;
 }
 
-.SignInForm form {
+.SingInForm form {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -325,118 +344,51 @@ body {
   background-color: #8E793E;
 }
 
-.SignInForm form div input {
+.SingInForm label {
+  display: flex;
+}
+
+.SingInForm label p {
+  margin-left: 0.5rem;
+}
+
+.SingInForm form div {
+  margin-block: 0.2rem;
+}
+
+.SingInForm form div input {
   border-radius: 50px;
   border: none;
   height: 40px;
   width: 300px;
+  padding-left: 1rem;
 }
 
-.SignInForm form div label input {
+.SingInForm form div label input {
   border-radius: 50px;
   border: none;
   height: auto;
   width: auto;
 }
 
-.SignInSign button {
+.SingInSing input[type="submit"] {
   height: 40px;
   width: 300px;
   border-radius: 50px;
   border: none;
+  cursor: pointer;
+  color: var(--blanco);
   background-color: #ad974f;
   transition: all 0.25s;
 }
 
-.SignInSign button:hover {
-  background-color: #ffff;
-  color: black;
+.SingInSing input[type="submit"]:hover {
+  background-color: var(--blanco);
+  color: var(--gris);
 }
 
-.SignInText {
-  font-size: 13px;
-}
-
-/*Register*/
-
-.RegisterContainer {
-  background-color: #8E793E;
-}
-
-.RegisterCabecera {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: 12rem;
-}
-
-.RegisterCabecera img {
-  width: 150px;
-  height: 150px;
-}
-
-.RegisterForm {
-  display: flex;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-  background-color: #8E793E;
-  text-align: center;
-}
-
-.RegisterForm form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: flex-start;
-  height: 20rem;
-  max-width: 500px;
-  background-color: #8E793E;
-}
-
-.RegisterForm form div p {
-  text-align: initial;
-  font-size: 13px;
-  justify-content: space-around;
-}
-
-.RegisterForm form div input {
-  height: 40px;
-  width: 300px;
-  border-radius: 0.3rem;
-  border: 1px solid #fff;
-  text-align: initial;
-  box-shadow: 0 2px 3px rgba(0 0 0 / 0.15);
-}
-
-.RegisterForm form div label input {
-  border-radius: 50px;
-  border: none;
-  height: auto;
-  width: auto;
-}
-
-.RegisterForm button {
-  height: 40px;
-  width: 300px;
-  border-radius: 50px;
-  border: none;
-  background-color: #ad974f;
-  transition: all 0.25s;
-}
-
-.RegisterPrivacy {
-  font-size: 13px;
-}
-
-.RegisterSend {
-  transition: all 0.25s;
-}
-
-.RegisterSend:hover {
-  background-color: #ffff;
-  color: black;
+.forgotPassword{
+  color: var(--blanco);
 }
 
 /*dashboard*/
@@ -463,8 +415,22 @@ body {
   align-items: flex-start;
 }
 
-.sessionDashboard a {
-  padding-right: 1rem;
+.managementDashboard{
+  padding-block: 1rem;
+}
+
+.managementDashboard h3{
+  font-size: 22px;
+  padding-block: 1rem;
+}
+
+.clientsDashboard{
+  padding-block: 1rem;
+}
+
+.clientsDashboard h3{
+  font-size: 22px;
+  padding-block: 1rem;
 }
 
 .panelInfoDashboard {
@@ -473,6 +439,16 @@ body {
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 3rem;
   grid-row-gap: 0px;
+  overflow: auto;
+}
+
+.sessionDashboard a{
+  margin-inline: 1rem;
+}
+
+.crearProducto{
+  display: flex;
+  justify-content: right;
 }
 
 .productsOverviewDashboard {
@@ -516,16 +492,27 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-align: center;
 }
 
 .fechaInfoDashBoard {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 20%;
+}
+
+.imagenFotoInfoDashboard img{
+  width: 50px;
+  height: 50px;
 }
 
 .fechaInfoDashBoard h2 {
   margin: 0
+}
+
+.informacionInfoDashboard{
+  width: 20%;
 }
 
 .informacionInfoDashboard h4 {
@@ -567,6 +554,13 @@ h3 {
   padding-inline: 1rem;
 }
 
+/*products*/
+.panelInfoDashboardProducts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-block: 2rem;
+}
 /* barra lateral */
 
 .barraDashboard {
@@ -591,26 +585,42 @@ h3 {
 }
 
 .documentDashboard {
-  padding-top: 1rem;
+  padding-block: 1rem;
 }
 
 .documentDashboard h3 {
   font-size: 22px;
+  padding-block: 1rem;
 }
 
 .secondDashboard {
   display: flex;
   align-items: center;
-  font-size: 14px;
-}
-
-.secondDashboard img {
-  padding-right: 1rem;
+  font-size: 16px;
+  padding-block: 0.4rem;
 }
 
 .secondDashboard a {
   text-decoration: none;
   color: var(--background_color_1);
+
+  transition: all 0.25s;
+}
+
+.secondDashboard a:hover{
+  color: var(--color_secundario);
+
+  transition: all 0.25s;
+}
+
+.secondDashboard h4{
+  margin-inline: 1rem;
+}
+
+.secondDashboard i{
+  width: 16px;
+  height: 16px;
+  text-align: center;
 }
 
 /*footer*/
@@ -663,7 +673,12 @@ h3 {
 }
 
 .footer_linksFooter a:visited {
+  font-size: 18px;
+  text-decoration: none;
   color: var(--blanco);
+  margin-bottom: 15px;
+
+  transition: all 0.25s;
 }
 
 .footer_linksFooter a:hover {
@@ -714,8 +729,18 @@ h3 {
   background: var(--color_principal);
 }
 
-@media (max-width: 1100px) {}
+/*768*/
+@media (max-width: 1100px) {
+  .panelDashboard{
+    width: 70%;
+  }
 
+  .barraDashboard{
+    width: 30%;
+  }
+}
+
+@media (max-width: 800px) {}
 @media (max-width: 920px) {
   .divContainerInformacion {
     flex-direction: column;
