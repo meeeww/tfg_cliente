@@ -5,7 +5,11 @@ import cafe4 from '../assets/InformacionCafe/Informacioncafe4.jpg'
 import cafe5 from '../assets/InformacionCafe/Informacioncafe5.jpg'
 import cafe6 from '../assets/InformacionCafe/Informacioncafe6.jpg'
 import cafe7 from '../assets/InformacionCafe/Informacioncafe7.jpg'
-
+/*
+body 100%
+div grid 3 columnas
+div grid 4 columnas
+ */
 const linksUp = [
     { title: 'Take a Look at our Letter', description: 'Enjoy our delicious homemade pastries along with a freshly brewed cup of coffee at our café! We look forward to seeing you!', image: cafe1, button: "Order Now", redirection: "/menu" },
     { title: 'Take a Look at our Coffee', description: 'Do you want to enjoy our delicious coffee from the comfort of your own home? Discover our high-quality coffee capsules and start every morning with a cup of exceptional flavor.', image: cafe2, button: "Explore Coffee", redirection: "/coffee" },
@@ -27,8 +31,8 @@ const Informacion = () => {
         <div>
             <div className="divContainerInformacion">
                 {linksUp.map((item) => (
-                    <div key="" className="cajaInformacion">
-                        <div className="tituloCajaInformacion">
+                    <div key={item.title} className="cajaInformacion">
+                        <div key={item.title + "1"} className="tituloCajaInformacion">
                             <h2>{item.title}</h2>
                             <img src={item.image} alt="Coffee" />
                         </div>
@@ -40,8 +44,9 @@ const Informacion = () => {
             <div className="div2ContainerInformacion">
                 <div className='filaInformacion2'>
                     {linksDown.map((item) => (
-                        <div key="a" className="cajaInformacion2">
-                            <div className="tituloCajaInformacion">
+                        <div key={item.title} className="cajaInformacion2">
+                            {console.log(item.title)}
+                            <div key={item.name + "1"} className="tituloCajaInformacion">
                                 <h2>{item.title}</h2>
                                 <img src={item.image} alt="Coffee" />
                             </div>
