@@ -1,7 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Dashboard from './pages/Dashboard'
 import Inicio from './pages/Inicio'
+
+import Dashboard from './pages/Dashboard'
+import DashboardProducts from './pages/Dashboard/Products'
+import DahsboardCategories from './pages/Dashboard/Categories'
+
 import SignIn from './components/SingIn'
 import Register from './components/Register'
 import Registered from './pages/UsuarioCreado'
@@ -23,6 +27,12 @@ const router = createBrowserRouter([
     element: <Dashboard />,
   },
   {
+    path: "/dashboard/products",
+    element: <DashboardProducts />,
+  },
+  {
+    path: "/dashboard/categories",
+    element: <DahsboardCategories />,
     path: "/signin",
     element: <SignIn />,
   },

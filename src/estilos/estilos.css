@@ -227,8 +227,7 @@ body {
 }
 
 .cajaInformacion img {
-  width: 300px;
-  height: 300px;
+  max-width: 300px;
   border-radius: 30px;
 }
 
@@ -424,8 +423,22 @@ body {
   align-items: flex-start;
 }
 
-.sessionDashboard a {
-  padding-right: 1rem;
+.managementDashboard{
+  padding-block: 1rem;
+}
+
+.managementDashboard h3{
+  font-size: 22px;
+  padding-block: 1rem;
+}
+
+.clientsDashboard{
+  padding-block: 1rem;
+}
+
+.clientsDashboard h3{
+  font-size: 22px;
+  padding-block: 1rem;
 }
 
 .panelInfoDashboard {
@@ -434,6 +447,16 @@ body {
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 3rem;
   grid-row-gap: 0px;
+  overflow: auto;
+}
+
+.sessionDashboard a{
+  margin-inline: 1rem;
+}
+
+.crearProducto{
+  display: flex;
+  justify-content: right;
 }
 
 .productsOverviewDashboard {
@@ -477,16 +500,27 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-align: center;
 }
 
 .fechaInfoDashBoard {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 20%;
+}
+
+.imagenFotoInfoDashboard img{
+  width: 50px;
+  height: 50px;
 }
 
 .fechaInfoDashBoard h2 {
   margin: 0
+}
+
+.informacionInfoDashboard{
+  width: 20%;
 }
 
 .informacionInfoDashboard h4 {
@@ -528,6 +562,13 @@ h3 {
   padding-inline: 1rem;
 }
 
+/*products*/
+.panelInfoDashboardProducts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-block: 2rem;
+}
 /* barra lateral */
 
 .barraDashboard {
@@ -552,26 +593,42 @@ h3 {
 }
 
 .documentDashboard {
-  padding-top: 1rem;
+  padding-block: 1rem;
 }
 
 .documentDashboard h3 {
   font-size: 22px;
+  padding-block: 1rem;
 }
 
 .secondDashboard {
   display: flex;
   align-items: center;
-  font-size: 14px;
-}
-
-.secondDashboard img {
-  padding-right: 1rem;
+  font-size: 16px;
+  padding-block: 0.4rem;
 }
 
 .secondDashboard a {
   text-decoration: none;
   color: var(--background_color_1);
+
+  transition: all 0.25s;
+}
+
+.secondDashboard a:hover{
+  color: var(--color_secundario);
+
+  transition: all 0.25s;
+}
+
+.secondDashboard h4{
+  margin-inline: 1rem;
+}
+
+.secondDashboard i{
+  width: 16px;
+  height: 16px;
+  text-align: center;
 }
 
 /*footer*/
@@ -624,7 +681,12 @@ h3 {
 }
 
 .footer_linksFooter a:visited {
+  font-size: 18px;
+  text-decoration: none;
   color: var(--blanco);
+  margin-bottom: 15px;
+
+  transition: all 0.25s;
 }
 
 .footer_linksFooter a:hover {
@@ -675,8 +737,18 @@ h3 {
   background: var(--color_principal);
 }
 
-@media (max-width: 1100px) {}
+/*768*/
+@media (max-width: 1100px) {
+  .panelDashboard{
+    width: 70%;
+  }
 
+  .barraDashboard{
+    width: 30%;
+  }
+}
+
+@media (max-width: 800px) {}
 @media (max-width: 920px) {
   .divContainerInformacion {
     flex-direction: column;
