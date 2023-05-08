@@ -4,6 +4,7 @@ import Dashboard from './pages/Dashboard'
 import Inicio from './pages/Inicio'
 import SignIn from './components/SingIn'
 import Register from './components/Register'
+import Registered from './pages/UsuarioCreado'
 import NoMatch from './pages/NoMatch'
 import './estilos/estilos.css'
 
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
   {
     path: "/signup",
     element: <Register />,
+  },
+  {
+    path: "/registered",
+    element: <Registered />,
   },
   {
     path: "*",
