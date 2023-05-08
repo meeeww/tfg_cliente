@@ -7,6 +7,7 @@ import './estilos/estilos.css'
 import Precio from './components/SignIn'
 import Carta from './components/Carta'
 import Merchandising from './components/Merchandising'
+import ContactUs from './components/ContactUs'
 
 import {
   createBrowserRouter,
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
   {
     path: "/precio",
     element: <Precio />,
+  },
+  {
+    path: "/ContactUs",
+    element: <ContactUs />,
   },
 ]);
 

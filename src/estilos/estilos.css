@@ -486,7 +486,7 @@ body {
   flex-direction: column;
 }
 
-.CartaMenu h1{
+.CartaMenu h1 {
   text-align: center;
   padding: 20px;
 }
@@ -509,17 +509,17 @@ body {
   display: flex;
 }
 
-.CartaImagen{
+.CartaImagen {
   width: 33.3%;
   height: 100%;
 }
 
-.CartaImagen img{
+.CartaImagen img {
   width: 100%;
   height: 100%;
 }
 
-.CartaTexto{
+.CartaTexto {
   display: flex;
   flex-direction: column;
   width: 66.6%;
@@ -682,7 +682,7 @@ body {
   flex-direction: column;
 }
 
-.MerchandisingMenu h1{
+.MerchandisingMenu h1 {
   text-align: center;
 }
 
@@ -704,17 +704,17 @@ body {
   display: flex;
 }
 
-.MerchadisingImagen{
+.MerchadisingImagen {
   width: 33.3%;
   height: 100%;
 }
 
-.MerchadisingImagen img{
+.MerchadisingImagen img {
   width: 100%;
   height: 100%;
 }
 
-.MerchadisingTexto{
+.MerchadisingTexto {
   display: flex;
   flex-direction: column;
   width: 66.6%;
@@ -806,6 +806,96 @@ body {
     grid-row-gap: 20px;
     margin: 10px;
   }
+}
+
+/*ContactUs*/
+
+.ContactUsContenedor {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-column-gap: 10px;
+}
+
+.ContactUsUbicacion {
+  display: flex;
+  gap: 15rem;
+  margin: 1rem;
+  height: 30rem;
+}
+
+.ContactUsUbicacionDiv1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.ContactUsUbicacionDiv1 h1 {
+  text-align: center;
+}
+
+.ContactusUbicacionDiv2 {
+  display: flex;
+  gap: 2rem;
+}
+
+.ContactusUbicacionDiv2 i {
+  width: 1px;
+  height: 1px;
+}
+
+.ContactusUbicacionDiv2 p {
+  text-align: left;
+  width: 100%;
+}
+
+.ContactUsFormularioDiv {
+  background-color: red;
+}
+
+.ContactUsFormDiv {
+
+}
+
+.ContactUsFormHeader {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  background-color: var(--blanco);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+  margin: 1rem 1rem 0rem 1rem;
+  border: 1px solid #dddddd;
+  height: 5rem;
+}
+
+.ContactUsFormCuerpo {
+  background-color: var(--blanco);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+  margin: 0rem 1rem 0rem 1rem;
+  border: 1px solid #dddddd;
+  height: 25rem;
+}
+
+.ContactUsFormBoton{
+
+}
+
+.ContactUsFormBoton input {
+  border-radius: 50px;
+  border: none;
+  height: auto;
+  width: auto;
+}
+.ContactUsFormMensaje{
+  width: 47%;
+  margin: 10px;
+}
+
+.ContactUsFormMensajeGrande{
+  width: 97%;
+  height: 10rem;
+  margin: 10px;
 }
 
 /*dashboard*/
