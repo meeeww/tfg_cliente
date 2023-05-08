@@ -33,6 +33,8 @@ const router = createBrowserRouter([
   {
     path: "/dashboard/categories",
     element: <DahsboardCategories />,
+  },
+  {
     path: "/signin",
     element: <SignIn />,
   },
