@@ -188,7 +188,13 @@ body {
 
 /*Informacion*/
 .CartaInformacionContainer{
-  
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.WrapperCartaInformacion h2{
+  margin-block: 1rem;
 }
 
 .InformacionDivContainer1 {
