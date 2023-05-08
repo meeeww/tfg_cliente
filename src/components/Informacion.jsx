@@ -31,8 +31,8 @@ const Informacion = () => {
         <div>
             <div className="divContainerInformacion">
                 {linksUp.map((item) => (
-                    <div key="" className="cajaInformacion">
-                        <div className="tituloCajaInformacion">
+                    <div key={item.title} className="cajaInformacion">
+                        <div key={item.title + "1"} className="tituloCajaInformacion">
                             <h2>{item.title}</h2>
                             <img src={item.image} alt="Coffee" />
                         </div>
@@ -44,8 +44,9 @@ const Informacion = () => {
             <div className="div2ContainerInformacion">
                 <div className='filaInformacion2'>
                     {linksDown.map((item) => (
-                        <div key="a" className="cajaInformacion2">
-                            <div className="tituloCajaInformacion">
+                        <div key={item.title} className="cajaInformacion2">
+                            {console.log(item.title)}
+                            <div key={item.name + "1"} className="tituloCajaInformacion">
                                 <h2>{item.title}</h2>
                                 <img src={item.image} alt="Coffee" />
                             </div>
