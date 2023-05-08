@@ -1,8 +1,6 @@
 const managements = [
     { name: 'products', href: '/dashboard/products', icon: "fa-solid fa-mug-saucer" },
     { name: 'categories', href: '/dashboard/categories', icon: "fa-solid fa-tag" },
-    { name: 'characteristics', href: '/dashboard/characteristics', icon: "fa-solid fa-barcode" },
-    
 ]
 
 const clients = [
