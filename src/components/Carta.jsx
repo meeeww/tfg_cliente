@@ -1,6 +1,3 @@
-import React from 'react'
-import MainLayout from '../layout/MainLayout'
-
 import header1 from '../assets/CartaCafe/Headercafe.jpeg'
 import header2 from '../assets/CartaCafe/Headerzumo.jpg'
 import header3 from '../assets/CartaCafe/Headergranizado.jpg'
@@ -20,44 +17,43 @@ import carta10 from '../assets/CartaCafe/Cartapastel.png'
 
 const Carta = () => {
     return (
-        <MainLayout>
-            <h1>Carta</h1>
+        <>
             <div className="CartaHeader">
-                <div className="CartaDiv">
+                <a href='#coffee' className="CartaDiv">
                     <div className="CartaImg">
                         <img src={header1} alt="" />
                     </div>
                     <p>Coffee</p>
-                </div>
-                <div className="CartaDiv">
+                </a>
+                <a href='#juice' className="CartaDiv">
                     <div className="CartaImg">
                         <img src={header2} alt="" />
                     </div>
                     <p>Juice</p>
-                </div>
-                <div className="CartaDiv">
+                </a>
+                <a href='#slushie' className="CartaDiv">
                     <div className="CartaImg">
                         <img src={header3} alt="" />
                     </div>
                     <p>Slushie</p>
-                </div>
-                <div className="CartaDiv">
+                </a>
+                <a href='#sandwich' className="CartaDiv">
                     <div className="CartaImg">
                         <img src={header4} alt="" />
                     </div>
                     <p>Sandwich</p>
-                </div>
-                <div className="CartaDiv">
+                </a>
+                <a href='#confectionery' className="CartaDiv">
                     <div className="CartaImg">
                         <img src={header5} alt="" />
                     </div>
                     <p>Confectionery</p>
-                </div>
+                </a>
             </div>
 
             <div className="CartaMenu">
                 <h1>Coffee</h1>
-                <div className="CartaCoffee">
+                <div className="CartaCoffee" id="CartaCoffee">
                     <div className="CartaCofeeCaja">
                         <div className="CartaImagen">
                             <img src={carta1} alt="" />
@@ -194,7 +190,7 @@ const Carta = () => {
                     </div>
                 </div>
 
-                <h1>Slushie</h1>
+                <h1 id='slushie'>Slushie</h1>
                 <div className="CartaSlushie">
                     <div className="CartaSlushieCaja">
                         <div className="CartaImagen">
@@ -334,13 +330,10 @@ const Carta = () => {
                             <p>$1.60</p>
                         </div>
                     </div>
-    
+
                 </div>
-
-
-
             </div>
-        </MainLayout>
+        </>
     )
 }
 
