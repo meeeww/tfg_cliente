@@ -544,7 +544,7 @@ body {
   padding: 10px;
 }
 
-.CartaJuiceCaja {
+.CartaItemsCaja {
   background-color: var(--blanco);
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
   border-radius: 10px;

@@ -1,3 +1,6 @@
+import { useState, useEffect } from 'react'
+import Axios from 'axios'
+
 import header1 from '../assets/CartaCafe/Headercafe.jpeg'
 import header2 from '../assets/CartaCafe/Headerzumo.jpg'
 import header3 from '../assets/CartaCafe/Headergranizado.jpg'
@@ -16,6 +19,45 @@ import carta9 from '../assets/CartaCafe/Cartasandwich.png'
 import carta10 from '../assets/CartaCafe/Cartapastel.png'
 
 const Carta = () => {
+
+    const [productos, setProductos] = useState();
+    const [categorias, setCategorias] = useState();
+
+    let baseURL = "http://localhost:4000/API/productos/consultar";
+    let baseURL2 = "http://localhost:4000/API/categorias/consultar";
+
+    let config = {
+        timeout: 10000,
+    };
+
+
+
+    useEffect(() => {
+        Axios.get(baseURL, config)
+            .then((res) => {
+                //console.log("RESPONSE RECEIVED: ", res.data);
+                setProductos(res.data)
+                //localStorage.setItem("token", res.data)
+                //location.replace("http://localhost:5173/login")
+                return {
+                    statusCode: 200,
+                    body: JSON.stringify({ title: "this was a success" }),
+                };
+            })
+
+        Axios.get(baseURL2, config)
+            .then((res) => {
+                //console.log("RESPONSE RECEIVED: ", res.data);
+                setCategorias(res.data)
+                //localStorage.setItem("token", res.data)
+                //location.replace("http://localhost:5173/login")
+                return {
+                    statusCode: 200,
+                    body: JSON.stringify({ title: "this was a success" }),
+                };
+            })
+    }, [])
+
     return (
         <>
             <div className="CartaHeader">
@@ -52,80 +94,40 @@ const Carta = () => {
             </div>
 
             <div className="CartaMenu">
-                <h1>Coffee</h1>
-                <div className="CartaCoffee" id="CartaCoffee">
-                    <div className="CartaCofeeCaja">
-                        <div className="CartaImagen">
-                            <img src={carta1} alt="" />
-                        </div>
-                        <div className="CartaTexto">
-                            <h2>Coffee</h2>
-                            <p>Only coffee</p>
-                            <p>$1.00</p>
-                        </div>
-                    </div>
-                    <div className="CartaCofeeCaja">
-                        <div className="CartaImagen">
-                            <img src={carta2} alt="" />
-                        </div>
-                        <div className="CartaTexto">
-                            <h2>kleiner Brauner</h2>
-                            <p>Coffee with a bit of milk</p>
-                            <p>$1.30</p>
-                        </div>
-                    </div>
-                    <div className="CartaCofeeCaja">
-                        <div className="CartaImagen">
-                            <img src={carta3} alt="" />
-                        </div>
-                        <div className="CartaTexto">
-                            <h2>Coffee with milk</h2>
-                            <p>Coffee mixed with scalded milk in approximately equal amounts.</p>
-                            <p>$1.20</p>
-                        </div>
-                    </div>
-                    <div className="CartaCofeeCaja">
-                        <div className="CartaImagen">
-                            <img src={carta4} alt="" />
-                        </div>
-                        <div className="CartaTexto">
-                            <h2>Cappuccino  </h2>
-                            <p>A cappuccino is the perfect balance of espresso, steamed milk and foam.</p>
-                            <p>$1.60</p>
-                        </div>
-                    </div>
-                    <div className="CartaCofeeCaja">
-                        <div className="CartaImagen">
-                            <img src={carta5} alt="" />
-                        </div>
-                        <div className="CartaTexto">
-                            <h2>Irish coffee </h2>
-                            <p>Is a caffeinated alcoholic drink consisting of Irish whiskey, hot coffee and sugar</p>
-                            <p>$2.20</p>
-                        </div>
-                    </div>
-                    <div className="CartaCofeeCaja">
-                        <div className="CartaImagen">
-                            <img src={carta6} alt="" />
-                        </div>
-                        <div className="CartaTexto">
-                            <h2>Irish coffee </h2>
-                            <p>espresso coffee drink, topped with a small amount of foamed or steamed milk to allow the taste of the espresso to still shine through</p>
-                            <p>$1.60</p>
-                        </div>
+                <div id='coffee'>
+                    <h1>Coffee</h1>
+                    <div className="CartaCoffee" id="CartaCoffee">
+                        {
+                            productos &&
+                            productos.map((item) => (
+                                <div key={item.id_producto} className={"CartaItemsCaja"}>
+                                    <div className="CartaImagen">
+                                        <img src={item.foto_producto} alt={item.nombre_producto} />
+                                    </div>
+                                    <div className="CartaTexto">
+                                        <h2>{item.nombre_producto}</h2>
+                                        <p>{item.descripcion_producto}</p>
+                                        <p>{item.coste_base}</p>
+                                    </div>
+                                </div>
+                            ))}
                     </div>
                 </div>
 
-                <h1>Juice</h1>
-                <div className="CartaJuice">
-                    <div className="CartaJuiceCaja">
-                        <div className="CartaImagen">
-                            <img src={carta7} alt="" />
-                        </div>
-                        <div className="CartaTexto">
-                            <h2>Orange Juice </h2>
-                            <p>espresso coffee drink, topped with a small amount of foamed or steamed milk to allow the taste of the espresso to still shine through</p>
-                            <p>$1.60</p>
+                {/* hay que hacer que coja las categorias */}
+
+                <div id='juice'> 
+                    <h1>Juice</h1>
+                    <div className="CartaJuice">
+                        <div className="CartaJuiceCaja">
+                            <div className="CartaImagen">
+                                <img src={carta7} alt="" />
+                            </div>
+                            <div className="CartaTexto">
+                                <h2>Orange Juice </h2>
+                                <p>espresso coffee drink, topped with a small amount of foamed or steamed milk to allow the taste of the espresso to still shine through</p>
+                                <p>$1.60</p>
+                            </div>
                         </div>
                     </div>
                     <div className="CartaJuiceCaja">
