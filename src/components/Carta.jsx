@@ -7,6 +7,14 @@ import header3 from '../assets/CartaCafe/Headergranizado.jpg'
 import header4 from '../assets/CartaCafe/Headersandwich.jpg'
 import header5 from '../assets/CartaCafe/Headerdonuts.jpg'
 
+const headers = [
+    { title: "Coffee", redirect: "#coffee", img: header1 },
+    { title: "Juice", redirect: "#juice", img: header2 },
+    { title: "Slushie", redirect: "#slushie", img: header3 },
+    { title: "Sandwich", redirect: "#sandwich", img: header4 },
+    { title: "Confectionery", redirect: "#confectionery", img: header5 }
+]
+
 import carta1 from '../assets/CartaCafe/Cartacafesolo.png'
 import carta2 from '../assets/CartaCafe/Cartacortado.png'
 import carta3 from '../assets/CartaCafe/Cartacafeconleche.png'
@@ -61,36 +69,14 @@ const Carta = () => {
     return (
         <>
             <div className="CartaHeader">
-                <a href='#coffee' className="CartaDiv">
-                    <div className="CartaImg">
-                        <img src={header1} alt="" />
-                    </div>
-                    <p>Coffee</p>
-                </a>
-                <a href='#juice' className="CartaDiv">
-                    <div className="CartaImg">
-                        <img src={header2} alt="" />
-                    </div>
-                    <p>Juice</p>
-                </a>
-                <a href='#slushie' className="CartaDiv">
-                    <div className="CartaImg">
-                        <img src={header3} alt="" />
-                    </div>
-                    <p>Slushie</p>
-                </a>
-                <a href='#sandwich' className="CartaDiv">
-                    <div className="CartaImg">
-                        <img src={header4} alt="" />
-                    </div>
-                    <p>Sandwich</p>
-                </a>
-                <a href='#confectionery' className="CartaDiv">
-                    <div className="CartaImg">
-                        <img src={header5} alt="" />
-                    </div>
-                    <p>Confectionery</p>
-                </a>
+                {headers.map((item) => (
+                    <a key={item.title} href={item.redirect} className="CartaDiv">
+                        <div className="CartaImg">
+                            <img src={item.img} alt={item.title} />
+                        </div>
+                        <p>{item.title}</p>
+                    </a>
+                ))}
             </div>
 
             <div className="CartaMenu">
@@ -116,7 +102,7 @@ const Carta = () => {
 
                 {/* hay que hacer que coja las categorias */}
 
-                <div id='juice'> 
+                <div id='juice'>
                     <h1>Juice</h1>
                     <div className="CartaJuice">
                         <div className="CartaJuiceCaja">
