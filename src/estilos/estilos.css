@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
   --color_principal: #8E793E;
@@ -7,7 +7,7 @@
   --background_color_1: #FFFFFF;
   --backgroud_color_2: #231f20;
   --gris: #231f20;
-  --blanco: #EAEAEA;
+  --blanco: #fff8f8;
 }
 
 * {
@@ -182,75 +182,159 @@ body {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding-block: 1rem;
+  padding-block: 5rem;
   width: 100%;
 }
 
 /*Informacion*/
-.CartaInformacionContainer{
+.exploreClassInformacion {
   display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.tituloInformacionIndividual {
+  margin-left: 2rem;
+}
+
+.tituloInformacionIndividual h2 {
+  display: flex;
+  text-align: center;
+  font-size: 70px;
+  font-weight: bold;
+  margin-left: 0.5rem;
+}
+
+.exploreClassInformacion h2 {
+  font-weight: 500;
+  font-size: 28px;
+}
+
+.exploreOptionsInformacion a {
+  text-decoration: none;
+  text-align: center;
+}
+
+.opcionIndividualInformacion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-evenly;
+  width: 20rem;
+  height: 20rem;
+  padding: 1rem;
+  color: var(--gris);
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border-radius: 2rem;
+
+  margin: 1rem;
+
+  transition: all 0.25s;
+}
+
+.opcionIndividualInformacion:hover {
+  background-color: var(--color_secundario);
+  color: var(--blanco);
+  box-shadow: 0px 10px 15px -3px rgba(173, 151, 79, 0.7);
+
+  transition: all 0.25s;
+}
+
+.opcionIndividualInformacion img {
+  width: 100px;
+  height: 100px;
+  border-radius: 3rem;
+  margin-block-end: 1.5rem;
+}
+
+.opcionIndividualInformacion h3 {
+  font-weight: 500;
+}
+
+.exploreOptionsInformacion {
+  display: flex;
   align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-block-start: 4rem;
 }
 
-.WrapperCartaInformacion h2{
-  margin-block: 1rem;
+@media(max-width: 1400px){
+  .exploreOptionsInformacion{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-content: center;
+    justify-items: center;
+  }
 }
 
-.InformacionDivContainer1 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 20px;
+.separacionIndividualInformacion {
+  display: flex;
+  height: 10rem;
+  flex-direction: column;
   align-items: center;
-  padding-inline: 3rem;
-  width: 100%;
+  justify-content: space-between;
 }
 
-.InformacionDivContainer1 img {
-  width: 100%;
-  height: 100%;
-  border-radius: 60px;
-}
-
-.InformacionDiv {
-  height: 33rem;
-  width: 100%;
-  text-align: center;
-  justify-content: space-around;
-  padding-inline: 1rem;
-  background-color: var(--blanco);
-  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  border: 1px solid #dddddd;
-  font-size: 14px;
+.aboutUsOptionsInformacion {
   display: flex;
   flex-direction: column;
-}
-
-.InformacionDivContainer2 img {
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  height: 100%;
-  border-radius: 60px;
+  margin-block-start: 5rem;
 }
 
-.InformacionCaja >div{
-  width: 100%;
-  height: 100%;
-}
-
-.InformacionCaja {
+.aboutUsIndividual {
   display: flex;
-  flex-direction: column;
-  text-align: center;
   align-items: center;
   justify-content: space-around;
-  width: 100%;
-  height: 66.6%;
+  margin-block: 2rem;
 }
 
-.InformacionCaja h2{
-  padding-block: 1rem;
-  font-size: 20px;
+@media(max-width: 1070px){
+  .aboutUsIndividual{
+    flex-direction: column;
+  }
+}
+
+.aboutUsIndividual img {
+  border-radius: 2rem;
+
+  transition: all 0.25s;
+}
+
+.aboutUsIndividual img:hover {
+  scale: 105%;
+
+  transition: all 0.25s;
+}
+
+.textoAboutUs {
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 20rem;
+  margin-inline: 2rem;
+}
+
+.tituloInformacionIndividual {
+  margin-block-start: 5rem;
+}
+
+.tituloAboutUsIndividual h2 {
+  display: flex;
+  font-size: 28px;
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+.aboutUsImagenInformacion {
+  width: 500px;
+  height: 500px;
 }
 
 .botonInformacion {
@@ -261,6 +345,9 @@ body {
   border-radius: 2rem;
   cursor: pointer;
   text-decoration: none;
+  width: auto;
+  text-align: center;
+
   transition: all 0.25s;
 }
 
@@ -269,29 +356,8 @@ body {
   border-radius: 2rem;
   background-color: var(--color_secundario);
   color: var(--blanco);
+
   transition: all 0.25s;
-}
-
-.InformacionDivContainer2 {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 20px;
-  align-items: center;
-  padding-inline: 3rem;
-  padding-block: 1rem;
-  width: 100%;
-}
-
-@media (max-width:600px){
-  .InformacionDivContainer1{
-    grid-template-columns: repeat(1, 1fr);
-    grid-row-gap: 20px;
-  }
-
-  .InformacionDivContainer2{
-    grid-template-columns: repeat(1, 1fr);
-    grid-row-gap: 20px;
-  }
 }
 
 /*SingIn / FormInput*/
@@ -318,20 +384,20 @@ body {
   margin-block: 1rem;
 }
 
-.SingInMedio a{
+.SingInMedio a {
   color: var(--blanco);
   text-decoration: none;
 
   transition: all 0.25s;
 }
 
-.SingInMedio a:hover{
+.SingInMedio a:hover {
   color: var(--gris);
 
   transition: all 0.25s;
 }
 
-.staySignedIn{
+.staySignedIn {
   color: var(--blanco);
 }
 
@@ -397,7 +463,7 @@ body {
   color: var(--gris);
 }
 
-.forgotPassword{
+.forgotPassword {
   color: var(--blanco);
 }
 
@@ -425,20 +491,20 @@ body {
   align-items: flex-start;
 }
 
-.managementDashboard{
+.managementDashboard {
   padding-block: 1rem;
 }
 
-.managementDashboard h3{
+.managementDashboard h3 {
   font-size: 22px;
   padding-block: 1rem;
 }
 
-.clientsDashboard{
+.clientsDashboard {
   padding-block: 1rem;
 }
 
-.clientsDashboard h3{
+.clientsDashboard h3 {
   font-size: 22px;
   padding-block: 1rem;
 }
@@ -452,11 +518,11 @@ body {
   overflow: auto;
 }
 
-.sessionDashboard a{
+.sessionDashboard a {
   margin-inline: 1rem;
 }
 
-.crearProducto{
+.crearProducto {
   display: flex;
   justify-content: right;
 }
@@ -512,7 +578,7 @@ h3 {
   width: 20%;
 }
 
-.imagenFotoInfoDashboard img{
+.imagenFotoInfoDashboard img {
   width: 50px;
   height: 50px;
 }
@@ -521,7 +587,7 @@ h3 {
   margin: 0
 }
 
-.informacionInfoDashboard{
+.informacionInfoDashboard {
   width: 20%;
 }
 
@@ -571,6 +637,7 @@ h3 {
   justify-content: center;
   margin-block: 2rem;
 }
+
 /* barra lateral */
 
 .barraDashboard {
@@ -617,17 +684,17 @@ h3 {
   transition: all 0.25s;
 }
 
-.secondDashboard a:hover{
+.secondDashboard a:hover {
   color: var(--color_secundario);
 
   transition: all 0.25s;
 }
 
-.secondDashboard h4{
+.secondDashboard h4 {
   margin-inline: 1rem;
 }
 
-.secondDashboard i{
+.secondDashboard i {
   width: 16px;
   height: 16px;
   text-align: center;
@@ -741,16 +808,17 @@ h3 {
 
 /*768*/
 @media (max-width: 1100px) {
-  .panelDashboard{
+  .panelDashboard {
     width: 70%;
   }
 
-  .barraDashboard{
+  .barraDashboard {
     width: 30%;
   }
 }
 
 @media (max-width: 800px) {}
+
 @media (max-width: 920px) {
   .divContainerInformacion {
     flex-direction: column;
