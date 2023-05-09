@@ -28,45 +28,48 @@ import carta10 from '../assets/CartaCafe/Cartapastel.png'
 
 const Carta = () => {
 
+    const [isLoading, setLoading] = useState(true);
     const [productos, setProductos] = useState([]);
     const [categorias, setCategorias] = useState([]);
 
-    async function conseguirCategorias()´{
-    
-    }
-
     useEffect(() => {
-        Axios.get("http://localhost:4000/API/productos/consultar", {timeout: 10000})
-            .then((res) => {
-                //console.log("RESPONSE RECEIVED: ", res.data);
-                setProductos(res.data)
-                //localStorage.setItem("token", res.data)
-                //location.replace("http://localhost:5173/login")
-                return {
-                    statusCode: 200,
-                    body: JSON.stringify({ title: "this was a success" }),
-                };
+        Axios.get("http://localhost:4000/API/productos/consultar").then(response => {
+            setProductos(response.data)
+            Axios.get("http://localhost:4000/API/categorias/consultar").then(response2 => {
+                setCategorias(response2.data)
+                setLoading(false)
             })
+            //console.log(productos)
+        })
+    })
 
-        Axios.get("http://localhost:4000/API/categorias/consultar", {timeout: 10000})
-            .then((res) => {
-                //console.log("RESPONSE RECEIVED: ", res.data);
-                setCategorias(res.data)
-                
-                //localStorage.setItem("token", res.data)
-                //location.replace("http://localhost:5173/login")
-                return {
-                    statusCode: 200,
-                    body: JSON.stringify({ title: "this was a success" }),
-                };
-            })
-    }, [productos, categorias])
-
-    if(categorias.length == 0){
-        console.log("hey")
-        return null;
+    if (isLoading) {
+        console.log("loading")
+        return (null);
     }
-    
+
+    // useEffect(() => {
+    //     conseguirProductos()
+
+    //     Axios.get("http://localhost:4000/API/categorias/consultar", { timeout: 10000 })
+    //         .then((res) => {
+    //             //console.log("RESPONSE RECEIVED: ", res.data);
+    //             setCategorias(res.data)
+
+    //             //localStorage.setItem("token", res.data)
+    //             //location.replace("http://localhost:5173/login")
+    //             return {
+    //                 statusCode: 200,
+    //                 body: JSON.stringify({ title: "this was a success" }),
+    //             };
+    //         })
+    // }, [])
+    // 
+    // if (productos.length == 0) {
+    //     console.log("hey")
+    //     return null;
+    // }
+
     return (
         <>
             <div className="CartaHeader">
@@ -81,33 +84,44 @@ const Carta = () => {
             </div>
 
             <div className="CartaMenu">
-                {
-                    categorias.map((categoria) => {
-                        (
-                            <div id={categoria.nombre_categoria}>
-                                <h1>{categoria.nombre_categoria}</h1>
-                                <div className={"Carta" + categoria.nombre_categoria} id={"Carta" + categoria.nombre_categoria}>
-                                    {
-                                        productos &&
-                                        productos.map((item) => (
-                                            <div key={item.id_producto} className={"CartaItemsCaja"}>
+                {categorias.map((categoria) => (
+                    <div id={categoria.nombre_categoria} key={categoria.id_categoria}>
+                        <h1>{categoria.nombre_categoria}</h1>
+                        <div className={"Carta" + categoria.nombre_categoria} id={"Carta" + categoria.nombre_categoria}>
+                            {
+                                productos &&
+                                productos.map((producto) => (
+                                    producto.id_categoria == categoria.id_categoria ?
+                                        <a key={producto.id_producto} href={"http://localhost:5173/productos/" + producto.id_producto}>
+                                            <div className={"CartaItemsCaja"}>
                                                 <div className="CartaImagen">
-                                                    <img src={item.foto_producto} alt={item.nombre_producto} />
+                                                    <img src={producto.foto_producto} alt={producto.nombre_producto} />
                                                 </div>
                                                 <div className="CartaTexto">
-                                                    <h2>{item.nombre_producto}</h2>
-                                                    <p>{item.descripcion_producto}</p>
-                                                    <p>{item.coste_base}</p>
+                                                    <h2>{producto.nombre_producto}</h2>
+                                                    <p>{producto.descripcion_producto}</p>
+                                                    <p>{producto.coste_base}</p>
                                                 </div>
                                             </div>
-                                        ))
-                                    }
-                                </div>
-                            </div>
-                        )
+                                        </a>
+                                        :
+                                        console.log()
+                                ))
+                            }
+                        </div>
+                    </div>
+                ))}
 
 
-                    })
+                {
+                    // categorias.map((categoria) => {
+                    //     (
+                    //         
+
+                    //     )
+
+
+                    // })
                 }
 
 
@@ -117,7 +131,7 @@ const Carta = () => {
 
 
 
-                
+
             </div>
         </>
     )
