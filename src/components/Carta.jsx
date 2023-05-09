@@ -28,20 +28,15 @@ import carta10 from '../assets/CartaCafe/Cartapastel.png'
 
 const Carta = () => {
 
-    const [productos, setProductos] = useState();
-    const [categorias, setCategorias] = useState();
+    const [productos, setProductos] = useState([]);
+    const [categorias, setCategorias] = useState([]);
 
-    let baseURL = "http://localhost:4000/API/productos/consultar";
-    let baseURL2 = "http://localhost:4000/API/categorias/consultar";
-
-    let config = {
-        timeout: 10000,
-    };
-
-
+    async function conseguirCategorias()´{
+    
+    }
 
     useEffect(() => {
-        Axios.get(baseURL, config)
+        Axios.get("http://localhost:4000/API/productos/consultar", {timeout: 10000})
             .then((res) => {
                 //console.log("RESPONSE RECEIVED: ", res.data);
                 setProductos(res.data)
@@ -53,10 +48,11 @@ const Carta = () => {
                 };
             })
 
-        Axios.get(baseURL2, config)
+        Axios.get("http://localhost:4000/API/categorias/consultar", {timeout: 10000})
             .then((res) => {
                 //console.log("RESPONSE RECEIVED: ", res.data);
                 setCategorias(res.data)
+                
                 //localStorage.setItem("token", res.data)
                 //location.replace("http://localhost:5173/login")
                 return {
@@ -64,8 +60,13 @@ const Carta = () => {
                     body: JSON.stringify({ title: "this was a success" }),
                 };
             })
-    }, [])
+    }, [productos, categorias])
 
+    if(categorias.length == 0){
+        console.log("hey")
+        return null;
+    }
+    
     return (
         <>
             <div className="CartaHeader">
@@ -80,246 +81,43 @@ const Carta = () => {
             </div>
 
             <div className="CartaMenu">
-                <div id='coffee'>
-                    <h1>Coffee</h1>
-                    <div className="CartaCoffee" id="CartaCoffee">
-                        {
-                            productos &&
-                            productos.map((item) => (
-                                <div key={item.id_producto} className={"CartaItemsCaja"}>
-                                    <div className="CartaImagen">
-                                        <img src={item.foto_producto} alt={item.nombre_producto} />
-                                    </div>
-                                    <div className="CartaTexto">
-                                        <h2>{item.nombre_producto}</h2>
-                                        <p>{item.descripcion_producto}</p>
-                                        <p>{item.coste_base}</p>
-                                    </div>
+                {
+                    categorias.map((categoria) => {
+                        (
+                            <div id={categoria.nombre_categoria}>
+                                <h1>{categoria.nombre_categoria}</h1>
+                                <div className={"Carta" + categoria.nombre_categoria} id={"Carta" + categoria.nombre_categoria}>
+                                    {
+                                        productos &&
+                                        productos.map((item) => (
+                                            <div key={item.id_producto} className={"CartaItemsCaja"}>
+                                                <div className="CartaImagen">
+                                                    <img src={item.foto_producto} alt={item.nombre_producto} />
+                                                </div>
+                                                <div className="CartaTexto">
+                                                    <h2>{item.nombre_producto}</h2>
+                                                    <p>{item.descripcion_producto}</p>
+                                                    <p>{item.coste_base}</p>
+                                                </div>
+                                            </div>
+                                        ))
+                                    }
                                 </div>
-                            ))}
-                    </div>
-                </div>
-
-                {/* hay que hacer que coja las categorias */}
-
-                <div id='juice'>
-                    <h1>Juice</h1>
-                    <div className="CartaJuice">
-                        <div className="CartaJuiceCaja">
-                            <div className="CartaImagen">
-                                <img src={carta7} alt="" />
                             </div>
-                            <div className="CartaTexto">
-                                <h2>Orange Juice </h2>
-                                <p>espresso coffee drink, topped with a small amount of foamed or steamed milk to allow the taste of the espresso to still shine through</p>
-                                <p>$1.60</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="CartaJuiceCaja">
-                        <div className="CartaImagen">
-                            <img src={carta7} alt="" />
-                        </div>
-                        <div className="CartaTexto">
-                            <h2>Pineapple juice </h2>
-                            <p>espresso coffee drink, topped with a small amount of foamed or steamed milk to allow the taste of the espresso to still shine through</p>
-                            <p>$1.60</p>
-                        </div>
-                    </div>
-                    <div className="CartaJuiceCaja">
-                        <div className="CartaImagen">
-                            <img src={carta7} alt="" />
-                        </div>
-                        <div className="CartaTexto">
-                            <h2>Cranberry juice </h2>
-                            <p>espresso coffee drink, topped with a small amount of foamed or steamed milk to allow the taste of the espresso to still shine through</p>
-                            <p>$1.60</p>
-                        </div>
-                    </div>
-                    <div className="CartaJuiceCaja">
-                        <div className="CartaImagen">
-                            <img src={carta7} alt="" />
-                        </div>
-                        <div className="CartaTexto">
-                            <h2>Prune juice </h2>
-                            <p>espresso coffee drink, topped with a small amount of foamed or steamed milk to allow the taste of the espresso to still shine through</p>
-                            <p>$1.60</p>
-                        </div>
-                    </div>
-                    <div className="CartaJuiceCaja">
-                        <div className="CartaImagen">
-                            <img src={carta7} alt="" />
-                        </div>
-                        <div className="CartaTexto">
-                            <h2>Strawberry juice</h2>
-                            <p>espresso coffee drink, topped with a small amount of foamed or steamed milk to allow the taste of the espresso to still shine through</p>
-                            <p>$1.60</p>
-                        </div>
-                    </div>
-                    <div className="CartaJuiceCaja">
-                        <div className="CartaImagen">
-                            <img src={carta7} alt="" />
-                        </div>
-                        <div className="CartaTexto">
-                            <h2>Apple juice</h2>
-                            <p>espresso coffee drink, topped with a small amount of foamed or steamed milk to allow the taste of the espresso to still shine through</p>
-                            <p>$1.60</p>
-                        </div>
-                    </div>
-                    <div className="CartaJuiceCaja">
-                        <div className="CartaImagen">
-                            <img src={carta7} alt="" />
-                        </div>
-                        <div className="CartaTexto">
-                            <h2>Coffee juice</h2>
-                            <p>espresso coffee drink, topped with a small amount of foamed or steamed milk to allow the taste of the espresso to still shine through</p>
-                            <p>$1.60</p>
-                        </div>
-                    </div>
-                </div>
+                        )
 
-                <h1 id='slushie'>Slushie</h1>
-                <div className="CartaSlushie">
-                    <div className="CartaSlushieCaja">
-                        <div className="CartaImagen">
-                            <img src={carta8} alt="" />
-                        </div>
-                        <div className="CartaTexto">
-                            <h2>Orange Juice </h2>
-                            <p>espresso coffee drink, topped with a small amount of foamed or steamed milk to allow the taste of the espresso to still shine through</p>
-                            <p>$1.60</p>
-                        </div>
-                    </div>
-                    <div className="CartaSlushieCaja">
-                        <div className="CartaImagen">
-                            <img src={carta8} alt="" />
-                        </div>
-                        <div className="CartaTexto">
-                            <h2>Orange Juice </h2>
-                            <p>espresso coffee drink, topped with a small amount of foamed or steamed milk to allow the taste of the espresso to still shine through</p>
-                            <p>$1.60</p>
-                        </div>
-                    </div>
-                    <div className="CartaSlushieCaja">
-                        <div className="CartaImagen">
-                            <img src={carta8} alt="" />
-                        </div>
-                        <div className="CartaTexto">
-                            <h2>Orange Juice </h2>
-                            <p>espresso coffee drink, topped with a small amount of foamed or steamed milk to allow the taste of the espresso to still shine through</p>
-                            <p>$1.60</p>
-                        </div>
-                    </div>
-                    <div className="CartaSlushieCaja">
-                        <div className="CartaImagen">
-                            <img src={carta8} alt="" />
-                        </div>
-                        <div className="CartaTexto">
-                            <h2>Orange Juice </h2>
-                            <p>espresso coffee drink, topped with a small amount of foamed or steamed milk to allow the taste of the espresso to still shine through</p>
-                            <p>$1.60</p>
-                        </div>
-                    </div>
-                </div>
 
-                <h1>Sandwiches</h1>
-                <div className="CartaSandwich">
-                    <div className="CartaSandwichCaja">
-                        <div className="CartaImagen">
-                            <img src={carta9} alt="" />
-                        </div>
-                        <div className="CartaTexto">
-                            <h2>Orange Juice </h2>
-                            <p>espresso coffee drink, topped with a small amount of foamed or steamed milk to allow the taste of the espresso to still shine through</p>
-                            <p>$1.60</p>
-                        </div>
-                    </div>
-                    <div className="CartaSandwichCaja">
-                        <div className="CartaImagen">
-                            <img src={carta9} alt="" />
-                        </div>
-                        <div className="CartaTexto">
-                            <h2>Orange Juice </h2>
-                            <p>espresso coffee drink, topped with a small amount of foamed or steamed milk to allow the taste of the espresso to still shine through</p>
-                            <p>$1.60</p>
-                        </div>
-                    </div>
-                    <div className="CartaSandwichCaja">
-                        <div className="CartaImagen">
-                            <img src={carta9} alt="" />
-                        </div>
-                        <div className="CartaTexto">
-                            <h2>Orange Juice </h2>
-                            <p>espresso coffee drink, topped with a small amount of foamed or steamed milk to allow the taste of the espresso to still shine through</p>
-                            <p>$1.60</p>
-                        </div>
-                    </div>
-                    <div className="CartaSandwichCaja">
-                        <div className="CartaImagen">
-                            <img src={carta9} alt="" />
-                        </div>
-                        <div className="CartaTexto">
-                            <h2>Orange Juice </h2>
-                            <p>espresso coffee drink, topped with a small amount of foamed or steamed milk to allow the taste of the espresso to still shine through</p>
-                            <p>$1.60</p>
-                        </div>
-                    </div>
-                    <div className="CartaSandwichCaja">
-                        <div className="CartaImagen">
-                            <img src={carta9} alt="" />
-                        </div>
-                        <div className="CartaTexto">
-                            <h2>Orange Juice </h2>
-                            <p>espresso coffee drink, topped with a small amount of foamed or steamed milk to allow the taste of the espresso to still shine through</p>
-                            <p>$1.60</p>
-                        </div>
-                    </div>
-                </div>
+                    })
+                }
 
-                <h1>Confectionery</h1>
-                <div className="CartaConfectionery">
-                    <div className="CartaConfectioneryCaja">
-                        <div className="CartaImagen">
-                            <img src={carta10} alt="" />
-                        </div>
-                        <div className="CartaTexto">
-                            <h2>Orange Juice </h2>
-                            <p>espresso coffee drink, topped with a small amount of foamed or steamed milk to allow the taste of the espresso to still shine through</p>
-                            <p>$1.60</p>
-                        </div>
-                    </div>
-                    <div className="CartaConfectioneryCaja">
-                        <div className="CartaImagen">
-                            <img src={carta10} alt="" />
-                        </div>
-                        <div className="CartaTexto">
-                            <h2>Orange Juice </h2>
-                            <p>espresso coffee drink, topped with a small amount of foamed or steamed milk to allow the taste of the espresso to still shine through</p>
-                            <p>$1.60</p>
-                        </div>
-                    </div>
-                    <div className="CartaConfectioneryCaja">
-                        <div className="CartaImagen">
-                            <img src={carta10} alt="" />
-                        </div>
-                        <div className="CartaTexto">
-                            <h2>Orange Juice </h2>
-                            <p>espresso coffee drink, topped with a small amount of foamed or steamed milk to allow the taste of the espresso to still shine through</p>
-                            <p>$1.60</p>
-                        </div>
-                    </div>
-                    <div className="CartaConfectioneryCaja">
-                        <div className="CartaImagen">
-                            <img src={carta10} alt="" />
-                        </div>
-                        <div className="CartaTexto">
-                            <h2>Orange Juice </h2>
-                            <p>espresso coffee drink, topped with a small amount of foamed or steamed milk to allow the taste of the espresso to still shine through</p>
-                            <p>$1.60</p>
-                        </div>
-                    </div>
 
-                </div>
+
+
+
+
+
+
+                
             </div>
         </>
     )
