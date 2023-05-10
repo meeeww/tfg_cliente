@@ -28,36 +28,12 @@ const Carta = () => {
                 setCategorias(response2.data)
                 setLoading(false)
             })
-            //console.log(productos)
         })
     })
 
     if (isLoading) {
-        console.log("loading")
         return (null);
     }
-
-    // useEffect(() => {
-    //     conseguirProductos()
-
-    //     Axios.get("http://localhost:4000/API/categorias/consultar", { timeout: 10000 })
-    //         .then((res) => {
-    //             //console.log("RESPONSE RECEIVED: ", res.data);
-    //             setCategorias(res.data)
-
-    //             //localStorage.setItem("token", res.data)
-    //             //location.replace("http://localhost:5173/login")
-    //             return {
-    //                 statusCode: 200,
-    //                 body: JSON.stringify({ title: "this was a success" }),
-    //             };
-    //         })
-    // }, [])
-    // 
-    // if (productos.length == 0) {
-    //     console.log("hey")
-    //     return null;
-    // }
 
     return (
         <>
@@ -71,7 +47,6 @@ const Carta = () => {
                     </a>
                 ))}
             </div>
-
             <div className="CartaMenu">
                 {categorias.map((categoria) => (
                     <div id={categoria.nombre_categoria} key={categoria.id_categoria}>
@@ -102,27 +77,6 @@ const Carta = () => {
                         </div>
                     </div>
                 ))}
-
-
-                {
-                    // categorias.map((categoria) => {
-                    //     (
-                    //         
-
-                    //     )
-
-
-                    // })
-                }
-
-
-
-
-
-
-
-
-
             </div>
         </>
     )

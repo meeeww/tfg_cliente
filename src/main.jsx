@@ -1,10 +1,18 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Dashboard from './pages/Dashboard'
 import Inicio from './pages/Inicio'
+
+import Dashboard from './pages/Dashboard'
+import DashboardProducts from './pages/Dashboard/Products'
+import DashboardCategories from './pages/Dashboard/Categories'
+
+import SignIn from './components/SingIn'
+import Register from './components/Register'
+import Registered from './pages/UsuarioCreado'
 import NoMatch from './pages/NoMatch'
-import './estilos/estilos.css'
 import Carta from './pages/Carta'
+
+import './estilos/estilos.css'
 
 import {
   createBrowserRouter,
@@ -17,12 +25,32 @@ const router = createBrowserRouter([
     element: <Inicio />,
   },
   {
+    path: "/signin",
+    element: <SignIn />,
+  },
+  {
+    path: "/signup",
+    element: <Register />,
+  },
+  {
     path: "/carta",
     element: <Carta />,
   },
   {
     path: "/dashboard",
     element: <Dashboard />,
+  },
+  {
+    path: "/dashboard/products",
+    element: <DashboardProducts />,
+  },
+  {
+    path: "/dashboard/categories",
+    element: <DashboardCategories />,
+  },
+  {
+    path: "/registered",
+    element: <Registered />,
   },
   {
     path: "*",

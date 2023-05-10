@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
   --color_principal: #8E793E;
@@ -7,7 +7,7 @@
   --background_color_1: #FFFFFF;
   --backgroud_color_2: #231f20;
   --gris: #231f20;
-  --blanco: #FFFFFF;
+  --blanco: #fff8f8;
 }
 
 * {
@@ -182,66 +182,159 @@ body {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding-block: 1rem;
+  padding-block: 5rem;
   width: 100%;
 }
 
 /*Informacion*/
-.InformacionDivContainer1 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 20px;
-  align-items: center;
-  padding: 20px 20px 0px 20px;
+.exploreClassInformacion {
+  display: flex;
+  flex-direction: column;
   width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
-.InformacionDivContainer1 img {
-  width: 100%;
-  height: 100%;
-  border-radius: 60px;
+.tituloInformacionIndividual {
+  margin-left: 2rem;
 }
 
-.InformacionDiv {
-  height: 33rem;
-  width: 100%;
+.tituloInformacionIndividual h2 {
+  display: flex;
   text-align: center;
-  justify-content: space-around;
-  padding-inline: 1rem;
-  background-color: var(--blanco);
-  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  border: 1px solid #dddddd;
-  font-size: 14px;
-  display: flex;
-  flex-direction: column;
+  font-size: 70px;
+  font-weight: bold;
+  margin-left: 0.5rem;
 }
 
-.InformacionCaja {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+.exploreClassInformacion h2 {
+  font-weight: 500;
+  font-size: 28px;
 }
 
-.InformacionDivContainer2 img {
-  width: 100%;
-  height: 100%;
-  border-radius: 60px;
-}
-
-.InformacionCaja>div {
-  width: 100%;
-  height: 100%;
-}
-
-.InformacionCaja {
-  display: flex;
-  flex-direction: column;
+.exploreOptionsInformacion a {
+  text-decoration: none;
   text-align: center;
+}
+
+.opcionIndividualInformacion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 20rem;
+  height: 20rem;
+  padding: 1rem;
+  color: var(--gris);
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border-radius: 2rem;
+
+  margin: 1rem;
+
+  transition: all 0.25s;
+}
+
+.opcionIndividualInformacion:hover {
+  background-color: var(--color_secundario);
+  color: var(--blanco);
+  box-shadow: 0px 10px 15px -3px rgba(173, 151, 79, 0.7);
+
+  transition: all 0.25s;
+}
+
+.opcionIndividualInformacion img {
+  width: 100px;
+  height: 100px;
+  border-radius: 3rem;
+  margin-block-end: 1.5rem;
+}
+
+.opcionIndividualInformacion h3 {
+  font-weight: 500;
+}
+
+.exploreOptionsInformacion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-block-start: 4rem;
+}
+
+@media(max-width: 1400px){
+  .exploreOptionsInformacion{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-content: center;
+    justify-items: center;
+  }
+}
+
+.separacionIndividualInformacion {
+  display: flex;
+  height: 10rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.aboutUsOptionsInformacion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-block-start: 5rem;
+}
+
+.aboutUsIndividual {
+  display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 100%;
-  height: 66.6%;
+  margin-block: 2rem;
+}
+
+@media(max-width: 1070px){
+  .aboutUsIndividual{
+    flex-direction: column;
+  }
+}
+
+.aboutUsIndividual img {
+  border-radius: 2rem;
+
+  transition: all 0.25s;
+}
+
+.aboutUsIndividual img:hover {
+  scale: 105%;
+
+  transition: all 0.25s;
+}
+
+.textoAboutUs {
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 20rem;
+  margin-inline: 2rem;
+}
+
+.tituloInformacionIndividual {
+  margin-block-start: 5rem;
+}
+
+.tituloAboutUsIndividual h2 {
+  display: flex;
+  font-size: 28px;
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+.aboutUsImagenInformacion {
+  width: 500px;
+  height: 500px;
 }
 
 .botonInformacion {
@@ -252,6 +345,9 @@ body {
   border-radius: 2rem;
   cursor: pointer;
   text-decoration: none;
+  width: auto;
+  text-align: center;
+
   transition: all 0.25s;
 }
 
@@ -260,53 +356,52 @@ body {
   border-radius: 2rem;
   background-color: var(--color_secundario);
   color: var(--blanco);
+
   transition: all 0.25s;
 }
 
-.InformacionDivContainer2 {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 20px;
-  align-items: center;
-  padding: 20px 0px 20px 20px;
-  width: 100%;
+/*SingIn / FormInput*/
+.SingInContainer {
+  background-color: var(--color_principal);
 }
 
-@media (max-width:600px) {
-  .InformacionDivContainer1 {
-    grid-template-columns: repeat(1, 1fr);
-    grid-row-gap: 20px;
-  }
-
-  .InformacionDivContainer2 {
-    grid-template-columns: repeat(1, 1fr);
-    grid-row-gap: 20px;
-  }
-}
-
-/*SignIn*/
-.SignInContainer {
-  background-color: #8E793E;
-}
-
-.SignInCabecera {
+.SingInCabecera {
   display: flex;
   justify-content: center;
 }
 
-.SignInCabecera img {
+.SingInCabecera img {
   width: 150px;
   height: 150px;
+  margin-block: 3rem;
 }
 
-.SignInMedio {
+.SingInMedio {
   display: flex;
   gap: 60px;
   justify-content: center;
   text-align: center;
+  margin-block: 1rem;
 }
 
-.SignInForm {
+.SingInMedio a {
+  color: var(--blanco);
+  text-decoration: none;
+
+  transition: all 0.25s;
+}
+
+.SingInMedio a:hover {
+  color: var(--gris);
+
+  transition: all 0.25s;
+}
+
+.staySignedIn {
+  color: var(--blanco);
+}
+
+.SingInForm {
   display: flex;
   justify-content: center;
   height: 100%;
@@ -315,7 +410,7 @@ body {
   text-align: center;
 }
 
-.SignInForm form {
+.SingInForm form {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -325,118 +420,51 @@ body {
   background-color: #8E793E;
 }
 
-.SignInForm form div input {
+.SingInForm label {
+  display: flex;
+}
+
+.SingInForm label p {
+  margin-left: 0.5rem;
+}
+
+.SingInForm form div {
+  margin-block: 0.2rem;
+}
+
+.SingInForm form div input {
   border-radius: 50px;
   border: none;
   height: 40px;
   width: 300px;
+  padding-left: 1rem;
 }
 
-.SignInForm form div label input {
+.SingInForm form div label input {
   border-radius: 50px;
   border: none;
   height: auto;
   width: auto;
 }
 
-.SignInSign button {
+.SingInSing input[type="submit"] {
   height: 40px;
   width: 300px;
   border-radius: 50px;
   border: none;
+  cursor: pointer;
+  color: var(--blanco);
   background-color: #ad974f;
   transition: all 0.25s;
 }
 
-.SignInSign button:hover {
-  background-color: #ffff;
-  color: black;
+.SingInSing input[type="submit"]:hover {
+  background-color: var(--blanco);
+  color: var(--gris);
 }
 
-.SignInText {
-  font-size: 13px;
-}
-
-/*Register*/
-
-.RegisterContainer {
-  background-color: #8E793E;
-}
-
-.RegisterCabecera {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: 12rem;
-}
-
-.RegisterCabecera img {
-  width: 150px;
-  height: 150px;
-}
-
-.RegisterForm {
-  display: flex;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-  background-color: #8E793E;
-  text-align: center;
-}
-
-.RegisterForm form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: flex-start;
-  height: 20rem;
-  max-width: 500px;
-  background-color: #8E793E;
-}
-
-.RegisterForm form div p {
-  text-align: initial;
-  font-size: 13px;
-  justify-content: space-around;
-}
-
-.RegisterForm form div input {
-  height: 40px;
-  width: 300px;
-  border-radius: 0.3rem;
-  border: 1px solid #fff;
-  text-align: initial;
-  box-shadow: 0 2px 3px rgba(0 0 0 / 0.15);
-}
-
-.RegisterForm form div label input {
-  border-radius: 50px;
-  border: none;
-  height: auto;
-  width: auto;
-}
-
-.RegisterForm button {
-  height: 40px;
-  width: 300px;
-  border-radius: 50px;
-  border: none;
-  background-color: #ad974f;
-  transition: all 0.25s;
-}
-
-.RegisterPrivacy {
-  font-size: 13px;
-}
-
-.RegisterSend {
-  transition: all 0.25s;
-}
-
-.RegisterSend:hover {
-  background-color: #ffff;
-  color: black;
+.forgotPassword {
+  color: var(--blanco);
 }
 
 /*carta*/
@@ -706,8 +734,22 @@ body {
   align-items: flex-start;
 }
 
-.sessionDashboard a {
-  padding-right: 1rem;
+.managementDashboard {
+  padding-block: 1rem;
+}
+
+.managementDashboard h3 {
+  font-size: 22px;
+  padding-block: 1rem;
+}
+
+.clientsDashboard {
+  padding-block: 1rem;
+}
+
+.clientsDashboard h3 {
+  font-size: 22px;
+  padding-block: 1rem;
 }
 
 .panelInfoDashboard {
@@ -716,6 +758,16 @@ body {
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 3rem;
   grid-row-gap: 0px;
+  overflow: auto;
+}
+
+.sessionDashboard a {
+  margin-inline: 1rem;
+}
+
+.crearProducto {
+  display: flex;
+  justify-content: right;
 }
 
 .productsOverviewDashboard {
@@ -759,16 +811,27 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-align: center;
 }
 
 .fechaInfoDashBoard {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 20%;
+}
+
+.imagenFotoInfoDashboard img {
+  width: 50px;
+  height: 50px;
 }
 
 .fechaInfoDashBoard h2 {
   margin: 0
+}
+
+.informacionInfoDashboard {
+  width: 20%;
 }
 
 .informacionInfoDashboard h4 {
@@ -810,6 +873,14 @@ h3 {
   padding-inline: 1rem;
 }
 
+/*products*/
+.panelInfoDashboardProducts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-block: 2rem;
+}
+
 /* barra lateral */
 
 .barraDashboard {
@@ -834,26 +905,42 @@ h3 {
 }
 
 .documentDashboard {
-  padding-top: 1rem;
+  padding-block: 1rem;
 }
 
 .documentDashboard h3 {
   font-size: 22px;
+  padding-block: 1rem;
 }
 
 .secondDashboard {
   display: flex;
   align-items: center;
-  font-size: 14px;
-}
-
-.secondDashboard img {
-  padding-right: 1rem;
+  font-size: 16px;
+  padding-block: 0.4rem;
 }
 
 .secondDashboard a {
   text-decoration: none;
   color: var(--background_color_1);
+
+  transition: all 0.25s;
+}
+
+.secondDashboard a:hover {
+  color: var(--color_secundario);
+
+  transition: all 0.25s;
+}
+
+.secondDashboard h4 {
+  margin-inline: 1rem;
+}
+
+.secondDashboard i {
+  width: 16px;
+  height: 16px;
+  text-align: center;
 }
 
 /*footer*/
@@ -906,7 +993,12 @@ h3 {
 }
 
 .footer_linksFooter a:visited {
+  font-size: 18px;
+  text-decoration: none;
   color: var(--blanco);
+  margin-bottom: 15px;
+
+  transition: all 0.25s;
 }
 
 .footer_linksFooter a:hover {
@@ -957,7 +1049,18 @@ h3 {
   background: var(--color_principal);
 }
 
-@media (max-width: 1100px) {}
+/*768*/
+@media (max-width: 1100px) {
+  .panelDashboard {
+    width: 70%;
+  }
+
+  .barraDashboard {
+    width: 30%;
+  }
+}
+
+@media (max-width: 800px) {}
 
 @media (max-width: 920px) {
   .divContainerInformacion {
