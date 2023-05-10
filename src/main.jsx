@@ -6,7 +6,7 @@ import Dashboard from './pages/Dashboard'
 import DashboardProducts from './pages/Dashboard/Products'
 import DashboardCategories from './pages/Dashboard/Categories'
 
-import SignIn from './components/SingIn'
+import SignIn from './components/SignIn'
 import Register from './components/Register'
 import Registered from './pages/UsuarioCreado'
 import NoMatch from './pages/NoMatch'
