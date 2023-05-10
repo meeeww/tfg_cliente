@@ -59,49 +59,7 @@ const ContactUs = () => {
                             </div>
                         </div>
                     </div>
-
                 </div>
-
-
-
-
-
-
-
-
-
-
-
-                {/*<div className="ContactUsFormularioDiv">
-                    <div className="ContactUsFormDiv">
-                        <div className="ContactUsFormHeader">
-                            <p>Our team will contact you</p>
-                        </div>
-                        <div className="ContactUsFormCuerpo">
-                            <form action="">
-                                <div className="ContactUsFormMensajeDiv">
-                                    <input className="ContactUsFormMensaje" type="text" placeholder="Name*" />
-                                    <input className="ContactUsFormMensaje" type="text" placeholder="Last names*" />
-                                </div>
-                                <div className="ContactUsFormMensajeDiv">
-                                    <input className="ContactUsFormMensaje" type="text" placeholder="Email*" />
-                                    <input className="ContactUsFormMensaje" type="text" placeholder="Phone number*" />
-                                </div>
-                                <div className="ContactUsFormMensajeGrandeDiv">
-                                    <input className="ContactUsFormMensajeGrande" type="text" />
-                                </div>
-                                <div className="ContactusFormPrivacidad">
-                                <label >
-                                    <input type="checkbox" value="privacy" />I accept the privacy terms.
-                                </label>
-                            </div>
-                            <div className="ContactUsFormBotonDiv">
-                                <button className="ContactUsFormBoton">Send</button>
-                            </div>
-                            </form>
-                        </div>
-                    </div>
-    </div>*/}
             </div>
         </MainLayout>
     )
