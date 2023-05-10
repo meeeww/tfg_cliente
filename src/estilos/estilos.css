@@ -65,6 +65,33 @@ body {
   color: var(--color_secundario);
 }
 
+.navHeaderDerecha {
+  display: flex;
+}
+
+.navHeaderDerecha a {
+  padding: 10px;
+  text-decoration: none;
+  color: var(--gris);
+  margin-inline: 0.5rem;
+  cursor: pointer;
+
+  transition: all 0.25s;
+}
+
+.navHeaderDerecha i{
+  font-size: 28px;
+}
+
+.navHeaderDerecha a:visited {
+  color: var(--gris);
+}
+
+
+.navHeaderDerecha a:hover {
+  color: var(--color_secundario);
+}
+
 .active {
   color: var(--color_secundario) !important;
 }
@@ -107,7 +134,6 @@ body {
   height: 70vh;
   z-index: 10;
   background-image: url("../assets/BackgroundImage.png");
-  opacity: 0.9;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
