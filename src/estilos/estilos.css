@@ -512,13 +512,13 @@ body {
 .tituloCarta h1 {
   display: flex;
   text-align: center;
-  font-size: 46px;
+  font-size: 38px;
   font-weight: bold;
   margin: 0;
 }
 
 .tituloCarta h1 > h1{
-  margin-left: 2rem;
+  margin-left: 1rem;
 }
 
 .CartaCoffee {
