@@ -7,6 +7,9 @@ import DashboardProducts from './pages/Dashboard/Products'
 import DashboardCategories from './pages/Dashboard/Categories'
 
 import UsuarioConfig from './pages/Usuarios/UsuarioConfiguracion'
+import UsuarioDireccion from './pages/Usuarios/UsuarioDireccion'
+import UsuarioPagos from './pages/Usuarios/UsuarioPagos'
+import UsuarioRecibos from './pages/Usuarios/UsuarioRecibos'
 
 import SignIn from './components/SignIn'
 import Register from './components/Register'
@@ -31,6 +34,18 @@ const router = createBrowserRouter([
   {
     path: "/user",
     element: <UsuarioConfig />,
+  },
+  {
+    path: "/user/orders",
+    element: <UsuarioRecibos />,
+  },
+  {
+    path: "/user/adress",
+    element: <UsuarioDireccion />,
+  },
+  {
+    path: "/user/payments",
+    element: <UsuarioPagos />,
   },
   {
     path: "/signin",

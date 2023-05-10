@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import MainLayout from "../../layout/MainLayout";
 import Panel from '../../components/Usuarios/Panel';
 
-import Configuracion from '../../components/Usuarios/Configuracion';
+import Recibos from '../../components/Usuarios/Recibos';
 
 import '../../estilos/estilos.css'
 
@@ -46,7 +46,7 @@ function Usuario() {
     <MainLayout>
       <div className="mainBodyUsuario">
         <Panel />
-        <Configuracion data = {usuario} />
+        <Recibos data = {usuario} />
       </div>
     </MainLayout>
   )

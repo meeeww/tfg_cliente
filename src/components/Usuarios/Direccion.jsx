@@ -1,12 +1,11 @@
 const listaConfiguracion = [
-    { titulo: "nombre_usuario", mostrar: "Name" },
-    { titulo: "apellido_usuario", mostrar: "Last Name" },
-    { titulo: "correo_usuario", mostrar: "Email" },
-    { titulo: "telefono_usuario", mostrar: "Phone" },
-    { titulo: "contra", mostrar: "Password" },
+    { titulo: "direccion", mostrar: "Adress" },
+    { titulo: "apartamento", mostrar: "Apartment" },
+    { titulo: "nombre_edificio", mostrar: "Building Name" },
+    { titulo: "opciones_entrega", mostrar: "Shipping Options" },
 ]
 
-const Configuracion = ( data ) => {
+const Direccion = ( data ) => {
     return (
         <div className="panelDashboard">
             <div className="headerDashboard">
@@ -27,4 +26,4 @@ const Configuracion = ( data ) => {
     );
 }
 
-export default Configuracion;
+export default Direccion;
