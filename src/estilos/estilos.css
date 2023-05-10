@@ -466,7 +466,7 @@ body {
   transition: all 0.25s;
 }
 
-.CartaDiv:hover{
+.CartaDiv:hover {
   background-color: var(--color_secundario);
   color: var(--blanco);
   box-shadow: 0px 10px 15px -3px rgba(173, 151, 79, 0.7);
@@ -492,7 +492,7 @@ body {
   transition: all 0.25s;
 }
 
-.CartaImg img:hover{
+.CartaImg img:hover {
   scale: 105%;
 
   transition: all 0.25s;
@@ -503,8 +503,26 @@ body {
   flex-direction: column;
 }
 
-.CartaMenu h1{
+.CartaMenu h1 {
+  /* text-align: center; */
+}
+
+.tituloCarta{
+  display: flex;
+  align-items: center;
+
+}
+
+.tituloCarta h1 {
+  display: flex;
   text-align: center;
+  font-size: 46px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.tituloCarta h1 > h1{
+  margin-left: 2rem;
 }
 
 .CartaCoffee {
@@ -515,9 +533,13 @@ body {
   padding: 10px;
 }
 
-.CartaCoffee a{
+.CartaCoffee a {
   text-decoration: none;
+  color: var(--gris);
+  max-width: 30rem;
 }
+
+
 
 .CartaCofeeCaja {
   background-color: var(--blanco);
@@ -528,17 +550,18 @@ body {
   display: flex;
 }
 
-.CartaImagen{
+.CartaImagen {
   width: 33.3%;
-  height: 100%;
+
 }
 
-.CartaImagen img{
+.CartaImagen img {
+  border-radius: 1rem;
   width: 100%;
   height: 100%;
 }
 
-.CartaTexto{
+.CartaTexto {
   display: flex;
   flex-direction: column;
   width: 66.6%;
@@ -556,12 +579,18 @@ body {
 }
 
 .CartaItemsCaja {
-  background-color: var(--blanco);
-  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  border: 1px solid #dddddd;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
   font-size: 14px;
   display: flex;
+}
+
+.CartaItemsCaja:hover {
+  background-color: var(--color_secundario);
+  color: var(--blanco);
+  box-shadow: 0px 10px 15px -3px rgba(173, 151, 79, 0.7);
+
+  transition: all 0.25s;
 }
 
 .CartaSlushie {

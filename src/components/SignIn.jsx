@@ -1,5 +1,4 @@
 import '../estilos/estilos.css'
-import React from 'react'
 import logo from '../assets/Logo.png'
 import MainLayout from '../layout/MainLayout'
 
@@ -31,7 +30,7 @@ const FormInput = () => {
                         <div className="SignInSign">
                             <button>Sign in</button>
                         </div>
-                        <div class="SignInText">
+                        <div className="SignInText">
                             <p>Forgot your password</p>
                         </div>
                     </form>

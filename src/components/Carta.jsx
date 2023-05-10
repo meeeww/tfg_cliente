@@ -86,8 +86,10 @@ const Carta = () => {
             <div className="CartaMenu">
                 {categorias.map((categoria) => (
                     <div id={categoria.nombre_categoria} key={categoria.id_categoria}>
-                        <h1>{categoria.nombre_categoria}</h1>
-                        <div className={"Carta" + categoria.nombre_categoria} id={"Carta" + categoria.nombre_categoria}>
+                        <div className="tituloCarta">
+                            <h1>Our <h1 style={{ color: "var(--color_secundario)" }}>{categoria.nombre_categoria}</h1></h1>
+                        </div>
+                        <div className={"CartaCoffee"} id={categoria.nombre_categoria.toLowerCase()}>
                             {
                                 productos &&
                                 productos.map((producto) => (
