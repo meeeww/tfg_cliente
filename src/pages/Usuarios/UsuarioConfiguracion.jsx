@@ -6,7 +6,7 @@ import Panel from '../../components/Usuarios/Panel';
 
 import Configuracion from '../../components/Usuarios/Configuracion';
 
-import '../estilos/estilos.css'
+import '../../estilos/estilos.css'
 
 function Usuario() {
 
