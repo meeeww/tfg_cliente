@@ -27,7 +27,7 @@ const Header = () => (
             <div className="register-loginHeader">
                 <nav className="navHeader">
                     {linksRight.map((item) => (
-                        <NavLink to={item.href} id={item.clase} key={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>{item.name}</NavLink>
+                        <NavLink to={item.href} id={item.clase} key={item.name}>{item.name}</NavLink>
                     ))}
                 </nav>
             </div>
