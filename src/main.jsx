@@ -10,7 +10,9 @@ import UsuarioConfig from './pages/Usuarios/UsuarioConfiguracion'
 
 import SignIn from './components/SignIn'
 import Register from './components/Register'
+import SignOut from './components/SignOut'
 import Registered from './pages/UsuarioCreado'
+
 import NoMatch from './pages/NoMatch'
 import Carta from './pages/Carta'
 
@@ -37,6 +39,10 @@ const router = createBrowserRouter([
   {
     path: "/signup",
     element: <Register />,
+  },
+  {
+    path: "/signout",
+    element: <SignOut />,
   },
   {
     path: "/carta",

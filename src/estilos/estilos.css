@@ -907,6 +907,11 @@ h3 {
   margin-block: 2rem;
 }
 
+/* usuarios */
+.mainBodyUsuario{
+  display: flex;
+}
+
 /* barra lateral */
 
 .barraDashboard {

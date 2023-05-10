@@ -3,7 +3,7 @@ const managements = [
     { name: 'orders', href: '/user/orders', icon: "fa-solid fa-basket-shopping" },
     { name: 'adress', href: '/user/adress', icon: "fa-solid fa-map-location-dot" },
     { name: 'payments', href: '/user/payments', icon: "fa-solid fa-credit-card" },
-    { name: 'logout', href: '/user/logout', icon: "fa-solid fa-right-from-bracket" },
+    { name: 'logout', href: '../signout', icon: "fa-solid fa-right-from-bracket" },
 ]
 
 const Configuracion = () => {

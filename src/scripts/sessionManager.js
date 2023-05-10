@@ -1,9 +1,13 @@
 import Axios from 'axios'
 
 function checkSession() {
+    let usuario
+
     if (localStorage.getItem("token") != null || localStorage.getItem("token") == "") {
         let baseURL = "http://localhost:4000/API/sesiones/buscar?token=";
         let baseURL2 = "http://localhost:4000/API/usuarios/buscar?id=";
+
+        
 
         let config = {
             timeout: 10000,
@@ -15,6 +19,7 @@ function checkSession() {
                 console.log("RESPONSE RECEIVED: ", res.data[0]);
                 if (res.data[0]) {
                     console.log("existe el token")
+                    usuario = res.data[0]
                     let idUsuario = res.data[0]["id_usuario"]
                     Axios.get((baseURL2 + idUsuario), config)
                         .then((res) => {
@@ -36,6 +41,8 @@ function checkSession() {
                 };
             })
     }
+
+    return usuario;
 }
 
 export default checkSession
