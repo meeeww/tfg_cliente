@@ -9,8 +9,8 @@ const linksLeft = [
 ]
 
 const linksRight = [
-    { name: 'Sign In', href: '/signin', clase: "signin" },
-    { name: 'Sign Up', href: '/signup', clase: "signup" },
+    { name: 'Shopping Cart', href: '/cart', icono: "fa-solid fa-cart-shopping" },
+    { name: 'User Page', href: '/user', icono: "fa-solid fa-circle-user" },
 ]
 
 const Header = () => (
@@ -25,9 +25,9 @@ const Header = () => (
                 ))}
             </nav>
             <div className="register-loginHeader">
-                <nav className="navHeader">
+                <nav className="navHeaderDerecha">
                     {linksRight.map((item) => (
-                        <NavLink to={item.href} id={item.clase} key={item.name}>{item.name}</NavLink>
+                        <a key={item.name} href={item.href}><i className={item.icono}></i></a>
                     ))}
                 </nav>
             </div>
