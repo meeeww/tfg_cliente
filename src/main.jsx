@@ -4,12 +4,14 @@ import Inicio from './pages/Inicio'
 
 import Dashboard from './pages/Dashboard'
 import DashboardProducts from './pages/Dashboard/Products'
-import DahsboardCategories from './pages/Dashboard/Categories'
+import DashboardCategories from './pages/Dashboard/Categories'
 
 import SignIn from './components/SingIn'
 import Register from './components/Register'
 import Registered from './pages/UsuarioCreado'
 import NoMatch from './pages/NoMatch'
+import Carta from './pages/Carta'
+
 import './estilos/estilos.css'
 
 import {
@@ -23,6 +25,18 @@ const router = createBrowserRouter([
     element: <Inicio />,
   },
   {
+    path: "/signin",
+    element: <SignIn />,
+  },
+  {
+    path: "/signup",
+    element: <Register />,
+  },
+  {
+    path: "/carta",
+    element: <Carta />,
+  },
+  {
     path: "/dashboard",
     element: <Dashboard />,
   },
@@ -32,15 +46,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/dashboard/categories",
-    element: <DahsboardCategories />,
-  },
-  {
-    path: "/signin",
-    element: <SignIn />,
-  },
-  {
-    path: "/signup",
-    element: <Register />,
+    element: <DashboardCategories />,
   },
   {
     path: "/registered",

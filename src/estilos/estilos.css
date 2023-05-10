@@ -467,6 +467,249 @@ body {
   color: var(--blanco);
 }
 
+/*carta*/
+
+.CartaHeader {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin-block: 3rem;
+  align-content: center;
+  justify-items: center;
+}
+
+.CartaDiv {
+  height: 10rem;
+  width: 10rem;
+  text-align: center;
+  justify-content: space-around;
+  padding-inline: 1rem;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border-radius: 2rem;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: var(--gris);
+
+  transition: all 0.25s;
+}
+
+.CartaDiv:hover {
+  background-color: var(--color_secundario);
+  color: var(--blanco);
+  box-shadow: 0px 10px 15px -3px rgba(173, 151, 79, 0.7);
+
+  transition: all 0.25s;
+}
+
+.CartaImg {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 66.6%;
+}
+
+.CartaImg img {
+  width: 100%;
+  height: 100%;
+  border-radius: 4rem;
+
+  transition: all 0.25s;
+}
+
+.CartaImg img:hover {
+  scale: 105%;
+
+  transition: all 0.25s;
+}
+
+.CartaMenu {
+  display: flex;
+  flex-direction: column;
+}
+
+.tituloCarta{
+  display: flex;
+  align-items: center;
+
+}
+
+.tituloCarta h1 {
+  display: flex;
+  text-align: center;
+  font-size: 38px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.tituloCarta h1 > h1{
+  margin-left: 1rem;
+}
+
+.CartaCoffee {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  padding: 10px;
+}
+
+.CartaCoffee a {
+  text-decoration: none;
+  color: var(--gris);
+  max-width: 30rem;
+}
+
+
+
+.CartaCofeeCaja {
+  background-color: var(--blanco);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  border: 1px solid #dddddd;
+  font-size: 14px;
+  display: flex;
+}
+
+.CartaImagen {
+  width: 33.3%;
+
+}
+
+.CartaImagen img {
+  border-radius: 1rem;
+  width: 100%;
+  height: 100%;
+}
+
+.CartaTexto {
+  display: flex;
+  flex-direction: column;
+  width: 66.6%;
+  text-align: center;
+  justify-content: space-evenly;
+}
+
+.CartaJuice {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  padding: 10px;
+}
+
+.CartaItemsCaja {
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  font-size: 14px;
+  display: flex;
+}
+
+.CartaItemsCaja:hover {
+  background-color: var(--color_secundario);
+  color: var(--blanco);
+  box-shadow: 0px 10px 15px -3px rgba(173, 151, 79, 0.7);
+
+  transition: all 0.25s;
+}
+
+.CartaSlushie {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  padding: 10px;
+}
+
+.CartaSlushieCaja {
+  background-color: var(--blanco);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  border: 1px solid #dddddd;
+  font-size: 14px;
+  display: flex;
+}
+
+.CartaSandwich {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  padding: 10px;
+}
+
+.CartaSandwichCaja {
+  background-color: var(--blanco);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  border: 1px solid #dddddd;
+  font-size: 14px;
+  display: flex;
+}
+
+.CartaConfectionery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  padding: 10px;
+}
+
+.CartaConfectioneryCaja {
+  background-color: var(--blanco);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  border: 1px solid #dddddd;
+  font-size: 14px;
+  display: flex;
+}
+
+
+
+@media (max-width:840px) {
+  .CartaHeader {
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 20px;
+  }
+
+  .CartaCoffee {
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 20px;
+    margin: 10px;
+  }
+
+  .CartaJuice {
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 20px;
+    margin: 10px;
+  }
+
+  .CartaSlushie {
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 20px;
+    margin: 10px;
+  }
+
+  .CartaSandwich {
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 20px;
+    margin: 10px;
+  }
+
+  .CartaConfectionery {
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 20px;
+    margin: 10px;
+  }
+}
+
 /*dashboard*/
 
 .dashboardBody {
