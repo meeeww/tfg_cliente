@@ -503,10 +503,6 @@ body {
   flex-direction: column;
 }
 
-.CartaMenu h1 {
-  /* text-align: center; */
-}
-
 .tituloCarta{
   display: flex;
   align-items: center;

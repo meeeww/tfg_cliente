@@ -15,17 +15,6 @@ const headers = [
     { title: "Confectionery", redirect: "#confectionery", img: header5 }
 ]
 
-import carta1 from '../assets/CartaCafe/Cartacafesolo.png'
-import carta2 from '../assets/CartaCafe/Cartacortado.png'
-import carta3 from '../assets/CartaCafe/Cartacafeconleche.png'
-import carta4 from '../assets/CartaCafe/Cartacapuchino.png'
-import carta5 from '../assets/CartaCafe/CartaIrish.png'
-import carta6 from '../assets/CartaCafe/Cartamacchiato.png'
-import carta7 from '../assets/CartaCafe/Cartazumo.png'
-import carta8 from '../assets/CartaCafe/Cartagranizado.png'
-import carta9 from '../assets/CartaCafe/Cartasandwich.png'
-import carta10 from '../assets/CartaCafe/Cartapastel.png'
-
 const Carta = () => {
 
     const [isLoading, setLoading] = useState(true);
