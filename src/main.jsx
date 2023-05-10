@@ -6,6 +6,8 @@ import Dashboard from './pages/Dashboard'
 import DashboardProducts from './pages/Dashboard/Products'
 import DashboardCategories from './pages/Dashboard/Categories'
 
+import UsuarioConfig from './pages/Usuarios/UsuarioConfiguracion'
+
 import SignIn from './components/SignIn'
 import Register from './components/Register'
 import Registered from './pages/UsuarioCreado'
@@ -23,6 +25,10 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Inicio />,
+  },
+  {
+    path: "/user",
+    element: <UsuarioConfig />,
   },
   {
     path: "/signin",

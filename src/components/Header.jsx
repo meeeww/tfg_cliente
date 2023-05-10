@@ -10,7 +10,7 @@ const linksLeft = [
 
 const linksRight = [
     { name: 'Shopping Cart', href: '/cart', icono: "fa-solid fa-cart-shopping" },
-    { name: 'User Page', href: '/user', icono: "fa-solid fa-circle-user" },
+    { name: 'User Page', href: '/signin', icono: "fa-solid fa-circle-user" },
 ]
 
 const Header = () => (

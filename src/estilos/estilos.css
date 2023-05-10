@@ -910,6 +910,7 @@ h3 {
 /* barra lateral */
 
 .barraDashboard {
+  padding-top: 2rem;
   background-color: var(--backgroud_color_2);
   width: 20%;
   height: 100vh;

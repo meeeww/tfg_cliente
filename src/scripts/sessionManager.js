@@ -2,7 +2,6 @@ import Axios from 'axios'
 
 function checkSession() {
     if (localStorage.getItem("token") != null || localStorage.getItem("token") == "") {
-        console.log("aaaaa")
         let baseURL = "http://localhost:4000/API/sesiones/buscar?token=";
         let baseURL2 = "http://localhost:4000/API/usuarios/buscar?id=";
 
@@ -21,9 +20,9 @@ function checkSession() {
                         .then((res) => {
                             console.log("RESPONSE 2 RECEIVED: ", res.data[0]);
                             if(res.data[0] != undefined){
-                                location.replace("http://localhost:5173")
+                                location.replace("http://localhost:5173/user")
                             } else {
-                                location.replace("http://localhost:5173/login")
+                                //location.replace("http://localhost:5173/login")
                             }
                         })
 
