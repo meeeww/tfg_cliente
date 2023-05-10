@@ -1,5 +1,6 @@
 import React from "react";
 import MainLayout from '../layout/MainLayout'
+import logo from '../assets/Logo.png'
 
 const ContactUs = () => {
     return (
@@ -35,7 +36,43 @@ const ContactUs = () => {
                         </div>
                     </div>
                 </div>
+
                 <div className="ContactUsFormularioDiv">
+                    <div className="ContactUsFormulario">
+                        <div className="ContactUsFormularioIzq">
+                            <div className="ContactUsFormularioImagen">
+                                <img src={logo} alt="logo" />
+                            </div>
+                        </div>
+                        <div className="ContactUsFormularioDcho">
+                            <h1>Contact us</h1>
+                            <div className="ContactUsFormularioCuerpo">
+                                <div className="ContactUsFormularioMensajes">
+                                    <input type="text" placeholder="Full name"/>
+                                    <input type="text" placeholder="E-mail"/>
+                                    <input type="text" placeholder="Phone"/>
+                                </div>
+                                <div className="ContactUsFormularioMensajeGrande">
+                                    <input type="text" placeholder="Message..."/>
+                                    <button className="ContactUsFormularioBoton">Send</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+                {/*<div className="ContactUsFormularioDiv">
                     <div className="ContactUsFormDiv">
                         <div className="ContactUsFormHeader">
                             <p>Our team will contact you</p>
@@ -64,7 +101,7 @@ const ContactUs = () => {
                             </form>
                         </div>
                     </div>
-                </div>
+    </div>*/}
             </div>
         </MainLayout>
     )
