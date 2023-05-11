@@ -814,14 +814,45 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
-    grid-row-gap: 20px;
     padding: 1rem;
+    
   }
+
+  .ContactUsContenedorDivFormulario {
+    display: flex;
+   
+  }
+
+  .ContactUsContenedorDivFormularioDerecha {
+    width: 50%;
+  }
+
+  .ContactUsContenedorDivFormularioIzquierda {
+    width: 50%;
+  }
+
+  .ContactUsContenedorFormularioInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .ContactUsContenedorFormularioInfo h1 {
+    text-align: center;
+  }
+
+
+
+
+
+
+
 
   .ContactUsUbicacion {
     display: flex;
     gap: 10px;
     justify-content: space-evenly;
+    height: 29rem;
   }
 
   .ContactUsUbicacionDiv1 {
@@ -860,35 +891,17 @@
   }
 
   .ContactUsFormulario {
-    width: 50rem;
+    width: 100%;
     height: 100%;
     display: flex;
     justify-content: space-around;
-    border-radius: 20px;
-    border: 3px solid var(--color_secundario);
-  }
-
-  .ContactUsFormularioIzq {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   .ContactUsFormularioDcho {
     width: 50%;
     height: 100%;
-  }
-
-  .ContactUsFormularioImagen {
-    height: 75%;
-    width: 75%;
-  }
-
-  .ContactUsFormularioImagen img {
-    height: 100%;
-    width: 100%;
+    border: 3px solid var(--color_secundario);
+    border-radius: 20px;
   }
 
   .ContactUsFormularioDcho h1 {
@@ -936,7 +949,8 @@
     display: flex;
     flex-direction: column;
     padding: 20px 10px 0px 0px;
-    gap: 20px;
+    gap: 10px;
+    padding: 10px 10px 10px 0px;
   }
 
   .ContactUsFormularioMensajeGrande input {
@@ -975,11 +989,46 @@
     transition: all 0.25s;
   }
 
+
+
+  @media (max-width:1100px) {
+    .ContactUsFormularioMensajes input {
+      width: 100%;
+    }
+
+    .ContactUsFormularioMensajeGrande input {
+      width: 100%;
+    }
+
+    .ContactUsFormularioMensajeGrande {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .ContactUsFormularioMensajes {
+      gap: 28px;
+    }
+
+    .ContactUsFormularioMensajeGrande {
+      gap: 28px;
+      padding: 28px 10px 10px 0px;
+    } 
+
+    .ContactUsFormularioDiv {
+      height: 100%;
+    }
+
+    .ContactUsFormularioMensajeGrande button {
+      width: 50%;
+    }
+  }
+
   @media (max-width:900px) {
     .ContactUsContenedor {
       grid-template-columns: repeat(1, 1fr);
-      gap: 20px;
-      height: 75rem;
+
+      height: 100rem;
     }
 
     .ContactUsUbicacionDiv1 {
@@ -988,10 +1037,32 @@
 
     .ContactUsUbicacion {
       flex-direction: column;
+      height: auto;
     }
 
     .ContactUsFormulario {
-      width: 40rem;
+      width: 100%;
+      display: inline;
+    }
+
+    .ContactUsContenedorDivFormulario{
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .ContactUsContenedorFormularioInfo{
+      gap: 10px;
+    }
+
+    .ContactUsFormularioDiv{
+      display: inline;
+    }
+    .ContactUsFormularioDcho{
+      width: 100%;
+    }
+
+    .ContactUsContenedorDivFormulario{
+      gap: 10px;
     }
   }
 
@@ -1010,7 +1081,7 @@
       width: 100%;
     }
 
-    .ContactUsFormularioMensajeGrande input{
+    .ContactUsFormularioMensajeGrande input {
       width: 100%;
     }
 
@@ -1023,10 +1094,12 @@
     .ContactUsFormularioMensajeGrande button {
       width: 50%;
     }
-    .ContactUsFormularioIzq{
+
+    .ContactUsFormularioIzq {
       align-items: center;
     }
-    .ContactUsFormularioImagen{
+
+    .ContactUsFormularioImagen {
       width: 80%;
       height: 50%;
     }
@@ -1038,8 +1111,9 @@
       gap: 20px;
       height: 74rem;
     }
-    .ContactUsFormularioIzq{
-      display:none;
+
+    .ContactUsFormularioIzq {
+      display: none;
     }
 
     .ContactUsFormulario {
@@ -1048,10 +1122,11 @@
       height: 23rem;
     }
 
-    .ContactUsFormularioDcho h1{
+    .ContactUsFormularioDcho h1 {
       font-size: 20px;
     }
   }
+
   /*dashboard*/
 
   .dashboardBody {
