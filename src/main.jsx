@@ -16,8 +16,12 @@ import Register from './components/Register'
 import SignOut from './components/SignOut'
 import Registered from './pages/UsuarioCreado'
 
-import NoMatch from './pages/NoMatch'
 import Carta from './pages/Carta'
+
+import Carrito from './pages/Productos/Carrito'
+import Producto from './pages/Productos/Producto'
+
+import NoMatch from './pages/NoMatch'
 
 import './estilos/estilos.css'
 
@@ -60,8 +64,16 @@ const router = createBrowserRouter([
     element: <SignOut />,
   },
   {
-    path: "/carta",
+    path: "/menu",
     element: <Carta />,
+  },
+  {
+    path: "/cart",
+    element: <Carrito />,
+  },
+  {
+    path: "/product",
+    element: <Producto />,
   },
   {
     path: "/dashboard",

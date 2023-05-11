@@ -1,9 +1,3 @@
-const listaConfiguracion = [
-    { titulo: "numero_tarjeta", mostrar: "Card Number" },
-    { titulo: "cvv", mostrar: "CVV" },
-    { titulo: "mes_caducidad", mostrar: "Expire Date" },
-]
-
 const Recibos = ( data ) => {
     return (
         <div className="panelDashboard">
