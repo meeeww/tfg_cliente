@@ -819,20 +819,22 @@
 
   .ContactUsContenedorDivFormulario {
     display: flex;
+    justify-content: space-evenly;
   }
 
   .ContactUsContenedorDivFormularioDerecha {
-    width: 50%;
+    width: 40%;
   }
 
   .ContactUsContenedorDivFormularioIzquierda {
-    width: 50%;
+    width: 40%;
   }
 
   .ContactUsContenedorFormularioInfo {
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
+    justify-content: center;
   }
 
   .ContactUsContenedorFormularioInfo h1 {
@@ -878,18 +880,17 @@
 
   .ContactUsFormularioDiv {
     display: flex;
-    justify-content: center;
+    height: 100%;
+    width: 100%;
   }
 
   .ContactUsFormulario {
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: space-around;
   }
 
   .ContactUsFormularioDcho {
-    width: 50%;
+    width: 100%;
     height: 100%;
     border: 3px solid var(--color_secundario);
     border-radius: 20px;
@@ -897,26 +898,35 @@
 
   .ContactUsFormularioDcho h1 {
     text-align: center;
-    padding: 10px 0px 0px 0px;
+    padding: 25px 0px 0px 0px;
   }
 
   .ContactUsFormularioCuerpo {
-    height: 90%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+  
+.ContactUsFormularioCuerpoMensajes{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  gap: 25px;
+}
 
   .ContactUsFormularioMensajes {
     display: flex;
+    width: 100%;
     flex-direction: column;
-    padding: 10px 10px 0px 0px;
-    gap: 20px;
+    gap: 30px;
+    align-items: center;
   }
 
   .ContactUsFormularioMensajes input {
-    width: 15rem;
-    height: 2rem;
+    width: 80%;
+    height: 2.3rem;
     border-radius: 15px;
     border: none;
     padding: 10px 0px 10px 10px;
@@ -938,13 +948,11 @@
   .ContactUsFormularioMensajeGrande {
     display: flex;
     flex-direction: column;
-    padding: 20px 10px 0px 0px;
-    gap: 10px;
-    padding: 10px 10px 10px 0px;
+    gap: 25px;
+    align-items: center;
   }
-
   .ContactUsFormularioMensajeGrande input {
-    width: 15rem;
+    width: 80%;
     height: 6rem;
     border-radius: 10px;
     border: none;
@@ -965,7 +973,7 @@
   }
 
   .ContactUsFormularioBoton {
-    width: 15rem;
+    width: 50%;
     height: 2rem;
     border-radius: 15px;
     background-color: var(--blanco);
@@ -977,39 +985,6 @@
     background-color: var(--color_secundario);
     color: var(--blanco);
     transition: all 0.25s;
-  }
-
-  @media (max-width:1100px) {
-    .ContactUsFormularioMensajes input {
-      width: 100%;
-    }
-
-    .ContactUsFormularioMensajeGrande input {
-      width: 100%;
-    }
-
-    .ContactUsFormularioMensajeGrande {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .ContactUsFormularioMensajes {
-      gap: 28px;
-    }
-
-    .ContactUsFormularioMensajeGrande {
-      gap: 28px;
-      padding: 28px 10px 10px 0px;
-    }
-
-    .ContactUsFormularioDiv {
-      height: 100%;
-    }
-
-    .ContactUsFormularioMensajeGrande button {
-      width: 50%;
-    }
   }
 
   @media (max-width:900px) {
@@ -1052,66 +1027,52 @@
     .ContactUsContenedorDivFormulario {
       gap: 10px;
     }
+
+    .ContactUsFormularioCuerpoMensajes{
+      gap: 10px;
+    }
+    .ContactUsFormularioMensajes{
+      gap: 10px;
+    }
+    .ContactUsFormularioMensajeGrande{
+      gap:10px;
+    }
+    .ContactUsFormularioDcho h1{
+      padding: 10px 0px 0px 0px;
+    }
+    .ContactUsFormularioMensajeGrande button{
+      margin-bottom: 5px;
+    }
+  }
+
+  @media (max-width:800px) {
+    .ContactUsContenedor {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
+      height: 105rem;
+    }
+    
   }
 
   @media (max-width:700px) {
     .ContactUsContenedor {
       grid-template-columns: repeat(1, 1fr);
       gap: 20px;
-      height: 75rem;
-    }
-
-    .ContactUsFormulario {
-      width: 30rem;
-    }
-
-    .ContactUsFormularioMensajes input {
-      width: 100%;
-    }
-
-    .ContactUsFormularioMensajeGrande input {
-      width: 100%;
-    }
-
-    .ContactUsFormularioMensajeGrande {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .ContactUsFormularioMensajeGrande button {
-      width: 50%;
-    }
-
-    .ContactUsFormularioIzq {
-      align-items: center;
-    }
-
-    .ContactUsFormularioImagen {
-      width: 80%;
-      height: 50%;
+      height: 110rem;
     }
   }
-
+  @media (max-width:600px) {
+    .ContactUsContenedor {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
+      height: 115rem;
+    }
+  }
   @media (max-width:500px) {
     .ContactUsContenedor {
       grid-template-columns: repeat(1, 1fr);
       gap: 20px;
-      height: 74rem;
-    }
-
-    .ContactUsFormularioIzq {
-      display: none;
-    }
-
-    .ContactUsFormulario {
-      width: 20rem;
-      padding: 0.6rem;
-      height: 23rem;
-    }
-
-    .ContactUsFormularioDcho h1 {
-      font-size: 20px;
+      height: 125rem;
     }
   }
 
