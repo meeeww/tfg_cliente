@@ -8,6 +8,7 @@ import Precio from './components/SignIn'
 import Carta from './components/Carta'
 import Merchandising from './components/Merchandising'
 import ContactUs from './components/ContactUs'
+import WorkWithUs from './components/WorkWithUs'
 
 import {
   createBrowserRouter,
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
   {
     path: "/ContactUs",
     element: <ContactUs />,
+  },
+  {
+    path: "/WorkWithUs",
+    element: <WorkWithUs />,
   },
 ]);
 

@@ -1,6 +1,5 @@
 import React from "react";
 import MainLayout from '../layout/MainLayout'
-import logo from '../assets/Logo.png'
 
 const ContactUs = () => {
     return (
