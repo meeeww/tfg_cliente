@@ -79,7 +79,7 @@ body {
   transition: all 0.25s;
 }
 
-.navHeaderDerecha i{
+.navHeaderDerecha i {
   font-size: 28px;
 }
 
@@ -287,8 +287,8 @@ body {
   margin-block-start: 4rem;
 }
 
-@media(max-width: 1400px){
-  .exploreOptionsInformacion{
+@media(max-width: 1400px) {
+  .exploreOptionsInformacion {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-content: center;
@@ -320,8 +320,8 @@ body {
   margin-block: 2rem;
 }
 
-@media(max-width: 1070px){
-  .aboutUsIndividual{
+@media(max-width: 1070px) {
+  .aboutUsIndividual {
     flex-direction: column;
   }
 }
@@ -557,7 +557,7 @@ body {
   flex-direction: column;
 }
 
-.tituloCarta{
+.tituloCarta {
   display: flex;
   align-items: center;
 
@@ -571,7 +571,7 @@ body {
   margin: 0;
 }
 
-.tituloCarta h1 > h1{
+.tituloCarta h1>h1 {
   margin-left: 1rem;
 }
 
@@ -908,8 +908,38 @@ h3 {
 }
 
 /* usuarios */
-.mainBodyUsuario{
+.mainBodyUsuario {
   display: flex;
+}
+
+/*productos*/
+.productoDivGeneral {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 10rem;
+}
+
+.productoIndividualInformacion {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  height: 200px;
+}
+
+.productoIndividualInformacion h5 {
+  color: var(--gris);
+  font-weight: 300;
+}
+
+.productoIndividualInformacion h3 {
+  color: var(--color_secundario);
+  font-weight: 500;
+}
+
+.productoIndividualInformacion h4 {
+  font-weight: 400;
 }
 
 /* barra lateral */

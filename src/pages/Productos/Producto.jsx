@@ -8,27 +8,26 @@ import ProductoIndividual from "../../components/Productos/Producto";
 
 import '../../estilos/estilos.css'
 
-
 function Producto() {
+  const queryParameters = new URLSearchParams(window.location.search)
+  const productId = queryParameters.get("id")
 
-  const [usuario, setUsuario] = useState([])
+  const [producto, setProducto] = useState([])
+  const [categoria, setCategoria] = useState([])
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
     if (localStorage.getItem("token") != null || localStorage.getItem("token") == "") {
-      Axios.get("http://localhost:4000/API/sesiones/buscar?token=" + localStorage.getItem("token")).then(response => {
-
+      Axios.get("http://localhost:4000/API/productos/buscar?id=" + productId).then(response => {
         if (response.data[0]) {
-
-          Axios.get("http://localhost:4000/API/usuarios/buscar?id=" + response.data[0]["id_usuario"]).then(response2 => {
-            setUsuario(response2.data[0])
+          setProducto(response.data[0])
+          Axios.get("http://localhost:4000/API/categorias/buscar?id=" + response.data[0].id_categoria).then(response => {
+            setCategoria(response.data[0])
             setLoading(false)
           })
+          
         }
-
       })
-      // setUsuario(checkSession())
-      // setLoading(false)
     }
   }, [])
 
@@ -39,7 +38,7 @@ function Producto() {
   return (
     <MainLayout>
       <Breadcumb></Breadcumb>
-      <ProductoIndividual data = {usuario} />
+      <ProductoIndividual data={{producto, categoria}} />
     </MainLayout>
   )
 }
