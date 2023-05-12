@@ -9,6 +9,8 @@ import Carta from './components/Carta'
 import Merchandising from './components/Merchandising'
 import ContactUs from './components/ContactUs'
 import WorkWithUs from './components/WorkWithUs'
+import WorkWithUsOffices from './components/WorkWithUsOffices'
+
 
 import {
   createBrowserRouter,
@@ -47,6 +49,10 @@ const router = createBrowserRouter([
   {
     path: "/WorkWithUs",
     element: <WorkWithUs />,
+  },
+  {
+    path: "/WorkWithUsOffices",
+    element: <WorkWithUsOffices />,
   },
 ]);
 

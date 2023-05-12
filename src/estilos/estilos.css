@@ -1156,6 +1156,34 @@
     gap: 10px;
   }
 
+  /*WorkWithUsOffices*/
+
+.WorkWithUsOfficesContenedor{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.WorkWithUsOfficesDiv{
+  width: 50%;
+  height: 300px;
+  border: 1px solid var(--backgroud_color_2);
+  overflow-y : scroll; 
+}
+
+.WorkWithUsOfficesCaja{
+  border: 1px solid var(--backgroud_color_2);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  padding: 2rem;
+}
+
+.WorkWithUsOfficesCaja:hover{
+  background-color: rgb(198, 198, 198);
+}
+
   /*dashboard*/
 
   .dashboardBody {
