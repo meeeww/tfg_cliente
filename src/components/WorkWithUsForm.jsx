@@ -40,7 +40,6 @@ const WorkWithUsForm = () => {
                             <label for="birthdate">Date of birth</label>
                             <input type="date" id="birthdate" name="birthdate" />
                         </div>
-                        <input type="text" placeholder="PASSWORD" />
                         <div className="WorkWithUsFormCheckBoxContainer">
                             <div className="WorkWithUsFormCheckBox">
                                 <input type="checkbox" id="miCheckbox" />
@@ -49,7 +48,6 @@ const WorkWithUsForm = () => {
                         </div>
                         <div className="WorkWithUsFormBoton">
                         <button>Send</button>
-
                         </div>
                     </div>
                 </div>
