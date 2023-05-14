@@ -1,4 +1,10 @@
+import { useState } from "react";
+import BotonCompra from './BotonCompra'
+
 const Producto = (data) => {
+
+    const [numero, setNumero] = useState(1);
+
     return (
         <div className="productoDivGeneral">
             <div className="productoIndividualImagen">
@@ -11,9 +17,16 @@ const Producto = (data) => {
                 <h3>{"$" + data.data.producto.coste_base}</h3>
                 <div className="productoIndividualCarrito">
                     <div className="productoIndividualCarritoCantidad">
+                        <span onClick={() => {
+                            if (numero >= 2) {
+                                setNumero(numero - 1)
+                            }
+                        }}>-</span>
+                        <span>{numero}</span>
+                        <span onClick={() => setNumero(numero + 1)}>+</span>
 
                     </div>
-                    <button>Add to cart</button>
+                    <BotonCompra producto = {{data, numero}} />
                 </div>
             </div>
         </div>

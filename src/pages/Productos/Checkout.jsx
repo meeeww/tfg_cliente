@@ -2,13 +2,13 @@ import Axios from 'axios'
 import { useEffect, useState } from 'react'
 
 import MainLayout from "../../layout/MainLayout";
-import Panel from '../../components/Usuarios/Panel';
+import Panel from '../../components/Usuarios/Panel.jsx';
 
-import Recibos from '../../components/Usuarios/Recibos';
+import CheckoutComponent from '../../components/Productos/Checkout';
 
 import '../../estilos/estilos.css'
 
-function Usuario() {
+function Checkout() {
 
   const [recibo, setRecibo] = useState([])
   const [usuario, setUsuario] = useState("")
@@ -54,10 +54,10 @@ function Usuario() {
     <MainLayout>
       <div className="mainBodyUsuario">
         <Panel />
-        <Recibos data={{recibo, usuario}} />
+        <CheckoutComponent data={{recibo, usuario}} />
       </div>
     </MainLayout>
   )
 }
 
-export default Usuario
+export default Checkout

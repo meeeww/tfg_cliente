@@ -20,6 +20,7 @@ import Carta from './pages/Carta'
 
 import Carrito from './pages/Productos/Carrito'
 import Producto from './pages/Productos/Producto'
+import Checkout from './components/Productos/Checkout'
 
 import NoMatch from './pages/NoMatch'
 
@@ -74,6 +75,10 @@ const router = createBrowserRouter([
   {
     path: "/product",
     element: <Producto />,
+  },
+  {
+    path: "/checkout",
+    element: <Checkout />,
   },
   {
     path: "/dashboard",
