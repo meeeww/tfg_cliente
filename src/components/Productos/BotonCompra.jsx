@@ -29,20 +29,14 @@ const BotonCompra = (data) => {
                         .then((res) => {
                             if (res.data[0] != undefined) {
                                 Axios.get((getPedidoURL + idUsuario)).then((resPedido) => {
-                                    console.log(resPedido.data[0])
-                                    console.log(resPedido.data[0]["estado"])
                                     if (resPedido.data[0] != undefined && resPedido.data[0]["estado"] == 0) {
-                                        console.log("ya hay wow")
                                         Axios.post(postInfoPedidoURL, { "numero_pedido": resPedido.data[0]["numero_pedido"], "id_producto": idProducto, "fecha": date, "cantidad": data.producto.numero })
                                     } else {
-                                        console.log("ya hay2")
                                         Axios.post(postPedidosURL, { "id_usuario": res.data[0]["id_usuario"], "direccion_envio": "NA", "estado": 0, "preciototal": 0 }).then(() => {
                                             Axios.get((getPedidoURL + idUsuario)).then((resPedido2) => {
                                                 Axios.post(postInfoPedidoURL, { "numero_pedido": resPedido2.data[0]["numero_pedido"], "id_producto": idProducto, "fecha": date, "cantidad": data.producto.numero })
                                             })
                                         })
-
-
                                     }
                                 })
                             }
