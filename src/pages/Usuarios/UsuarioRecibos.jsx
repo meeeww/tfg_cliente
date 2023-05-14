@@ -24,7 +24,7 @@ function Usuario() {
           let recibos = []
           Axios.get("http://localhost:4000/API/pedidos/buscar/usuario?id=" + response.data[0]["id_usuario"]).then(response2 => {
             response2.data.forEach((respuesta) => {
-              if (respuesta["estado"] == 0) {
+              if (respuesta["estado"] == 2) {
                 recibos.push(respuesta)
                 setRecibo(recibos)
               }

@@ -20,7 +20,7 @@ import Carta from './pages/Carta'
 
 import Carrito from './pages/Productos/Carrito'
 import Producto from './pages/Productos/Producto'
-import Checkout from './components/Productos/Checkout'
+import Checkout from './pages/Productos/Checkout'
 
 import NoMatch from './pages/NoMatch'
 

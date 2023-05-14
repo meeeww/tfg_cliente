@@ -2,7 +2,7 @@ import Axios from 'axios'
 import { useEffect, useState } from 'react'
 
 import MainLayout from "../../layout/MainLayout";
-import Panel from '../../components/Usuarios/Panel.jsx';
+import Panel from '../../components/Usuarios/Panel';
 
 import CheckoutComponent from '../../components/Productos/Checkout';
 
