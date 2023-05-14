@@ -1,12 +1,10 @@
 const listaConfiguracion = [
-    { titulo: "nombre_usuario", mostrar: "Name" },
-    { titulo: "apellido_usuario", mostrar: "Last Name" },
-    { titulo: "correo_usuario", mostrar: "Email" },
-    { titulo: "telefono_usuario", mostrar: "Phone" },
-    { titulo: "contra", mostrar: "Password" },
+    { titulo: "numero_tarjeta", mostrar: "Card Number" },
+    { titulo: "cvv", mostrar: "CVV" },
+    { titulo: "mes_caducidad", mostrar: "Expire Date" },
 ]
 
-const Configuracion = ( data ) => {
+const Pagos = ( data ) => {
     return (
         <div className="panelDashboard">
             <div className="headerDashboard">
@@ -27,4 +25,4 @@ const Configuracion = ( data ) => {
     );
 }
 
-export default Configuracion;
+export default Pagos;

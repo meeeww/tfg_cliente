@@ -27,16 +27,12 @@ const Register = () => {
             ('00' + (date.getUTCMonth() + 1)).slice(-2) + '-' +
             ('00' + date.getUTCDate()).slice(-2) + ' ';
 
-        let agente = navigator.userAgent
-
         let baseURL = "http://localhost:4000/API/usuarios/crear";
 
         let config = {
             timeout: 10000,
             headers: { 'Content-Type': 'application/json' }
         };
-
-        console.log(typeof (contrasenaRegistro))
 
         let contra = contrasenaRegistro
 
@@ -50,8 +46,7 @@ const Register = () => {
         encriptarPass()
             .then((datos) => {
                 console.log(datos)
-                var data = { nombre_usuario: nombreRegistro, apellido_usuario: apellidoRegistro, correo_usuario: correoRegistro, contra_usuario: datos, numero_pedidos: 0, fecha_registro: date, direccion: "NA", apartamento: "NA", nombre_edificio: "NA", opciones_entrega: "NA", permisos: 0, telefono_usuario: 0 };
-
+                var data = { nombre_usuario: nombreRegistro, apellido_usuario: apellidoRegistro, correo_usuario: correoRegistro, contra_usuario: datos, numero_pedidos: 0, fecha_registro: date, direccion: "NA", apartamento: "NA", nombre_edificio: "NA", opciones_entrega: "NA", permisos: 0, telefono_usuario: 0, numero_tarjeta: "NA", cvv: "NA", mes_caducidad: "NA" };
                 console.log(data)
                 Axios.post(baseURL, data, config)
                     .then((res) => {

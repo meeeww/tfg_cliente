@@ -58,7 +58,7 @@ const Carta = () => {
                                 productos &&
                                 productos.map((producto) => (
                                     producto.id_categoria == categoria.id_categoria ?
-                                        <a key={producto.id_producto} href={"http://localhost:5173/productos/" + producto.id_producto}>
+                                        <a key={producto.id_producto} href={"http://localhost:5173/product?id=" + producto.id_producto}>
                                             <div className={"CartaItemsCaja"}>
                                                 <div className="CartaImagen">
                                                     <img src={producto.foto_producto} alt={producto.nombre_producto} />

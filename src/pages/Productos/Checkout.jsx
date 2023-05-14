@@ -4,24 +4,32 @@ import { useEffect, useState } from 'react'
 import MainLayout from "../../layout/MainLayout";
 import Panel from '../../components/Usuarios/Panel';
 
-import Configuracion from '../../components/Usuarios/Configuracion';
+import CheckoutComponent from '../../components/Productos/Checkout';
 
 import '../../estilos/estilos.css'
 
-function Usuario() {
+function Checkout() {
 
-  const [usuario, setUsuario] = useState([])
+  const [recibo, setRecibo] = useState([])
+  const [usuario, setUsuario] = useState("")
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
     if (localStorage.getItem("token") != null || localStorage.getItem("token") == "") {
       Axios.get("http://localhost:4000/API/sesiones/buscar?token=" + localStorage.getItem("token")).then(response => {
-        
         if (response.data[0]) {
-          
           Axios.get("http://localhost:4000/API/usuarios/buscar?id=" + response.data[0]["id_usuario"]).then(response2 => {
-            setUsuario(response2.data[0])
-            setLoading(false)
+            setUsuario(response2.data[0]["nombre_usuario"])
+          })
+          let recibos = []
+          Axios.get("http://localhost:4000/API/pedidos/buscar/usuario?id=" + response.data[0]["id_usuario"]).then(response2 => {
+            response2.data.forEach((respuesta) => {
+              if (respuesta["estado"] == 0) {
+                recibos.push(respuesta)
+                setRecibo(recibos)
+              }
+              setLoading(false)
+            })
           })
         }
 
@@ -30,7 +38,7 @@ function Usuario() {
       // setLoading(false)
     }
   }, [])
-  
+
   if (isLoading) {
     return (null);
   }
@@ -46,10 +54,10 @@ function Usuario() {
     <MainLayout>
       <div className="mainBodyUsuario">
         <Panel />
-        <Configuracion data = {usuario} />
+        <CheckoutComponent data={{recibo, usuario}} />
       </div>
     </MainLayout>
   )
 }
 
-export default Usuario
+export default Checkout
