@@ -17,8 +17,10 @@ const BotonCompra = (data) => {
 
         let postPedidosURL = "http://localhost:4000/API/pedidos/crear";
         let getPedidoURL = "http://localhost:4000/API/pedidos/buscar/usuario?id="
+        let deletePedidoURL = "http://localhost:4000/API/pedidos/eliminar"
 
         let postInfoPedidoURL = "http://localhost:4000/API/infopedidos/crear"
+        let deleteInfoPedidoURL = "http://localhost:4000/API/infopedidos/eliminar/numero"
 
         Axios.get((baseURL + localStorage.getItem("token")))
             .then((res) => {
@@ -29,9 +31,24 @@ const BotonCompra = (data) => {
                         .then((res) => {
                             if (res.data[0] != undefined) {
                                 Axios.get((getPedidoURL + idUsuario)).then((resPedido) => {
-                                    if (resPedido.data[0] != undefined && resPedido.data[0]["estado"] == 0) {
-                                        Axios.post(postInfoPedidoURL, { "numero_pedido": resPedido.data[0]["numero_pedido"], "id_producto": idProducto, "fecha": date, "cantidad": data.producto.numero })
-                                    } else {
+                                    console.log(resPedido.data)
+                                    let contador = 0
+                                    resPedido.data.map((item) => {
+                                        if (item["estado"] == 0) {
+                                            console.log("ya existe")
+                                            Axios.post(postInfoPedidoURL, { "numero_pedido": item["numero_pedido"], "id_producto": idProducto, "fecha": date, "cantidad": data.producto.numero })
+                                            contador++
+                                            if (contador >= 2) {
+                                                console.log("eliminando")
+                                                console.log({ numero_pedido: item["numero_pedido"] })
+                                                Axios.delete(deleteInfoPedidoURL, { data: { numero_pedido: item["numero_pedido"] } }).then(() => {
+                                                    Axios.delete(deletePedidoURL, { data: { numero_pedido: item["numero_pedido"] } })
+                                                })
+                                            }
+                                        }
+                                    })
+                                    if (contador == 0) {
+                                        console.log("creando")
                                         Axios.post(postPedidosURL, { "id_usuario": res.data[0]["id_usuario"], "direccion_envio": "NA", "estado": 0, "preciototal": 0 }).then(() => {
                                             Axios.get((getPedidoURL + idUsuario)).then((resPedido2) => {
                                                 Axios.post(postInfoPedidoURL, { "numero_pedido": resPedido2.data[0]["numero_pedido"], "id_producto": idProducto, "fecha": date, "cantidad": data.producto.numero })

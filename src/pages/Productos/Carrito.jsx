@@ -70,10 +70,10 @@ function Carrito() {
                 <h3>{carrito[index]["cantidad"]}</h3>
               </div>
               <div className="infoProductoIndividualPrecioCarrito">
-                {"$" + productoIndividual["coste_base"]}
+                {"$" + parseFloat(productoIndividual["coste_base"]).toFixed(2)}
               </div>
               <div className="infoProductoIndividualTotalCarrito">
-                {parseInt((productoIndividual["coste_base"]) * carrito[index]["cantidad"])}
+                {parseFloat((productoIndividual["coste_base"]) * carrito[index]["cantidad"]).toFixed(2)}
               </div>
             </div>
           ))}
