@@ -40,7 +40,13 @@ function Usuario() {
   }, [])
 
   if (isLoading) {
-    return (null);
+    return (
+      <MainLayout>
+      <div className="mainBodyUsuario">
+        <Panel />
+      </div>
+    </MainLayout>
+    );
   }
 
 

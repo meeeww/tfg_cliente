@@ -4,7 +4,8 @@ import Logo from '../assets/Logo.png'
 const linksLeft = [
     { name: 'Main', href: '/' },
     { name: 'Menu', href: '/menu' },
-    { name: 'Coffee', href: '/coffee' },
+    { name: 'Merchandising', href: '/merchandising' },
+    { name: 'About Us', href: '/aboutus' },
     { name: 'Contact Us', href: '/contactus' },
 ]
 

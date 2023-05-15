@@ -80,7 +80,8 @@ body {
 }
 
 .navHeaderDerecha i {
-  font-size: 28px;
+  font-size: 26px;
+  font-weight: 600;
 }
 
 .navHeaderDerecha a:visited {
@@ -750,6 +751,13 @@ body {
 }
 
 /*carrito*/
+.noHayCarrito {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-block: 5rem;
+}
+
 .infoCarrito{
   margin: 5rem;
 }
