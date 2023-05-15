@@ -25,7 +25,7 @@ const Footer = () => (
                     <h4>Company</h4>
                     <div className="linksOrganizerFooter">
                         {linksLeft.map((item) => (
-                            <NavLink key="" to={item.href}>{item.title}</NavLink>
+                            <NavLink key={item.title} to={item.href}>{item.title}</NavLink>
                         ))}
                     </div>
                 </div>
@@ -33,7 +33,7 @@ const Footer = () => (
                     <h4>Find Us</h4>
                     <div className="linksOrganizerFooter">
                         {linksCenter.map((item) => (
-                            <NavLink key="" to={item.href}>{item.title}</NavLink>
+                            <NavLink key={item.title} to={item.href}>{item.title}</NavLink>
                         ))}
                     </div>
 
@@ -42,7 +42,7 @@ const Footer = () => (
                     <h4>Follow Us</h4>
                     <div className="social_linksFooter">
                         {linksRight.map((item) => (
-                            <NavLink key="" to={item.href} className={item.icon}></NavLink>
+                            <NavLink key={item.href} to={item.href} className={item.icon}></NavLink>
                         ))}
                     </div>
                 </div>

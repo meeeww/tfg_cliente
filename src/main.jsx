@@ -22,6 +22,8 @@ import Carrito from './pages/Productos/Carrito'
 import Producto from './pages/Productos/Producto'
 import Checkout from './pages/Productos/Checkout'
 
+import PopUp from './modals/PopUp/PopUp'
+
 import NoMatch from './pages/NoMatch'
 
 import './estilos/estilos.css'
@@ -95,6 +97,10 @@ const router = createBrowserRouter([
   {
     path: "/registered",
     element: <Registered />,
+  },
+  {
+    path: "/popup",
+    element: <PopUp />,
   },
   {
     path: "*",
