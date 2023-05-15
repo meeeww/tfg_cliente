@@ -45,7 +45,14 @@ function Carrito() {
   }, [])
 
   if (isLoading || producto == null || carrito == null) {
-    return (null);
+    return (
+      <MainLayout>
+        <Breadcumb></Breadcumb>
+        <div className="noHayCarrito">
+          <h1>You Have not Ordered Anything!</h1>
+        </div>
+      </MainLayout>
+    );
   }
 
   return (
