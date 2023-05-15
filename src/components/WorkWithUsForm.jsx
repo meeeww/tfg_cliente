@@ -4,10 +4,10 @@ import Imagen from "./WorkWithUsImagen";
 const WorkWithUsForm = () => {
     return (
         <MainLayout>
+            <Imagen></Imagen>
             <div className="WorkWithUsFormContenedor">
                 <div className="WorkWithUsFormDivTexto">
-                    <h1>Register</h1>
-                    <p>From our Employment Channel, you will only be asked to provide us with documentation related to recruitment, when you are selected for one of our vacancies.</p>
+                    <h1>Work with us</h1>
                 </div>
                 <div className="WorkWithUsFormFormContenedor">
                     <div className="WorkWithUsForm1">
@@ -24,16 +24,16 @@ const WorkWithUsForm = () => {
                         <p>Job position requested</p>
                         <div className="WorkWithUsFormCheckBoxContainer">
                             <div className="WorkWithUsFormCheckBox">
-                                <input type="checkbox" id="miCheckbox" />
-                                <label for="miCheckbox">Waiter</label>
+                                <input type="radio" name="radio" />
+                                <p>Cook</p>
                             </div>
                             <div className="WorkWithUsFormCheckBox">
-                                <input type="checkbox" id="miCheckbox" />
-                                <label for="miCheckbox">Kitchener</label>
+                                <input type="radio" name="radio" />
+                                <p>Waiter</p>
                             </div>
                             <div className="WorkWithUsFormCheckBox">
-                                <input type="checkbox" id="miCheckbox" />
-                                <label for="miCheckbox">Any</label>
+                                <input type="radio" name="radio" />
+                                <p>Any</p>
                             </div>
                         </div>
                         <div className="WorkWithUsFormFecha">
@@ -47,7 +47,7 @@ const WorkWithUsForm = () => {
                             </div>
                         </div>
                         <div className="WorkWithUsFormBoton">
-                        <button>Send</button>
+                            <button>Send</button>
                         </div>
                     </div>
                 </div>

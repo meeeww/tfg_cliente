@@ -1262,9 +1262,13 @@
 
 .WorkWithUsFormCheckBox{
   display: flex;
-  gap: 8px;
   width: 100%;
+  gap: 10px;
   align-items: center;
+}
+
+.WorkWithUsFormCheckBox input{
+  width: 0.7rem;
 }
 
 #miCheckbox{
@@ -1280,7 +1284,7 @@
 }
 
 .WorkWithUsFormFecha input{
-  width: 10%;
+  width: 8rem;
 }
 
 .WorkWithUsFormBoton{
@@ -1288,7 +1292,7 @@
 }
 
 .WorkWithUsFormBoton button{
-  width: 5%;
+  width: 4rem;
   height: 2rem;
   background-color: var(--blanco);
   transition: all 0.25s;
