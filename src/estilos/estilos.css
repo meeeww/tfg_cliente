@@ -8,6 +8,7 @@
     --backgroud_color_2: #231f20;
     --gris: #231f20;
     --blanco: #fff;
+    --fondo: url('../assets/fondo.png')
   }
 
   * {
@@ -980,6 +981,7 @@
     background-color: var(--blanco);
     border: 2px solid var(--color_secundario);
     transition: all 0.25s;
+    cursor: pointer;
   }
 
   .ContactUsFormularioBoton:hover {
@@ -1165,24 +1167,26 @@
     align-items: center;
   }
 
-  .WorkWithUsDiv button{
-    width: 25%;
+  .WorkWithUsDivButton{
+    width: 15rem;
+    height: 2rem;
     border-radius: 10px;
     border: 1px solid var(--backgroud_color_2);
     background-color: var(--blanco);
     border-color: var(--color_secundario);
     transition: all 0.25s;
+    cursor:pointer;
   }
 
-  .WorkWithUsDiv button:focus {
+  .WorkWithUsDivButton:focus {
     outline: none;
-    border: 1px solid var(--color_secundario);
     transition: all 0.05s;
   }
 
-  .WorkWithUsDiv button::placeholder {
+  .WorkWithUsDivButton:hover {
     border: 1px solid var(--color_secundario);
     background-color: var(--color_secundario);
+    color: var(--blanco);
     transition: all 0.25s;
   }
 
@@ -1219,7 +1223,7 @@
 .WorkWithUsFormContenedor{
   display: flex;
   flex-direction: column;
-  padding: 4rem;
+  padding: 3rem;
 }
 
 .WorkWithUsFormDivTexto{
@@ -1227,7 +1231,11 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding-bottom: 1rem ;
+  padding-bottom: 2rem ;
+}
+
+.WorkWithUsColor{
+  color: var(--color_secundario);
 }
 
 .WorkWithUsFormFormContenedor{
@@ -1245,19 +1253,22 @@
  .WorkWithUsForm1 input{
   width: 90%;
   height: 2rem;
-  border-radius: 5px;
+  border-radius: 15px;
   padding-left: 1rem;
+  border: 2px solid var(--color_secundario);
+  transition: all 0.25s;
  }
 
  .WorkWithUsForm1 input:focus {
   outline: none;
-  border: 2px solid var(--color_secundario);
+  border: 0.2rem solid var(--color_secundario);
+  transition: all 0.05s;
 }
+
 
 .WorkWithUsFormCheckBoxContainer{
   display: flex;
   flex-direction: column;
-  gap: 5px;
 }
 
 .WorkWithUsFormCheckBox{
@@ -1269,11 +1280,6 @@
 
 .WorkWithUsFormCheckBox input{
   width: 0.7rem;
-}
-
-#miCheckbox{
-  width: 10px;
-  height: 10px;
 }
 
 .WorkWithUsFormFecha{
@@ -1292,17 +1298,28 @@
 }
 
 .WorkWithUsFormBoton button{
-  width: 4rem;
+  width: 8rem;
   height: 2rem;
   background-color: var(--blanco);
   transition: all 0.25s;
   border: 2px solid var(--color_secundario);
-  border-radius: 5px;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 .WorkWithUsFormBoton button:hover{
   background-color: var(--color_secundario);
+  color: var(--blanco);
 }
+
+.WorkWithUsTitulo{
+  font-size: 22px;
+}
+
+.WorkWithUsTexto{
+  font-size: 14px;
+}
+
   /*dashboard*/
 
   .dashboardBody {
