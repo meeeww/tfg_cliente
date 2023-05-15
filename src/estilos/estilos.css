@@ -164,7 +164,7 @@ body {
   background-color: var(--color_secundario);
   border: 3px solid var(--color_secundario);
   border-radius: 2rem;
-  margin-inline: 2rem;
+  margin-inline: 1rem;
   color: var(--blanco);
 
   width: 10rem;
@@ -175,6 +175,10 @@ body {
   justify-content: center;
 
   transition: all 0.25s;
+}
+
+.sobreNosotrosBread {
+  margin-inline: 1rem;
 }
 
 .botonesBread div {
@@ -201,7 +205,11 @@ body {
 
 .botonesBread a {
   text-decoration: none;
+}
 
+.signinBreadRegistered,
+.mainpageBreadRegistered {
+  margin-inline: 1rem;
 }
 
 /*Inicio*/
@@ -209,7 +217,6 @@ body {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding-block: 5rem;
   width: 100%;
 }
 
@@ -305,6 +312,10 @@ body {
   justify-content: space-between;
 }
 
+.separacionIndividualInformacion img {
+  object-fit: cover;
+}
+
 .aboutUsOptionsInformacion {
   display: flex;
   flex-direction: column;
@@ -321,16 +332,18 @@ body {
   margin-block: 2rem;
 }
 
-@media(max-width: 1070px) {
-  .aboutUsIndividual {
-    flex-direction: column;
-  }
-}
-
 .aboutUsIndividual img {
+  object-fit: cover;
+  margin-inline: 5rem;
   border-radius: 2rem;
 
   transition: all 0.25s;
+}
+
+@media(max-width: 1153px) {
+  .aboutUsIndividual {
+    flex-direction: column;
+  }
 }
 
 .aboutUsIndividual img:hover {
@@ -345,7 +358,7 @@ body {
   flex-direction: column;
   justify-content: space-around;
   height: 20rem;
-  margin-inline: 2rem;
+  margin-inline: 5rem;
 }
 
 .tituloInformacionIndividual {
@@ -543,6 +556,7 @@ body {
   width: 100%;
   height: 100%;
   border-radius: 4rem;
+  object-fit: cover;
 
   transition: all 0.25s;
 }
@@ -603,13 +617,13 @@ body {
 
 .CartaImagen {
   width: 33.3%;
-
 }
 
 .CartaImagen img {
   border-radius: 1rem;
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .CartaTexto {
@@ -746,7 +760,7 @@ body {
   user-select: none;
 }
 
-.productoIndividualCarritoCantidad span{
+.productoIndividualCarritoCantidad span {
   cursor: pointer;
 }
 
@@ -758,52 +772,52 @@ body {
   margin-block: 5rem;
 }
 
-.infoCarrito{
+.infoCarrito {
   margin: 5rem;
 }
 
-.infoPrincipalCarrito{
+.infoPrincipalCarrito {
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 
-.infoProductoIndividualPrincipalCarrito{
+.infoProductoIndividualPrincipalCarrito {
   display: flex;
   width: 5rem;
 }
 
-.infoProductoIndividualPrincipalCarrito img{
+.infoProductoIndividualPrincipalCarrito img {
   width: 4rem;
   height: 4rem;
 }
 
-.textoInfoProductoCarrito h3{
+.textoInfoProductoCarrito h3 {
   font-weight: 500;
 }
 
-.textoInfoProductoCarrito{
+.textoInfoProductoCarrito {
   margin-inline: 1rem;
 }
 
-.textoInfoProductoCarrito h4{
+.textoInfoProductoCarrito h4 {
   font-weight: 400;
 }
 
-.infoProductosIndividualCarrito{
+.infoProductosIndividualCarrito {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-block: 1rem;
 }
 
-.infoProductoIndividualCantidadCarrito{
+.infoProductoIndividualCantidadCarrito {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.infoCheckoutCarrito{
+.infoCheckoutCarrito {
   display: flex;
   flex-direction: column;
   align-items: flex-end;

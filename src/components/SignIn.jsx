@@ -7,6 +7,10 @@ import checkSession from '../scripts/sessionManager'
 
 import md5 from 'md5'
 
+import llamarPopUp from '../scripts/llamarPopUp'
+
+import PopUp from '../modals/PopUp/PopUp'
+
 const FormInput = () => {
 
     const rand = () => {
@@ -24,6 +28,9 @@ const FormInput = () => {
     const [correoInicio, setCorreoInicio] = useState('')
     const [contraInicio, setContraInicio] = useState('')
 
+    const [tipoAlerta, setTipoAlerta] = useState(1)
+    const [mensajeAlerta, setMensajeAlerta] = useState("Text")
+
     const iniciarSesion = (event) => {
         event.preventDefault();
 
@@ -36,9 +43,6 @@ const FormInput = () => {
         let agente = navigator.userAgent
 
         let baseURL = "http://localhost:4000/API/usuarios/buscar/login?correo=" + correoInicio;
-
-
-        //sesion.getId_usuario(), sesion.getToken(), sesion.getDispositivo(), sesion.getFecha()
 
         let config = {
             timeout: 10000,
@@ -55,41 +59,47 @@ const FormInput = () => {
 
         encriptarPass()
             .then((datos) => {
-                Axios.get((baseURL), config)
-                    .then((res) => {
-                        console.log("RESPONSE 3 RECEIVED: ", res.data[0]);
-                        let tokenTemporal = token()
-                        let idUsuarioTemporal = res.data[0]["id_usuario"]
-                        if (res.data[0] != undefined) {
-                            if (res.data[0]["contra_usuario"] == datos) {
-                                console.log("bien")
-                                localStorage.setItem("token", tokenTemporal)
-                                var data = { id_usuario: idUsuarioTemporal, token: tokenTemporal, dispositivo: agente, fecha: date };
-                                console.log(data)
-                                let baseURL2 = "http://localhost:4000/API/sesiones/crear";
-                                Axios.post(baseURL2, data, config)
-                                    .then((res) => {
-                                        console.log("RESPONSE RECEIVED: ", res.data);
-                                        location.replace("http://localhost:5173")
-                                        return {
-                                            statusCode: 200,
-                                            body: JSON.stringify({ title: "this was a success" }),
-                                        };
-                                    })
-
-
-                                //location.replace("http://localhost:5173")
+                if (document.getElementById("emailInput").value != "" && document.getElementById("passInput").value != "") {
+                    Axios.get((baseURL), config)
+                        .then((res) => {
+                            console.log("RESPONSE 3 RECEIVED: ", res.data[0]);
+                            let tokenTemporal = token()
+                            if (res.data[0] != undefined) {
+                                let idUsuarioTemporal = res.data[0]["id_usuario"]
+                                if (res.data[0]["contra_usuario"] == datos) {
+                                    localStorage.setItem("token", tokenTemporal)
+                                    var data = { id_usuario: idUsuarioTemporal, token: tokenTemporal, dispositivo: agente, fecha: date };
+                                    Axios.post("http://localhost:4000/API/sesiones/crear", data, config)
+                                        .then((res) => {
+                                            setMensajeAlerta("Successfully logged in")
+                                            setTipoAlerta(1)
+                                            llamarPopUp()
+                                            location.replace("http://localhost:5173")
+                                        })
+                                } else {
+                                    setMensajeAlerta("Incorrect password")
+                                    setTipoAlerta(3)
+                                    llamarPopUp()
+                                }
+                            } else {
+                                setMensajeAlerta("User is not registered")
+                                setTipoAlerta(3)
+                                llamarPopUp()
                             }
-                        } else {
-                            //location.replace("http://localhost:5173/login")
-                        }
-                    })
+                        })
+                } else {
+                    setMensajeAlerta("You have to fill the form")
+                    setTipoAlerta(2)
+                    llamarPopUp()
+                }
             })
+
     }
 
 
     return (
         <MainLayout>
+            <PopUp tipo={{ tipoAlerta, mensajeAlerta }} />
             <div className="SingInContainer">
                 <div className="SingInCabecera">
                     <img src={logo} alt="Logo" />
@@ -101,15 +111,10 @@ const FormInput = () => {
                 <div className="SingInForm">
                     <form>
                         <div>
-                            <input type="text" placeholder="Email" onChange={(e) => { setCorreoInicio(e.target.value) }} />
+                            <input type="text" placeholder="Email" id="emailInput" onChange={(e) => { setCorreoInicio(e.target.value) }} />
                         </div>
                         <div>
-                            <input type="password" placeholder="Password" onChange={(e) => { setContraInicio(e.target.value) }} />
-                        </div>
-                        <div className="staySignedIn">
-                            <label>
-                                <input type="checkbox" value="first_checkbox" /><p>Stay Signed In</p>
-                            </label>
+                            <input type="password" placeholder="Password" id="passInput" onChange={(e) => { setContraInicio(e.target.value) }} />
                         </div>
                         <div className="SingInSing">
                             <input type="submit" value="Login" onClick={iniciarSesion}></input>
