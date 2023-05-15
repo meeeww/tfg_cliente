@@ -31,6 +31,8 @@ body {
   align-items: center;
   padding: 10px;
   box-shadow: 0px 0px 10px 1px var(--gris);
+  z-index: 1000;
+  position: relative;
 }
 
 .logoHeader {
@@ -52,6 +54,7 @@ body {
   padding: 10px;
   text-decoration: none;
   color: var(--gris);
+  font-size: 20px;
 
   transition: all 0.25s;
 }
