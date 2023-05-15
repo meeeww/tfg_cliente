@@ -20,7 +20,9 @@ function NoMatch() {
                     </div>
                 </div>
                 <div className="botonesBread">
-                    <NavLink to={"/"}><div>Take Me Back</div></NavLink>
+                    <div className="sobreNosotrosBread">
+                        <NavLink to={"/"}><div>Take Me Back</div></NavLink>
+                    </div>
                     <div className="sobreNosotrosBread">
                         <NavLink to={"/aboutus"}><div>About Us</div></NavLink>
                     </div>
