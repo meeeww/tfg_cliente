@@ -176,7 +176,7 @@ body {
   transition: all 0.25s;
 }
 
-.sobreNosotrosBread{
+.sobreNosotrosBread {
   margin-inline: 1rem;
 }
 
@@ -206,7 +206,8 @@ body {
   text-decoration: none;
 }
 
-.signinBreadRegistered, .mainpageBreadRegistered{
+.signinBreadRegistered,
+.mainpageBreadRegistered {
   margin-inline: 1rem;
 }
 
@@ -215,7 +216,6 @@ body {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding-block: 5rem;
   width: 100%;
 }
 
@@ -311,7 +311,7 @@ body {
   justify-content: space-between;
 }
 
-.separacionIndividualInformacion img{
+.separacionIndividualInformacion img {
   object-fit: cover;
 }
 
@@ -331,20 +331,18 @@ body {
   margin-block: 2rem;
 }
 
-.aboutUsIndividual img{
-  object-fit: cover;
-}
-
-@media(max-width: 1070px) {
-  .aboutUsIndividual {
-    flex-direction: column;
-  }
-}
-
 .aboutUsIndividual img {
+  object-fit: cover;
+  margin-inline: 5rem;
   border-radius: 2rem;
 
   transition: all 0.25s;
+}
+
+@media(max-width: 1153px) {
+  .aboutUsIndividual {
+    flex-direction: column;
+  }
 }
 
 .aboutUsIndividual img:hover {
@@ -359,7 +357,7 @@ body {
   flex-direction: column;
   justify-content: space-around;
   height: 20rem;
-  margin-inline: 2rem;
+  margin-inline: 5rem;
 }
 
 .tituloInformacionIndividual {
@@ -761,57 +759,57 @@ body {
   user-select: none;
 }
 
-.productoIndividualCarritoCantidad span{
+.productoIndividualCarritoCantidad span {
   cursor: pointer;
 }
 
 /*carrito*/
-.infoCarrito{
+.infoCarrito {
   margin: 5rem;
 }
 
-.infoPrincipalCarrito{
+.infoPrincipalCarrito {
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 
-.infoProductoIndividualPrincipalCarrito{
+.infoProductoIndividualPrincipalCarrito {
   display: flex;
   width: 5rem;
 }
 
-.infoProductoIndividualPrincipalCarrito img{
+.infoProductoIndividualPrincipalCarrito img {
   width: 4rem;
   height: 4rem;
 }
 
-.textoInfoProductoCarrito h3{
+.textoInfoProductoCarrito h3 {
   font-weight: 500;
 }
 
-.textoInfoProductoCarrito{
+.textoInfoProductoCarrito {
   margin-inline: 1rem;
 }
 
-.textoInfoProductoCarrito h4{
+.textoInfoProductoCarrito h4 {
   font-weight: 400;
 }
 
-.infoProductosIndividualCarrito{
+.infoProductosIndividualCarrito {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-block: 1rem;
 }
 
-.infoProductoIndividualCantidadCarrito{
+.infoProductoIndividualCantidadCarrito {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.infoCheckoutCarrito{
+.infoCheckoutCarrito {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
