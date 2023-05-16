@@ -119,9 +119,6 @@ const FormInput = () => {
                         <div className="SingInSing">
                             <input type="submit" value="Login" onClick={iniciarSesion}></input>
                         </div>
-                        <div className="forgotPassword">
-                            <p>Forgot your password</p>
-                        </div>
                     </form>
                 </div>
             </div>
