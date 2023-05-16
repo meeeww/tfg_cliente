@@ -2,17 +2,16 @@ import Axios from 'axios'
 import { useState, useEffect } from 'react';
 import '../../estilos/estilos.css'
 import Panel from '../../components/Dashboard/Panel'
-import ModalConfiguracion from '../../modals/Product/ProductConfig'
-import ModalCreation from '../../modals/Product/ProductCreate'
-import ModalDelete from '../../modals/Product/ProductDelete'
+import ModalConfiguracion from '../../modals/User/UserConfig'
+import ModalDelete from '../../modals/User/UserDelete'
 
 
 
-function Products() {
+function Users() {
 
-    const [productos, setProductos] = useState();
+    const [users, setUsers] = useState();
 
-    let baseURL = "http://localhost:4000/API/productos/consultar";
+    let baseURL = "http://localhost:4000/API/usuarios/consultar";
 
     let config = {
         timeout: 10000,
@@ -24,8 +23,7 @@ function Products() {
     useEffect(() => {
         Axios.get(baseURL, config)
             .then((res) => {
-                //console.log("RESPONSE RECEIVED: ", res.data);
-                setProductos(res.data)
+                setUsers(res.data)
                 //localStorage.setItem("token", res.data)
                 //location.replace("http://localhost:5173/login")
                 return {
@@ -36,9 +34,7 @@ function Products() {
 
         if (localStorage.getItem("token") != null || localStorage.getItem("token") == "") {
             Axios.get("http://localhost:4000/API/sesiones/buscar?token=" + localStorage.getItem("token")).then(response => {
-
                 if (response.data[0]) {
-
                     Axios.get("http://localhost:4000/API/usuarios/buscar?id=" + response.data[0]["id_usuario"]).then(response2 => {
                         setUsuario(response2.data[0])
                         setLoading(false)
@@ -76,33 +72,30 @@ function Products() {
                     </div>
                     <div className="panelInfoDashboardProducts">
                         <div className="reportsOverviewDashboard">
-                            <h2>Product List</h2>
+                            <h2>User List</h2>
                             {
-                                productos &&
-                                productos.map((item) => (
-                                    <div key={"keyProductMain" + item.id_producto} className="reportInfoDashboard">
+                                users &&
+                                users.map((item) => (
+                                    <div key={"keyProductMain" + item.id_usuario} className="reportInfoDashboard">
                                         <div className="fechaInfoDashBoard">
-                                            <h2>{item.id_producto}</h2>
-                                            <h3>Stock: {item.stock}</h3>
+                                            <h2>{item.id_usuario}</h2>
                                         </div>
-                                        <div className="imagenFotoInfoDashboard">
-                                            <img src={item.foto_producto}></img>
+                                        <div className="infoUsuarioDashboard">
+                                            <h3>{item.nombre_usuario}</h3>
+                                            <h3>{item.correo_usuario}</h3>
                                         </div>
                                         <div className="informacionInfoDashboard">
-                                            <h3>{item.nombre_producto}</h3>
-                                            <h4>{item.descripcion_producto}</h4>
+                                            <h3>Pedidos: {item.numero_pedidos}</h3>
                                         </div>
-                                        <h4>{item.coste_base}€</h4>
+                                        <div className="informacionInfoDashboard">
+                                            <h3>Autoridad: {item.permisos}</h3>
+                                        </div>
                                         <div>
-                                            <ModalConfiguracion producto={item}></ModalConfiguracion>
-                                            <ModalDelete producto={item}></ModalDelete>
+                                            <ModalConfiguracion usuario={item}></ModalConfiguracion>
+                                            <ModalDelete usuario={item}></ModalDelete>
                                         </div>
                                     </div>
                                 ))}
-                        </div>
-                        <div className="crearProducto">
-                            <ModalCreation></ModalCreation>
-                            {/* <a className="crearProductoBoton" onClick={(event) => crearProducto()}>Crear Producto</a> */}
                         </div>
                     </div>
                 </div>
@@ -112,4 +105,4 @@ function Products() {
 }
 
 
-export default Products
+export default Users

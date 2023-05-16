@@ -1058,6 +1058,14 @@ h3 {
   height: 4rem;
 }
 
+.infoUsuarioDashboard{
+  width: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 /*productos*/
 .productoDivGeneral {
   display: flex;
@@ -1111,6 +1119,17 @@ h3 {
 .barraDashboard h2 {
   text-align: center;
   margin: 0;
+}
+
+.barraDashboard a{
+  text-decoration: none;
+  color: var(--color_secundario);
+  transition: all 0.25s;
+}
+
+.barraDashboard a:hover{
+  color: var(--background_color_1);
+  transition: all 0.25s;
 }
 
 .documentDashboard {
