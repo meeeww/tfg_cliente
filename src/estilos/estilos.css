@@ -1002,6 +1002,56 @@ h3 {
   display: flex;
 }
 
+.mainOrdersUserDashboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 1rem;
+}
+
+.mainOrdersUserDashboard a {
+  color: var(--gris);
+
+  transition: all 0.25s;
+}
+
+.mainOrdersUserDashboard a:hover {
+  color: var(--color_secundario);
+
+  transition: all 0.25s;
+}
+
+.orderProductoIndividualUsuario {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 1rem;
+}
+
+.productoorderProductoIndividualUsuario {
+  width: 20%;
+}
+
+.fechaorderProductoIndividualUsuario {
+  width: 20%;
+}
+
+.cantidadorderProductoIndividualUsuario {
+  width: 10%;
+}
+
+.productoorderProductoIndividualUsuario a {
+  color: var(--gris);
+
+  transition: all 0.25s;
+}
+
+.productoorderProductoIndividualUsuario a:hover {
+  color: var(--color_secundario);
+
+  transition: all 0.25s;
+}
+
 /*productos*/
 .productoDivGeneral {
   display: flex;

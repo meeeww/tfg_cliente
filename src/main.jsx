@@ -10,6 +10,7 @@ import UsuarioConfig from './pages/Usuarios/UsuarioConfiguracion'
 import UsuarioDireccion from './pages/Usuarios/UsuarioDireccion'
 import UsuarioPagos from './pages/Usuarios/UsuarioPagos'
 import UsuarioRecibos from './pages/Usuarios/UsuarioRecibos'
+import UsuarioReciboIndividual from './pages/Recibos/ReciboIndividual'
 
 import SignIn from './components/SignIn'
 import Register from './components/Register'
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
   {
     path: "/user/orders",
     element: <UsuarioRecibos />,
+  },
+  {
+    path: "/user/orders/orderid",
+    element: <UsuarioReciboIndividual />,
   },
   {
     path: "/user/adress",
