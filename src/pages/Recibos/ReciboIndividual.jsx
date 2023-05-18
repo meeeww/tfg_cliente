@@ -12,7 +12,6 @@ function ReciboIndividual() {
 
     const queryParameters = new URLSearchParams(window.location.search)
     const idParam = queryParameters.get("id")
-    console.log(idParam)
 
     useEffect(() => {
         if (localStorage.getItem("token") != null || localStorage.getItem("token") == "") {
@@ -25,9 +24,11 @@ function ReciboIndividual() {
                         Axios.get("http://localhost:4000/API/infopedidos/buscar/pedido?id=" + idParam).then(respuestaInfoPedidos => {
                             infoProductos.push(respuestaInfoPedidos.data)
                             setInfoProducto(infoProductos)
-                            setLoading(false)
-                            respuestaInfoPedidos.data.forEach((productoIndividual) => {
-                                console.log(productoIndividual)
+                            //
+                            Axios.get("http://localhost:4000/API/pedidos/buscar/pedido?id=" + idParam).then(respuestaInfoPedidos => {
+                                if (usuario == respuestaInfoPedidos.data[0]["id_usuario"]) {
+                                    setLoading(false)
+                                }
                             })
                         })
                     })
