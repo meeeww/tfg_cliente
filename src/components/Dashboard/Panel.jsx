@@ -1,3 +1,6 @@
+import axios from "axios"
+import { useEffect, useState } from "react"
+
 const managements = [
     { name: 'clients', href: '/dashboard/', icon: "fa-solid fa-user" },
     { name: 'products', href: '/dashboard/products', icon: "fa-solid fa-mug-saucer" },
@@ -17,6 +20,25 @@ const documents = [
 ]
 
 const Panel = () => {
+
+    const [tienePermisos, setPermisos] = useState(true)
+
+    useEffect(() => {
+        axios.get("http://localhost:4000/API/sesiones/buscar?token=" + localStorage.getItem("token")).then(response => {
+            if (response.data[0]) {
+                axios.get("http://localhost:4000/API/usuarios/buscar?id=" + response.data[0]["id_usuario"]).then(response2 => {
+                    if (response2.data[0]["permisos"] == 0) {
+                        setPermisos(false)
+                    }
+                })
+            }
+        })
+    })
+
+    if (!tienePermisos) {
+        location.replace("http://localhost:5173")
+    }
+
     return (
         <div className="barraDashboard">
             <h1><a href="/">La Tarrina</a></h1>

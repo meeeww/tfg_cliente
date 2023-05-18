@@ -45,6 +45,9 @@ function Carrito() {
   }, [])
 
   if (isLoading || producto == null || carrito == null) {
+    console.log(isLoading)
+    console.log(producto)
+    console.log(carrito)
     return (
       <MainLayout>
         <Breadcumb></Breadcumb>
