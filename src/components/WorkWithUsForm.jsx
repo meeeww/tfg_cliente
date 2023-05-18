@@ -2,11 +2,13 @@ import React from "react";
 import MainLayout from '../layout/MainLayout';
 import Imagen from "./WorkWithUsImagen";
 import { useEffect, useState } from "react";
+import axios from "axios";
+
 
 const WorkWithUsForm = () => {
 
     const enviarFormulario = () => {
-        
+
         let arrayCampos = []
         arrayCampos.push(document.getElementById("campoName").value)
         arrayCampos.push(document.getElementById("campoLastName").value)
@@ -25,8 +27,31 @@ const WorkWithUsForm = () => {
         arrayCampos.push(document.getElementById("campoBirthdate").value)
         arrayCampos.push(document.getElementById("campoPrivacidad").checked)
         console.log(arrayCampos)
+
+        let baseURL = "http://localhost:4000/API/trabajos/buscar?id=";
+        let postTrabajoURL = "http://localhost:4000/API/trabajos/crear";
+        let postUsuarioURL = "http://localhost:4000/API//usuarios/buscar?id="; 
+        let getTrabajoURL = "http://localhost:4000/API/trabajos/buscar/usuario?id="
+        let deleteTrabajoURL = "http://localhost:4000/API/trabajos/eliminar"
+
+        axios.post(postTrabajoURL, { "segundoApellido": arrayCampos[2], "ssc": arrayCampos[3], "ciudad": arrayCampos[7], 
+        "condado": arrayCampos[8], "estado": arrayCampos[9], "fechaNacimiento": arrayCampos[14]})
         
+        if (arrayCampos[10] == true){
+            axios.post(postTrabajoURL, { "TrabajoWebDeveloper": arrayCampos[10]})
+        }else if (arrayCampos[11] == true){
+            axios.post(postTrabajoURL, { "TrabajoCook": arrayCampos[11]})
+        }else if (arrayCampos[12] == true){
+            axios.post(postTrabajoURL, { "TrabajoWaiter": arrayCampos[12]})
+        }else if (arrayCampos[13] == true){
+            axios.post(postTrabajoURL, { "TrabajoAny": arrayCampos[13]})
+        }
+
+        axios.post(postUsuarioURL, { "segundoApellido": arrayCampos[2], "ssc": arrayCampos[3], "ciudad": arrayCampos[7], 
+        "condado": arrayCampos[8], "estado": arrayCampos[9], "fechaNacimiento": arrayCampos[14]})
+
     }
+
 
     return (
         <MainLayout>
@@ -63,7 +88,7 @@ const WorkWithUsForm = () => {
                                     <p className="WorkWithUsTexto">Waiter</p>
                                 </div>
                                 <div className="WorkWithUsFormCheckBox">
-                                    <input type="radio" id="campoPuestoTrabajoAny" name="Radio" value={"Any"}/>
+                                    <input type="radio" id="campoPuestoTrabajoAny" name="Radio" value={"Any"} />
                                     <p className="WorkWithUsTexto">Any</p>
                                 </div>
                             </div>
