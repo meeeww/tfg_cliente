@@ -92,7 +92,11 @@ function Products() {
                                             <h3>{item.nombre_producto}</h3>
                                             <h4>{item.descripcion_producto}</h4>
                                         </div>
-                                        <h4>{item.coste_base}€</h4>
+                                        <div className="precioVentasInfoDashboard">
+                                            <h4>{"Ventas: " + item.ventas}</h4>
+                                            <h4>{item.coste_base}€</h4>
+                                        </div>
+
                                         <div>
                                             <ModalConfiguracion producto={item}></ModalConfiguracion>
                                             <ModalDelete producto={item}></ModalDelete>

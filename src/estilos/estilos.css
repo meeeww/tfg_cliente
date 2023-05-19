@@ -962,6 +962,14 @@ h3 {
   width: 20%;
 }
 
+.precioVentasInfoDashboard{
+  width: 20%;
+}
+
+.imagenFotoInfoDashboard{
+  width: 10%;
+}
+
 .imagenFotoInfoDashboard img {
   width: 50px;
   height: 50px;
