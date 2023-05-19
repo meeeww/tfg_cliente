@@ -42,10 +42,10 @@ function Usuario() {
   if (isLoading) {
     return (
       <MainLayout>
-      <div className="mainBodyUsuario">
-        <Panel />
-      </div>
-    </MainLayout>
+        <div className="mainBodyUsuario">
+          <Panel />
+        </div>
+      </MainLayout>
     );
   }
 
@@ -60,7 +60,7 @@ function Usuario() {
     <MainLayout>
       <div className="mainBodyUsuario">
         <Panel />
-        <Recibos data={{recibo, usuario}} />
+        <Recibos data={{ recibo, usuario }} />
       </div>
     </MainLayout>
   )
