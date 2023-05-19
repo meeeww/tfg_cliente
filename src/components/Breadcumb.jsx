@@ -16,7 +16,7 @@ const Breadcumb = () => {
             </div>
             <div className="botonesBread">
                 <div id="orderNowBread">
-                    <NavLink to={"/ordernow"}><div>Order Now</div></NavLink>
+                    <NavLink to={"/menu"}><div>Order Now</div></NavLink>
                 </div>
 
                 <div className="sobreNosotrosBread">

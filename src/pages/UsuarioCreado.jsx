@@ -16,15 +16,15 @@ function NoMatch() {
                         <h1>The &<h1 style={{ color: mainColor }}>C</h1>offee Tub</h1>
                     </div>
                     <div className="subtituloBread">
-                        <h2>Oh no. The 404 Page!</h2>
+                        <h2>Account created.</h2>
                     </div>
                 </div>
                 <div className="botonesBread">
-                    <div className="sobreNosotrosBread">
-                        <NavLink to={"/"}><div>Take Me Back</div></NavLink>
+                    <div className="mainpageBreadRegistered">
+                        <NavLink to={"/"}><div>Main Page</div></NavLink>
                     </div>
-                    <div className="sobreNosotrosBread">
-                        <NavLink to={"/aboutus"}><div>About Us</div></NavLink>
+                    <div className="signinBreadRegistered">
+                        <NavLink to={"/signin"}><div>Sign In</div></NavLink>
                     </div>
                 </div>
             </div>

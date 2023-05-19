@@ -4,13 +4,13 @@ import Logo from '../assets/Logo.png'
 const linksLeft = [
     { name: 'Main', href: '/' },
     { name: 'Menu', href: '/menu' },
-    { name: 'Coffee', href: '/coffee' },
+    { name: 'About Us', href: '/aboutus' },
     { name: 'Contact Us', href: '/contactus' },
 ]
 
 const linksRight = [
-    { name: 'Sign In', href: '/signin', clase: "signin" },
-    { name: 'Sign Up', href: '/signup', clase: "signup" },
+    { name: 'Shopping Cart', href: '/cart', icono: "fa-solid fa-cart-shopping" },
+    { name: 'User Page', href: '/signin', icono: "fa-solid fa-circle-user" },
 ]
 
 const Header = () => (
@@ -21,13 +21,13 @@ const Header = () => (
         <div className="nav-linksHeader">
             <nav className="navHeader">
                 {linksLeft.map((item) => (
-                    <NavLink to={item.href} key={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>{item.name}</NavLink>
+                    <NavLink to={item.href} key={item.name} className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>{item.name}</NavLink>
                 ))}
             </nav>
             <div className="register-loginHeader">
-                <nav className="navHeader">
+                <nav className="navHeaderDerecha">
                     {linksRight.map((item) => (
-                        <NavLink to={item.href} id={item.clase} key={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>{item.name}</NavLink>
+                        <a key={item.name} href={item.href}><i className={item.icono}></i></a>
                     ))}
                 </nav>
             </div>
