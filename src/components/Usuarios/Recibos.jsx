@@ -1,6 +1,3 @@
-import Axios from 'axios'
-import { useEffect, useState } from 'react'
-
 const Recibos = (data) => {
 
     return (
@@ -12,29 +9,23 @@ const Recibos = (data) => {
                 </div>
             </div>
             <div className="configuracionUsuario">
-                <div className="infoProductosCarrito">
-                    {producto.map((productoIndividual, index) => (
-                        <div key={"productoIndividual" + index} className="infoProductosIndividualCarrito">
-                            <div className="infoRecibosPrincipal">
-                                {console.log(recibos + " ")}
-                                <img src={productoIndividual["foto_producto"]} alt='Product'></img>
-                                <div className="textoInfoProductoCarrito">
-                                    <h3>{productoIndividual["nombre_producto"]}</h3>
-                                    <h4>{productoIndividual["descripcion_producto"]}</h4>
-                                </div>
-                            </div>
-                            <div className="infoProductoIndividualCantidadCarrito">
-                                <h3>{carrito[index]["cantidad"]}</h3>
-                            </div>
-                            <div className="infoProductoIndividualPrecioCarrito">
-                                {"$" + parseFloat(productoIndividual["coste_base"]).toFixed(2)}
-                            </div>
-                            <div className="infoProductoIndividualTotalCarrito">
-                                {"$" + parseFloat((productoIndividual["coste_base"]) * carrito[index]["cantidad"]).toFixed(2)}
-                            </div>
+                {data.data.recibo.map((item, index) => (
+                    <div key={item.id_usuario + "-" + index} className="mainOrdersUserDashboard">
+                        {/* <h4>{item.direccion_envio}</h4>
+                        <h4>{"$" + item.preciototal}</h4> */}
+                        <div>
+                            <h4>Order ID: {item.numero_pedido}</h4>
+                            <p>Total Price: {"$" + item.preciototal}</p>
                         </div>
-                    ))}
-                </div>
+                        <div>
+                            <p>Adress: {item.direccion_envio}</p>
+                        </div>
+                        <div>
+                            <a href={"http://localhost:5173/user/orders/orderid?id=" + item.numero_pedido}>List of Products</a>
+                        </div>
+                    </div>
+
+                ))}
             </div>
         </div>
     );
