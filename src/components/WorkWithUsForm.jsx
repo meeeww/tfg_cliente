@@ -40,7 +40,7 @@ const WorkWithUsForm = () => {
         axios.get(getSessionesURL + localStorage.getItem("token")).then(response => {
             if (response.data[0]) {
                 axios.get(getUsuarioURL + response.data[0]["id_usuario"]).then(response2 => {
-                    if (response2.data[0] != null ) {
+                    if (response2.data[0]["id_usuario"] != null ) {
                         if (arrayCampos[10] == true) {
                             puestoTrabajo = arrayCampos[14]
                         } else if (arrayCampos[11] == true) {
@@ -52,9 +52,10 @@ const WorkWithUsForm = () => {
                         }
                 
                         axios.post(postTrabajoURL, {
-                            "segundoApellido": arrayCampos[2], "ssc": arrayCampos[3], "codigoPostal": arrayCampos[6],
-                            "ciudad": arrayCampos[7], "condado": arrayCampos[8], "estado": arrayCampos[9], "puestoTrabajo": puestoTrabajo,
-                            "fechaNacimiento": arrayCampos[14]
+                            "id_usuario": response2.data[0]["id_usuario"],
+                            "segundo_apellido": arrayCampos[2], "ssc": arrayCampos[3], "codigo_postal": arrayCampos[6],
+                            "ciudad": arrayCampos[7], "condado": arrayCampos[8], "estado": arrayCampos[9], "puesto_trabajo": puestoTrabajo,
+                            "fecha_nacimiento": arrayCampos[18]
                         })
                     } 
                 })

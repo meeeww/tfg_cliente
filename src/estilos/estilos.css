@@ -851,6 +851,517 @@ body {
   align-items: flex-end;
 }
 
+  /*ContactUs*/
+
+  .ContactUsContenedor {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    padding: 1rem;
+  }
+
+  .ContactUsContenedorDivFormulario {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .ContactUsContenedorDivFormularioDerecha {
+    width: 40%;
+  }
+
+  .ContactUsContenedorDivFormularioIzquierda {
+    width: 40%;
+  }
+
+  .ContactUsContenedorFormularioInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    justify-content: center;
+  }
+
+  .ContactUsContenedorFormularioInfo h1 {
+    text-align: center;
+  }
+
+  .ContactUsUbicacion {
+    display: flex;
+    gap: 10px;
+    justify-content: space-evenly;
+    height: 29rem;
+  }
+
+  .ContactUsUbicacionDiv1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .ContactUsUbicacionDiv1 h1 {
+    text-align: center;
+  }
+
+  .ContactusUbicacionDiv2 {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .ContactusUbicacionDiv2 i {
+    width: 1px;
+    height: 1px;
+  }
+
+  .ContactusUbicacionDiv2 p {
+    text-align: left;
+    width: 100%;
+  }
+
+  .ContactUsUbicacionIframe {
+    display: flex;
+    justify-content: center;
+  }
+
+  .ContactUsFormularioDiv {
+    display: flex;
+    height: 100%;
+    width: 100%;
+  }
+
+  .ContactUsFormulario {
+    width: 100%;
+    height: 100%;
+  }
+
+  .ContactUsFormularioDcho {
+    width: 100%;
+    height: 100%;
+    border: 3px solid var(--color_secundario);
+    border-radius: 20px;
+  }
+
+  .ContactUsFormularioDcho h1 {
+    text-align: center;
+    padding: 25px 0px 0px 0px;
+  }
+
+  .ContactUsFormularioCuerpo {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ContactUsFormularioCuerpoMensajes {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    gap: 25px;
+  }
+
+  .ContactUsFormularioMensajes {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .ContactUsFormularioMensajes input {
+    width: 80%;
+    height: 2.3rem;
+    border-radius: 15px;
+    border: none;
+    padding: 10px 0px 10px 10px;
+    background-color: var(--blanco);
+    border: 0.1rem solid var(--color_secundario);
+    transition: all 0.25s;
+  }
+
+  .ContactUsFormularioMensajes input:focus {
+    outline: none;
+    border: 0.2rem solid var(--color_secundario);
+    transition: all 0.05s;
+  }
+
+  .ContactUsFormularioMensajes input::placeholder {
+    color: black;
+  }
+
+  .ContactUsFormularioMensajeGrande {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+  }
+
+  .ContactUsFormularioMensajeGrande input {
+    width: 80%;
+    height: 6rem;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 0px 10px 10px;
+    background-color: var(--blanco);
+    border: 0.1rem solid var(--color_secundario);
+    transition: all 0.25s;
+  }
+
+  .ContactUsFormularioMensajeGrande input:focus {
+    outline: none;
+    border: 0.2rem solid var(--color_secundario);
+    transition: all 0.05s;
+  }
+
+  .ContactUsFormularioMensajeGrande input::placeholder {
+    color: black;
+  }
+
+  .ContactUsFormularioBoton {
+    width: 50%;
+    height: 2rem;
+    border-radius: 15px;
+    background-color: var(--blanco);
+    border: 2px solid var(--color_secundario);
+    transition: all 0.25s;
+    cursor: pointer;
+  }
+
+  .ContactUsFormularioBoton:hover {
+    background-color: var(--color_secundario);
+    color: var(--blanco);
+    transition: all 0.25s;
+  }
+
+  @media (max-width:900px) {
+    .ContactUsContenedor {
+      grid-template-columns: repeat(1, 1fr);
+      height: 100rem;
+    }
+
+    .ContactUsUbicacionDiv1 {
+      align-items: center;
+    }
+
+    .ContactUsUbicacion {
+      flex-direction: column;
+      height: auto;
+    }
+
+    .ContactUsFormulario {
+      width: 100%;
+      display: inline;
+    }
+
+    .ContactUsContenedorDivFormulario {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .ContactUsContenedorFormularioInfo {
+      gap: 10px;
+    }
+
+    .ContactUsFormularioDiv {
+      display: inline;
+    }
+
+    .ContactUsFormularioDcho {
+      width: 100%;
+    }
+
+    .ContactUsContenedorDivFormulario {
+      gap: 10px;
+    }
+
+    .ContactUsFormularioCuerpoMensajes {
+      gap: 10px;
+    }
+
+    .ContactUsFormularioMensajes {
+      gap: 10px;
+    }
+
+    .ContactUsFormularioMensajeGrande {
+      gap: 10px;
+    }
+
+    .ContactUsFormularioDcho h1 {
+      padding: 10px 0px 0px 0px;
+    }
+
+    .ContactUsFormularioMensajeGrande button {
+      margin-bottom: 5px;
+    }
+  }
+
+  @media (max-width:800px) {
+    .ContactUsContenedor {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
+      height: 105rem;
+    }
+  }
+
+  @media (max-width:700px) {
+    .ContactUsContenedor {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
+      height: 110rem;
+    }
+  }
+
+  @media (max-width:600px) {
+    .ContactUsContenedor {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
+      height: 115rem;
+    }
+  }
+
+  @media (max-width:500px) {
+    .ContactUsContenedor {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
+      height: 125rem;
+    }
+  }
+
+  /*WorkWithUs*/
+
+  .WorkWithUsContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0px 10px 0px;
+  }
+  
+  .WorkWithUsDiv{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .WorkWithUsDiv h1{
+    text-align: center;
+  }
+
+  .WorkWithUsDiv1Contenedor{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .WorkWithUsDiv1Caja{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    height: 15rem;
+    gap: 2rem;
+    text-align: center;
+    padding-top: 1rem;
+  }
+
+  .WorkWithUsDiv1Caja h1{
+    font-size: 20px;
+  }
+
+  .WorkWithUsDiv1Caja i{
+    font-size: 5rem;
+  }
+
+  .WorkWithUsDivTexto{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .WorkWithUsDiv2Contenedor{
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .WorkWithUsDiv2Caja{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    height: 12rem;
+    gap: 2rem;
+    text-align: center;
+    padding-top: 1rem;
+  }
+
+  .WorkWithUsDiv2Caja h1{
+    font-size: 20px;
+  }
+
+  .WorkWithUsDiv2Caja i{
+    font-size: 5rem;
+  }
+
+  .WorkWithUsDivTexto2{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .WorkWithUsDivButton{
+    width: 15rem;
+    height: 2rem;
+    border-radius: 10px;
+    border: 1px solid var(--backgroud_color_2);
+    background-color: var(--blanco);
+    border-color: var(--color_secundario);
+    transition: all 0.25s;
+    cursor:pointer;
+  }
+
+  .WorkWithUsDivButton:focus {
+    outline: none;
+    transition: all 0.05s;
+  }
+
+  .WorkWithUsDivButton:hover {
+    border: 1px solid var(--color_secundario);
+    background-color: var(--color_secundario);
+    color: var(--blanco);
+    transition: all 0.25s;
+  }
+
+  @media (max-width:900px) {
+
+    .WorkWithUsDiv1Caja i{
+      font-size: 3rem;
+    }
+
+    .WorkWithUsDiv2Caja i{
+      font-size: 3rem;
+    }
+  }
+
+  @media (max-width:600px) {
+
+    .WorkWithUsDiv1Caja{
+      height: 18rem;
+    }
+    .WorkWithUsDiv2Caja{
+      height: 13rem;
+    }
+  }
+
+  @media (max-width:550px) {
+
+    .WorkWithUsDiv1Caja{
+      height: 20rem;
+    }
+  }
+
+  /*WorkWithUsForm*/
+
+.WorkWithUsFormContenedor{
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+}
+
+.WorkWithUsFormDivTexto{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-bottom: 2rem ;
+}
+
+.WorkWithUsColor{
+  color: var(--color_secundario);
+}
+
+.WorkWithUsFormFormContenedor{
+  display: flex;
+}
+
+.WorkWithUsForm1{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  height: 100%;
+}
+
+ .WorkWithUsForm1 input{
+  width: 90%;
+  height: 2rem;
+  border-radius: 15px;
+  padding-left: 1rem;
+  border: 2px solid var(--color_secundario);
+  transition: all 0.25s;
+ }
+
+ .WorkWithUsForm1 input:focus {
+  outline: none;
+  border: 0.2rem solid var(--color_secundario);
+  transition: all 0.05s;
+}
+
+
+.WorkWithUsFormCheckBoxContainer{
+  display: flex;
+  flex-direction: column;
+}
+
+.WorkWithUsFormCheckBox{
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  align-items: center;
+}
+
+.WorkWithUsFormCheckBox input{
+  width: 0.7rem;
+}
+
+.WorkWithUsFormFecha{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.WorkWithUsFormFecha input{
+  width: 8rem;
+}
+
+.WorkWithUsFormBoton{
+  width: 100%;
+}
+
+.WorkWithUsFormBoton button{
+  width: 8rem;
+  height: 2rem;
+  background-color: var(--blanco);
+  transition: all 0.25s;
+  border: 2px solid var(--color_secundario);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.WorkWithUsFormBoton button:hover{
+  background-color: var(--color_secundario);
+  color: var(--blanco);
+}
+
+.WorkWithUsTitulo{
+  font-size: 22px;
+}
+
+.WorkWithUsTexto{
+  font-size: 14px;
+}
+
 /*dashboard*/
 
 .dashboardBody {
