@@ -52,7 +52,6 @@ function ReciboIndividual() {
             <div className="mainBodyUsuario">
                 <Panel />
                 <div className="panelDashboard">
-                    {console.log(infoProducto[0])}
                     {infoProducto[0].map((infoProductoIndividual) => (
                         <div key={infoProductoIndividual["id_info"]} className="orderProductoIndividualUsuario">
                             <div className="productoorderProductoIndividualUsuario">
