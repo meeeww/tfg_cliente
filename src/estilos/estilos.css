@@ -1063,6 +1063,7 @@ h3 {
   justify-content: space-between;
   align-items: center;
   margin-block: 1rem;
+  width: 100%;
 }
 
 .mainOrdersUserDashboard a {
