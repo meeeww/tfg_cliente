@@ -26,7 +26,7 @@ function ReciboIndividual() {
                             setInfoProducto(infoProductos)
                             //
                             Axios.get("http://localhost:4000/API/pedidos/buscar/pedido?id=" + idParam).then(respuestaInfoPedidos => {
-                                if (usuario == respuestaInfoPedidos.data[0]["id_usuario"]) {
+                                if (usuario == respuestaInfoPedidos.data[0]["id_usuario"] || response2.data[0]["permisos"] >= 1) {
                                     setLoading(false)
                                 }
                             })

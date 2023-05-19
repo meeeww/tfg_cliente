@@ -2,6 +2,7 @@ import Axios from 'axios'
 import { useState, useEffect } from 'react';
 import '../../estilos/estilos.css'
 import Panel from '../../components/Dashboard/Panel'
+import Header from '../../components/Dashboard/Header'
 import ModalConfiguracion from '../../modals/Product/ProductConfig'
 import ModalCreation from '../../modals/Product/ProductCreate'
 import ModalDelete from '../../modals/Product/ProductDelete'
@@ -69,10 +70,7 @@ function Products() {
                             <h1 style={{ "paddingRight": "1rem" }}>Welcome,</h1>
                             <h1>{usuario.nombre_usuario}</h1>
                         </div>
-                        <div className="sessionDashboard">
-                            <a href="/">Main Menu</a>
-                            <a href="../signout">Logout</a>
-                        </div>
+                        <Header />
                     </div>
                     <div className="panelInfoDashboardProducts">
                         <div className="reportsOverviewDashboard">

@@ -3,17 +3,16 @@ import { useState, useEffect } from 'react';
 import '../../estilos/estilos.css'
 import Panel from '../../components/Dashboard/Panel'
 import Header from '../../components/Dashboard/Header'
-import ModalConfiguracion from '../../modals/Category/CategoryConfig'
-import ModalCreation from '../../modals/Category/CategoryCreate'
-import ModalDelete from '../../modals/Category/CategoryDelete'
+import ModalConfiguracion from '../../modals/User/UserConfig'
+import ModalDelete from '../../modals/User/UserDelete'
 
 
 
-function Categorias() {
+function Orders() {
 
-    const [categorias, setCategorias] = useState();
+    const [pedidos, setPedidos] = useState();
 
-    let baseURL = "http://localhost:4000/API/categorias/consultar";
+    let baseURL = "http://localhost:4000/API/trabajos/consultar";
 
     let config = {
         timeout: 10000,
@@ -25,8 +24,7 @@ function Categorias() {
     useEffect(() => {
         Axios.get(baseURL, config)
             .then((res) => {
-                //console.log("RESPONSE RECEIVED: ", res.data);
-                setCategorias(res.data)
+                setPedidos(res.data)
                 //localStorage.setItem("token", res.data)
                 //location.replace("http://localhost:5173/login")
                 return {
@@ -37,9 +35,7 @@ function Categorias() {
 
         if (localStorage.getItem("token") != null || localStorage.getItem("token") == "") {
             Axios.get("http://localhost:4000/API/sesiones/buscar?token=" + localStorage.getItem("token")).then(response => {
-
                 if (response.data[0]) {
-
                     Axios.get("http://localhost:4000/API/usuarios/buscar?id=" + response.data[0]["id_usuario"]).then(response2 => {
                         setUsuario(response2.data[0])
                         setLoading(false)
@@ -74,28 +70,23 @@ function Categorias() {
                     </div>
                     <div className="panelInfoDashboardProducts">
                         <div className="reportsOverviewDashboard">
-                            <h2>Categories List</h2>
+                            <h2>Order List</h2>
                             {
-                                categorias &&
-                                categorias.map((item) => (
-                                    <div key={"keyProductMain" + item.id_categoria} className="reportInfoDashboard">
-                                        <div className="fechaInfoDashBoard">
-                                            <h3>Id: {item.id_categoria}</h3>
-
-                                        </div>
-                                        <div className="informacionInfoDashboard">
-                                            <h3>{item.nombre_categoria}</h3>
+                                pedidos &&
+                                pedidos.map((item, index) => (
+                                    <div key={item.id_usuario + "-" + index} className="mainOrdersUserDashboard">
+                                        <div>
+                                            <h4>Order ID: {item.numero_pedido}</h4>
+                                            <p>Total Price: {"$" + item.preciototal}</p>
                                         </div>
                                         <div>
-                                            <ModalConfiguracion categoria={item}></ModalConfiguracion>
-                                            <ModalDelete categoria={item}></ModalDelete>
+                                            <p>Adress: {item.direccion_envio}</p>
+                                        </div>
+                                        <div>
+                                            <a href={"http://localhost:5173/user/orders/orderid?id=" + item.numero_pedido}>List of Products</a>
                                         </div>
                                     </div>
                                 ))}
-                        </div>
-                        <div className="crearProducto">
-                            <ModalCreation></ModalCreation>
-                            {/* <a className="crearProductoBoton" onClick={(event) => crearProducto()}>Crear Producto</a> */}
                         </div>
                     </div>
                 </div>
@@ -105,4 +96,4 @@ function Categorias() {
 }
 
 
-export default Categorias
+export default Orders

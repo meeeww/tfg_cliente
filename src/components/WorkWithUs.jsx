@@ -10,21 +10,21 @@ const WorkWithUs = () => {
                     <h1>What do I have to do to work in The Coffee Tub?</h1>
                     <div className="WorkWithUsDiv1Contenedor">
                         <div className="WorkWithUsDiv1Caja">
-                            <i class="fa-brands fa-wpforms"></i>
+                            <i className="fa-brands fa-wpforms"></i>
                             <div className="WorkWithUsDivTexto">
                                 <h1>Personal data and CV</h1>
                                 <p>Complete the form with your personal data. If you have training and experience, tell us!</p>
                             </div>
                         </div>
                         <div className="WorkWithUsDiv1Caja">
-                            <i class="fa-regular fa-calendar"></i>
+                            <i className="fa-regular fa-calendar"></i>
                             <div className="WorkWithUsDivTexto">
                                 <h1>Hours and position</h1>
                                 <p>Choose your work preferences: how many hours a week and where you would like to work.</p>
                             </div>
                         </div>
                         <div className="WorkWithUsDiv1Caja">
-                            <i class="fa-solid fa-people-arrows"></i>
+                            <i className="fa-solid fa-people-arrows"></i>
                             <div className="WorkWithUsDivTexto">
                                 <h1>Personal interview</h1>
                                 <p>Our Restaurant Manager will contact you to schedule a personal interview.</p>
@@ -36,15 +36,15 @@ const WorkWithUs = () => {
                     <h1>Benefits of working at VIPS and VIPS Smart</h1>
                     <div className="WorkWithUsDiv2Contenedor">
                         <div className="WorkWithUsDiv2Caja">
-                            <i class="fa-solid fa-rocket"></i>
+                            <i className="fa-solid fa-rocket"></i>
                             <div className="WorkWithUsDivTexto">
                                 <h1>The development of our teams is stellar</h1>
                             </div>
                         </div>
                         <div className="WorkWithUsDiv2Caja">
-                            <i class="fa-solid fa-heart"></i>
+                            <i className="fa-solid fa-heart"></i>
                             <div className="WorkWithUsDivTexto">
-                                <h1>Our values ​​define us</h1>
+                                <h1>Our values define us</h1>
                             </div>
                         </div>
                     </div>
