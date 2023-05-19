@@ -12,7 +12,7 @@ function Orders() {
 
     const [pedidos, setPedidos] = useState();
 
-    let baseURL = "http://localhost:4000/API/pedidos/consultar";
+    let baseURL = "http://localhost:4000/API/contactos/consultar";
 
     let config = {
         timeout: 10000,
@@ -76,14 +76,16 @@ function Orders() {
                                 pedidos.map((item, index) => (
                                     <div key={item.id_usuario + "-" + index} className="mainOrdersUserDashboard">
                                         <div>
-                                            <h4>Order ID: {item.numero_pedido}</h4>
-                                            <p>Total Price: {"$" + item.preciototal}</p>
+                                            <h4>Contact ID: {item.id_contacto}</h4>
+                                            <p>Name: {item.nombre}</p>
                                         </div>
                                         <div>
-                                            <p>Adress: {item.direccion_envio}</p>
+                                            <p>Email: {item.email}</p>
+                                            <p>Phone: {item.telefono}</p>
                                         </div>
                                         <div>
-                                            <a href={"http://localhost:5173/user/orders/orderid?id=" + item.numero_pedido}>List of Products</a>
+                                            <p>Message:</p>
+                                            <p>{item.mensaje}</p>
                                         </div>
                                     </div>
                                 ))}

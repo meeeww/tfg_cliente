@@ -7,6 +7,7 @@ import DashboardUsers from './pages/Dashboard/Users'
 import DashboardProducts from './pages/Dashboard/Products'
 import DashboardCategories from './pages/Dashboard/Categories'
 import DashboardOrders from './pages/Dashboard/Orders'
+import DashboardContact from './pages/Dashboard/Contact'
 
 import UsuarioConfig from './pages/Usuarios/UsuarioConfiguracion'
 import UsuarioDireccion from './pages/Usuarios/UsuarioDireccion'
@@ -82,7 +83,7 @@ const router = createBrowserRouter([
     element: <Carta />,
   },
   {
-    path: "/Merchandising",
+    path: "/merchandising",
     element: <Merchandising />,
   },
   {
@@ -112,6 +113,10 @@ const router = createBrowserRouter([
   {
     path: "/dashboard/orders",
     element: <DashboardOrders />,
+  },
+  {
+    path: "/dashboard/contact",
+    element: <DashboardContact />,
   },
   {
     path: "/registered",
