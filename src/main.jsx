@@ -3,8 +3,10 @@ import ReactDOM from 'react-dom/client'
 import Inicio from './pages/Inicio'
 
 import Dashboard from './pages/Dashboard'
+import DashboardUsers from './pages/Dashboard/Users'
 import DashboardProducts from './pages/Dashboard/Products'
 import DashboardCategories from './pages/Dashboard/Categories'
+import DashboardOrders from './pages/Dashboard/Orders'
 
 import UsuarioConfig from './pages/Usuarios/UsuarioConfiguracion'
 import UsuarioDireccion from './pages/Usuarios/UsuarioDireccion'
@@ -97,7 +99,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/dashboard",
-    element: <Dashboard />,
+    element: <DashboardUsers />,
   },
   {
     path: "/dashboard/products",
@@ -106,6 +108,10 @@ const router = createBrowserRouter([
   {
     path: "/dashboard/categories",
     element: <DashboardCategories />,
+  },
+  {
+    path: "/dashboard/orders",
+    element: <DashboardOrders />,
   },
   {
     path: "/registered",

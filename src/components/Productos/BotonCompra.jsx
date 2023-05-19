@@ -51,7 +51,13 @@ const BotonCompra = (data) => {
                                         console.log("creando")
                                         Axios.post(postPedidosURL, { "id_usuario": res.data[0]["id_usuario"], "direccion_envio": "NA", "estado": 0, "preciototal": 0 }).then(() => {
                                             Axios.get((getPedidoURL + idUsuario)).then((resPedido2) => {
-                                                Axios.post(postInfoPedidoURL, { "numero_pedido": resPedido2.data[0]["numero_pedido"], "id_producto": idProducto, "fecha": date, "cantidad": data.producto.numero })
+                                                console.log(resPedido2)
+                                                resPedido2.data.map((item) => {
+                                                    if (item["estado"] == 0) {
+                                                        console.log({ "numero_pedido": item["numero_pedido"], "id_producto": idProducto, "fecha": date, "cantidad": data.producto.numero })
+                                                        Axios.post(postInfoPedidoURL, { "numero_pedido": item["numero_pedido"], "id_producto": idProducto, "fecha": date, "cantidad": data.producto.numero })
+                                                    }
+                                                })
                                             })
                                         })
                                     }

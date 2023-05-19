@@ -11,7 +11,8 @@ import '../../estilos/estilos.css'
 function Checkout() {
 
   const [recibo, setRecibo] = useState([])
-  const [usuario, setUsuario] = useState("")
+  const [usuario, setUsuario] = useState([])
+  const [productos, setProductos] = useState([])
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -19,14 +20,17 @@ function Checkout() {
       Axios.get("http://localhost:4000/API/sesiones/buscar?token=" + localStorage.getItem("token")).then(response => {
         if (response.data[0]) {
           Axios.get("http://localhost:4000/API/usuarios/buscar?id=" + response.data[0]["id_usuario"]).then(response2 => {
-            setUsuario(response2.data[0]["nombre_usuario"])
+            setUsuario([response2.data[0]["id_usuario"], response2.data[0]["nombre_usuario"], response2.data[0]["numero_pedidos"]])
           })
           let recibos = []
           Axios.get("http://localhost:4000/API/pedidos/buscar/usuario?id=" + response.data[0]["id_usuario"]).then(response2 => {
             response2.data.forEach((respuesta) => {
               if (respuesta["estado"] == 0) {
-                recibos.push(respuesta)
-                setRecibo(recibos)
+                Axios.get("http://localhost:4000/API/infopedidos/buscar/pedido?id=" + respuesta["numero_pedido"]).then(responseFinal => {
+                  recibos.push(respuesta)
+                  setRecibo(recibos)
+                  setProductos(responseFinal)
+                })
               }
               setLoading(false)
             })
@@ -54,7 +58,7 @@ function Checkout() {
     <MainLayout>
       <div className="mainBodyUsuario">
         <Panel />
-        <CheckoutComponent data={{recibo, usuario}} />
+        <CheckoutComponent data={{ recibo, usuario, productos }} />
       </div>
     </MainLayout>
   )

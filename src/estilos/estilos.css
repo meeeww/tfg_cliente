@@ -10,19 +10,19 @@
   --blanco: #fff8f8;
 }
 
-  * {
-    font-family: 'Rubik', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+* {
+  font-family: 'Rubik', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  body {
-    font-family: 'Poppins', sans-serif;
-    padding: 0;
-    margin: 0;
-    overflow-x: hidden
-  }
+body {
+  font-family: 'Poppins', sans-serif;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden
+}
 
 /*Header*/
 .headerHeader {
@@ -35,20 +35,20 @@
   position: relative;
 }
 
-  .logoHeader {
-    display: flex;
-    align-items: center;
-    margin-right: 20px;
-  }
+.logoHeader {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
 
-  .logoHeader img {
-    height: 75px;
-    width: 75px;
-  }
+.logoHeader img {
+  height: 75px;
+  width: 75px;
+}
 
-  .navHeader {
-    display: flex;
-  }
+.navHeader {
+  display: flex;
+}
 
 .navHeader a {
   padding: 10px;
@@ -56,17 +56,17 @@
   color: var(--gris);
   font-size: 20px;
 
-    transition: all 0.25s;
-  }
+  transition: all 0.25s;
+}
 
-  .navHeader a:visited {
-    color: var(--gris);
-  }
+.navHeader a:visited {
+  color: var(--gris);
+}
 
 
-  .navHeader a:hover {
-    color: var(--color_secundario);
-  }
+.navHeader a:hover {
+  color: var(--color_secundario);
+}
 
 .navHeaderDerecha {
   display: flex;
@@ -100,33 +100,33 @@
   color: var(--color_secundario) !important;
 }
 
-  #signup {
-    border: 3px solid var(--color_secundario);
-    border-radius: 2rem;
-    margin-left: 1rem;
-    color: var(--gris);
+#signup {
+  border: 3px solid var(--color_secundario);
+  border-radius: 2rem;
+  margin-left: 1rem;
+  color: var(--gris);
 
-    transition: all 0.25s;
-  }
+  transition: all 0.25s;
+}
 
-  #signup:hover {
-    background-color: var(--color_secundario);
-    color: var(--blanco);
+#signup:hover {
+  background-color: var(--color_secundario);
+  color: var(--blanco);
 
-    transition: all 0.25s;
-  }
+  transition: all 0.25s;
+}
 
-  .nav-linksHeader {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-  }
+.nav-linksHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
 
-  .register-loginHeader {
-    display: flex;
-    align-items: center;
-  }
+.register-loginHeader {
+  display: flex;
+  align-items: center;
+}
 
 /*Migas de pan*/
 .mainBread {
@@ -144,24 +144,24 @@
   color: var(--blanco);
 }
 
-  .tituloBread h1 {
-    display: flex;
-    text-align: center;
-    font-size: 70px;
-    font-weight: bold;
-    margin: 0;
-  }
+.tituloBread h1 {
+  display: flex;
+  text-align: center;
+  font-size: 70px;
+  font-weight: bold;
+  margin: 0;
+}
 
-  .subtituloBread h2 {
-    text-align: center;
-    font-size: 32px;
-    font-weight: 600;
-    margin: 0;
-  }
+.subtituloBread h2 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0;
+}
 
-  .botonesBread {
-    display: flex;
-  }
+.botonesBread {
+  display: flex;
+}
 
 #orderNowBread {
   background-color: var(--color_secundario);
@@ -170,15 +170,15 @@
   margin-inline: 1rem;
   color: var(--blanco);
 
-    width: 10rem;
-    height: 3rem;
+  width: 10rem;
+  height: 3rem;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    transition: all 0.25s;
-  }
+  transition: all 0.25s;
+}
 
 .sobreNosotrosBread {
   margin-inline: 1rem;
@@ -189,22 +189,22 @@
   border-radius: 2rem;
   color: var(--blanco);
 
-    width: 10rem;
-    height: 3rem;
+  width: 10rem;
+  height: 3rem;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    transition: all 0.25s;
-  }
+  transition: all 0.25s;
+}
 
-  .botonesBread div:hover {
-    background-color: var(--color_secundario);
-    color: var(--gris);
+.botonesBread div:hover {
+  background-color: var(--color_secundario);
+  color: var(--gris);
 
-    transition: all 0.25s;
-  }
+  transition: all 0.25s;
+}
 
 .botonesBread a {
   text-decoration: none;
@@ -480,7 +480,7 @@
   padding-left: 1rem;
 }
 
-#textPrivacy{
+#textPrivacy {
   color: var(--gris);
   user-select: none;
 }
@@ -492,8 +492,8 @@
   width: auto;
 }
 
-.SingInSing{
-  margin-block: 2rem!important;
+.SingInSing {
+  margin-block: 2rem !important;
 }
 
 .SingInSing input[type="submit"] {
@@ -514,7 +514,7 @@
 }
 
 /*usuario*/
-.confirmChangesUsuario{
+.confirmChangesUsuario {
   margin-block: 1rem;
 }
 
@@ -962,6 +962,14 @@ h3 {
   width: 20%;
 }
 
+.precioVentasInfoDashboard {
+  width: 20%;
+}
+
+.imagenFotoInfoDashboard {
+  width: 10%;
+}
+
 .imagenFotoInfoDashboard img {
   width: 50px;
   height: 50px;
@@ -1027,7 +1035,7 @@ h3 {
   display: flex;
 }
 
-.campoInfoUsuario{
+.campoInfoUsuario {
   margin-block: 0.5rem;
 }
 
@@ -1038,13 +1046,13 @@ h3 {
   align-items: flex-start;
 }
 
-.infoReciboPanelUsuario{
+.infoReciboPanelUsuario {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.infoProductosCarrito{
+.infoProductosCarrito {
   width: 100%;
 }
 
@@ -1056,6 +1064,14 @@ h3 {
 .infoRecibosPrincipal img {
   width: 4rem;
   height: 4rem;
+}
+
+.infoUsuarioDashboard {
+  width: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .mainOrdersUserDashboard {
@@ -1162,6 +1178,17 @@ h3 {
 .barraDashboard h2 {
   text-align: center;
   margin: 0;
+}
+
+.barraDashboard a {
+  text-decoration: none;
+  color: var(--color_secundario);
+  transition: all 0.25s;
+}
+
+.barraDashboard a:hover {
+  color: var(--background_color_1);
+  transition: all 0.25s;
 }
 
 .documentDashboard {
@@ -2160,14 +2187,14 @@ h3 {
 
   /*WorkWithUs*/
 
-  .WorkWithUsContainer{
+  .WorkWithUsContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10px 0px 10px 0px;
   }
-  
-  .WorkWithUsDiv{
+
+  .WorkWithUsDiv {
     width: 70%;
     display: flex;
     flex-direction: column;
@@ -2175,16 +2202,16 @@ h3 {
     padding-bottom: 1rem;
   }
 
-  .WorkWithUsDiv h1{
+  .WorkWithUsDiv h1 {
     text-align: center;
   }
 
-  .WorkWithUsDiv1Contenedor{
+  .WorkWithUsDiv1Contenedor {
     display: flex;
     justify-content: space-around;
   }
 
-  .WorkWithUsDiv1Caja{
+  .WorkWithUsDiv1Caja {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -2195,26 +2222,26 @@ h3 {
     padding-top: 1rem;
   }
 
-  .WorkWithUsDiv1Caja h1{
+  .WorkWithUsDiv1Caja h1 {
     font-size: 20px;
   }
 
-  .WorkWithUsDiv1Caja i{
+  .WorkWithUsDiv1Caja i {
     font-size: 5rem;
   }
 
-  .WorkWithUsDivTexto{
+  .WorkWithUsDivTexto {
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
 
-  .WorkWithUsDiv2Contenedor{
+  .WorkWithUsDiv2Contenedor {
     display: flex;
     justify-content: space-evenly;
   }
 
-  .WorkWithUsDiv2Caja{
+  .WorkWithUsDiv2Caja {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -2225,15 +2252,15 @@ h3 {
     padding-top: 1rem;
   }
 
-  .WorkWithUsDiv2Caja h1{
+  .WorkWithUsDiv2Caja h1 {
     font-size: 20px;
   }
 
-  .WorkWithUsDiv2Caja i{
+  .WorkWithUsDiv2Caja i {
     font-size: 5rem;
   }
 
-  .WorkWithUsDivTexto2{
+  .WorkWithUsDivTexto2 {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -2241,7 +2268,7 @@ h3 {
     align-items: center;
   }
 
-  .WorkWithUsDivButton{
+  .WorkWithUsDivButton {
     width: 15rem;
     height: 2rem;
     border-radius: 10px;
@@ -2249,7 +2276,7 @@ h3 {
     background-color: var(--blanco);
     border-color: var(--color_secundario);
     transition: all 0.25s;
-    cursor:pointer;
+    cursor: pointer;
   }
 
   .WorkWithUsDivButton:focus {
@@ -2266,133 +2293,134 @@ h3 {
 
   @media (max-width:900px) {
 
-    .WorkWithUsDiv1Caja i{
+    .WorkWithUsDiv1Caja i {
       font-size: 3rem;
     }
 
-    .WorkWithUsDiv2Caja i{
+    .WorkWithUsDiv2Caja i {
       font-size: 3rem;
     }
   }
 
   @media (max-width:600px) {
 
-    .WorkWithUsDiv1Caja{
+    .WorkWithUsDiv1Caja {
       height: 18rem;
     }
-    .WorkWithUsDiv2Caja{
+
+    .WorkWithUsDiv2Caja {
       height: 13rem;
     }
   }
 
   @media (max-width:550px) {
 
-    .WorkWithUsDiv1Caja{
+    .WorkWithUsDiv1Caja {
       height: 20rem;
     }
   }
 
   /*WorkWithUsForm*/
 
-.WorkWithUsFormContenedor{
-  display: flex;
-  flex-direction: column;
-  padding: 3rem;
-}
+  .WorkWithUsFormContenedor {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+  }
 
-.WorkWithUsFormDivTexto{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding-bottom: 2rem ;
-}
+  .WorkWithUsFormDivTexto {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 2rem;
+  }
 
-.WorkWithUsColor{
-  color: var(--color_secundario);
-}
+  .WorkWithUsColor {
+    color: var(--color_secundario);
+  }
 
-.WorkWithUsFormFormContenedor{
-  display: flex;
-}
+  .WorkWithUsFormFormContenedor {
+    display: flex;
+  }
 
-.WorkWithUsForm1{
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  width: 100%;
-  height: 100%;
-}
+  .WorkWithUsForm1 {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    height: 100%;
+  }
 
- .WorkWithUsForm1 input{
-  width: 90%;
-  height: 2rem;
-  border-radius: 15px;
-  padding-left: 1rem;
-  border: 2px solid var(--color_secundario);
-  transition: all 0.25s;
- }
+  .WorkWithUsForm1 input {
+    width: 90%;
+    height: 2rem;
+    border-radius: 15px;
+    padding-left: 1rem;
+    border: 2px solid var(--color_secundario);
+    transition: all 0.25s;
+  }
 
- .WorkWithUsForm1 input:focus {
-  outline: none;
-  border: 0.2rem solid var(--color_secundario);
-  transition: all 0.05s;
-}
+  .WorkWithUsForm1 input:focus {
+    outline: none;
+    border: 0.2rem solid var(--color_secundario);
+    transition: all 0.05s;
+  }
 
 
-.WorkWithUsFormCheckBoxContainer{
-  display: flex;
-  flex-direction: column;
-}
+  .WorkWithUsFormCheckBoxContainer {
+    display: flex;
+    flex-direction: column;
+  }
 
-.WorkWithUsFormCheckBox{
-  display: flex;
-  width: 100%;
-  gap: 10px;
-  align-items: center;
-}
+  .WorkWithUsFormCheckBox {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    align-items: center;
+  }
 
-.WorkWithUsFormCheckBox input{
-  width: 0.7rem;
-}
+  .WorkWithUsFormCheckBox input {
+    width: 0.7rem;
+  }
 
-.WorkWithUsFormFecha{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
+  .WorkWithUsFormFecha {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 
-.WorkWithUsFormFecha input{
-  width: 8rem;
-}
+  .WorkWithUsFormFecha input {
+    width: 8rem;
+  }
 
-.WorkWithUsFormBoton{
-  width: 100%;
-}
+  .WorkWithUsFormBoton {
+    width: 100%;
+  }
 
-.WorkWithUsFormBoton button{
-  width: 8rem;
-  height: 2rem;
-  background-color: var(--blanco);
-  transition: all 0.25s;
-  border: 2px solid var(--color_secundario);
-  border-radius: 10px;
-  cursor: pointer;
-}
+  .WorkWithUsFormBoton button {
+    width: 8rem;
+    height: 2rem;
+    background-color: var(--blanco);
+    transition: all 0.25s;
+    border: 2px solid var(--color_secundario);
+    border-radius: 10px;
+    cursor: pointer;
+  }
 
-.WorkWithUsFormBoton button:hover{
-  background-color: var(--color_secundario);
-  color: var(--blanco);
-}
+  .WorkWithUsFormBoton button:hover {
+    background-color: var(--color_secundario);
+    color: var(--blanco);
+  }
 
-.WorkWithUsTitulo{
-  font-size: 22px;
-}
+  .WorkWithUsTitulo {
+    font-size: 22px;
+  }
 
-.WorkWithUsTexto{
-  font-size: 14px;
-}
+  .WorkWithUsTexto {
+    font-size: 14px;
+  }
 
   /*dashboard*/
 
@@ -2704,4 +2732,4 @@ h3 {
     }
 
   }
-  }
+}

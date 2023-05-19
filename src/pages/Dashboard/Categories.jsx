@@ -8,7 +8,7 @@ import ModalDelete from '../../modals/Category/CategoryDelete'
 
 
 
-function Dashboard() {
+function Categorias() {
 
     const [categorias, setCategorias] = useState();
 
@@ -18,7 +18,8 @@ function Dashboard() {
         timeout: 10000,
     };
 
-
+    const [usuario, setUsuario] = useState([])
+    const [isLoading, setLoading] = useState(true);
 
     useEffect(() => {
         Axios.get(baseURL, config)
@@ -32,7 +33,31 @@ function Dashboard() {
                     body: JSON.stringify({ title: "this was a success" }),
                 };
             })
+
+        if (localStorage.getItem("token") != null || localStorage.getItem("token") == "") {
+            Axios.get("http://localhost:4000/API/sesiones/buscar?token=" + localStorage.getItem("token")).then(response => {
+
+                if (response.data[0]) {
+
+                    Axios.get("http://localhost:4000/API/usuarios/buscar?id=" + response.data[0]["id_usuario"]).then(response2 => {
+                        setUsuario(response2.data[0])
+                        setLoading(false)
+                    })
+                }
+
+            })
+            // setUsuario(checkSession())
+            // setLoading(false)
+        }
     }, [])
+
+    if (isLoading) {
+        return (
+            < div className="dashboardBody" >
+                <Panel></Panel>
+            </div >
+        )
+    }
 
     return (
         <>
@@ -42,12 +67,11 @@ function Dashboard() {
                     <div className="headerDashboard">
                         <div className="welcomeMessageDashboard">
                             <h1 style={{ "paddingRight": "1rem" }}>Welcome,</h1>
-                            <h1>{"Admin"}</h1>
+                            <h1>{usuario.nombre_usuario}</h1>
                         </div>
                         <div className="sessionDashboard">
-                            <a href="#">Settings</a>
-                            <a href="#">Logout</a>
-                            <img src='#'></img>
+                            <a href="/">Main Menu</a>
+                            <a href="../signout">Logout</a>
                         </div>
                     </div>
                     <div className="panelInfoDashboardProducts">
@@ -83,4 +107,4 @@ function Dashboard() {
 }
 
 
-export default Dashboard
+export default Categorias
