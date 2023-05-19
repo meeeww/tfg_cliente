@@ -1,7 +1,25 @@
 import React from "react";
 import MainLayout from '../layout/MainLayout'
+import axios from "axios";
 
 const ContactUs = () => {
+
+    const enviarFormulario = () => {
+
+        let arrayCampos = []
+        arrayCampos.push(document.getElementById("name").value)
+        arrayCampos.push(document.getElementById("email").value)
+        arrayCampos.push(document.getElementById("phone").value)
+        arrayCampos.push(document.getElementById("message").value)
+        console.log(arrayCampos)
+
+        let postContactosURL = "http://localhost:4000/API/contactos/crear";
+
+        axios.post(postContactosURL, {
+            "nombre": arrayCampos[0], "email": arrayCampos[1], "telefono": arrayCampos[2], "mensaje": arrayCampos[3],
+        })
+    }
+
     return (
         <MainLayout>
             <div className="ContactUsContenedor">
@@ -23,13 +41,13 @@ const ContactUs = () => {
                                         <div className="ContactUsFormularioCuerpoMensajes">
                                             <h1>Contact us</h1>
                                             <div className="ContactUsFormularioMensajes">
-                                                <input type="text" placeholder="Full name" />
-                                                <input type="text" placeholder="E-mail" />
-                                                <input type="text" placeholder="Phone" />
+                                                <input type="text" id="name" placeholder="Full name" />
+                                                <input type="text" id="email" placeholder="E-mail" />
+                                                <input type="text" id="phone" placeholder="Phone" />
                                             </div>
                                             <div className="ContactUsFormularioMensajeGrande">
-                                                <input type="text" placeholder="Message..." />
-                                                <button className="ContactUsFormularioBoton">Send</button>
+                                                <input type="text" id="message" placeholder="Message..." />
+                                                <button className="ContactUsFormularioBoton" onClick={enviarFormulario} >Send</button>
                                             </div>
                                         </div>
                                     </div>
