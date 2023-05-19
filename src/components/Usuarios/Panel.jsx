@@ -16,7 +16,7 @@ const Panel = () => {
             <div className="managementDashboard">
                 <h3>Profile</h3>
                 {managements.map((item) => (
-                    <div key="" className={"secondDashboard"}>
+                    <div key={item.name} className={"secondDashboard"}>
                         <i className={item.icon}></i>
                         <h4><a key={item.name} href={item.href}>{item.name.charAt(0).toUpperCase() + item.name.slice(1)}</a></h4>
                     </div>

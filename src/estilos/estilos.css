@@ -404,10 +404,6 @@ body {
 }
 
 /*SingIn / FormInput*/
-.SingInContainer {
-  background-color: var(--color_principal);
-}
-
 .SingInCabecera {
   display: flex;
   justify-content: center;
@@ -428,14 +424,16 @@ body {
 }
 
 .SingInMedio a {
-  color: var(--blanco);
+  padding: 10px;
   text-decoration: none;
+  color: var(--gris);
+  font-size: 20px;
 
   transition: all 0.25s;
 }
 
 .SingInMedio a:hover {
-  color: var(--gris);
+  color: var(--color_secundario);
 
   transition: all 0.25s;
 }
@@ -449,7 +447,6 @@ body {
   justify-content: center;
   height: 100%;
   width: 100%;
-  background-color: #8E793E;
   text-align: center;
 }
 
@@ -458,9 +455,9 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: flex-start;
-  height: 15rem;
+  height: auto;
+  margin-block-end: 2rem;
   max-width: 500px;
-  background-color: #8E793E;
 }
 
 .SingInForm label {
@@ -477,36 +474,64 @@ body {
 
 .SingInForm form div input {
   border-radius: 50px;
-  border: none;
+  border: 3px solid var(--color_secundario);
   height: 40px;
   width: 300px;
   padding-left: 1rem;
 }
 
+#textPrivacy{
+  color: var(--gris);
+  user-select: none;
+}
+
 .SingInForm form div label input {
   border-radius: 50px;
-  border: none;
+  border: 3px solid var(--color_secundario);
   height: auto;
   width: auto;
+}
+
+.SingInSing{
+  margin-block: 2rem!important;
 }
 
 .SingInSing input[type="submit"] {
   height: 40px;
   width: 300px;
-  border-radius: 50px;
-  border: none;
+  border-radius: 2rem;
+  border: 3px solid var(--color_secundario);
   cursor: pointer;
-  color: var(--blanco);
-  background-color: #ad974f;
+  color: var(--gris);
+  background-color: var(--transparent);
   transition: all 0.25s;
 }
 
 .SingInSing input[type="submit"]:hover {
-  background-color: var(--blanco);
-  color: var(--gris);
+  background-color: var(--color_secundario);
+  border: 3px solid var(--color_secundario);
+  color: var(--blanco);
 }
 
-.forgotPassword {
+/*usuario*/
+.confirmChangesUsuario{
+  margin-block: 1rem;
+}
+
+.confirmChangesUsuario input[type="submit"] {
+  height: 40px;
+  width: 300px;
+  border-radius: 2rem;
+  border: 3px solid var(--color_secundario);
+  cursor: pointer;
+  color: var(--gris);
+  background-color: var(--transparent);
+  transition: all 0.25s;
+}
+
+.confirmChangesUsuario input[type="submit"]:hover {
+  background-color: var(--color_secundario);
+  border: 3px solid var(--color_secundario);
   color: var(--blanco);
 }
 
@@ -1000,6 +1025,37 @@ h3 {
 /* usuarios */
 .mainBodyUsuario {
   display: flex;
+}
+
+.campoInfoUsuario{
+  margin-block: 0.5rem;
+}
+
+.configuracionUsuario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.infoReciboPanelUsuario{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.infoProductosCarrito{
+  width: 100%;
+}
+
+.infoRecibosPrincipal {
+  display: flex;
+  width: 5rem;
+}
+
+.infoRecibosPrincipal img {
+  width: 4rem;
+  height: 4rem;
 }
 
 .mainOrdersUserDashboard {

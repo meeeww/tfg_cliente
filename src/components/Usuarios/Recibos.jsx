@@ -1,7 +1,5 @@
 const Recibos = (data) => {
 
-    console.log(data)
-
     return (
         <div className="panelDashboard">
             <div className="headerDashboard">
