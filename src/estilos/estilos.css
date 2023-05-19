@@ -1415,6 +1415,18 @@ body {
 
 .sessionDashboard a {
   margin-inline: 1rem;
+  font-size: 22px;
+  color: var(--gris);
+
+  transition: all 0.25s;
+}
+
+.sessionDashboard a:hover {
+  margin-inline: 1rem;
+  font-size: 22px;
+  color: var(--color_secundario);
+
+  transition: all 0.25s;
 }
 
 .crearProducto {
