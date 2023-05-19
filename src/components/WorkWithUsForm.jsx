@@ -24,32 +24,47 @@ const WorkWithUsForm = () => {
         arrayCampos.push(document.getElementById("campoPuestoTrabajoCook").checked)
         arrayCampos.push(document.getElementById("campoPuestoTrabajoWaiter").checked)
         arrayCampos.push(document.getElementById("campoPuestoTrabajoAny").checked)
+        arrayCampos.push(document.getElementById("campoPuestoTrabajoWebDeveloper").value)
+        arrayCampos.push(document.getElementById("campoPuestoTrabajoCook").value)
+        arrayCampos.push(document.getElementById("campoPuestoTrabajoWaiter").value)
+        arrayCampos.push(document.getElementById("campoPuestoTrabajoAny").value)
         arrayCampos.push(document.getElementById("campoBirthdate").value)
         arrayCampos.push(document.getElementById("campoPrivacidad").checked)
         console.log(arrayCampos)
 
-        let baseURL = "http://localhost:4000/API/trabajos/buscar?id=";
         let postTrabajoURL = "http://localhost:4000/API/trabajos/crear";
-        let postUsuarioURL = "http://localhost:4000/API//usuarios/buscar?id="; 
-        let getTrabajoURL = "http://localhost:4000/API/trabajos/buscar/usuario?id="
-        let deleteTrabajoURL = "http://localhost:4000/API/trabajos/eliminar"
+        let getSessionesURL = "http://localhost:4000/API/sesiones/buscar?token="
+        let getUsuarioURL = "http://localhost:4000/API/usuarios/buscar?id="
 
-        axios.post(postTrabajoURL, { "segundoApellido": arrayCampos[2], "ssc": arrayCampos[3], "ciudad": arrayCampos[7], 
-        "condado": arrayCampos[8], "estado": arrayCampos[9], "fechaNacimiento": arrayCampos[14]})
+        let puestoTrabajo
+        axios.get(getSessionesURL + localStorage.getItem("token")).then(response => {
+            if (response.data[0]) {
+                axios.get(getUsuarioURL + response.data[0]["id_usuario"]).then(response2 => {
+                    if (response2.data[0] != null ) {
+                        if (arrayCampos[10] == true) {
+                            puestoTrabajo = arrayCampos[14]
+                        } else if (arrayCampos[11] == true) {
+                            puestoTrabajo = arrayCampos[15]
+                        } else if (arrayCampos[12] == true) {
+                            puestoTrabajo = arrayCampos[16]
+                        } else if (arrayCampos[13] == true) {
+                            puestoTrabajo = arrayCampos[17]
+                        }
+                
+                        axios.post(postTrabajoURL, {
+                            "segundoApellido": arrayCampos[2], "ssc": arrayCampos[3], "codigoPostal": arrayCampos[6],
+                            "ciudad": arrayCampos[7], "condado": arrayCampos[8], "estado": arrayCampos[9], "puestoTrabajo": puestoTrabajo,
+                            "fechaNacimiento": arrayCampos[14]
+                        })
+                    } 
+                })
+            }
+        })
+
+
+
+
         
-        if (arrayCampos[10] == true){
-            axios.post(postTrabajoURL, { "TrabajoWebDeveloper": arrayCampos[10]})
-        }else if (arrayCampos[11] == true){
-            axios.post(postTrabajoURL, { "TrabajoCook": arrayCampos[11]})
-        }else if (arrayCampos[12] == true){
-            axios.post(postTrabajoURL, { "TrabajoWaiter": arrayCampos[12]})
-        }else if (arrayCampos[13] == true){
-            axios.post(postTrabajoURL, { "TrabajoAny": arrayCampos[13]})
-        }
-
-        axios.post(postUsuarioURL, { "segundoApellido": arrayCampos[2], "ssc": arrayCampos[3], "ciudad": arrayCampos[7], 
-        "condado": arrayCampos[8], "estado": arrayCampos[9], "fechaNacimiento": arrayCampos[14]})
-
     }
 
 
