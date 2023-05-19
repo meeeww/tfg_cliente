@@ -27,7 +27,11 @@ import PopUp from './modals/PopUp/PopUp'
 
 import NoMatch from './pages/NoMatch'
 
-import './estilos/estilos.css'
+import Merchandising from './components/Merchandising'
+import ContactUs from './components/ContactUs'
+import WorkWithUs from './components/WorkWithUs'
+import WorkWithUsForm from './components/WorkWithUsForm'
+
 
 import {
   createBrowserRouter,
@@ -76,6 +80,10 @@ const router = createBrowserRouter([
     element: <Carta />,
   },
   {
+    path: "/Merchandising",
+    element: <Merchandising />,
+  },
+  {
     path: "/cart",
     element: <Carrito />,
   },
@@ -110,6 +118,18 @@ const router = createBrowserRouter([
   {
     path: "*",
     element: <NoMatch />,
+  },
+  {
+    path: "/ContactUs",
+    element: <ContactUs />,
+  },
+  {
+    path: "/WorkWithUs",
+    element: <WorkWithUs />,
+  },
+  {
+    path: "/WorkWithUsForm",
+    element: <WorkWithUsForm />,
   },
 ]);
 
