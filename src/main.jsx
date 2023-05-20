@@ -8,6 +8,7 @@ import DashboardProducts from './pages/Dashboard/Products'
 import DashboardCategories from './pages/Dashboard/Categories'
 import DashboardOrders from './pages/Dashboard/Orders'
 import DashboardContact from './pages/Dashboard/Contact'
+import DashboardJobApplications from './pages/Dashboard/JobApplications'
 
 import UsuarioConfig from './pages/Usuarios/UsuarioConfiguracion'
 import UsuarioDireccion from './pages/Usuarios/UsuarioDireccion'
@@ -117,6 +118,10 @@ const router = createBrowserRouter([
   {
     path: "/dashboard/contact",
     element: <DashboardContact />,
+  },
+  {
+    path: "/dashboard/jobapplication",
+    element: <DashboardJobApplications />
   },
   {
     path: "/registered",
