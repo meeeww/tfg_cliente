@@ -1,6 +1,7 @@
 import React from "react";
 import MainLayout from '../layout/MainLayout'
 import axios from "axios";
+import ImagenGrande from "../components/ContactUsImagen"; 
 
 const ContactUs = () => {
 
@@ -22,15 +23,16 @@ const ContactUs = () => {
 
     return (
         <MainLayout>
+            <ImagenGrande></ImagenGrande>
             <div className="ContactUsContenedor">
                 <div className="ContactUsContenedorDivFormulario">
                     <div className="ContactUsContenedorDivFormularioDerecha">
                         <div className="ContactUsContenedorFormularioInfo">
-                            <h1>Get in touch</h1>
+                            <h1>Get in <spam className="WorkWithUsColor">touch</spam></h1>
                             <p>At our cafeteria, we are passionate about offering you an exceptional experience and a welcoming environment where you can enjoy delicious drinks and delicious snacks. We value your comments, questions and suggestions, so we invite you to contact us at any time.</p>
-                            <p><b>Telephone:</b> Call us at the number +1 555-123-4567 and we will be happy to assist you personally.</p>
-                            <p><b>Email:</b> If you prefer to communicate in writing, send us an email to info@thecoffeetub.com and we will respond as soon as possible.</p>
-                            <p><b>Social networks:</b> Follow us on our social networks (Facebook, Instagram and Twitter) to keep up to date with our promotions, special events and news. In addition, you can send us direct messages through these platforms, and we will respond promptly.</p>
+                            <p><spam className="WorkWithUsColor"><b>Telephone:</b></spam> Call us at the number +1 555-123-4567 and we will be happy to assist you personally.</p>
+                            <p><spam className="WorkWithUsColor"><b>Email:</b></spam> If you prefer to communicate in writing, send us an email to info@thecoffeetub.com and we will respond as soon as possible.</p>
+                            <p><spam className="WorkWithUsColor"><b>Social Networks:</b></spam> Follow us on our social networks (Facebook, Instagram and Twitter) to keep up to date with our promotions, special events and news. In addition, you can send us direct messages through these platforms, and we will respond promptly.</p>
                         </div>
                     </div>
                     <div className="ContactUsContenedorDivFormularioIzquierda">
@@ -39,7 +41,7 @@ const ContactUs = () => {
                                 <div className="ContactUsFormularioDcho">
                                     <div className="ContactUsFormularioCuerpo">
                                         <div className="ContactUsFormularioCuerpoMensajes">
-                                            <h1>Contact us</h1>
+                                            <h1><spam className="WorkWithUsColor">Contact</spam>  us</h1>
                                             <div className="ContactUsFormularioMensajes">
                                                 <input type="text" id="name" placeholder="Full name" />
                                                 <input type="text" id="email" placeholder="E-mail" />
