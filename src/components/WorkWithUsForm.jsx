@@ -61,8 +61,8 @@ const WorkWithUsForm = () => {
         })
     }
 
-    return (
-        <MainLayout>
+    return ( 
+        <MainLayout> 
             <Imagen></Imagen>
             <div className="WorkWithUsFormFondo">
                 <div className="WorkWithUsFormContenedor">
@@ -118,9 +118,7 @@ const WorkWithUsForm = () => {
                 </div>
             </div>
         </MainLayout>
-
     )
-
 }
 
 export default WorkWithUsForm;
