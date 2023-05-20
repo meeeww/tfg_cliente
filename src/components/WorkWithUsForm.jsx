@@ -1,9 +1,7 @@
 import React from "react";
 import MainLayout from '../layout/MainLayout';
 import Imagen from "./WorkWithUsImagen";
-import { useEffect, useState } from "react";
 import axios from "axios";
-
 
 const WorkWithUsForm = () => {
 
@@ -61,13 +59,7 @@ const WorkWithUsForm = () => {
                 })
             }
         })
-
-
-
-
-        
     }
-
 
     return (
         <MainLayout>
@@ -127,10 +119,7 @@ const WorkWithUsForm = () => {
             </div>
         </MainLayout>
 
-
     )
-
-
 
 }
 
