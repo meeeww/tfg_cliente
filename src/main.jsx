@@ -35,6 +35,7 @@ import ContactUs from './components/ContactUs'
 import WorkWithUs from './components/WorkWithUs'
 import WorkWithUsForm from './components/WorkWithUsForm'
 
+import AboutUs from './components/AboutUs'
 
 import {
   createBrowserRouter,
@@ -141,6 +142,10 @@ const router = createBrowserRouter([
   {
     path: "/WorkWithUsForm",
     element: <WorkWithUsForm />,
+  },
+  {
+    path: "/AboutUs",
+    element: <AboutUs />,
   },
 ]);
 
