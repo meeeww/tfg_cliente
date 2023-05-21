@@ -6,7 +6,7 @@ const WorkWithUs = () => {
             <Imagen></Imagen>
             <div className="WorkWithUsContainer">
                 <div className="WorkWithUsDiv">
-                    <h1>What do I have to do to work in The Coffee Tub?</h1>
+                    <h1 className="WorkWithUsColorTitulo">What do I have to do to work in The Coffee Tub?</h1>
                     <div className="WorkWithUsDiv1Contenedor">
                         <div className="WorkWithUsDiv1Caja">
                             <i className="fa-brands fa-wpforms"></i>
@@ -32,7 +32,7 @@ const WorkWithUs = () => {
                     </div>
                 </div>
                 <div className="WorkWithUsDiv">
-                    <h1>Benefits of working at VIPS and VIPS Smart</h1>
+                    <h1 className="WorkWithUsColorTitulo">Benefits of working at The Coffee Tub</h1>
                     <div className="WorkWithUsDiv2Contenedor">
                         <div className="WorkWithUsDiv2Caja">
                             <i className="fa-solid fa-rocket"></i>
@@ -49,15 +49,13 @@ const WorkWithUs = () => {
                     </div>
                 </div>
                 <div className="WorkWithUsDiv">
-                    <h1>What to do to be The Coffee Tub people</h1>
+                    <h1 className="WorkWithUsColorTitulo">What to do to be The Coffee Tub people</h1>
                     <div className="WorkWithUsDivTexto2">
                         <p>To work at The Coffee Tub, it is essential to register on our Employment Portal. Through simple steps, you can complete your profile with your personal data and work preferences. At the end of the registration, we will invite you to carry out an affinity evaluation that will allow us to get to know you better.</p>
                         <p>At The Coffee Tub we value talent and strive to create a cohesive and committed team. Your registration in our Employment Portal is the first step to be part of our coffee family.</p>
                         <p>Join our team and discover the passion for coffee at The Coffee Tub! </p>
                         <button className="WorkWithUsDivButton">fill the form</button>
                     </div>
-
-
                 </div>
             </div>
         </MainLayout>
