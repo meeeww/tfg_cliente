@@ -1,9 +1,7 @@
 import React from "react";
 import MainLayout from '../layout/MainLayout';
 import Imagen from "./WorkWithUsImagen";
-import { useEffect, useState } from "react";
 import axios from "axios";
-
 
 const WorkWithUsForm = () => {
 
@@ -63,9 +61,8 @@ const WorkWithUsForm = () => {
         })
     }
 
-
-    return (
-        <MainLayout>
+    return ( 
+        <MainLayout> 
             <Imagen></Imagen>
             <div className="WorkWithUsFormFondo">
                 <div className="WorkWithUsFormContenedor">
@@ -121,12 +118,7 @@ const WorkWithUsForm = () => {
                 </div>
             </div>
         </MainLayout>
-
-
     )
-
-
-
 }
 
 export default WorkWithUsForm;
