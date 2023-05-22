@@ -8,6 +8,7 @@ const linksLeft = [
     { name: 'Menu', href: '/menu' },
     { name: 'About Us', href: '/aboutus' },
     { name: 'Contact Us', href: '/contactus' },
+    { name: 'Work With Us', href: '/workwithus'},
 ]
 
 const linksRightAdmin = [
