@@ -1483,6 +1483,36 @@ body {
   color: var(--blanco);
   background-color: var(--color_secundario);
 }
+
+@media (max-width:1000px) {
+  .AboutUsDiv1{
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .AboutUsDiv1Izquierda{
+    width: 100%;
+  }
+
+  .AboutUsDiv1Derecha{
+    width: 100%;
+  }
+
+  .AboutUsDiv2Contenedor{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .AboutUsDiv2Izquierda{
+    width: 100%;
+  }
+
+  .AboutUsDiv2Derecha{
+    width: 100%;
+  }
+}
+
 /*dashboard*/
 
 .dashboardBody {
