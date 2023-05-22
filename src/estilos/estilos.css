@@ -1032,7 +1032,7 @@ body {
   transition: all 0.25s;
 }
 
-.WorkWithUsColorTitulo{
+.WorkWithUsColorTitulo {
   color: var(--color_secundario);
 }
 
@@ -1218,7 +1218,7 @@ body {
   line-height: 40px;
   border-radius: 50%;
   padding-top: 30px;
-  color: var(--blanco);  
+  color: var(--blanco);
 }
 
 .WorkWithUsDivTexto2 {
@@ -1417,6 +1417,138 @@ body {
 
 .WorkWithUsTexto {
   font-size: 14px;
+}
+
+/*About Us*/
+
+.AboutUsContenedor {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+
+}
+
+.AboutUsDiv1 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.AboutUsDiv1Izquierda {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.AboutUsDiv1Izquierda h1 {
+  text-align: center;
+}
+
+.AboutUsDiv1Derecha {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.AboutUsDiv1Derecha img {
+  border-radius: 30px;
+  width: 95%;
+  height: 95%;
+}
+
+.AboutUsDiv2 {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+  gap: 1rem;
+}
+
+.AboutUsDiv2Contenedor {
+  display: flex;
+  justify-content: space-between;
+}
+
+.AboutUsDiv2Izquierda {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.AboutUsDiv2Derecha {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.AboutUsDiv3{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 2rem;
+}
+
+.AboutUsDiv4{
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+  gap: 0.5rem;
+}
+
+.AboutUsDiv4Buttom{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.AboutUsDiv4Buttom button{
+  height: 40px;
+  width: 300px;
+  background-color: var(--blanco);
+  transition: all 0.25s;
+  border: 2px solid var(--color_secundario);
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  font-size: 16px;
+}
+
+.AboutUsDiv4Buttom button:hover{
+  color: var(--blanco);
+  background-color: var(--color_secundario);
+}
+
+@media (max-width:1000px) {
+  .AboutUsDiv1{
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .AboutUsDiv1Izquierda{
+    width: 100%;
+  }
+
+  .AboutUsDiv1Derecha{
+    width: 100%;
+  }
+
+  .AboutUsDiv2Contenedor{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .AboutUsDiv2Izquierda{
+    width: 100%;
+  }
+
+  .AboutUsDiv2Derecha{
+    width: 100%;
+  }
 }
 
 /*dashboard*/
