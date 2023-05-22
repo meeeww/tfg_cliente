@@ -1,6 +1,13 @@
 import MainLayout from '../layout/MainLayout';
 import Imagen from "../components/WorkWithUsImagen";
+import { NavLink } from "react-router-dom";
+
 const WorkWithUs = () => {
+
+    const formulario = (event) => {
+        
+    }
+
     return (
         <MainLayout>
             <Imagen></Imagen>
@@ -54,8 +61,8 @@ const WorkWithUs = () => {
                         <p>To work at The Coffee Tub, it is essential to register on our Employment Portal. Through simple steps, you can complete your profile with your personal data and work preferences. At the end of the registration, we will invite you to carry out an affinity evaluation that will allow us to get to know you better.</p>
                         <p>At The Coffee Tub we value talent and strive to create a cohesive and committed team. Your registration in our Employment Portal is the first step to be part of our coffee family.</p>
                         <p>Join our team and discover the passion for coffee at The Coffee Tub! </p>
-                        <button className="WorkWithUsDivButton">fill the form</button>
-                    </div>
+                        <NavLink to={"http://localhost:5173/workWithUsform"} className="WorkWithUsDivButton">{"Fill the form"}</NavLink>
+                    </div>  
                 </div>
             </div>
         </MainLayout>

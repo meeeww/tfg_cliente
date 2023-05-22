@@ -1161,7 +1161,6 @@ body {
   flex-direction: column;
   align-items: center;
   width: 30%;
-  height: 15rem;
   gap: 2rem;
   text-align: center;
   padding-top: 1rem;
@@ -1200,7 +1199,6 @@ body {
   flex-direction: column;
   align-items: center;
   width: 30%;
-  height: 12rem;
   gap: 2rem;
   text-align: center;
   padding-top: 1rem;
@@ -1236,10 +1234,13 @@ body {
   height: 2rem;
   border-radius: 10px;
   border: 1px solid var(--backgroud_color_2);
-  background-color: var(--blanco);
+  background-color: var(--background_color_1);
   border-color: var(--color_secundario);
   transition: all 0.25s;
   cursor: pointer;
+  padding-top: 5px;
+  text-decoration: none;
+  color: var(--backgroud_color_2);
 }
 
 .WorkWithUsDivButton:focus {
@@ -1254,33 +1255,64 @@ body {
   transition: all 0.25s;
 }
 
-@media (max-width:900px) {
+@media (max-width:1000px) {
 
   .WorkWithUsDiv1Caja i {
-    font-size: 3rem;
+    font-size: 2rem;
+    display: inline-block;
+    height: 70px;
+    width: 70px;
+    background-color: var(--color_secundario);
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    padding-top: 15px;
+    color: var(--blanco);  
+  }
+  
+
+  .WorkWithUsDiv2Caja i {
+    font-size: 2rem;
+    display: inline-block;
+    height: 70px;
+    width: 70px;
+    background-color: var(--color_secundario);
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    padding-top: 15px;
+    color: var(--blanco);  
+  }
+
+}
+
+@media (max-width:650px) {
+  .WorkWithUsDiv1Caja i {
+    font-size: 2rem;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    background-color: var(--color_secundario);
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    padding-top: 6px;
+    color: var(--blanco);  
   }
 
   .WorkWithUsDiv2Caja i {
-    font-size: 3rem;
+    font-size: 2rem;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    background-color: var(--color_secundario);
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    padding-top: 8px;
+    color: var(--blanco);  
   }
-}
 
-@media (max-width:600px) {
-
-  .WorkWithUsDiv1Caja {
-    height: 18rem;
-  }
-
-  .WorkWithUsDiv2Caja {
-    height: 13rem;
-  }
-}
-
-@media (max-width:550px) {
-
-  .WorkWithUsDiv1Caja {
-    height: 20rem;
-  }
 }
 
 /*WorkWithUsForm*/
