@@ -8,7 +8,7 @@ const WorkWithUs = () => {
             <div className="AboutUsContenedor">
                 <div className="AboutUsDiv1">
                     <div className="AboutUsDiv1Izquierda">
-                        <h1>About The Coffee Tub</h1>
+                        <h1><spam className="WorkWithUsColor">About</spam> The Coffee Tub</h1>
                         <p>At The Coffee Tub, we are proud to be a leading coffee destination in the United States, offering exceptional coffee and related services. With three locations across the country, we strive to provide a memorable coffee experience for our valued customers.</p>
                         <p>As coffee enthusiasts, we select only the best coffee beans from around the world. Our dedicated team works closely with sustainable and ethical coffee producers, ensuring that each cup we serve is crafted with care and reflects the rich flavors and aromas that characterize exceptional coffee.</p>
                         <p>At The Coffee Junction, we are passionate about creating a welcoming and authentic environment for our customers. Our cafeterias are designed with your comfort in mind, providing a space where you can relax, enjoy your favorite coffee and share special moments with friends and loved ones.</p>
@@ -18,7 +18,7 @@ const WorkWithUs = () => {
                     </div>
                 </div>
                 <div className="AboutUsDiv2">
-                    <h1>More Than 5 Years Of Leadership</h1>
+                    <h1><spam className="WorkWithUsColor">M</spam>ore Than<spam className="WorkWithUsColor"> 5 Years</spam> Of Leadership</h1>
                     <div className="AboutUsDiv2Contenedor">
                         <div className="AboutUsDiv2Izquierda">
                             <p>The Coffee Tub emerged in New York in 2018 as a result of the visionary determination of its founders to introduce a new business model: spacious spaces, a wide range of products and highly competitive prices, all dedicated to the love of coffee.</p>
@@ -31,13 +31,15 @@ const WorkWithUs = () => {
                     </div>
                 </div>
                 <div className="AboutUsDiv3">
-                    <h1>Busisness Model</h1>
+                    <h1> <spam className="WorkWithUsColor">B</spam>usisness <spam className="WorkWithUsColor">M</spam>odel</h1>
                     <p>The last 5 years have been a journey full of learning, during which our business model has evolved to adapt to new consumer behaviors and trends. We have always had a clear objective in mind: to become the first choice of our clients when they think of enjoying a coffee and a delicious breakfast in our country. To achieve this, we have based ourselves on three strategic pillars that support our vision of the future: our team, our clients and the positive impact on society.</p>
                 </div>
                 <div className="AboutUsDiv4">
-                    <h1>Team</h1>
+                    <h1><spam className="WorkWithUsColor">T</spam>eam</h1>
                     <p>At The Coffee Tub, we are a passionate and committed team of approximately 40 talented workers. We are united by our passion for coffee and the desire to offer exceptional experiences to our customers in every cup we serve. Each member of our team plays a critical role in the daily operation of our cafeterias. From our dedicated baristas, who are experts in coffee preparation, to our friendly customer service staff who greet you with a smile, everyone contributes to creating a welcoming and friendly environment for our customers.</p>
-                    <button>Join our team</button>
+                    <div className="AboutUsDiv4Buttom">
+                        <button>Join our team</button>
+                    </div>
                 </div>
             </div>
         </MainLayout>
