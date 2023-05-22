@@ -3,8 +3,6 @@ import { useState, useEffect } from 'react';
 import '../../estilos/estilos.css'
 import Panel from '../../components/Dashboard/Panel'
 import Header from '../../components/Dashboard/Header'
-import ModalConfiguracion from '../../modals/User/UserConfig'
-import ModalDelete from '../../modals/User/UserDelete'
 
 
 
@@ -75,15 +73,19 @@ function Orders() {
                                 pedidos &&
                                 pedidos.map((item, index) => (
                                     <div key={item.id_usuario + "-" + index} className="mainOrdersUserDashboard">
+                                        {console.log(item)}
                                         <div>
-                                            <h4>Order ID: {item.numero_pedido}</h4>
-                                            <p>Total Price: {"$" + item.preciototal}</p>
+                                            <h4>User ID: {item.id_usuario}</h4>
+                                            <h5>Job Position:</h5>
+                                            <p>{item.puesto_trabajo}</p>
                                         </div>
                                         <div>
-                                            <p>Adress: {item.direccion_envio}</p>
+                                            <h4>Adress:</h4>
+                                            <p>{item.estado + ", " + item.condado}</p>
+                                            <p>{item.ciudad + ", " + item.codigo_postal}</p>
                                         </div>
                                         <div>
-                                            <a href={"http://localhost:5173/user/orders/orderid?id=" + item.numero_pedido}>List of Products</a>
+                                            <a href={"http://localhost:5173/user/orders/orderid?id=" + item.numero_pedido}>More Info</a>
                                         </div>
                                     </div>
                                 ))}
