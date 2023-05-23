@@ -1337,6 +1337,16 @@ body {
   color: var(--color_secundario);
 }
 
+.WorkWithUsColorSpace{
+  color: var(--color_secundario);
+  margin-inline: 10px;
+}
+
+.WorkWithUsColorSpaceRight{
+  color: var(--color_secundario);
+  margin-right: 10px;
+}
+
 .WorkWithUsFormFormContenedor {
   width: 50%;
   display: flex;

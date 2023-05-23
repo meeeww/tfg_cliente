@@ -1,6 +1,4 @@
-import { useState } from "react";
 import Axios from "axios";
-
 
 const BotonCompra = (data) => {
     function handleSubmit(e) {

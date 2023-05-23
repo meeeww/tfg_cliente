@@ -1,5 +1,4 @@
 const Recibos = (data) => {
-
     return (
         <div className="panelDashboard">
             <div className="headerDashboard">
@@ -24,7 +23,6 @@ const Recibos = (data) => {
                             <a href={"http://localhost:5173/user/orders/orderid?id=" + item.numero_pedido}>List of Products</a>
                         </div>
                     </div>
-
                 ))}
             </div>
         </div>

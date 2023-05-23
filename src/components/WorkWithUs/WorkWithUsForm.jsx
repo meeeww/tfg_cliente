@@ -1,16 +1,16 @@
 import { useState } from "react";
-import MainLayout from '../layout/MainLayout';
+import MainLayout from '../../layout/MainLayout';
 import Imagen from "./WorkWithUsImagen";
-import llamarPopUs from "../scripts/llamarPopUp"
-import PopUp from "../modals/PopUp/PopUp"
+import llamarPopUs from "../../scripts/llamarPopUp"
+import PopUp from "../../modals/PopUp/PopUp"
 
-import { ConnectionError, ValidationError, AcceptError } from "../errors/errors";
-import { validateTrabajo } from "../errors/validation";
+import { ConnectionError, ValidationError, AcceptError } from "../../errors/errors";
+import { validateTrabajo } from "../../errors/validation";
 
 const WorkWithUsForm = () => {
 
-    const [tipoAlerta, setTipoAlerta] = useState('')
-    const [mensajeAlerta, setMensajeAlerta] = useState('')
+    const [tipoAlerta, setTipoAlerta] = useState(0)
+    const [mensajeAlerta, setMensajeAlerta] = useState("")
 
     const enviarFormulario = () => {
         let arrayCampos = []

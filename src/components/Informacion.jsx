@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 import cafe1 from '../assets/InformacionCafe/Informacioncafe1.jpg'
@@ -18,7 +17,7 @@ const linksUp = [
 
 const linksDown = [
     { title: 'Find', subtitle: "Us", left: true, description: 'Would you like to enjoy our delicious coffee in person? Find us at our café and experience the quality and flavor of our coffee!', image: cafe3, button: "Find Us", redirection: "/aboutus" },
-    { title: 'Merchandise', subtitle: "", left: false, description: 'Carry our brand with you everywhere with our line of merchandise. Find mugs, t-shirts, hats, and more at our café. Make your purchase and support your favorite café!', image: cafe6, button: "Buy", redirection: "/merchandising" },
+    { title: 'Our', subtitle: "Coffee", left: false, description: 'Carry our brand with you everywhere with our line of merchandise. Find mugs, t-shirts, hats, and more at our café. Make your purchase and support your favorite café!', image: cafe6, button: "Find Coffee", redirection: "/menu" },
     { title: 'Work With', subtitle: "Us", left: true, description: 'Join our team and be part of our passion for providing the best coffee and food experience! Check out our job opportunities and apply now.', image: cafe7, button: "Work With Us", redirection: "/workwithus" },
 ]
 
@@ -28,11 +27,11 @@ const Informacion = () => {
         <>
             <div className="exploreClassInformacion">
                 <div className="tituloInformacionIndividual">
-                    <h2>Explore by our <h2 style={{ color: "var(--color_secundario)" }}>products</h2></h2>
+                    <h2>Explore<span className="WorkWithUsColorSpace">Our</span>Products</h2>
                 </div>
                 <div className="exploreOptionsInformacion">
                     {linksUp.map((item) => (
-                        <a key={item.name} href={item.redirection}>
+                        <a key={item.title} href={item.redirection}>
                             <div className="opcionIndividualInformacion">
                                 <div className="separacionIndividualInformacion">
                                     <h3>{item.title}</h3>
@@ -44,7 +43,7 @@ const Informacion = () => {
                     ))}
                 </div>
                 <div className="tituloInformacionIndividual">
-                    <h2>About <h2 style={{ color: "var(--color_secundario)" }}>us</h2></h2>
+                    <h2>About<span className="WorkWithUsColorSpace">Us</span></h2>
                 </div>
                 <div className="aboutUsOptionsInformacion">
                     {linksDown.map((item) => (
@@ -54,7 +53,7 @@ const Informacion = () => {
                                     <img src={item.image} className="aboutUsImagenInformacion"></img>
                                     <div className="textoAboutUs">
                                         <div className="tituloAboutUsIndividual">
-                                            <h2>{item.title} <h2 style={{ color: "var(--color_secundario)" }}>{item.subtitle}</h2></h2>
+                                            <h2>{item.title}<span className="WorkWithUsColorSpace">{item.subtitle}</span></h2>
                                         </div>
 
                                         <p>{item.description}</p>
@@ -65,20 +64,17 @@ const Informacion = () => {
                                 <>
                                     <div className="textoAboutUs">
                                         <div className="tituloAboutUsIndividual">
-                                            <h2>{item.title} <h2 style={{ color: "var(--color_secundario)" }}>{item.subtitle}</h2></h2>
+                                        <h2>{item.title}<span className="WorkWithUsColorSpace">{item.subtitle}</span></h2>
                                         </div>
 
                                         <p>{item.description}</p>
                                         <NavLink to={item.redirection} className="botonInformacion">{item.button}</NavLink>
                                     </div>
                                     <img src={item.image} className="aboutUsImagenInformacion"></img>
-
                                 </>
                             }
                         </div>
                     ))}
-
-
                 </div>
             </div>
         </>

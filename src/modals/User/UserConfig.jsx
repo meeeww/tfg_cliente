@@ -38,6 +38,7 @@ function Modal(usuario) {
   }
 
   const cambiarNombre = (id, opcion, valorOpcion) => {
+    console.log(usuarios)
     let data
     switch (opcion) {
       case "nombre":

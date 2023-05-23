@@ -3,8 +3,6 @@ import { useState, useEffect } from 'react';
 import '../../estilos/estilos.css'
 import Panel from '../../components/Dashboard/Panel'
 import Header from '../../components/Dashboard/Header'
-import ModalConfiguracion from '../../modals/User/UserConfig'
-import ModalDelete from '../../modals/User/UserDelete'
 
 
 
