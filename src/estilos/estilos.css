@@ -8,6 +8,7 @@
   --backgroud_color_2: #231f20;
   --gris: #231f20;
   --blanco: #fff8f8;
+  --gris_claro: #6e6e6e;
 }
 
 * {
@@ -1137,7 +1138,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px 0px 10px 0px;
+  padding: 2rem;
 }
 
 .WorkWithUsDiv {
@@ -1190,6 +1191,10 @@ body {
   gap: 10px;
 }
 
+.WorkWithUsDivTexto h1{
+    font-weight: 500;
+}
+
 .WorkWithUsDiv2Contenedor {
   display: flex;
   justify-content: space-evenly;
@@ -1225,7 +1230,7 @@ body {
 .WorkWithUsDivTexto2 {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 1rem;
   text-align: center;
   align-items: center;
 }
@@ -1242,6 +1247,7 @@ body {
   padding-top: 5px;
   text-decoration: none;
   color: var(--backgroud_color_2);
+  margin-top: 1.5rem;
 }
 
 .WorkWithUsDivButton:focus {
@@ -1436,7 +1442,7 @@ body {
   display: flex;
   flex-direction: column;
   padding: 3rem;
-
+  gap: 2rem;
 }
 
 .AboutUsDiv1 {
@@ -1473,7 +1479,6 @@ body {
 .AboutUsDiv2 {
   display: flex;
   flex-direction: column;
-  padding-top: 2rem;
   gap: 1rem;
 }
 
@@ -1500,14 +1505,33 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  padding-top: 2rem;
 }
 
 .AboutUsDiv4 {
   display: flex;
   flex-direction: column;
-  padding-top: 2rem;
   gap: 0.5rem;
+}
+
+.AboutUsDiv4Team{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.AboutUsDiv4TeamCajas{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding-block: 1rem;
+}
+
+.AboutUsDiv4TeamCajas img{
+  object-fit: cover;
+  border-radius: 50%;
+  height: 12rem;
+  width: 12rem;
 }
 
 .AboutUsDiv4Buttom {
@@ -1559,6 +1583,18 @@ body {
 
   .AboutUsDiv2Derecha {
     width: 100%;
+  }
+
+  .AboutUsDiv4TeamCajas img{
+    width: 10rem;
+    height: 10rem;
+  }
+}
+
+@media (max-width:700px){
+  .AboutUsDiv4TeamCajas img{
+    width: 8rem;
+    height: 8rem;
   }
 }
 
