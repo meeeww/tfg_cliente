@@ -49,7 +49,7 @@ const WorkWithUsForm = () => {
                 setTipoAlerta(3)
                 llamarPopUs()
             }
-
+            
             if (e instanceof AcceptError) {
                 setMensajeAlerta("Accept privacy policy")
                 setTipoAlerta(3)
