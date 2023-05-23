@@ -1588,6 +1588,17 @@ body {
   padding-left: 2rem;
 }
 
+.PrivacyPolityDiv1 a{
+  color: var(--color_secundario);
+}
+
+.PrivacyPolityDiv1 a:hover{
+  color: var(--color_principal);
+}
+
+.PrivacyPolityDiv1 a:visited{
+  color: var(--color_principal);
+}
 /*Boton compra*/
 
 .BotonCompraBoton{
