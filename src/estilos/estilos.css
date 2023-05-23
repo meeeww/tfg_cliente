@@ -2738,10 +2738,15 @@ h3 {
   margin: 0;
 }
 
+.dashboardDocuments{
+  
+}
+
 .reportInfoDashboard {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-block: 1rem;
 }
 
 .fechaInfoDashBoard {
