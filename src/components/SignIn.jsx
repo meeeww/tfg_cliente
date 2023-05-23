@@ -53,6 +53,7 @@ const FormInput = () => {
 
         const encriptarPass = () => {
             return new Promise((resolve, reject) => {
+                console.log(reject)
                 resolve(md5(contra))
             })
         }

@@ -17,18 +17,16 @@ function Producto() {
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (localStorage.getItem("token") != null || localStorage.getItem("token") == "") {
-      Axios.get("http://localhost:4000/API/productos/buscar?id=" + productId).then(response => {
-        if (response.data[0]) {
-          setProducto(response.data[0])
-          Axios.get("http://localhost:4000/API/categorias/buscar?id=" + response.data[0].id_categoria).then(response => {
-            setCategoria(response.data[0])
-            setLoading(false)
-          })
-          
-        }
-      })
-    }
+    Axios.get("http://localhost:4000/API/productos/buscar?id=" + productId).then(response => {
+      if (response.data[0]) {
+        setProducto(response.data[0])
+        Axios.get("http://localhost:4000/API/categorias/buscar?id=" + response.data[0].id_categoria).then(response => {
+          setCategoria(response.data[0])
+          setLoading(false)
+        })
+
+      }
+    })
   }, [])
 
   if (isLoading) {
@@ -38,7 +36,7 @@ function Producto() {
   return (
     <MainLayout>
       <Breadcumb></Breadcumb>
-      <ProductoIndividual data={{producto, categoria}} />
+      <ProductoIndividual data={{ producto, categoria }} />
     </MainLayout>
   )
 }

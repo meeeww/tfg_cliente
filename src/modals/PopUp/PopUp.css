@@ -1,7 +1,7 @@
 .containerPopUp{
-    position: absolute;
+    position: fixed;
     right: 2rem;
-    top: 9rem;
+    top: 5rem;
     width: 15rem;
     height: 5rem;
 
