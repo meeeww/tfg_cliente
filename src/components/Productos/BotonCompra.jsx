@@ -1,6 +1,15 @@
+import { useState } from 'react'
+
 import Axios from "axios";
 
+import llamarPopUp from '../../scripts/llamarPopUp'
+import PopUp from '../../modals/PopUp/PopUp'
+
 const BotonCompra = (data) => {
+
+    const [tipoAlerta, setTipoAlerta] = useState(1)
+    const [mensajeAlerta, setMensajeAlerta] = useState("Text")
+
     function handleSubmit(e) {
         e.preventDefault();
 
@@ -62,12 +71,17 @@ const BotonCompra = (data) => {
                                 })
                             }
                         })
+                } else {
+                    setMensajeAlerta("You have to log in")
+                    setTipoAlerta(3)
+                    llamarPopUp()
                 }
             })
     }
 
     return (
         <form onSubmit={handleSubmit}>
+            <PopUp tipo={{ tipoAlerta, mensajeAlerta }} />
             <button className="BotonCompraBoton" type="submit">{"Add to Cart"}</button>
         </form>
     )
