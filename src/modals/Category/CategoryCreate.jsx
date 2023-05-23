@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Axios from "axios";
 import "./Category.css";
 
@@ -55,7 +55,7 @@ function Modal() {
               <h4>Name</h4>
               <input type={"text"} id="inputNombreProduct" autoComplete="off"></input>
             </div>
-            <a style={{ float: "right", marginTop: "1rem" }} onClick={(event) => {
+            <a style={{ float: "right", marginTop: "1rem" }} onClick={() => {
               let nombre = document.getElementById("inputNombreProduct")
               if (nombre.value != "") {
                 crearCategoria(nombre.value)

@@ -50,7 +50,7 @@ function Modal(producto) {
           <div className="modal-content">
             <h2>Delete {producto.producto.nombre_producto}</h2>
             <p>Are you sure you want to delete {producto.producto.nombre_producto}?</p>
-            <a onClick={(event) => {
+            <a onClick={() => {
 
               eliminarProducto(producto.producto.id_producto)
             }}>

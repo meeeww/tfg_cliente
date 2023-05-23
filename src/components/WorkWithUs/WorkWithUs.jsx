@@ -1,16 +1,11 @@
-import MainLayout from '../layout/MainLayout';
-import Imagen from "../components/WorkWithUsImagen";
+import MainLayout from '../../layout/MainLayout';
+import Breadcumb from "../../components/Breadcumb";
 import { NavLink } from "react-router-dom";
 
 const WorkWithUs = () => {
-
-    const formulario = (event) => {
-        
-    }
-
     return (
         <MainLayout>
-            <Imagen></Imagen>
+            <Breadcumb></Breadcumb>
             <div className="WorkWithUsContainer">
                 <div className="WorkWithUsDiv">
                     <h1 className="WorkWithUsColorTitulo">What do I have to do to work in The Coffee Tub?</h1>

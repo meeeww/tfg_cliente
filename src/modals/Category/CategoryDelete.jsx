@@ -52,7 +52,7 @@ function Modal(categoria) {
           <div className="modal-content">
             <h2>Delete {categoria.categoria.nombre_categoria}</h2>
             <p>Are you sure you want to delete {categoria.categoria.nombre_categoria}?</p>
-            <a onClick={(event) => {
+            <a onClick={() => {
 
               eliminarCategoria(categoria.categoria.id_categoria)
             }}>

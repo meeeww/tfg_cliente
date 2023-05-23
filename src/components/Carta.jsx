@@ -51,7 +51,7 @@ const Carta = () => {
                 {categorias.map((categoria) => (
                     <div id={categoria.nombre_categoria} key={categoria.id_categoria}>
                         <div className="tituloCarta">
-                            <h1>Our <h1 style={{ color: "var(--color_secundario)" }}>{categoria.nombre_categoria}</h1></h1>
+                            <h2>Our<span className="WorkWithUsColorSpace">{categoria.nombre_categoria}</span></h2>
                         </div>
                         <div className={"CartaCoffee"} id={categoria.nombre_categoria.toLowerCase()}>
                             {

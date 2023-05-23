@@ -100,7 +100,7 @@ function Modal() {
                   ))}
               </select>
             </div>
-            <a style={{ float: "right", marginTop: "1rem" }} onClick={(event) => {
+            <a style={{ float: "right", marginTop: "1rem" }} onClick={() => {
               let nombre = document.getElementById("inputNombreProduct")
               let descripcion = document.getElementById("inputDescripcionProduct")
               let foto = document.getElementById("inputFotoProduct")

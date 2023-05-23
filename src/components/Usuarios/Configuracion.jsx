@@ -14,6 +14,7 @@ const Configuracion = (data) => {
     const encriptarPass = (contra) => {
         return new Promise((resolve, reject) => {
             resolve(md5(contra))
+            console.log(reject)
             //resolve(bcrypt.hash(contra, 10))
         })
     }

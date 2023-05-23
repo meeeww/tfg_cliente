@@ -2,7 +2,6 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import Inicio from './pages/Inicio'
 
-import Dashboard from './pages/Dashboard'
 import DashboardUsers from './pages/Dashboard/Users'
 import DashboardProducts from './pages/Dashboard/Products'
 import DashboardCategories from './pages/Dashboard/Categories'
@@ -33,8 +32,8 @@ import NoMatch from './pages/NoMatch'
 
 import Merchandising from './components/Merchandising'
 import ContactUs from './components/ContactUs'
-import WorkWithUs from './components/WorkWithUs'
-import WorkWithUsForm from './components/WorkWithUsForm'
+import WorkWithUs from './components/WorkWithUs/WorkWithUs'
+import WorkWithUsForm from './components/WorkWithUs/WorkWithUsForm'
 
 import AboutUs from './components/AboutUs'
 
