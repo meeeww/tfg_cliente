@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 
 const managements = [
     { name: 'clients', href: '/dashboard/', icon: "fa-solid fa-user" },
+    { name: 'employees', href: '/dashboard/employees', icon: "fa-solid fa-helmet-safety" },
     { name: 'products', href: '/dashboard/products', icon: "fa-solid fa-mug-saucer" },
     { name: 'categories', href: '/dashboard/categories', icon: "fa-solid fa-tag" },
 ]
@@ -10,13 +11,11 @@ const managements = [
 const clients = [
     { name: 'orders', href: '/dashboard/orders', icon: "fa-solid fa-cart-shopping" },
     { name: 'contact', href: '/dashboard/contact', icon: "fa-solid fa-phone" },
-    { name: 'customerFeedback', href: '/dashboard/feedback', icon: "fa-solid fa-paper-plane" },
 ]
 
 const documents = [
     { name: 'documents', href: '/dashboard/documents', icon: "fa-solid fa-folder-open" },
     { name: 'jobApplications', href: '/dashboard/jobapplication', icon: "fa-solid fa-plus" },
-    { name: 'prospect', href: '/dashboard/prospect', icon: "fa-solid fa-circle-info" },
 ]
 
 const Panel = () => {

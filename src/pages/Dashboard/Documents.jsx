@@ -3,16 +3,14 @@ import { useState, useEffect } from 'react';
 import '../../estilos/estilos.css'
 import Panel from '../../components/Dashboard/Panel'
 import Header from '../../components/Dashboard/Header'
-import ModalConfiguracion from '../../modals/User/UserConfig'
-import ModalDelete from '../../modals/User/UserDelete'
 
 
 
-function Users() {
+function Orders() {
 
-    const [users, setUsers] = useState();
+    const [pedidos, setPedidos] = useState();
 
-    let baseURL = "http://localhost:4000/API/usuarios/consultar";
+    let baseURL = "http://localhost:4000/API/pedidos/consultar";
 
     let config = {
         timeout: 10000,
@@ -24,7 +22,7 @@ function Users() {
     useEffect(() => {
         Axios.get(baseURL, config)
             .then((res) => {
-                setUsers(res.data)
+                setPedidos(res.data)
                 //localStorage.setItem("token", res.data)
                 //location.replace("http://localhost:5173/login")
                 return {
@@ -70,27 +68,20 @@ function Users() {
                     </div>
                     <div className="panelInfoDashboardProducts">
                         <div className="reportsOverviewDashboard">
-                            <h2>User List</h2>
+                            <h2>Order List</h2>
                             {
-                                users &&
-                                users.map((item) => (
-                                    <div key={"keyProductMain" + item.id_usuario} className="reportInfoDashboard">
-                                        <div className="fechaInfoDashBoard">
-                                            <h2>{item.id_usuario}</h2>
-                                        </div>
-                                        <div className="infoUsuarioDashboard">
-                                            <h3>{item.nombre_usuario}</h3>
-                                            <h3>{item.correo_usuario}</h3>
-                                        </div>
-                                        <div className="informacionInfoDashboard">
-                                            <h3>Pedidos: {item.numero_pedidos}</h3>
-                                        </div>
-                                        <div className="informacionInfoDashboard">
-                                            <h3>Autoridad: {item.permisos}</h3>
+                                pedidos &&
+                                pedidos.map((item, index) => (
+                                    <div key={item.id_usuario + "-" + index} className="mainOrdersUserDashboard">
+                                        <div>
+                                            <h4>Order ID: {item.numero_pedido}</h4>
+                                            <p>Total Price: {"$" + item.preciototal}</p>
                                         </div>
                                         <div>
-                                            <ModalConfiguracion usuario={{item, usuario}}></ModalConfiguracion>
-                                            <ModalDelete usuario={item}></ModalDelete>
+                                            <p>Adress: {item.direccion_envio}</p>
+                                        </div>
+                                        <div>
+                                            <a href={"http://localhost:5173/user/orders/orderid?id=" + item.numero_pedido}>List of Products</a>
                                         </div>
                                     </div>
                                 ))}
@@ -103,4 +94,4 @@ function Users() {
 }
 
 
-export default Users
+export default Orders
