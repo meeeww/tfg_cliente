@@ -37,6 +37,7 @@ import WorkWithUs from './components/WorkWithUs'
 import WorkWithUsForm from './components/WorkWithUsForm'
 
 import AboutUs from './components/AboutUs'
+import PrivacyPolicy from './components/PrivacyPolity'
 
 import {
   createBrowserRouter,
@@ -151,6 +152,10 @@ const router = createBrowserRouter([
   {
     path: "/AboutUs",
     element: <AboutUs />,
+  },
+  {
+    path: "/privacy",
+    element: <PrivacyPolicy />,
   },
 ]);
 
