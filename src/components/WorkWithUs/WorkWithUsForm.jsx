@@ -1,6 +1,6 @@
 import { useState } from "react";
 import MainLayout from '../../layout/MainLayout';
-import Imagen from "./WorkWithUsImagen";
+import Breadcumb from "../../components/Breadcumb";
 import llamarPopUs from "../../scripts/llamarPopUp"
 import PopUp from "../../modals/PopUp/PopUp"
 
@@ -102,7 +102,7 @@ const WorkWithUsForm = () => {
     return (
         <MainLayout>
             <PopUp tipo={{ tipoAlerta, mensajeAlerta }} />
-            <Imagen></Imagen>
+            <Breadcumb></Breadcumb>
             <div className="WorkWithUsFormFondo">
                 <div className="WorkWithUsFormContenedor">
                     <div className="WorkWithUsFormDivTexto">
