@@ -1,18 +1,16 @@
 import React from "react";
 import MainLayout from '../layout/MainLayout';
-import Imagen from '../components/PrivacyPolityImagen'
+import Breadcumb from '../components/BreadcumbSinBotones'
 
 const PrivacyPolicy = () => {
 
     return(
         <MainLayout>
-            <Imagen></Imagen>
+            <Breadcumb></Breadcumb>
             <div className="PrivacyPolityContainer">
                 <div className="PrivacyPolityDiv1">
                     <p><b>At The Coffee Tub, we approach data and privacy like everything else we do: we put people first.</b> We believe that taking care of you means taking care of your data and your privacy. Have a cup of coffee and find out more below.</p>
-                    <p>Last revised: May 2023</p>
-                </div>
-                <div className="PrivacyPolityDiv1">
+                    <p>Last revised: May 2023</p>      
                     <p><b>General description</b></p>
                     <p>This The Coffee Tub Privacy Policy describes the types of personal information we collect, how we use it, how and when it is shared, and your choices and rights in relation to your information. It also explains how we communicate with you and how you can make requests or inquiries about your information. We appreciate you taking the time to read and understand our data and privacy practices.</p>
                     <p><b>Content</b></p>
@@ -115,23 +113,6 @@ const PrivacyPolicy = () => {
                     <p>Your personal information may be transferred to, stored, and processed in a country other than the country in which it was collected. It may also be processed by staff working for The Coffee Tub or for our third party service providers outside of the European Economic Area (EEA). In such cases, we will take appropriate measures to ensure an adequate level of data protection on the part of the recipient in accordance with the GDPR, in particular, through the establishment of standard contractual clauses approved by the European Commission. You can obtain a copy of these clauses by contacting our Data Protection Officer (see section 10 Contact below).</p>
                     <h2>10. CONTACT</h2>                
                     <p>We welcome your questions, comments, and concerns about privacy. You can contact The Coffee Tub at THE COFEE TUB EMEA LIMITED at info@thecoffeetub.com</p>
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
                 </div>
             </div>
         </MainLayout>

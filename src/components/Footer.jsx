@@ -4,6 +4,7 @@ const linksLeft = [
     { title: 'About Us', href: '/aboutus' },
     { title: 'Our Services', href: '/services' },
     { title: 'Privary Policy', href: '/privacy' },
+    { title: 'Cookies Policy', href: '/cookies' },
 ]
 
 const linksCenter = [

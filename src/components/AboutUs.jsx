@@ -1,6 +1,9 @@
 import MainLayout from '../layout/MainLayout';
 import Breadcumb from "../components/Breadcumb";
 import Foto1 from "../assets/InformacionCafe/InformacionCafe3.jpg"
+import Diego from "../assets/AboutUs/Diego.jpg"
+import Zas from "../assets/AboutUs/Zas.png"
+
 const WorkWithUs = () => {
     return (
         <MainLayout>
@@ -37,6 +40,16 @@ const WorkWithUs = () => {
                 <div className="AboutUsDiv4">
                     <h1><span className="WorkWithUsColorSpaceRight">Team</span></h1>
                     <p>At The Coffee Tub, we are a passionate and committed team of approximately 40 talented workers. We are united by our passion for coffee and the desire to offer exceptional experiences to our customers in every cup we serve. Each member of our team plays a critical role in the daily operation of our cafeterias. From our dedicated baristas, who are experts in coffee preparation, to our friendly customer service staff who greet you with a smile, everyone contributes to creating a welcoming and friendly environment for our customers.</p>
+                    <div className="AboutUsDiv4Team">
+                        <div className="AboutUsDiv4TeamCajas">
+                            <img src={Diego} alt="FotoDiego" />
+                            <p>Diego Giménez Sancho</p>
+                        </div>
+                        <div className="AboutUsDiv4TeamCajas">
+                            <img src={Zas} alt="FotoDiego" />
+                            <p>Juan Zas Marín</p>
+                        </div>
+                    </div>
                     <div className="AboutUsDiv4Buttom">
                         <button>Join our team</button>
                     </div>
