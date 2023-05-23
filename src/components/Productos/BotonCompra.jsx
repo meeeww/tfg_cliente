@@ -68,7 +68,7 @@ const BotonCompra = (data) => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <button type="submit">{"Add to Cart"}</button>
+            <button className="BotonCompraBoton" type="submit">{"Add to Cart"}</button>
         </form>
     )
 }
