@@ -366,7 +366,7 @@ body {
 }
 
 .tituloInformacionIndividual {
-  margin-block-start: 5rem;
+  margin-block-start: 2rem;
 }
 
 .tituloAboutUsIndividual h2 {
@@ -536,7 +536,7 @@ body {
   color: var(--blanco);
 }
 
-/*carta*/
+/*carta*/ 
 
 .CartaHeader {
   display: grid;
@@ -859,7 +859,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(2, 1fr);
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .ContactUsContenedorDivFormulario {
@@ -1441,7 +1441,7 @@ body {
 .AboutUsContenedor {
   display: flex;
   flex-direction: column;
-  padding: 3rem;
+  padding: 2rem;
   gap: 2rem;
 }
 
@@ -1638,7 +1638,20 @@ body {
 /*Boton compra*/
 
 .BotonCompraBoton{
+  height: 40px;
+  width: 100px;
+  background-color: var(--blanco);
+  transition: all 0.25s;
+  border: 2px solid var(--color_secundario);
+  border-radius: 10px;
   cursor: pointer;
+  margin-top: 0.5rem;
+  font-size: 16px;
+}
+
+.BotonCompraBoton:hover{
+  background-color: var(--color_secundario);
+  color: var(--blanco);
 }
 /*dashboard*/
 
