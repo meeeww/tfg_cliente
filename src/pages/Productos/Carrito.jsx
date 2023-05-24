@@ -12,7 +12,9 @@ function Carrito() {
   const [numero, setNumero] = useState(0)
   const [carrito, setCarrito] = useState([])
   const [producto, setProducto] = useState([])
-  const [isLoading, setLoading] = useState(true);
+  const [isLoading, setLoading] = useState(true)
+  
+  const [precioTotal, setPrecioTotal] = useState(0);
 
   useEffect(() => {
     if (localStorage.getItem("token") != null || localStorage.getItem("token") == "") {
