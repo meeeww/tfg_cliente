@@ -12,7 +12,7 @@ function Users() {
 
     const [users, setUsers] = useState();
 
-    let baseURL = "http://localhost:4000/API/usuarios/consultar";
+    let baseURL = "http://localhost:4000/API/usuarios/consultar/empleados";
 
     let config = {
         timeout: 10000,
