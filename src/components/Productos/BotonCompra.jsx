@@ -45,6 +45,9 @@ const BotonCompra = (data) => {
                                             console.log("ya existe")
                                             Axios.post(postInfoPedidoURL, { "numero_pedido": item["numero_pedido"], "id_producto": idProducto, "fecha": date, "cantidad": data.producto.numero })
                                             contador++
+                                            setMensajeAlerta("Successfully addded to cart")
+                                            setTipoAlerta(1)
+                                            llamarPopUp()
                                             if (contador >= 2) {
                                                 console.log("eliminando")
                                                 console.log({ numero_pedido: item["numero_pedido"] })
@@ -61,6 +64,9 @@ const BotonCompra = (data) => {
                                                 console.log(resPedido2)
                                                 resPedido2.data.map((item) => {
                                                     if (item["estado"] == 0) {
+                                                        setMensajeAlerta("Successfully addded to cart")
+                                                        setTipoAlerta(1)
+                                                        llamarPopUp()
                                                         console.log({ "numero_pedido": item["numero_pedido"], "id_producto": idProducto, "fecha": date, "cantidad": data.producto.numero })
                                                         Axios.post(postInfoPedidoURL, { "numero_pedido": item["numero_pedido"], "id_producto": idProducto, "fecha": date, "cantidad": data.producto.numero })
                                                     }

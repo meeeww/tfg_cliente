@@ -6,13 +6,6 @@ import Header from '../../components/Dashboard/Header'
 
 
 function Orders() {
-
-    let baseURL = "http://localhost:4000/API/usuarios/consultar";
-
-    let config = {
-        timeout: 10000,
-    };
-
     const [usuario, setUsuario] = useState([])
     const [isLoading, setLoading] = useState(true);
 
@@ -54,8 +47,8 @@ function Orders() {
                     </div>
                     <div className="dashboardDocuments">
                         <div className="occupationalHazardsDocuments">
-                            <h1>Texto</h1>
-                            <video src='' autoPlay={false}></video>
+                            <h1>Occupational Hazards</h1>
+                            <a href="C:/Users/srjza/Documents/trabajofinal/tfg_cliente/src/assets/Evaluaci%C3%B3n%20de%20Riesgos%20Laborales%20-%20The%20Coffee%20Tub.pdf" className='descargarRiesgosLaborales'>Download PDF</a>
                         </div>
                     </div>
                 </div>

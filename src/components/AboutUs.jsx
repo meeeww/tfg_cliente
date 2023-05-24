@@ -43,11 +43,13 @@ const WorkWithUs = () => {
                     <div className="AboutUsDiv4Team">
                         <div className="AboutUsDiv4TeamCajas">
                             <img src={Diego} alt="FotoDiego" />
-                            <p>Diego Giménez Sancho</p>
+                            <h3>Diego Giménez Sancho</h3>
+                            <p>Co-Founder</p>
                         </div>
                         <div className="AboutUsDiv4TeamCajas">
                             <img src={Zas} alt="FotoDiego" />
-                            <p>Juan Zas Marín</p>
+                            <h3>Juan Zas Marín</h3>
+                            <p>Co-Founder</p>
                         </div>
                     </div>
                     <div className="AboutUsDiv4Buttom">

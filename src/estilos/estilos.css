@@ -211,6 +211,54 @@ body {
   text-decoration: none;
 }
 
+.descargarRiesgosLaborales {
+  border: 3px solid var(--color_secundario);
+  border-radius: 2rem;
+  color: var(--gris);
+
+  width: 10rem;
+  height: 3rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition: all 0.25s;
+}
+
+.descargarRiesgosLaborales:hover {
+  background-color: var(--color_secundario);
+  color: var(--blanco);
+
+  transition: all 0.25s;
+}
+
+.checkoutBoton {
+  border: 3px solid var(--color_secundario);
+  border-radius: 2rem;
+  color: var(--gris);
+
+  width: 15rem;
+  height: 3rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition: all 0.25s;
+}
+
+.checkoutBoton:hover {
+  background-color: var(--color_secundario);
+  color: var(--blanco);
+
+  transition: all 0.25s;
+}
+
 .signinBreadRegistered,
 .mainpageBreadRegistered {
   margin-inline: 1rem;
@@ -536,7 +584,7 @@ body {
   color: var(--blanco);
 }
 
-/*carta*/ 
+/*carta*/
 
 .CartaHeader {
   display: grid;
@@ -1191,8 +1239,8 @@ body {
   gap: 10px;
 }
 
-.WorkWithUsDivTexto h1{
-    font-weight: 500;
+.WorkWithUsDivTexto h1 {
+  font-weight: 500;
 }
 
 .WorkWithUsDiv2Contenedor {
@@ -1344,12 +1392,12 @@ body {
   color: var(--color_secundario);
 }
 
-.WorkWithUsColorSpace{
+.WorkWithUsColorSpace {
   color: var(--color_secundario);
   margin-inline: 10px;
 }
 
-.WorkWithUsColorSpaceRight{
+.WorkWithUsColorSpaceRight {
   color: var(--color_secundario);
   margin-right: 10px;
 }
@@ -1513,13 +1561,13 @@ body {
   gap: 0.5rem;
 }
 
-.AboutUsDiv4Team{
+.AboutUsDiv4Team {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
 }
 
-.AboutUsDiv4TeamCajas{
+.AboutUsDiv4TeamCajas {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1527,11 +1575,16 @@ body {
   padding-block: 1rem;
 }
 
-.AboutUsDiv4TeamCajas img{
+.AboutUsDiv4TeamCajas img {
   object-fit: cover;
   border-radius: 50%;
   height: 12rem;
   width: 12rem;
+}
+
+.AboutUsDiv4TeamCajas h3 {
+  font-weight: 600;
+  margin-block: 1rem;
 }
 
 .AboutUsDiv4Buttom {
@@ -1585,14 +1638,14 @@ body {
     width: 100%;
   }
 
-  .AboutUsDiv4TeamCajas img{
+  .AboutUsDiv4TeamCajas img {
     width: 10rem;
     height: 10rem;
   }
 }
 
-@media (max-width:700px){
-  .AboutUsDiv4TeamCajas img{
+@media (max-width:700px) {
+  .AboutUsDiv4TeamCajas img {
     width: 8rem;
     height: 8rem;
   }
@@ -1624,20 +1677,21 @@ body {
   padding-left: 2rem;
 }
 
-.PrivacyPolityDiv1 a{
+.PrivacyPolityDiv1 a {
   color: var(--color_secundario);
 }
 
-.PrivacyPolityDiv1 a:hover{
+.PrivacyPolityDiv1 a:hover {
   color: var(--color_principal);
 }
 
-.PrivacyPolityDiv1 a:visited{
+.PrivacyPolityDiv1 a:visited {
   color: var(--color_principal);
 }
+
 /*Boton compra*/
 
-.BotonCompraBoton{
+.BotonCompraBoton {
   height: 40px;
   width: 100px;
   background-color: var(--blanco);
@@ -1647,12 +1701,15 @@ body {
   cursor: pointer;
   margin-top: 0.5rem;
   font-size: 16px;
+  transition: all 0.25s;
 }
 
-.BotonCompraBoton:hover{
+.BotonCompraBoton:hover {
   background-color: var(--color_secundario);
   color: var(--blanco);
+  transition: all 0.25s;
 }
+
 /*dashboard*/
 
 .dashboardBody {
@@ -2798,9 +2855,7 @@ h3 {
   margin: 0;
 }
 
-.dashboardDocuments{
-  
-}
+.dashboardDocuments {}
 
 .reportInfoDashboard {
   display: flex;

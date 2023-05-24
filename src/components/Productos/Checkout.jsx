@@ -1,14 +1,18 @@
 import Axios from 'axios'
+import { useState } from 'react'
+import llamarPopUp from '../../scripts/llamarPopUp'
+import PopUp from '../../modals/PopUp/PopUp'
 
 const CheckoutComponent = (data) => {
 
-    console.log(data.data["usuario"])
-    console.log(data.data.productos.data)
+    const [tipoAlerta, setTipoAlerta] = useState(1)
+    const [mensajeAlerta, setMensajeAlerta] = useState("Text")
 
-    
+
 
     return (
         <div className="panelDashboard">
+            <PopUp tipo={{ tipoAlerta, mensajeAlerta }} />
             <div className="headerDashboard">
                 <div className="welcomeMessageDashboard">
                     <h1 style={{ "paddingRight": "1rem" }}>Welcome,</h1>
@@ -18,11 +22,21 @@ const CheckoutComponent = (data) => {
             <div className="configuracionUsuario">
                 {data.data.recibo.map((item, index) => (
                     <>
-                        <div key={item.id_usuario + "-" + index}>
-                            <h4>{item.direccion_envio}</h4>
-                            <h4>{"$" + item.preciototal}</h4>
+                        <div key={item.id_usuario + "-" + index} className="mainOrdersUserDashboard">
+                            {/* <h4>{item.direccion_envio}</h4>
+                   <h4>{"$" + item.preciototal}</h4> */}
+                            <div>
+                                <h4>Order ID: {item.numero_pedido}</h4>
+                                <p>Total Price: {"$" + item.preciototal}</p>
+                            </div>
+                            <div>
+                                <p>Adress: {item.direccion_envio}</p>
+                            </div>
+                            <div>
+                                <a href={"http://localhost:5173/user/orders/orderid?id=" + item.numero_pedido}>List of Products</a>
+                            </div>
                         </div>
-                        <a onClick=
+                        <a className="checkoutBoton" onClick=
                             {
                                 function setState() {
                                     Axios.put("http://localhost:4000/API/pedidos/modificar/estado", { "numero_pedido": item.numero_pedido, "estado": 2 })
@@ -30,6 +44,12 @@ const CheckoutComponent = (data) => {
                                     for (let i = 0; i < data.data.productos.data.length; i++) {
                                         Axios.get("http://localhost:4000/API/productos/buscar?id=" + data.data.productos.data[i]["id_producto"]).then(responseFinal => {
                                             Axios.put("http://localhost:4000/API/productos/modificar/ventas", { "id_producto": data.data.productos.data[i]["id_producto"], "ventas": (parseInt(responseFinal.data[0]["ventas"]) + 1) })
+                                            setMensajeAlerta("Checkout successful")
+                                            setTipoAlerta(1)
+                                            llamarPopUp()
+                                            setTimeout(() => {
+                                                location.replace("/user/orders")
+                                            }, 2);
                                         })
                                     }
                                 }
