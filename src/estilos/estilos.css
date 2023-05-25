@@ -80,6 +80,19 @@ body {
   margin-inline: 0.5rem;
   cursor: pointer;
   font-size: 16px;
+  transition: all 0.25s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navHeaderDerecha a span {
+  padding: 10px;
+  text-decoration: none;
+  color: var(--gris);
+  margin-inline: 0.1rem;
+  cursor: pointer;
+  font-size: 22px;
 
   transition: all 0.25s;
 }
@@ -727,6 +740,7 @@ body {
   border-radius: 1rem;
   font-size: 14px;
   display: flex;
+  transition: all 0.25s;
 }
 
 .CartaItemsCaja:hover {
@@ -859,6 +873,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  margin-bottom: 5rem;
+}
+
+.infoPrincipalCarrito h1{
+  font-weight: 500;
 }
 
 .infoProductoIndividualPrincipalCarrito {

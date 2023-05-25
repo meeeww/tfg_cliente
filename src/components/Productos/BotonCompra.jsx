@@ -25,6 +25,7 @@ const BotonCompra = (data) => {
         let postPedidosURL = "http://localhost:4000/API/pedidos/crear";
         let getPedidoURL = "http://localhost:4000/API/pedidos/buscar/usuario?id="
         let deletePedidoURL = "http://localhost:4000/API/pedidos/eliminar"
+        let modificarPedidoURL = "http://localhost:4000/API/pedidos/modificar/precio"
 
         let postInfoPedidoURL = "http://localhost:4000/API/infopedidos/crear"
         let deleteInfoPedidoURL = "http://localhost:4000/API/infopedidos/eliminar/numero"
@@ -34,6 +35,7 @@ const BotonCompra = (data) => {
                 if (res.data[0]) {
                     let idUsuario = res.data[0]["id_usuario"]
                     let idProducto = data.producto.data.data.producto["id_producto"]
+                    let precioProducto = data.producto.data.data.producto["coste_base"]
                     Axios.get((baseURL2 + idUsuario))
                         .then((res) => {
                             if (res.data[0] != undefined) {
@@ -43,7 +45,12 @@ const BotonCompra = (data) => {
                                     resPedido.data.map((item) => {
                                         if (item["estado"] == 0) {
                                             console.log("ya existe")
-                                            Axios.post(postInfoPedidoURL, { "numero_pedido": item["numero_pedido"], "id_producto": idProducto, "fecha": date, "cantidad": data.producto.numero })
+                                            Axios.post(postInfoPedidoURL, { "numero_pedido": item["numero_pedido"], "id_producto": idProducto, "fecha": date, "cantidad": data.producto.numero }).then(() => {
+                                                let precioUltimo = item["preciototal"] + (precioProducto * data.producto.numero)
+                                                console.log(precioUltimo)
+                                                Axios.put(modificarPedidoURL, { "numero_pedido": item["numero_pedido"], "preciototal": precioUltimo })
+                                                console.log(typeof precioUltimo)
+                                            })
                                             contador++
                                             setMensajeAlerta("Successfully addded to cart")
                                             setTipoAlerta(1)
@@ -55,12 +62,13 @@ const BotonCompra = (data) => {
                                                     Axios.delete(deletePedidoURL, { data: { numero_pedido: item["numero_pedido"] } })
                                                 })
                                             }
-                                            location.replace("http://localhost:5173/cart")
+                                            //location.replace("http://localhost:5173/cart")
                                         }
                                     })
                                     if (contador == 0) {
                                         console.log("creando")
-                                        Axios.post(postPedidosURL, { "id_usuario": res.data[0]["id_usuario"], "direccion_envio": "NA", "estado": 0, "preciototal": 0 }).then(() => {
+                                        console.log(typeof precioProducto)
+                                        Axios.post(postPedidosURL, { "id_usuario": res.data[0]["id_usuario"], "direccion_envio": res.data[0]["direccion"], "estado": 0, "preciototal": (precioProducto * data.producto.numero) }).then(() => {
                                             Axios.get((getPedidoURL + idUsuario)).then((resPedido2) => {
                                                 console.log(resPedido2)
                                                 resPedido2.data.map((item) => {

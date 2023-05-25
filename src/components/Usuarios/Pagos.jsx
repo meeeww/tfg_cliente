@@ -22,8 +22,7 @@ const Pagos = (data) => {
                         Axios.put("http://localhost:4000/API/usuarios/modificar/" + item.query, { "id_usuario": data["data"]["id_usuario"], "mes_caducidad": document.getElementById(item.titulo).value })
                         break
                 }
-                console.log("http://localhost:4000/API/usuarios/modificar/" + item.query)
-                console.log(document.getElementById(item.titulo).value)
+                location.reload()
             }
         })
     }

@@ -13,7 +13,7 @@ function Carrito() {
   const [carrito, setCarrito] = useState([])
   const [producto, setProducto] = useState([])
   const [isLoading, setLoading] = useState(true)
-  
+
   const [precioTotal, setPrecioTotal] = useState(0);
 
   useEffect(() => {
@@ -28,6 +28,7 @@ function Carrito() {
                   setCarrito(infoPedidos.data)
                   let listaProductos = []
                   let numeroTemp = 0
+                  let precioTemporal = 0
                   infoPedidos.data.map((infoPedido) => {
                     Axios.get("http://localhost:4000/API/productos/buscar?id=" + infoPedido["id_producto"]).then(productoGet => {
                       setLoading(false)
@@ -35,6 +36,8 @@ function Carrito() {
                       setNumero(numeroTemp)
                       listaProductos.push(productoGet.data[0])
                       setProducto(listaProductos);
+                      precioTemporal = pedido["preciototal"]//(precioTemporal + (carritoTemporal[index]["cantidad"] * productoGet.data[0]["coste_base"]))
+                      setPrecioTotal(precioTemporal)
                     })
                   })
                 })
@@ -47,9 +50,6 @@ function Carrito() {
   }, [])
 
   if (isLoading || producto == null || carrito == null) {
-    console.log(isLoading)
-    console.log(producto)
-    console.log(carrito)
     return (
       <MainLayout>
         <Breadcumb></Breadcumb>
@@ -85,15 +85,12 @@ function Carrito() {
                 {"$" + parseFloat(productoIndividual["coste_base"]).toFixed(2)}
               </div>
               <div className="infoProductoIndividualTotalCarrito">
-                {parseFloat((productoIndividual["coste_base"]) * carrito[index]["cantidad"]).toFixed(2)}
+                {"$" + parseFloat((productoIndividual["coste_base"]) * carrito[index]["cantidad"]).toFixed(2)}
               </div>
             </div>
           ))}
           <div className="infoCheckoutCarrito">
-            <h3>Total: $
-              {
-                5
-              }
+            <h3>Total: ${parseFloat(precioTotal).toFixed(2)}
             </h3>
             <a href="/checkout">Checkout</a>
           </div>
