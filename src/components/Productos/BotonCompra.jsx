@@ -55,6 +55,7 @@ const BotonCompra = (data) => {
                                                     Axios.delete(deletePedidoURL, { data: { numero_pedido: item["numero_pedido"] } })
                                                 })
                                             }
+                                            location.replace("http://localhost:5173/cart")
                                         }
                                     })
                                     if (contador == 0) {
@@ -69,6 +70,7 @@ const BotonCompra = (data) => {
                                                         llamarPopUp()
                                                         console.log({ "numero_pedido": item["numero_pedido"], "id_producto": idProducto, "fecha": date, "cantidad": data.producto.numero })
                                                         Axios.post(postInfoPedidoURL, { "numero_pedido": item["numero_pedido"], "id_producto": idProducto, "fecha": date, "cantidad": data.producto.numero })
+                                                        location.replace("http://localhost:5173/cart")
                                                     }
                                                 })
                                             })

@@ -8,7 +8,7 @@ const linksLeft = [
     { name: 'Menu', href: '/menu' },
     { name: 'About Us', href: '/aboutus' },
     { name: 'Contact Us', href: '/contactus' },
-    { name: 'Work With Us', href: '/workwithus'},
+    { name: 'Work With Us', href: '/workwithus' },
 ]
 
 const linksRightAdmin = [
@@ -25,6 +25,7 @@ const linksRight = [
 function Header() {
 
     const [isLoading, setLoading] = useState(true);
+    const [numero, setNumero] = useState(0)
 
     useEffect(() => {
         if (localStorage.getItem("token") != null || localStorage.getItem("token") == "") {
@@ -36,6 +37,21 @@ function Header() {
                         }
                     })
                 }
+                Axios.get("http://localhost:4000/API/pedidos/buscar/usuario?id=" + response.data[0]["id_usuario"]).then(response2 => {
+                    response2.data.map((pedido) => {
+                        if (pedido["estado"] == 0) {
+                            Axios.get("http://localhost:4000/API/infopedidos/buscar/pedido?id=" + pedido["numero_pedido"]).then(infoPedidos => {
+                                let numeroTemp = 0
+                                infoPedidos.data.map((infoPedido) => {
+                                    Axios.get("http://localhost:4000/API/productos/buscar?id=" + infoPedido["id_producto"]).then(productoGet => {
+                                        numeroTemp++
+                                        setNumero(numeroTemp)
+                                    })
+                                })
+                            })
+                        }
+                    })
+                })
             })
         }
     }, [])
@@ -54,9 +70,21 @@ function Header() {
                     </nav>
                     <div className="register-loginHeader">
                         <nav className="navHeaderDerecha">
-                            {linksRight.map((item) => (
-                                <a key={item.name} href={item.href}><i className={item.icono}></i></a>
-                            ))}
+                            {linksRight.map((item) => {
+                                {
+                                    console.log(item.name)
+                                    if (item.name == "Shopping Cart") {
+                                        return (
+                                            <a key={item.name} href={item.href}><i className={item.icono}></i>{numero}</a>
+                                        )
+                                    } else {
+                                        return (
+                                            <a key={item.name} href={item.href}><i className={item.icono}></i></a>
+                                        )
+
+                                    }
+                                }
+                            })}
                         </nav>
                     </div>
                 </div>
@@ -77,9 +105,21 @@ function Header() {
                 </nav>
                 <div className="register-loginHeader">
                     <nav className="navHeaderDerecha">
-                        {linksRightAdmin.map((item) => (
-                            <a key={item.name} href={item.href}><i className={item.icono}></i></a>
-                        ))}
+                        {linksRightAdmin.map((item) => {
+                            {
+                                console.log(item.name)
+                                if (item.name == "Shopping Cart") {
+                                    return (
+                                        <a key={item.name} href={item.href}><i className={item.icono}></i>{numero}</a>
+                                    )
+                                } else {
+                                    return (
+                                        <a key={item.name} href={item.href}><i className={item.icono}></i></a>
+                                    )
+
+                                }
+                            }
+                        })}
                     </nav>
                 </div>
             </div>

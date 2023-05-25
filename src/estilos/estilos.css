@@ -79,6 +79,7 @@ body {
   color: var(--gris);
   margin-inline: 0.5rem;
   cursor: pointer;
+  font-size: 16px;
 
   transition: all 0.25s;
 }
