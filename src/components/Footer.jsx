@@ -2,14 +2,14 @@ import { NavLink } from "react-router-dom";
 
 const linksLeft = [
     { title: 'About Us', href: '/aboutus' },
-    { title: 'Our Services', href: '/services' },
+    { title: 'Menu', href: '/menu' },
     { title: 'Privary Policy', href: '/privacy' },
     { title: 'Cookies Policy', href: '/cookies' },
 ]
 
 const linksCenter = [
-    { title: 'Establishments', href: '/establishments' },
-    { title: 'Delivery', href: '/delivery' },
+    { title: 'Work With Us', href: '/Workwithus' },
+    { title: 'Contact Us', href: '/contactus' },
 ]
 
 const linksRight = [
