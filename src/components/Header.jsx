@@ -75,7 +75,7 @@ function Header() {
                                     console.log(item.name)
                                     if (item.name == "Shopping Cart") {
                                         return (
-                                            <a key={item.name} href={item.href}><i className={item.icono}></i>{numero}</a>
+                                            <a key={item.name} href={item.href}><i className={item.icono}></i><span>{numero}</span></a>
                                         )
                                     } else {
                                         return (
@@ -110,7 +110,7 @@ function Header() {
                                 console.log(item.name)
                                 if (item.name == "Shopping Cart") {
                                     return (
-                                        <a key={item.name} href={item.href}><i className={item.icono}></i>{numero}</a>
+                                        <a key={item.name} href={item.href}><i className={item.icono}></i><span>{numero}</span></a>
                                     )
                                 } else {
                                     return (

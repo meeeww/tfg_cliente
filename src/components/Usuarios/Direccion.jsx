@@ -26,8 +26,7 @@ const Direccion = (data) => {
                         Axios.put("http://localhost:4000/API/usuarios/modificar/" + item.query, { "id_usuario": data["data"]["id_usuario"], "opciones_entrega": document.getElementById(item.titulo).value })
                         break
                 }
-                console.log("http://localhost:4000/API/usuarios/modificar/" + item.query)
-                console.log(document.getElementById(item.titulo).value)
+                location.reload()
             }
         })
     }

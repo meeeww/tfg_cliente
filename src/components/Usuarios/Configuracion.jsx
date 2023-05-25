@@ -51,8 +51,7 @@ const Configuracion = (data) => {
 
                         break
                 }
-                console.log("http://localhost:4000/API/usuarios/modificar/" + item.query)
-                console.log(document.getElementById(item.titulo).value)
+                location.reload()
             }
         })
     }
