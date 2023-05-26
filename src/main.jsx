@@ -10,6 +10,7 @@ import DashboardOrders from './pages/Dashboard/Orders'
 import DashboardContact from './pages/Dashboard/Contact'
 import DashboardJobApplications from './pages/Dashboard/JobApplications'
 import DashboardDocuments from './pages/Dashboard/Documents'
+import DashboardComite from './pages/Dashboard/Comite'
 
 import UsuarioConfig from './pages/Usuarios/UsuarioConfiguracion'
 import UsuarioDireccion from './pages/Usuarios/UsuarioDireccion'
@@ -134,6 +135,10 @@ const router = createBrowserRouter([
   {
     path: "/dashboard/jobapplication",
     element: <DashboardJobApplications />
+  },
+  {
+    path: "/dashboard/comite",
+    element: <DashboardComite />
   },
   {
     path: "/registered",

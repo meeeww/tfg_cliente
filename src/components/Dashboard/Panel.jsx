@@ -15,6 +15,7 @@ const clients = [
 
 const documents = [
     { name: 'documents', href: '/dashboard/documents', icon: "fa-solid fa-folder-open" },
+    { name: 'comite', href: '/dashboard/comite', icon: "fa-solid fa-graduation-cap" },
     { name: 'jobApplications', href: '/dashboard/jobapplication', icon: "fa-solid fa-plus" },
 ]
 
