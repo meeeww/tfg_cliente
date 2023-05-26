@@ -13,8 +13,30 @@ function Carrito() {
   const [carrito, setCarrito] = useState([])
   const [producto, setProducto] = useState([])
   const [isLoading, setLoading] = useState(true)
+  const [pedido, setPedido] = useState()
 
   const [precioTotal, setPrecioTotal] = useState(0);
+
+  function eliminar(id) {
+    let dataPayload = { id_producto: id, numero_pedido: carrito[0]["numero_pedido"] };
+
+    let config = {
+      timeout: 10000,
+      headers: { 'Content-Type': 'application/json' }
+    };
+
+    Axios.delete("http://localhost:4000/API/infopedidos/eliminar", { data: dataPayload }, config).then(() => {
+      Axios.get("http://localhost:4000/API/productos/buscar?id=" + id).then((productoIndividual) => {
+        let precioActualizado = pedido["preciototal"] - (productoIndividual.data[0]["coste_base"] * carrito[0]["cantidad"])
+        Axios.put("http://localhost:4000/API/pedidos/modificar/precio", { "numero_pedido": carrito[0]["numero_pedido"], "preciototal": precioActualizado })
+      })
+      return {
+        statusCode: 200,
+        body: JSON.stringify({ title: "this was a success" }),
+      };
+    })
+    location.reload()
+  }
 
   useEffect(() => {
     if (localStorage.getItem("token") != null || localStorage.getItem("token") == "") {
@@ -24,6 +46,7 @@ function Carrito() {
           Axios.get("http://localhost:4000/API/pedidos/buscar/usuario?id=" + response.data[0]["id_usuario"]).then(response2 => {
             response2.data.map((pedido) => {
               if (pedido["estado"] == 0) {
+                setPedido(pedido)
                 Axios.get("http://localhost:4000/API/infopedidos/buscar/pedido?id=" + pedido["numero_pedido"]).then(infoPedidos => {
                   setCarrito(infoPedidos.data)
                   let listaProductos = []
@@ -80,6 +103,7 @@ function Carrito() {
               </div>
               <div className="infoProductoIndividualCantidadCarrito">
                 <h3>{carrito[index]["cantidad"]}</h3>
+                <a onClick={() => eliminar(carrito[index]["id_producto"])}><i className="fa-solid fa-trash"></i></a>
               </div>
               <div className="infoProductoIndividualPrecioCarrito">
                 {"$" + parseFloat(productoIndividual["coste_base"]).toFixed(2)}

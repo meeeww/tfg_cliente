@@ -62,7 +62,7 @@ const BotonCompra = (data) => {
                                                     Axios.delete(deletePedidoURL, { data: { numero_pedido: item["numero_pedido"] } })
                                                 })
                                             }
-                                            //location.replace("http://localhost:5173/cart")
+                                            location.replace("http://localhost:5173/cart")
                                         }
                                     })
                                     if (contador == 0) {

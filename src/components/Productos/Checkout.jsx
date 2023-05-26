@@ -27,7 +27,7 @@ const CheckoutComponent = (data) => {
                    <h4>{"$" + item.preciototal}</h4> */}
                             <div>
                                 <h4>Order ID: {item.numero_pedido}</h4>
-                                <p>Total Price: {"$" + item.preciototal}</p>
+                                <p>Total Price: {"$" + parseFloat(item.preciototal).toFixed(2)}</p>
                             </div>
                             <div>
                                 <p>Adress: {item.direccion_envio}</p>

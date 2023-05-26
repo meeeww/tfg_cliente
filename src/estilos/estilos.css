@@ -740,6 +740,7 @@ body {
   border-radius: 1rem;
   font-size: 14px;
   display: flex;
+  height: 100%;
   transition: all 0.25s;
 }
 
@@ -913,6 +914,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.infoProductoIndividualCantidadCarrito a{
+  margin-left: 2rem;
+  cursor: pointer;
 }
 
 .infoCheckoutCarrito {
