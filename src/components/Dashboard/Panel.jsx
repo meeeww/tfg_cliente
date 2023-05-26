@@ -40,7 +40,7 @@ const Panel = () => {
 
     return (
         <div className="barraDashboard">
-            <h1><a href="/">La Tarrina</a></h1>
+            <h1><a href="/">The Coffee Tub</a></h1>
             <div className="dashboardDashboard">
                 <h2>Dashboard</h2>
             </div>
