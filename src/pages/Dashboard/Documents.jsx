@@ -48,7 +48,10 @@ function Orders() {
                     <div className="dashboardDocuments">
                         <div className="occupationalHazardsDocuments">
                             <h1>Occupational Hazards</h1>
-                            <a href="C:/Users/srjza/Documents/trabajofinal/tfg_cliente/src/assets/Evaluaci%C3%B3n%20de%20Riesgos%20Laborales%20-%20The%20Coffee%20Tub.pdf" className='descargarRiesgosLaborales'>Download PDF</a>
+                            <video width="320" height="240" controls>
+                                <source src='../../../public/PrevencionDeRiesgosLaborales.mp4' type="video/mp4"></source>
+                            </video>
+                            <a href="../../../public/EvaluaciónDeRiesgosLaborales.pdf" className='descargarRiesgosLaborales'>Download PDF</a>
                         </div>
                     </div>
                 </div>
