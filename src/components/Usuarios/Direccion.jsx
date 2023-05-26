@@ -14,7 +14,9 @@ const Direccion = (data) => {
             if (document.getElementById(item.titulo).value != "") {
                 switch (item.mostrar) {
                     case "Address":
+                        console.log("http://localhost:4000/API/usuarios/modificar/" + item.query)
                         Axios.put("http://localhost:4000/API/usuarios/modificar/" + item.query, { "id_usuario": data["data"]["id_usuario"], "direccion": document.getElementById(item.titulo).value })
+                        Axios.put("http://localhost:4000/API/pedidos/modificar/direccion", { "id_usuario": data["data"]["id_usuario"], "direccion_envio": document.getElementById(item.titulo).value })
                         break
                     case "Apartment":
                         Axios.put("http://localhost:4000/API/usuarios/modificar/" + item.query, { "id_usuario": data["data"]["id_usuario"], "apartamento": document.getElementById(item.titulo).value })
@@ -26,7 +28,7 @@ const Direccion = (data) => {
                         Axios.put("http://localhost:4000/API/usuarios/modificar/" + item.query, { "id_usuario": data["data"]["id_usuario"], "opciones_entrega": document.getElementById(item.titulo).value })
                         break
                 }
-                location.reload()
+                //location.reload()
             }
         })
     }

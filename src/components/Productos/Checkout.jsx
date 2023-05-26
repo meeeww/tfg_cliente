@@ -39,18 +39,24 @@ const CheckoutComponent = (data) => {
                         <a className="checkoutBoton" onClick=
                             {
                                 function setState() {
-                                    Axios.put("http://localhost:4000/API/pedidos/modificar/estado", { "numero_pedido": item.numero_pedido, "estado": 2 })
-                                    Axios.put("http://localhost:4000/API/usuarios/modificar/pedidos", { "id_usuario": data.data["usuario"][0], "numero_pedidos": (parseInt(data.data["usuario"][2]) + 1) })
-                                    for (let i = 0; i < data.data.productos.data.length; i++) {
-                                        Axios.get("http://localhost:4000/API/productos/buscar?id=" + data.data.productos.data[i]["id_producto"]).then(responseFinal => {
-                                            Axios.put("http://localhost:4000/API/productos/modificar/ventas", { "id_producto": data.data.productos.data[i]["id_producto"], "ventas": (parseInt(responseFinal.data[0]["ventas"]) + 1) })
-                                            setMensajeAlerta("Checkout successful")
-                                            setTipoAlerta(1)
-                                            llamarPopUp()
-                                            setTimeout(() => {
-                                                location.replace("/user/orders")
-                                            }, 2);
-                                        })
+                                    if (item.direccion_envio == "NA" || item.direccion_envio == "na") {
+                                        setMensajeAlerta("You have to set up your adress")
+                                        setTipoAlerta(3)
+                                        llamarPopUp()
+                                    } else {
+                                        Axios.put("http://localhost:4000/API/pedidos/modificar/estado", { "numero_pedido": item.numero_pedido, "estado": 2 })
+                                        Axios.put("http://localhost:4000/API/usuarios/modificar/pedidos", { "id_usuario": data.data["usuario"][0], "numero_pedidos": (parseInt(data.data["usuario"][2]) + 1) })
+                                        for (let i = 0; i < data.data.productos.data.length; i++) {
+                                            Axios.get("http://localhost:4000/API/productos/buscar?id=" + data.data.productos.data[i]["id_producto"]).then(responseFinal => {
+                                                Axios.put("http://localhost:4000/API/productos/modificar/ventas", { "id_producto": data.data.productos.data[i]["id_producto"], "ventas": (parseInt(responseFinal.data[0]["ventas"]) + 1) })
+                                                setMensajeAlerta("Checkout successful")
+                                                setTipoAlerta(1)
+                                                llamarPopUp()
+                                                setTimeout(() => {
+                                                    location.replace("/user/orders")
+                                                }, 2);
+                                            })
+                                        }
                                     }
                                 }
                             }>Proceed to Checkout

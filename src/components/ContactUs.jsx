@@ -1,8 +1,14 @@
+import { useState } from "react";
 import MainLayout from '../layout/MainLayout'
 import axios from "axios";
 import Breadcumb from "../components/Breadcumb";
+import llamarPopUs from "../scripts/llamarPopUp"
+import PopUp from "../modals/PopUp/PopUp"
 
 const ContactUs = () => {
+
+    const [tipoAlerta, setTipoAlerta] = useState(0)
+    const [mensajeAlerta, setMensajeAlerta] = useState("")
 
     const enviarFormulario = () => {
 
@@ -15,14 +21,21 @@ const ContactUs = () => {
 
         let postContactosURL = "http://localhost:4000/API/contactos/crear";
 
-        axios.post(postContactosURL, {
-            "nombre": arrayCampos[0], "email": arrayCampos[1], "telefono": arrayCampos[2], "mensaje": arrayCampos[3],
-        })
+        if (arrayCampos[0] != "" && arrayCampos[1] != "" && arrayCampos[2] != "" && arrayCampos[3] != "") {
+            axios.post(postContactosURL, {
+                "nombre": arrayCampos[0], "email": arrayCampos[1], "telefono": arrayCampos[2], "mensaje": arrayCampos[3],
+            })
+        } else {
+            setMensajeAlerta("Fill in all the fields")
+            setTipoAlerta(3)
+            llamarPopUs()
+        }
     }
 
     return (
         <MainLayout>
             <Breadcumb></Breadcumb>
+            <PopUp tipo={{ tipoAlerta, mensajeAlerta }} />
             <div className="ContactUsContenedor">
                 <div className="ContactUsContenedorDivFormulario">
                     <div className="ContactUsContenedorDivFormularioDerecha">
