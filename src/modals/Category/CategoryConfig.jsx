@@ -1,10 +1,16 @@
 import { useState } from "react";
 import Axios from "axios";
 
+import llamarPopUs from "../../scripts/llamarPopUp"
+import PopUp from "../../modals/PopUp/PopUp"
+
 import "./Category.css";
 
 function Modal(categoria) {
   const [modal, setModal] = useState(false);
+
+  const [tipoAlerta, setTipoAlerta] = useState(0)
+  const [mensajeAlerta, setMensajeAlerta] = useState("")
 
   const toggleModal = () => {
     setModal(!modal);
@@ -26,6 +32,9 @@ function Modal(categoria) {
     };
 
     Axios.put(baseURL, data, config)
+    setMensajeAlerta("Successfully edited")
+    setTipoAlerta(1)
+    llamarPopUs()
       .then(() => {
         return {
           statusCode: 200,
@@ -39,6 +48,7 @@ function Modal(categoria) {
 
   return (
     <>
+      <PopUp tipo={{ tipoAlerta, mensajeAlerta }} />
       <button onClick={toggleModal} className="btn-modal">
         <i className="fa-solid fa-wrench"></i>
       </button>

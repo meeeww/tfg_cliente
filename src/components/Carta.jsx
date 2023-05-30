@@ -66,7 +66,7 @@ const Carta = () => {
                                                 <div className="CartaTexto">
                                                     <h2>{producto.nombre_producto}</h2>
                                                     <p>{producto.descripcion_producto}</p>
-                                                    <p>{producto.coste_base}</p>
+                                                    <p>${producto.coste_base}</p>
                                                 </div>
                                             </div>
                                         </a>

@@ -16,12 +16,10 @@
 
     padding-block: 1rem;
 
-    transition: all 1s;
 }
 
 .activePopUp{
     display: flex;
-    transition: all 0s;
 }
 
 .infoPopUp{

@@ -1,11 +1,17 @@
 import { useState, useEffect } from "react";
 import Axios from "axios";
 
+import llamarPopUs from "../../scripts/llamarPopUp"
+import PopUp from "../../modals/PopUp/PopUp"
+
 import "./Product.css";
 
 function Modal(producto) {
   const [modal, setModal] = useState(false);
   const [categorias, setCategorias] = useState();
+
+  const [tipoAlerta, setTipoAlerta] = useState(0)
+  const [mensajeAlerta, setMensajeAlerta] = useState("")
 
   let baseURL = "http://localhost:4000/API/categorias/consultar";
 
@@ -17,7 +23,7 @@ function Modal(producto) {
     Axios.get(baseURL, config)
       .then((res) => {
         //console.log("RESPONSE RECEIVED: ", res.data);
-        setCategorias(res.data)       
+        setCategorias(res.data)
         //localStorage.setItem("token", res.data)
         //location.replace("http://localhost:5173/login")
         return {
@@ -65,6 +71,9 @@ function Modal(producto) {
         data = { id_producto: id, id_categoria: valorOpcion };
         break;
     }
+    setMensajeAlerta("Successfully edited")
+    setTipoAlerta(1)
+    llamarPopUs()
 
     config = {
       timeout: 10000,
@@ -94,6 +103,7 @@ function Modal(producto) {
 
   return (
     <>
+      <PopUp tipo={{ tipoAlerta, mensajeAlerta }} />
       <button onClick={toggleModal} className="btn-modal">
         <i className="fa-solid fa-wrench"></i>
       </button>
