@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import MainLayout from "../../layout/MainLayout";
 import Panel from '../../components/Usuarios/Panel';
 
+
 import Configuracion from '../../components/Usuarios/Configuracion';
 
 import '../../estilos/estilos.css'
