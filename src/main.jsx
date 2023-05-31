@@ -42,6 +42,8 @@ import AboutUs from './components/AboutUs'
 import PrivacyPolicy from './components/PrivacyPolity'
 import Cookies from './components/Cookies'
 
+import FormularioExamen from './components/FormularioExamen'
+
 import {
   createBrowserRouter,
   RouterProvider,
@@ -175,6 +177,10 @@ const router = createBrowserRouter([
   {
     path: "/cookies",
     element: <Cookies />,
+  },
+  {
+    path: "/FormularioExamen",
+    element: <FormularioExamen/>,
   },
 ]);
 

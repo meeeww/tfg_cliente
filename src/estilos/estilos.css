@@ -3118,5 +3118,15 @@ h3 {
     height: 100%;
     margin-block: 2rem;
   }
+}
+
+/*Examen Formulario*/
+
+.FormularioExamenContainer{
+  display: flex;
+  margin: 2rem;
+}
+
+.FormularioExamenMenu{
 
 }
