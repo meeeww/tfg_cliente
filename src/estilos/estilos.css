@@ -846,34 +846,34 @@ body {
     margin: 10px;
   }
 
-  .navHeader{
+  .navHeader {
     display: none;
   }
 
-  .exploreOptionsInformacion{
+  .exploreOptionsInformacion {
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .aboutUsImagenInformacion{
+  .aboutUsImagenInformacion {
     width: 300px;
     height: 300px;
   }
 
-  .textoAboutUs{
+  .textoAboutUs {
     width: 20rem;
     margin-inline: 0;
   }
 
-  .aboutUsIndividual img{
+  .aboutUsIndividual img {
     margin-inline: 0;
   }
 
-  .tituloBread h1{
+  .tituloBread h1 {
     font-size: 53px;
   }
 
-  .footer_linksFooter{
-    padding: 0 0!important;
+  .footer_linksFooter {
+    padding: 0 0 !important;
   }
 }
 
@@ -909,7 +909,7 @@ body {
   margin-bottom: 5rem;
 }
 
-.infoPrincipalCarrito h1{
+.infoPrincipalCarrito h1 {
   font-weight: 500;
 }
 
@@ -948,7 +948,7 @@ body {
   align-items: center;
 }
 
-.infoProductoIndividualCantidadCarrito a{
+.infoProductoIndividualCantidadCarrito a {
   margin-left: 2rem;
   cursor: pointer;
 }
@@ -3122,11 +3122,58 @@ h3 {
 
 /*Examen Formulario*/
 
-.FormularioExamenContainer{
+.FormularioExamenContainer {
   display: flex;
   margin: 2rem;
 }
 
-.FormularioExamenMenu{
+.FormularioExamenMenu {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 3rem;
+  grid-row-gap: 0px;
+}
 
+.FormularioExamenCaja img {
+  width: 100%;
+  height: 15rem;
+  border-radius: 2rem 2rem 0rem 2rem;
+}
+
+.FormularioExamenCajaTexto {
+  background-color: rgb(187, 187, 187);
+  width: 100%;
+  height: 15rem;
+  border-radius: 0rem 2rem 0rem 0rem;
+  position: relative;
+  bottom: 7%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.FormularioExamenCajaTexto button {
+  width: 6rem;
+  height: 3rem;
+  border: 2px solid green;
+  color: green;
+  border-radius: 10px;
+  font-size: 15px;
+  margin-top: 2rem;
+}
+
+@media (max-width: 1400px) {
+  .FormularioExamenMenu {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 3rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .FormularioExamenMenu {
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 3rem;
+  }
 }
