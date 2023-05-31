@@ -11,21 +11,13 @@ import { useState, useEffect } from 'react';
 
 const FormularioExamen = () => {
 
-    let [usuario, setUsuario] = useState([])
-
-    
+    let arrayCampos = []
+    let usuario = arrayCampos[0]
 
     const enviarFormulario = () => {
-        let arrayCampos = []
         arrayCampos.push(document.getElementById("campoName").value)
         console.log(arrayCampos)
-
-        setUsuario = arrayCampos[0]
-
     }
-
-
-
 
     return (
         <div className="FormularioExamenContainer">
