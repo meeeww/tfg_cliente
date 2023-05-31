@@ -3125,6 +3125,7 @@ h3 {
 .FormularioExamenContainer {
   display: flex;
   margin: 2rem;
+  flex-direction: column;
 }
 
 .FormularioExamenMenu {
@@ -3163,6 +3164,35 @@ h3 {
   font-size: 15px;
   margin-top: 2rem;
 }
+
+.formularioExamenFormulario{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  gap: 1rem;
+}
+
+.formularioExamenPregunta{
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.formularioExamenPregunta input{
+  width: 15rem;
+}
+
+.formularioExamenFormulario button {
+  width: 4rem;
+  height: 2rem;
+  border: 2px solid green;
+  color: green;
+  border-radius: 10px;
+  font-size: 15px;
+  margin-top: 2rem;
+}
+
 
 @media (max-width: 1400px) {
   .FormularioExamenMenu {

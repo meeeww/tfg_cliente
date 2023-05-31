@@ -4,15 +4,37 @@ import foto1 from "../assets/Examen/capuccino.jpg"
 import foto2 from "../assets/Examen/matcha.jpg"
 import foto3 from "../assets/Examen/frapuccino.jpg"
 import foto4 from "../assets/Examen/chocolate.jpg"
-
-
+import { useState, useEffect } from 'react';
 
 
 
 
 const FormularioExamen = () => {
+
+    let [usuario, setUsuario] = useState([])
+
+    
+
+    const enviarFormulario = () => {
+        let arrayCampos = []
+        arrayCampos.push(document.getElementById("campoName").value)
+        console.log(arrayCampos)
+
+        setUsuario = arrayCampos[0]
+
+    }
+
+
+
+
     return (
         <div className="FormularioExamenContainer">
+            <div className="welcomeMessageDashboard">
+                <h1 style={{ "paddingRight": "1rem" }}>Hola,</h1>
+                <h1>{usuario}</h1>
+
+
+            </div>
             <div className="FormularioExamenMenu">
                 <div className="FormularioExamenCaja">
                     <img src={foto1} alt="capuccino" />
@@ -46,6 +68,14 @@ const FormularioExamen = () => {
                         <button>Añadir</button>
                     </div>
                 </div>
+            </div>
+
+            <div className="formularioExamenFormulario">
+                <div className="formularioExamenPregunta">
+                    <p>Como te llamas</p>
+                    <input type="text" id="campoName" placeholder="Name" />
+                </div>
+                <button onClick={enviarFormulario}>Añadir</button>
             </div>
         </div>
     )
