@@ -21,6 +21,10 @@ const Carta = () => {
     const [productos, setProductos] = useState([]);
     const [categorias, setCategorias] = useState([]);
 
+    const clickear = () => {
+        document.getElementById("textoInputAutoria").innerHTML = document.getElementById("idBotonAutoria").value
+    }
+
     useEffect(() => {
         Axios.get("http://localhost:4000/API/productos/consultar").then(response => {
             setProductos(response.data)
@@ -29,7 +33,7 @@ const Carta = () => {
                 setLoading(false)
             })
         })
-    })
+    }, [])
 
     if (isLoading) {
         return (null);
@@ -61,12 +65,15 @@ const Carta = () => {
                                         <a key={producto.id_producto} href={"http://localhost:5173/product?id=" + producto.id_producto}>
                                             <div className={"CartaItemsCaja"}>
                                                 <div className="CartaImagen">
+                                                    <i className="corazonMenu fa-solid fa-heart"></i>
                                                     <img src={producto.foto_producto} alt={producto.nombre_producto} />
                                                 </div>
                                                 <div className="CartaTexto">
-                                                    <h2>{producto.nombre_producto}</h2>
-                                                    <p>{producto.descripcion_producto}</p>
-                                                    <p>${producto.coste_base}</p>
+                                                    <div>
+                                                        <h2>{producto.nombre_producto}</h2>
+                                                        <p>{producto.descripcion_producto}</p>
+                                                    </div>
+                                                    <button className="botonMenu">Añadir</button>
                                                 </div>
                                             </div>
                                         </a>
@@ -77,6 +84,11 @@ const Carta = () => {
                         </div>
                     </div>
                 ))}
+            </div>
+            <div style={{backgroundColor: "red", width: "100%", height: "20rem", padding: "5rem"}}>
+                <input type={"text"} id="idBotonAutoria" placeholder='Escribe aqui'></input>
+                <button style={{width: "5rem", height: "2.5rem", marginLeft: "3rem"}} onClick={clickear}>Boton</button>
+                <p id='textoInputAutoria'></p>
             </div>
         </>
     )
